@@ -27,5 +27,6 @@ informational popup.
 - **footer** -- "Details" text shown in the footer of the popup.
 - **footer_link** -- The textual content of the optional 'more info' link in the footer.
 - **footer_link_url** -- The absolute or relative URL target for the optional footer link
-- **partial_name** -- Maps to `'default'` by default.  This parameter can be used (in conjunction with PayByGroup) to 
-  provide a completely different skin for the look and feel for the informational popup.
+- **partial_name** -- This parameter can be used (in conjunction with design work at PayByGroup) to 
+  provide a completely different skin for the look and feel for the informational popup.  
+  By default this paramter maps to the `'default'` skin. 
