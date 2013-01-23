@@ -8,6 +8,10 @@ require 'sass'
 require 'rdiscount'
 require 'nokogiri'
 
+use Rack::Auth::Basic, "Restricted Area" do |username, password|
+  [username, password] == ['docs', 'docs']
+end
+
 get '/' do
   @index = RDiscount.new( File.open("contents/index.md").read ).to_html
   haml :index
