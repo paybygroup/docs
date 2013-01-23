@@ -1,3 +1,5 @@
+`ruby -rubygems app.rb`
+
 # Markdown based blog
 
 PayByGroup Documentation
