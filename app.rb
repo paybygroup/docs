@@ -9,7 +9,7 @@ require 'rdiscount'
 require 'nokogiri'
 
 use Rack::Auth::Basic, "Restricted Area" do |username, password|
-  [username, password] == ['docs', 'docs']
+  [username, password] == ['webmaster@paybygroup', 'cafldo']
 end
 
 get '/' do
