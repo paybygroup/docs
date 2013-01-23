@@ -17,24 +17,15 @@ informational popup.
 
 #### Popup Parameters
 
+- **step1** -- Text content for step 1.
+- **step2** -- Text content for step 2.
+- **step3** -- Text content for step 3.
+- **button_prefix** -- Text to the left of the popup's primary call to action.
+- **button_action** -- Action taken by the popup's primary call to action button.
+  By default the action is `close`, the other legal value is 'to_pbg' which causes
+  the informational popup to progress to the create PayByGroup page.
+- **footer** -- "Details" text shown in the footer of the popup.
+- **footer_link** -- The textual content of the optional 'more info' link in the footer.
+- **footer_link_url** -- The absolute or relative URL target for the optional footer link
 - **partial_name** -- Maps to `'default'` by default.  This parameter can be used (in conjunction with PayByGroup) to 
   provide a completely different skin for the look and feel for the informational popup.
-
-- **step1** -- Text for step 1
-
-Choose **PayByGroup** on any home's payment page.",
-                                                                    step2: 'Set how to split the cost, and send the invites.',
-                                                                    step3: 'Everyone joins, you confirm and all enjoy!',
-                                                                    button_prefix: 'Ready?',
-                                                                    button: 'Continue',
-                                                                    button_action: :close,
-                                                                    footer: "Details: When you choose PayByGroup, you aren't obligated to complete the purchase. Your booking is subject to availability. You can set a tipping point for the minimum number of people you need.  The booking is only completed and everyone charged when you give the go-ahead.",
-                                                                    footer_link: 'more info',
-                                                                    footer_link_url: 'http://paybygroup.com/paybygroup-faqs-rent-like-a-champion/'
-                                                                  }
-express the paybygoup service 
-
-tailor the presentation of our service in the context of 
-
-providing information about our service expressed in a
-way that is idealized 
