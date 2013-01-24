@@ -42,8 +42,8 @@ The HTML must contain the PBG bootstrap.js:
 The popup itself is triggered by any HTML element (e.g. a `DIV`) with a `pbg_info` class.
 Here is an example of a popup that uses default parameters for the popup.
 
-    <div class="pbg_info" data-button-icon="pbg_transparent_logo_small" data-merchant-id="demo_cabo" data-button-width="200"></div>
+    <div class="pbg_info" data-button-icon="pbg_transparent_logo_small" data-merchant-id="cabo" data-button-width="200"></div>
 
 Here is an example of a popup that overrides the call to action to goto create a PayByGroup:
 
-    <div class="pbg_info" data-button-icon="horizontal" data-merchant-id="demo_cabo" data-purchase-id="1234" data-popup-button-action="to_pbg"></div>
+    <div class="pbg_info" data-button-icon="horizontal" data-merchant-id="cabo" data-purchase-id="1234" data-popup-button-action="to_pbg"></div>
