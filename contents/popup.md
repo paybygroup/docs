@@ -2,9 +2,9 @@
 
 
 
-### PayByGroup Informational Popup
+### PayByGroup Popup
 
-The PBG Informational Popup is designed to provide merchants with considerable
+The PBG Popup is designed to provide merchants with considerable
 flexibilty in configuring how paybygroup is presented to their customers.
 Below we list the parameters that control this informational popup.  
 
@@ -29,4 +29,21 @@ informational popup.
 - **footer_link_url** -- The absolute or relative URL target for the optional footer link
 - **partial_name** -- This parameter can be used (in conjunction with design work at PayByGroup) to 
   provide a completely different skin for the look and feel for the informational popup.  
-  By default this paramter maps to the `'default'` skin. 
+  By default this paramter maps to the `'default'` skin.
+  
+  
+
+#### Example HTML Snipits invoking the PBG Popup
+
+The HTML must contain the PBG bootstrap.js:
+
+    <script src="/merch/integrated/bootstrap.js"></script>
+
+The popup itself is triggered by any HTML element (e.g. a `DIV`) with a `pbg_info` class.
+Here is an example of a popup that uses default parameters for the popup.
+
+    <div class="pbg_info" data-button-icon="pbg_transparent_logo_small" data-merchant-id="demo_cabo" data-button-width="200"></div>
+
+Here is an example of a popup that overrides the call to action to goto create a PayByGroup:
+
+    <div class="pbg_info" data-button-icon="horizontal" data-merchant-id="demo_cabo" data-purchase-id="1234" data-popup-button-action="to_pbg"></div>
