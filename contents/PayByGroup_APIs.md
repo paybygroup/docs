@@ -1,7 +1,7 @@
 
 # PayByGroup API reference documentation
 
-Reference documentation for all merchant-facing, programmatic, PayByGroup interfaces. 
+Reference *documentation* _for_ all merchant-facing, programmatic, PayByGroup interfaces. 
 
 ## Contents
 - [**API Conventions**](#api_conventions) 
