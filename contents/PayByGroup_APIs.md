@@ -27,20 +27,20 @@ Reference *documentation* _for_ all merchant-facing, programmatic, PayByGroup in
 ## API Conventions
 The following describes the approach used by PayByGroup APIs unless explicitly stated otherwise.
 
-**FORMAT**
+#### FORMAT
   - Data is transferred using post requests formatted as 'application/json'.
   - Responses are also a single JSON encoded object in the post's body.
   - Both the post parameters and the response values are each encoded as a single JSON map of values.
   - The calling map of all API calls must contain a merchant-specific auth token (a 32 character random identifier)
 
-**ADDRESSING**
+#### ADDRESSING
   - All API calls must originate from one of the PBG_ADDRESSES below or from the supplied MERCHANT_API_URLs
   - In production all calls to PBG must be to the 'production' address below.
   - Staging/testing of new API interactions will typically be done using the ‘test’ or ‘dev2’ addresses below.
   - API calls that originate from PBG to the merchant follow the same format above, and will 
     provide the same 'merchant_auth' and 'action' keys.
 
-**DATATYPES**
+#### DATATYPES
   - DATE FORMAT:   "YYYY-MM-DD"
   - DATETIME FORMAT:   “YYYY-MM-DD HH:MM PST”
     (This is the rails default ISO-8601 format, pacific coast time.
@@ -49,16 +49,16 @@ The following describes the approach used by PayByGroup APIs unless explicitly s
     A string containing a decimal followed by a space and a currency indicator
     (e.g. "USD" for US dollars)
     
-**PBG\_ADDRESSES**
+#### PBG\_ADDRESSES
  - 184.106.133.37 (production)
  - 50.57.143.251 (test)
  - 50.57.115.142 (dev2)
  - 50.57.106.140 (dev1)
 
-**MERCHANT\_API\_URL**
+#### MERCHANT\_API\_URL
  - IP address supplied by the merchant
 
-**MERCHANT\_AUTH**
+#### MERCHANT\_AUTH
  - 32-character sequence of printable ASCII characters
 
 
@@ -69,7 +69,7 @@ The following describes the approach used by PayByGroup APIs unless explicitly s
 ## **Merchant Get Purchase Info**
 Interface for querying PayByGroup about existing group purchases.
 
-FUNCTION 
+#### FUNCTION 
 
   Provides a RESTful way for merchants to query status and parameters for a filtered subset of PayByGroups over a given date range at any point. 
 
@@ -79,7 +79,7 @@ This API provides three querying mechanisms that can be employed in combination 
 3. Group Purchases can be retrieved by selected those that has a specific state change occur within a specified time window.
    This allows the merchant to reliably process all purchases that at a spcific point in their life cycle (like completion, or expiration).
 
-URL 
+#### URL 
 
   &nbsp; &nbsp; https://PBG\_IP\_ADDRESS/api/merch\_get\_purch\_info.json
 
