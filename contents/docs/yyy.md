@@ -82,7 +82,7 @@ This API provides three querying mechanisms that can be employed in combination 
 **Required Request Parameters:**
 - **:api\_key** _(string)_  --  The Merchant's API key (a secret authorization token).  This can be obtained from the merchant's master user account.
 
-#### Required Request Parameters:
+**Required Request Parameters:**
 - **:merchant\_id**     _(string)_  –-  Constrains purchases to those with this merchant id.
 - **:inventory\_id**    _(string)_  –-  Constrains purchases to those with this inventory id.
 - **:purchase\_id**     _(string)_  –-  Constrains purchases to the one with this purchase id.
