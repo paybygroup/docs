@@ -69,7 +69,8 @@ The following describes the approach used by PayByGroup APIs unless explicitly s
 ## **Merchant Get Purchase Info**
 Interface for querying PayByGroup about existing group purchases.
 
-**Function:**  Provides a RESTful way for merchants to query status and parameters for a filtered subset of PayByGroups over a given date range at any point. 
+FUNCTION 
+  Provides a RESTful way for merchants to query status and parameters for a filtered subset of PayByGroups over a given date range at any point. 
 
 This API provides three querying mechanisms that can be employed in combination as needed:
 1. Group Purchases can be retrieved by purchase\_id (both merchant, and PayByGroup ids)
@@ -77,19 +78,19 @@ This API provides three querying mechanisms that can be employed in combination 
 3. Group Purchases can be retrieved by selected those that has a specific state change occur within a specified time window.
    This allows the merchant to reliably process all purchases that at a spcific point in their life cycle (like completion, or expiration).
 
-**URL:** &nbsp; &nbsp; https://PBG\_IP\_ADDRESS/api/merch\_get\_purch\_info.json
+URL 
+  &nbsp; &nbsp; https://PBG\_IP\_ADDRESS/api/merch\_get\_purch\_info.json
 
 **Required Request Parameters:**
 - **:api\_key** _(string)_  --  The Merchant's API key (a secret authorization token).  This can be obtained from the merchant's master user account.
 
-#### Required Request Parameters:
+###### Required Request Parameters:
 - **:merchant\_id**     _(string)_  –-  Constrains purchases to those with this merchant id.
 - **:inventory\_id**    _(string)_  –-  Constrains purchases to those with this inventory id.
 - **:purchase\_id**     _(string)_  –-  Constrains purchases to the one with this purchase id.
-- **:created\_after**   _(date)_    -–  Constrains purchases to those created on or after this (inclusive start of date range).
-- **:created\_before**  _(date)_    -–  Constrains purchases to those created before  (exclusive end of date range).
-- **:status**  _(array of string)_  -–  Constrains purchases to those w. matching status states.
-                                        (See Group Purchase 'status' for possible values)
+- **:created\_after**   _(date)_    -–  Constrains purchases to those created on or after this.  (inclusive start of date range)
+- **:created\_before**  _(date)_    -–  Constrains purchases to those created before.  (exclusive end of date range)
+- **:status**  _(array of string)_  -–  Constrains purchases to those w. matching status states.  (See Group Purchase 'status' for possible values)
 
 
 **RESPONSE PARAMS**
