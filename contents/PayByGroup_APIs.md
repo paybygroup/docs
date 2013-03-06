@@ -83,7 +83,7 @@ This API provides three querying mechanisms that can be employed in combination 
 
   &nbsp; &nbsp; https://PBG\_IP\_ADDRESS/api/merch\_get\_purch\_info.json
 
-### Request Parameters
+#### Request Parameters
 - **:api\_key** _(string)_          --  [REQUIRED]  The Merchant's API key (a secret authorization token).  This can be obtained from the merchant's master user account.
 - **:merchant\_id**     _(string)_  –-  Constrains purchases to those with this merchant id.
 - **:inventory\_id**    _(string)_  –-  Constrains purchases to those with this inventory id.
