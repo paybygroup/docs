@@ -70,6 +70,7 @@ The following describes the approach used by PayByGroup APIs unless explicitly s
 Interface for querying PayByGroup about existing group purchases.
 
 FUNCTION 
+
   Provides a RESTful way for merchants to query status and parameters for a filtered subset of PayByGroups over a given date range at any point. 
 
 This API provides three querying mechanisms that can be employed in combination as needed:
@@ -79,12 +80,13 @@ This API provides three querying mechanisms that can be employed in combination 
    This allows the merchant to reliably process all purchases that at a spcific point in their life cycle (like completion, or expiration).
 
 URL 
+
   &nbsp; &nbsp; https://PBG\_IP\_ADDRESS/api/merch\_get\_purch\_info.json
 
-**Required Request Parameters:**
+#### Required Request Parameters
 - **:api\_key** _(string)_  --  The Merchant's API key (a secret authorization token).  This can be obtained from the merchant's master user account.
 
-###### Required Request Parameters:
+### Required Request Parameters:
 - **:merchant\_id**     _(string)_  –-  Constrains purchases to those with this merchant id.
 - **:inventory\_id**    _(string)_  –-  Constrains purchases to those with this inventory id.
 - **:purchase\_id**     _(string)_  –-  Constrains purchases to the one with this purchase id.
