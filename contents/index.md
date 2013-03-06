@@ -4,7 +4,11 @@
 Shared PayByGroup documentation
 
 ## Docs
+
+- *zzz* [PayByGroup API Docs](/docs/PayByGroup_API)
+
 - *Merchant Integration Docs** [Merchant Integration](/docs/)
+
 - *Popup* [popup docs](/popup)
 
 <!-- - *28/12/2011* [Instrucciones para visitar un museo](/instrucciones-para-visitar-un-museo) 
