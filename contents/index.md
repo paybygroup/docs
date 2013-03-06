@@ -1,9 +1,10 @@
-<!-- #### César Salazar -->
-# PayByGroup
 
-Shared documentation for PayByGroup
+# PayByGroup Documentation
+
+Shared PayByGroup documentation
 
 ## Docs
+- *Merchant Integration Docs** [Merchant Integration](/docs/)
 - *Popup* [popup docs](/popup)
 
 <!-- - *28/12/2011* [Instrucciones para visitar un museo](/instrucciones-para-visitar-un-museo) 
