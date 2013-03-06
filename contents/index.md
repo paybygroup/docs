@@ -5,7 +5,7 @@ Shared PayByGroup documentation
 
 ## Docs
 
-- *zzz* [PayByGroup API Docs](/docs/PayByGroup_API)
+- *Reference Documentation* [PayByGroup API Docs](/docs/PayByGroup_APIs)
 
 - *Merchant Integration Docs** [Merchant Integration](/docs/)
 
