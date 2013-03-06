@@ -76,7 +76,7 @@ This API provides three querying mechanisms that can be employed in combination 
 1. Group Purchases can be retrieved by purchase\_id (both merchant, and PayByGroup ids)
 1. Group Purchases can be retrieved by conjunction of constraints on Purchase field values (status, etc.)
 3. Group Purchases can be retrieved by selected those that has a specific state change occur within a specified time window.
-   This allows the merchant to reliably process all purchases that at a spcific point in their life cycle (like completion, or expiration).
+   This allows the merchant to reliably process all purchases that at a specific point in their life cycle (like completion, or expiration).
 
 #### URL 
   &nbsp; &nbsp; https://PBG\_IP\_ADDRESS/api/merch\_get\_purch\_info.json
