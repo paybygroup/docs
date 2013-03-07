@@ -12,6 +12,7 @@ Reference documentation for all merchant-facing, programmatic, PayByGroup interf
 | [/api_v1.1/purchases](#merch_get_purch_info)                      | Returns the details for matching selection of purchases
 | [/api_v1.1/purchases/:id/show](#purch_info)                       | Returns the details for single group purchase
 | [/api_v1.1/purchases/:id/action/:action](#purch_action) &nbsp; &nbsp; &nbsp; &nbsp; | Executes specified action on specified purchase
+| [/api_v1.1/purchases/:id/invitees](#purch_invitees)               | Returns details about selected invitees for a purchase
 | [/api_v1.1/transactions](#transactions_show)                      | Returns the details for matching selection of transactions
 
 ### PayByGroup Initiated APIs
@@ -29,10 +30,11 @@ Reference documentation for all merchant-facing, programmatic, PayByGroup interf
 The following describes the approach used by PayByGroup APIs unless explicitly stated otherwise.
 
 #### FORMAT
-  - Data is transferred using post requests formatted as 'application/json'.
-  - Responses are also a single JSON encoded object in the post's body.
-  - Both the post parameters and the response values are each encoded as a single JSON map of values.
-  - The calling map of all API calls must contain a merchant-specific auth token (a 32 character random identifier)
+  - Data is transferred using post requests with URL encoded parameters.
+  - Responses are encoded as a single JSON encoded hash in the post's body.
+  - The posts format is listed as 'application/json'.
+  - The calling parameters for all API calls must contain the 'api_key' parameter with containing the a merchant-specific 
+    authorization token (which can be obtained from the merchants dashboard).
 
 #### ADDRESSING
   - All API calls must originate from one of the PBG_ADDRESSES below or from the supplied MERCHANT_API_URLs
