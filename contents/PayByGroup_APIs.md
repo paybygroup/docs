@@ -6,8 +6,8 @@ Reference documentation for all merchant-facing, programmatic, PayByGroup interf
 
 
 | ### Merchant Initiated APIs
-| Resources                                                         | Description
 | ----------------------------------------------------------------- | ------------
+| Resources                                                         | Description
 | [/api_v1.1/purchases](#merch_get_purch_info)                      | Returns the details for matching selection of purchases
 | [/api_v1.1/purchases/:id/show](#purch_info)                       | Returns the details for single group purchase
 | [/api_v1.1/purchases/:id/action/:action](#purch_action)           | Executes specified action on specified purchase
