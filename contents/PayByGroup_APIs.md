@@ -1,7 +1,7 @@
 
-# PayByGroup API reference documentation
+# PayByGroup API Reference
 
-Reference *documentation* _for_ all merchant-facing, programmatic, PayByGroup interfaces. 
+Reference documentation for all merchant-facing, programmatic, PayByGroup interfaces. 
 
 
 | Tables        | Are           | Cool  |
@@ -20,15 +20,15 @@ Reference *documentation* _for_ all merchant-facing, programmatic, PayByGroup in
 
 ## Contents
 
-| Resource                                                    | zzzz         |
-| ----------------------------------------------------------- | ------------ |
-| [**API Conventions**](#api_conventions)                     | a            |
-| [**Merchant Get Purchase Info**](#merch_get_purch_info)     | b            |
-| [**Merchant Push Purchase Info**](#merch_push_purch_info)   | c            |
-| [**PBG Get Purchase Info**](#pbg_get_purch_info)            | d            |
-| [**PBG Push Purchase Info**](#pbg_push_purch_info)          | e            |
-| [**Merchant Push Action**](#merch_push_action)              | f            |
-| [**PBG Get Inventory Availability**](#pbg_get_availablity)  | g            |
+| Resource                                                    | zzzz         | qqqqqq
+| ----------------------------------------------------------- | ------------ | --------
+| [**API Conventions**](#api_conventions)                     | a            | q
+| [**Merchant Get Purchase Info**](#merch_get_purch_info)     | b            | q
+| [**Merchant Push Purchase Info**](#merch_push_purch_info)   | c            | x
+| [**PBG Get Purchase Info**](#pbg_get_purch_info)            | d            | v
+| [**PBG Push Purchase Info**](#pbg_push_purch_info)          | e            | f
+| [**Merchant Push Action**](#merch_push_action)              | f            | g
+| [**PBG Get Inventory Availability**](#pbg_get_availablity)  | g            | h
 
 
 ## Contents
