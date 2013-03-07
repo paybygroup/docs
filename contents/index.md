@@ -1,15 +1,21 @@
 
-# PayByGroup Documentation
+# PayByGroup
 
-Shared PayByGroup documentation
 
-## Docs
+## Merchant Integration Documentation
 
-- *Reference Documentation* [PayByGroup API Docs](/PayByGroup_APIs)
+- [PayByGroup API Docs](/PayByGroup_APIs) -- 
 
 - *Merchant Integration Docs** [Merchant Integration](/docs/)
 
 - *Popup* [popup docs](/popup)
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
 
 <!-- - *28/12/2011* [Instrucciones para visitar un museo](/instrucciones-para-visitar-un-museo) 
 - *03/12/2010* [Día de lanzamiento](/dia-de-lanzamiento)
