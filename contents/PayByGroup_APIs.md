@@ -5,7 +5,7 @@ Reference documentation for all merchant-facing, programmatic, PayByGroup interf
 (See [API conventions](#api_conventions) for details common across all APIs.)
 
 
-| ### Merchant Initiated APIs
+| ### Merchant Initiated APIs                                       | xxxx
 | ----------------------------------------------------------------- | ------------
 | Resources                                                         | Description
 | [/api_v1.1/purchases](#merch_get_purch_info)                      | Returns the details for matching selection of purchases
