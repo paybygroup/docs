@@ -3,39 +3,30 @@
 
 Reference documentation for all merchant-facing, programmatic, PayByGroup interfaces. 
 
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-
-- *28/12/2011* [Instrucciones para visitar un museo](/instrucciones-para-visitar-un-museo) 
-- *03/12/2010* [Día de lanzamiento](/dia-de-lanzamiento)
-- *22/09/2010* [Sin tomar el manubrio](/sin-tomar-el-manubrio)
-- *30/06/2010* [Dejar el coche, una decisión satisfactoria](/dejar-el-coche-una-decision-satisfactoria)
-- *05/07/2010* [Libros determinantes](/libros-determinantes)
-
-
 ## Contents
 
-| Resource                                                    | zzzz         | qqqqqq
-| ----------------------------------------------------------- | ------------ | --------
-| [**API Conventions**](#api_conventions)                     | a            | q
-| [**Merchant Get Purchase Info**](#merch_get_purch_info)     | b            | q
-| [**Merchant Push Purchase Info**](#merch_push_purch_info)   | c            | x
-| [**PBG Get Purchase Info**](#pbg_get_purch_info)            | d            | v
-| [**PBG Push Purchase Info**](#pbg_push_purch_info)          | e            | f
-| [**Merchant Push Action**](#merch_push_action)              | f            | g
-| [**PBG Get Inventory Availability**](#pbg_get_availablity)  | g            | h
+[**API Conventions**](#api_conventions)
+
+| Resources for Merchant Initiated Actions                          | Description
+| ----------------------------------------------------------------- | ------------
+| [/api_v1.1/purchases](#merch_get_purch_info)                      | Returns the details for matching selection of purchases
+| [/api_v1.1/purchases/:id/show](#purch_info)                       | Returns the details for single group purchase
+| [/api_v1.1/purchases/:id/action/:action](#purch_action)           | Executes specified action on specified purchase
+| [/api_v1.1/transactions](#transactions_show)                      | Returns the details for matching selection of transactions
+
+
+| Resources provided by the Merchant for PBG initiated actions      | Description
+| ----------------------------------------------------------------- | -------------
+| [/pbg_api_v1.1/purchases/:id/show](#pbg_get_purch_info)           | PBG requests details from merchant regarding specific purchase
+| [/pbg_api_v1.1/purchases/:id/availability](#pbg_get_availablity)  | PBG requests details from merchant regarding inventory availablity for a specific purchase
+| [/pbg_api_v1.1/purchases/update](#pbg_push_purch_info)            | PBG pushes requested purchase updates to merchant
 
 
 ## Contents
 
 - [**API Conventions**](#api_conventions) 
 - [**Merchant Get Purchase Info**](#merch_get_purch_info) 
-- [**Merchant Push Purchase Info**](#merch_push_purch_info)  
+- [**Merchant Push Purchase Info**](#purch_action)  
 - [**PBG Get Purchase Info**](#pbg_get_purch_info)
 - [**PBG Push Purchase Info**](#pbg_push_purch_info)
 - [**Merchant Push Action**](#merch_push_action)
@@ -90,6 +81,21 @@ The following describes the approach used by PayByGroup APIs unless explicitly s
 #### MERCHANT\_AUTH
  - 32-character sequence of printable ASCII characters
 
+#### RESPONSE FORMAT
+ version:  code:   developer_message: user_message: more_info:
+
+Codes Used By PayByGroup 
+200 - OK 
+400 - Bad Request 
+404 – Not Found 
+401 - Unauthorized
+500 - Internal Server Error
+
+
+
+Brian Mulloy. Web API Design  - Crafting Interfaces that Developers Love (Kindle Locations 200-202). 
+
+Brian Mulloy. Web API Design  - Crafting Interfaces that Developers Love (Kindle Locations 195-197). 
 
 
 
@@ -142,8 +148,14 @@ Example results format:
 
 
 <br><br><br><br>
-<p id="merch_push_purch_info"></p>
+<p id="purch_action"></p>
 ## **Merchant Push Purchase Info**
+
+Allows merchant to edit group purchase properties
+
+<br><br><br><br>
+< id="pbg_get_purch_info"></p>
+## **PBG Get Purchase Info** -- 
 
 2 - Purchase Create API
 
@@ -178,14 +190,6 @@ Any variables listed in the Merchant Input Variables list. Typically, merchants 
 
 
 
-
-
-<br><br><br><br>
-< id="pbg_get_purch_info"></p>
-## **PBG Get Purchase Info** -- 
-
-
-RLAC's Purchase Info 
 
 
 <br><br><br><br>
