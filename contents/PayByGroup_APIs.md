@@ -1,13 +1,13 @@
 
-# PayByGroup API Reference
+# PayByGroup v1.1 API Reference
 
 Reference documentation for all merchant-facing, programmatic, PayByGroup interfaces. 
+(See [API conventions](#api_conventions) for details common to the use of all of these APIs.)
 
-## Contents
 
-[**API Conventions**](#api_conventions)
+### Merchant Initiated APIs
 
-| Resources for Merchant Initiated Actions                          | Description
+| Resources                                                         | Description
 | ----------------------------------------------------------------- | ------------
 | [/api_v1.1/purchases](#merch_get_purch_info)                      | Returns the details for matching selection of purchases
 | [/api_v1.1/purchases/:id/show](#purch_info)                       | Returns the details for single group purchase
@@ -15,30 +15,13 @@ Reference documentation for all merchant-facing, programmatic, PayByGroup interf
 | [/api_v1.1/transactions](#transactions_show)                      | Returns the details for matching selection of transactions
 
 
-| Resources provided by the Merchant for PBG initiated actions      | Description
+### PayByGroup Initiated APIs
+
+| Resources                                                         | Description
 | ----------------------------------------------------------------- | -------------
 | [/pbg_api_v1.1/purchases/:id/show](#pbg_get_purch_info)           | PBG requests details from merchant regarding specific purchase
-| [/pbg_api_v1.1/purchases/:id/availability](#pbg_get_availablity)  | PBG requests details from merchant regarding inventory availablity for a specific purchase
+| [/pbg_api_v1.1/purchases/:id/availability](#pbg_get_availablity) &nbsp; &nbsp; | PBG requests details from merchant regarding inventory availablity for a specific purchase
 | [/pbg_api_v1.1/purchases/update](#pbg_push_purch_info)            | PBG pushes requested purchase updates to merchant
-
-
-## Contents
-
-- [**API Conventions**](#api_conventions) 
-- [**Merchant Get Purchase Info**](#merch_get_purch_info) 
-- [**Merchant Push Purchase Info**](#purch_action)  
-- [**PBG Get Purchase Info**](#pbg_get_purch_info)
-- [**PBG Push Purchase Info**](#pbg_push_purch_info)
-- [**Merchant Push Action**](#merch_push_action)
-- [**PBG Get Inventory Availability**](#pbg_get_availablity)
-
-## URLS
-- https://PBG\_IP\_ADDRESS/api/group\_purchase/query.json
-- https://PBG\_IP\_ADDRESS/api/group\_purchase/update.json
-
-- https://PBG\_IP\_ADDRESS/api/merch\_get\_purch\_info.json
-- https://PBG\_IP\_ADDRESS/api/merch\_get\_purch\_info.json
-- https://PBG\_IP\_ADDRESS/api/merch\_get\_purch\_info.json
 
 
 
