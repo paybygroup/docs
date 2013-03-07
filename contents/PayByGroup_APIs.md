@@ -3,7 +3,36 @@
 
 Reference *documentation* _for_ all merchant-facing, programmatic, PayByGroup interfaces. 
 
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+
+- *28/12/2011* [Instrucciones para visitar un museo](/instrucciones-para-visitar-un-museo) 
+- *03/12/2010* [Día de lanzamiento](/dia-de-lanzamiento)
+- *22/09/2010* [Sin tomar el manubrio](/sin-tomar-el-manubrio)
+- *30/06/2010* [Dejar el coche, una decisión satisfactoria](/dejar-el-coche-una-decision-satisfactoria)
+- *05/07/2010* [Libros determinantes](/libros-determinantes)
+
+
 ## Contents
+
+| Resource                                                    | zzzz         |
+| ----------------------------------------------------------- | ------------ |
+| [**API Conventions**](#api_conventions)                     | a            |
+| [**Merchant Get Purchase Info**](#merch_get_purch_info)     | b            |
+| [**Merchant Push Purchase Info**](#merch_push_purch_info)   | c            |
+| [**PBG Get Purchase Info**](#pbg_get_purch_info)            | d            |
+| [**PBG Push Purchase Info**](#pbg_push_purch_info)          | e            |
+| [**Merchant Push Action**](#merch_push_action)              | f            |
+| [**PBG Get Inventory Availability**](#pbg_get_availablity)  | g            |
+
+
+## Contents
+
 - [**API Conventions**](#api_conventions) 
 - [**Merchant Get Purchase Info**](#merch_get_purch_info) 
 - [**Merchant Push Purchase Info**](#merch_push_purch_info)  
