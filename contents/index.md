@@ -7,8 +7,9 @@
 
 <br><br>
 
-- [PayByGroup Merchant Integrationn](/MerchantIntegration) --
+- [Integration Documentationn](/MerchantIntegration)  --  PayByGroup merchant integration documentation
 
-- [PayByGroup Reference Docs](/PayByGroup_APIs)  --  API Reference Documentation
+- [API Reference](/PayByGroup_APIs)  --  API Reference Documentation
+
 
 - [Popup Docs](/popup) -- Docs for the merchant PayBgGroup Popup
