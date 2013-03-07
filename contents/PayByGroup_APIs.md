@@ -2,21 +2,17 @@
 # PayByGroup v1.1 API Reference
 
 Reference documentation for all merchant-facing, programmatic, PayByGroup interfaces. 
-(See [API conventions](#api_conventions) for details common to the use of all of these APIs.)
+(See [API conventions](#api_conventions) for details common across all APIs.)
 
 
-### Merchant Initiated APIs
-
+| ### Merchant Initiated APIs
 | Resources                                                         | Description
 | ----------------------------------------------------------------- | ------------
 | [/api_v1.1/purchases](#merch_get_purch_info)                      | Returns the details for matching selection of purchases
 | [/api_v1.1/purchases/:id/show](#purch_info)                       | Returns the details for single group purchase
 | [/api_v1.1/purchases/:id/action/:action](#purch_action)           | Executes specified action on specified purchase
 | [/api_v1.1/transactions](#transactions_show)                      | Returns the details for matching selection of transactions
-
-
-### PayByGroup Initiated APIs
-
+| ### PayByGroup Initiated APIs
 | Resources                                                         | Description
 | ----------------------------------------------------------------- | -------------
 | [/pbg_api_v1.1/purchases/:id/show](#pbg_get_purch_info)           | PBG requests details from merchant regarding specific purchase
