@@ -9,7 +9,7 @@
 
 - [Integration Documentationn](/merchant_gui_elements)  --  PayByGroup merchant integration documentation
 
-- [API Reference](/pbg_apis)  --  API Reference Documentation
+- [API Reference](/pbgapis)  --  API Reference Documentation
 
 - [Light box Docs](/merchant_gui_elements) -- Docs for the merchant PayBgGroup Light box
 
