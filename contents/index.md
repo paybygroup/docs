@@ -12,4 +12,4 @@
 - [API Reference](/PayByGroup_APIs)  --  API Reference Documentation
 
 
-- [Popup Docs](/popup) -- Docs for the merchant PayBgGroup Popup
+- [Light box Docs](/Light box) -- Docs for the merchant PayBgGroup Light box

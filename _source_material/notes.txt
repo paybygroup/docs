@@ -1,0 +1,5 @@
+  %h4
+    %a{:href => "/"}PayByGroup Documentation Root
+
+
+as removed from article
