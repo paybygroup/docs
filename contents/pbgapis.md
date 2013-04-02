@@ -78,11 +78,11 @@ The following describes the approach used by PayByGroup APIs unless explicitly s
 
 
 Codes Used By PayByGroup 
-200 - OK 
-400 - Bad Request 
-404 – Not Found 
-401 - Unauthorized
-500 - Internal Server Error
+    200 - OK 
+    400 - Bad Request 
+    404 – Not Found 
+    401 - Unauthorized
+    500 - Internal Server Error
 
 
 
