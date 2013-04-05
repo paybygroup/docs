@@ -4,18 +4,86 @@
 Reference documentation for all merchant-facing, programmatic, PayByGroup interfaces. 
 (See [API conventions](#api_conventions) for details common across all APIs.)
 
+<br />
+<p id="api_conventions"></p>
+## API Conventions
+The following describes the approach used by PayByGroup APIs unless explicitly stated otherwise.
 
+#### FORMAT
+  - Data is transferred as URL encoded parameters.
+  - Responses are encoded as a single JSON encoded hash in the HTTP response body.
+  - The HTTP response mimetype is `application/json`.
+  - The calling parameters for all API calls must contain the `api_key` parameter containing the merchant-specific 
+    authorization token obtained from the merchant account's PayByGroup dashboard.
+  - All requests must be `HTTPS`
+
+#### ADDRESSING
+  - All API calls must originate from one of the `PBG_ADDRESSES` below or from the supplied `MERCHANT_API_URL`s.
+  - In production all calls to PBG must be to the `production` API endpoint below.
+  - Staging/testing of new API interactions will typically be done using the `test` or `dev2` addresses below.
+  - API calls that originate from PBG to the merchant follow the same format above, and will 
+    provide the same `merchant_auth` and `action` keys.
+
+#### DATATYPES
+  - Datetime format used is `ISO 8601`
+    - Date: `YYYY-MM-DD`
+    - Datetime: `YYYY-MM-DDTHH:MM:SS-0800`
+    (For simplicity, midnight PST time is the expiration time for all PayByGroups. That way no group is surprised 
+    to have theirs expire before midnight in their local time, and the expiration does not need to be conditioned
+    on the location of one or more users.)
+  - CURRENCY: "#####.##" -- The current format is a simple decimal encoded as a string representing US dollars.
+    - Our future format will include currency indicators:  "###.## USD"
+      A string containing a decimal followed by a space and a currency indicator
+      (e.g. "USD" for US dollars)
+    
+#### API ENDPOINTS
+ - `production` - https://lets.paybygroup.com/api/v1.1/
+ - `test` - https://lets2.paybygroup.com/api/v1.1/
+ - 50.57.115.142 (dev2)
+ - 50.57.106.140 (dev1)
+
+#### MERCHANT\_API\_URL
+- IP address supplied by the merchant
+
+#### MERCHANT\_AUTH
+- 32-character sequence of printable ASCII characters
+
+#### RESPONSE FORMAT
+- All client error (4xx) API calls return a hash with the following parameters along with parameters specific
+   to each API call.
+
+    - `user_message`: An optional English language message suitable for display to the end user.
+    - `developer_message`: A more detailed message affording the developer greater insight into the error.
+    - `more_info`: Additional information, e.g. a link to documentation
+
+
+#### HTTP STATUS CODES
+
+- `200 OK` - returned after successful GET request
+- `201 Created` - returned after successful POST request
+- `400 Bad Request` - malformed API request
+- `401 Unauthorized` - you are not authorized to perform this action
+- `403 Forbidden` - you do not have permission for this action
+- `404 Not Found` - requested API endpoint doesn't exist
+- `500 Internal Server Error` - error on server
+
+
+<br />
+<br />
+<br />
 ### Merchant Initiated APIs
 
-| Resources                                                         | Description
-| ----------------------------------------------------------------- | ------------
-| 1 [/api_v1.1/purchases](#purchase_index)                          | Returns the details for matching selection of purchases
-| 2. [/api_v1.1/purchases/:id/show](#purchase_show)                  | Returns the details for single group purchase
-| 9 [/api_v1.1/purchases/:id/edit](#purchase_edit)                  | Allows merchant to update parameters of a purchase.
-| 3. [/api_v1.1/purchases/:id/action/:action](#purchase_action) &nbsp; &nbsp; &nbsp; &nbsp;  | Executes specified action on specified purchase
-| 6 [/api_v1.1/purchases/:id/invitees](#invitees_index)             | Returns details about selected invitees for a purchase
-| 7 [/api_v1.1/transactions](#transaction_index)                    | Returns the details for matching selection of transactions
+Action    | Resource                                                         | Description
+----------| ----------------------------------------------------------------- | ------------
+GET       | 1 [/purchases](#purchase_index)                          | Returns the details for matching selection of purchases
+GET       | 2. [purchases/:id](#purchase/show)                  | Returns the details for single group purchase
+PUT       | 9 [/purchases/:id](#purchase/edit)                  | Allows merchant to update parameters of a purchase.
+POST      | 3. [/purchases/:id/action/:action](#purchase/action) &nbsp; &nbsp; &nbsp; &nbsp;  | Executes specified action on specified purchase
+GET       | 6 [purchases/:id/invitees](#invitees/index)             | Returns details about selected invitees for a purchase
+GET       | 7 [transactions](#transaction/index)                    | Returns the details for matching selection of transactions
 
+<br />
+<br />
 ### PayByGroup Initiated APIs
 | Resources                                                         | Description
 | ----------------------------------------------------------------- | -------------
@@ -25,114 +93,61 @@ Reference documentation for all merchant-facing, programmatic, PayByGroup interf
 
 
 
-<br><br><br><br>
-<p id="api_conventions"></p>
-## **API Conventions**
-The following describes the approach used by PayByGroup APIs unless explicitly stated otherwise.
-
-#### FORMAT
-  - Data is transferred using post requests with URL encoded parameters.
-  - Responses are encoded as a single JSON encoded hash in the post's body.
-  - The posts format is listed as 'application/json'.
-  - The calling parameters for all API calls must contain the 'api_key' parameter containing the merchant-specific 
-    authorization token obtained from the merchant account's PayByGroup dashboard.
-
-#### ADDRESSING
-  - All API calls must originate from one of the PBG_ADDRESSES below or from the supplied MERCHANT_API_URLs
-  - In production all calls to PBG must be to the 'production' address below.
-  - Staging/testing of new API interactions will typically be done using the ‘test’ or ‘dev2’ addresses below.
-  - API calls that originate from PBG to the merchant follow the same format above, and will 
-    provide the same 'merchant_auth' and 'action' keys.
-
-#### DATATYPES
-  - DATE FORMAT:   "YYYY-MM-DD"
-  - DATETIME FORMAT:   “YYYY-MM-DD HH:MM PST”
-    (This is the rails default ISO-8601 format, pacific coast time.
-     For simplicity, midnight PST time is the expiration time for all PayByGroups. That way no group is surprised to have theirs expire before midnight in their local time, and the expiration does not need to be conditioned on the location of one or more users.)
-  - CURRENCY:      "#####.##" -- The current format is a simple decimal encoded as a string representing US dollars.
-    - Our future format will include currency indicators:  "###.## USD"
-      A string containing a decimal followed by a space and a currency indicator
-      (e.g. "USD" for US dollars)
-    
-#### PBG\_ADDRESSES
- - 184.106.133.37 (production)
- - 50.57.143.251 (test)
- - 50.57.115.142 (dev2)
- - 50.57.106.140 (dev1)
-
-#### MERCHANT\_API\_URL
- - IP address supplied by the merchant
-
-#### MERCHANT\_AUTH
- - 32-character sequence of printable ASCII characters
-
-#### RESPONSE FORMAT
- - All API calls return a hash with the following optional parameters along with parameters specific
-   to each API call.
-
-    {"code":200,
-     "user_message": "An optional English language message suitable for display to the end user."
-     "developer_message": "A more detailed message affording the developer greater insight into the error."
-     "more_info": "Additional information, e.g. a link to documentation"
-    }
-
-
-Codes Used By PayByGroup 
-    200 - OK 
-    400 - Bad Request 
-    404 – Not Found 
-    401 - Unauthorized
-    500 - Internal Server Error
-
-
-
 
 
 
 
 <br><br><br><br>
 <p id="purchase_index"></p>
-## **Purchase Index**
+## Purchase Index
 Interface for querying PayByGroup about existing group purchases.
+
+**URL**: `https://API_ENDPOINT/purchases.json` <br />
+
+**PARAMETERS**
+
+- `api_key` _(string)_  -  [REQUIRED] The Merchant's API key (a secret authorization token).This can be 
+obtained from the merchant's master user account.
+- `merchant_id` _(string)_  -  Constrains purchases to those with this merchant id.
+- `inventory_id`    _(string)_  -  Constrains purchases to those with this inventory id.
+- `purchase_id`     _(string)_  -  Constrains purchases to the one with this purchase id.
+- `created_after`   _(date)_    -  Constrains purchases to those created on or after this.  (inclusive start of date range)
+- `created_before`  _(date)_    -  Constrains purchases to those created before.  (exclusive end of date range)
+- `status`  _(array of string)_  -  Constrains purchases to those w. matching status states.  (See Group Purchase 'status' [link here] for possible values)
 
 #### FUNCTION 
   Provides a RESTful way for merchants to query status and parameters for a filtered subset of PayByGroups over a 
   given date range at any point. 
 
 This API provides three querying mechanisms that can be employed in combination as needed:
+
 1. Group Purchases can be retrieved by purchase\_id (both merchant, and PayByGroup ids)
 2. Group Purchases can be retrieved by conjunction of constraints on Purchase field values (status, etc.)
 3. Group Purchases can be retrieved by selected those that has a specific state change occur within a specified time window.
    This allows the merchant to reliably process all purchases that at a specific point in their life cycle (like completion, or expiration).
 
-#### URL 
-  &nbsp; &nbsp; https://PBG\_IP\_ADDRESS/api/merch\_get\_purch\_info.json
 
-#### REQUEST PARAMETERS
-- **:api\_key**         _(string)_  --  [REQUIRED] The Merchant's API key (a secret authorization token).
-                                        This can be obtained from the merchant's master user account.
-- **:merchant\_id**     _(string)_  –-  Constrains purchases to those with this merchant id.
-- **:inventory\_id**    _(string)_  –-  Constrains purchases to those with this inventory id.
-- **:purchase\_id**     _(string)_  –-  Constrains purchases to the one with this purchase id.
-- **:created\_after**   _(date)_    -–  Constrains purchases to those created on or after this.  (inclusive start of date range)
-- **:created\_before**  _(date)_    -–  Constrains purchases to those created before.  (exclusive end of date range)
-- **:status**  _(array of string)_  -–  Constrains purchases to those w. matching status states.  (See Group Purchase 'status' for possible values)
+<br />
+**RESPONSE**
 
+Returns a hash with `group_purchase` objects mapped to an array of group purchase descriptors for each existing group purchase that matches the joint constraints defined by the request parameters. Each group purchase descriptor in turn is a hash of parameters desribing the current state of that group purchase.
 
-#### RESPONSE PARAMETERS
-Returns a hash with "group_purchases" mapped to an array of group purchase descriptors for each existing group purchase that matches the joint constraints defined by the request parameters.  Each group purchase descriptor in turn is a hash of parameters desribing the current state of that group purchase.
-
-Example results format:
+Example results:
 
     { “group_purchases": 
       [
-        { "purchase_id”:     "ABC_12345",
-          "status":          "pending",
-          “purchase_name”:   “1600 Whitmarsh Avenue”,
-          . . .              . . .
+        { "id”:     "ABC_12345",
+          "status":          "GP_MERCHANT_PAID",
+          “name”:   “1600 Whitmarsh Avenue”,
+          "commit_deadline": "2013-04-19T15:54:05-07:00",
+          "min_people": 2,
+          "max_people": 5,
+          "splitting_method_type": "GroupPurchases::SimpleSplit",
+          "purchase_cost: "1500.00",
+          "merchant_id": "test",
+          "merchant_name": "John Doe",
         },
-        { "purchase_id”:     "ABC_98765",
-          "status":          "payment_completed",
+        { 
           . . .              . . .
         }
       ]
