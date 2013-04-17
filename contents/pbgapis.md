@@ -75,8 +75,8 @@ The following describes the approach used by PayByGroup APIs unless explicitly s
 
 Action    | Resource                                                         | Description
 ----------| ----------------------------------------------------------------- | ------------
-GET       | 1 [/purchases](#purchase_index)                          | Returns the details for matching selection of purchases
-GET       | 2. [purchases/:id](#purchase/show)                  | Returns the details for single group purchase
+GET       | [/purchases](#purchase_index)                          | Returns the details for matching selection of purchases
+GET       | 2. [/purchases/:id](#purchase/show)                  | Returns the details for single group purchase
 PUT       | 9 [/purchases/:id](#purchase/edit)                  | Allows merchant to update parameters of a purchase.
 POST      | 3. [/purchases/:id/action/:action](#purchase/action) &nbsp; &nbsp; &nbsp; &nbsp;  | Executes specified action on specified purchase
 GET       | 6 [purchases/:id/invitees](#invitees/index)             | Returns details about selected invitees for a purchase
@@ -145,7 +145,7 @@ Example results:
           "splitting_method_type": "GroupPurchases::SimpleSplit",
           "purchase_cost: "1500.00",
           "merchant_id": "test",
-          "merchant_name": "John Doe",
+          "merchant_name": "John Doe"
         },
         { 
           . . .              . . .
@@ -159,33 +159,34 @@ Example results:
 <p id="purchase_show"></p>
 ## **Purchase Show**
 
-#### FUNCTION 
-  Interface allowing a merchant to access the current state and parameters for a single group purchase using the purchase_id that the merchant supplied when this group purchase was created.
+Interface allowing a merchant to access the current state and parameters for a single group purchase using the `purchase_id` that the merchant supplied when this group purchase was created.
 
-URL: /api_v1.1/purchases/:id/show
+**URL**: `https://API_ENDPOINT/purchases/:id.json` <br />
 
-      
-#### REQUEST PARAMETERS
-- **:api\_key** _(string)_         --  [REQUIRED]  The Merchant's API key (a secret authorization token).
-- **:purchase\_id**    _(string)_  –-  [REQUIRED]  The id of the purchase whose infomation is to be returned.
+**PARAMETERS**
+
+- `api_key` _(string)_ - [REQUIRED] The Merchant's API key (a secret authorization token).
+- `purchase_id` _(string)_ - [REQUIRED] The ID of the purchase whose infomation is to be returned.
 
 
 #### RESPONSE PARAMETERS
-Returns a hash with "group_purchase" mapped the group purchase descriptor as described in "purchase index" 
-Will return BadRequest, Unauthorized, or NotFound return codes as appropriate.
+Returns a hash with `group_purchase` mapped the group purchase descriptor as described in "purchase index".
 
 Example results format:
 
-    { "code":                200,
-      "group_purchase": 
-        { "purchase_id”:     "ABC_12345",
-          "status":          "pending",
-          “purchase_name”:   “1600 Whitmarsh Avenue”,
-          . . .              . . .
-        },
-        { "purchase_id”:     "ABC_98765",
-          "status":          "payment_completed",
-          . . .              . . .
+    {
+        "group_purchase": 
+        {
+          "id": "ABC_12345",
+          "status": "GP_MERCHANT_PAID",
+          "name": “1600 Whitmarsh Avenue”,
+          "commit_deadline": "2013-04-19T15:54:05-07:00",
+          "min_people": 2,
+          "max_people": 5,
+          "splitting_method_type": "GroupPurchases::SimpleSplit",
+          "purchase_cost: "1500.00",
+          "merchant_id": "test",
+          "merchant_name": "John Doe"
         }
     }
 
