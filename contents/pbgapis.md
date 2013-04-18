@@ -76,7 +76,7 @@ The following describes the approach used by PayByGroup APIs unless explicitly s
 Action    | Resource                                                         | Description
 ----------| ----------------------------------------------------------------- | ------------
 GET       | [/purchases](#purchase_index)                          | Returns the details for matching selection of purchases
-GET       | 2. [/purchases/:id](#purchase/show)                  | Returns the details for single group purchase
+GET       | [/purchases/:id](#purchase_show)                  | Returns the details for single group purchase
 PUT       | 9 [/purchases/:id](#purchase/edit)                  | Allows merchant to update parameters of a purchase.
 POST      | 3. [/purchases/:id/action/:action](#purchase/action) &nbsp; &nbsp; &nbsp; &nbsp;  | Executes specified action on specified purchase
 GET       | 6 [purchases/:id/invitees](#invitees/index)             | Returns details about selected invitees for a purchase
@@ -185,6 +185,7 @@ Example results format:
           "max_people": 5,
           "splitting_method_type": "GroupPurchases::SimpleSplit",
           "purchase_cost: "1500.00",
+          "purchase_id: "Some Purchase",
           "merchant_id": "test",
           "merchant_name": "John Doe"
         }
