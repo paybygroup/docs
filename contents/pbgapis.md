@@ -78,7 +78,7 @@ Action    | Resource                                                         | D
 GET       | [/purchases](#purchase_index)                          | Returns the details for matching selection of purchases
 GET       | [/purchases/:id](#purchase_show)                  | Returns the details for single group purchase
 PUT       | 9 [/purchases/:id](#purchase/edit)                  | Allows merchant to update parameters of a purchase.
-POST      | 3. [/purchases/:id/action/:action](#purchase/action) &nbsp; &nbsp; &nbsp; &nbsp;  | Executes specified action on specified purchase
+POST      | 3. [/purchases/:id/:action](#purchase_action) &nbsp; &nbsp; &nbsp; &nbsp;  | Executes specified action on specified purchase
 GET       | 6 [purchases/:id/invitees](#invitees/index)             | Returns details about selected invitees for a purchase
 GET       | 7 [transactions](#transaction/index)                    | Returns the details for matching selection of transactions
 
@@ -169,8 +169,9 @@ Interface allowing a merchant to access the current state and parameters for a s
 - `purchase_id` _(string)_ - [REQUIRED] The ID of the purchase whose infomation is to be returned.
 
 
-#### RESPONSE PARAMETERS
-Returns a hash with `group_purchase` mapped the group purchase descriptor as described in "purchase index".
+**RESPONSE**
+
+Returns a hash with `group_purchase` mapped the group purchase descriptor as described in [Purchase Index](#purchase_index).
 
 Example results format:
 
@@ -197,34 +198,36 @@ Example results format:
 <p id="purchase_action"></p>
 ## **Purchase Action**
 
-FUNCTION
 Provides API control over actions that can be taken by the merchant on a given PayByGroup.
 
-URL   /api_v1.1/purchases/:id/action/:action
+**URL**: `https://API_ENDPOINT/purchases/:id/action` <br />
 
-#### REQUEST PARAMETERS
-- **:api\_key**       _(string)_   --  [REQUIRED]  The Merchant's API key.
-- **:purchase\_id**   _(string)_   –-  [REQUIRED]  The id of the purchase to be manipulated
-- **:action**         _(string)_   --  [REQUIRED]  The action (listed below) to be performed on the purchase. 
+**PARAMETERS**
+
+- `api_key` _(string)_ - [REQUIRED] The Merchant's API key (a secret authorization token).
+- `purchase_id` _(string)_ - [REQUIRED] The ID of the purchase whose infomation is to be returned.
+- `action` _(string)_   --  [REQUIRED]  The action (listed below) to be performed on the purchase. 
 
 
-AVAILALABLE ACTIONS
-- delete -- Completely removes a purchase from the PayByGroup system.  Use with care, will "break" 
+**AVAILALABLE ACTIONS**
+
+- `delete` - Completely removes a purchase from the PayByGroup system.  Use with care, will "break" 
   email links sent to users relating to this purchase.  (Cancel should generally be used instead of delete for most purchases, unless the merchant knows 'real' users are not involved with this purchase. Available for any purchase where no funds have been collected.
-- cancel -- Permanently cancels this PayByGroup, refunds any transacations, and cancels any 
+- `cancel` - Permanently cancels this PayByGroup, refunds any transacations, and cancels any 
   credit card authorizations currently in place.  Available for any purchase where no user 
   funds are currently captured.
-- collect_funds -- Confirms that the inventory is available to complete the purchase and triggers 
+- `collect_funds` - Confirms that the inventory is available to complete the purchase and triggers 
   transfer of funds to the merchant’s bank account.  Available when the purchase is in the state of org_commit 
   (this state)
-- refund -- Returns all funds collected for this PayByGroup and cancels any existing authorizations 
+- `refund` - Returns all funds collected for this PayByGroup and cancels any existing authorizations 
   on credit cards tied to this PayByGroup.  Available after funds (some) have been collected.
-- set_unavailable -- Notifies the organizer and merchant’s agent that the specific inventory is no 
+- `set_unavailable` - Notifies the organizer and merchant’s agent that the specific inventory is no 
   longer available and prompts them to settle on substitute inventory with the organizer to which 
   to apply this PayByGroup.  Available after a purchase has been claimed by the organizer, and before it has been cancelled or collected.
 
 
-#### RESPONSE FORM
+**RESPONSE**
+
 - Standard response parameters as listed in the conventions section are employed.
 
 
@@ -234,8 +237,8 @@ AVAILALABLE ACTIONS
 
 
 
-<br><br><br><br>
-< id="purchase_edit"></p>
+<br /><br /><br /><br />
+<p id="purchase_edit"></p>
 ## **Purchase Edit**
 
 FUNCTIONS
