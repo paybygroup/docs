@@ -57,5 +57,25 @@ the Gpay1 implementation.
   0 * * * * /bin/bash -l -c 'cd .../app  && RAILS_ENV=production bundle exec astrails-safe config/safe.rb >> log/whenever.log 2>&1'
 
 
-  - xxx
+# Unorganized notes
+
+### Fees:
+
+gp_merchant_paid
+gp_merchant_invoiced
+
+Processing Fees
+
+Convenience Fees --
+:fee_for_invitee       
+:fee_for_organizer
+:fee_implicit_for_purchase
+
+OrgFee   TotalCost
+InvFee   TotalCost
+
+            {key: :fee_for_invitee,                   title: "Fee for invitee",                           req: false, hover: "Input using this format - {percent: '2.5', min_per_slot: '2.50', max_per_slot: '25.00', cost_per_slot: '0.25', cost_per_transaction:'0.35'}"},
+            {key: :fee_for_organizer,                 title: "Fee for organizer",                         req: false, hover: "Input using this format - {percent: '2.5', min_per_slot: '2.50', max_per_slot: '25.00', cost_per_slot: '0.25', cost_per_transaction:'0.35'}"},
+            {key: :fee_implicit_for_purchase,         title: "Fee charged to merchants",                  req: true,  hover: "Input using this format - {percent: '2.5', min_per_slot: '2.50', max_per_slot: '25.00', cost_per_slot: '0.25', cost_per_transaction:'0.35'}"},
+
 

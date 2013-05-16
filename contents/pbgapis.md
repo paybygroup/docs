@@ -77,10 +77,10 @@ Action    | Resource                                                         | D
 ----------| ----------------------------------------------------------------- | ------------
 GET       | [/purchases](#purchase_index)                          | Returns the details for matching selection of purchases
 GET       | [/purchases/:id](#purchase_show)                  | Returns the details for single group purchase
-PUT       | 9 [/purchases/:id](#purchase/edit)                  | Allows merchant to update parameters of a purchase.
+PUT       | 9 [/purchases/:id](#purchase_edit)                  | Allows merchant to update parameters of a purchase.
 POST      | 3. [/purchases/:id/:action](#purchase_action) &nbsp; &nbsp; &nbsp; &nbsp;  | Executes specified action on specified purchase
-GET       | 6 [purchases/:id/invitees](#invitees/index)             | Returns details about selected invitees for a purchase
-GET       | 7 [transactions](#transaction/index)                    | Returns the details for matching selection of transactions
+GET       | 6 [purchases/:id/invitees](#invitees_index)             | Returns details about selected invitees for a purchase
+GET       | 7 [transactions](#transaction_index)                    | Returns the details for matching selection of transactions
 
 <br />
 <br />
@@ -194,6 +194,19 @@ Example results format:
 
 
 
+
+<br /><br /><br /><br />
+<p id="purchase_edit"></p>
+## **Purchase Edit**
+
+FUNCTIONS
+Allows merchant to edit properties of an existing purchase.
+
+
+--- TBD ---
+
+
+
 <br><br><br><br>
 <p id="purchase_action"></p>
 ## **Purchase Action**
@@ -237,16 +250,111 @@ Provides API control over actions that can be taken by the merchant on a given P
 
 
 
-<br /><br /><br /><br />
-<p id="purchase_edit"></p>
-## **Purchase Edit**
+<br><br><br><br>
+<p id="invitees_index"></p>
+## Invitees Index
+Interface for querying PayByGroup about users associated with a existing group purchase.
 
-FUNCTIONS
-Allows merchant to edit properties of an existing purchase.
+**URL**: `https://API_ENDPOINT/purchases/:id/index.json` <br />
+
+**PARAMETERS**
+
+- `api_key` _(string)_  -  [REQUIRED] The Merchant's API key (a secret authorization token).This can be 
+obtained from the merchant's master user account.
+- `:id` _(string)_  -  Group purchase_id contained in base URL
+
+#### FUNCTION 
+  Provides a RESTful way for merchants to query status and parameters the set of all users associated with a group purchase.
+  This includes all explicitily invited users as well as any initees that signed up using one of the 'public link' methods.
+
+<br />
+**RESPONSE**
+  Returns a hash with `inivtees` array containig an info hash for each invitee account.
+
+  Each user info hash contains:
+
+  - `id` -- an integer that uniquely identifies this invitee 'slot'.  This id will be unique across all invitees across 
+    all group purchases managed by PayByGroup
+  - `user_id ` -- an integer that uniquely identifies this user.  This id be shared across group purchases in the case
+    that a since user (with a sigle login) is part of multiple group purchases.
+  - `user_email` -- the current email address for this invitee.
+  - `status` -- the current status of this inivitee.  (IVAN PLEASE EDIT THESE  'ORGANIZER', 'INVITED', 'ACCEPTED', ...)
+
+Example results:
+
+    { “invitees": 
+      [
+        { "id”:          192433,
+          "user_id":     9331,
+          "user_email":  "user.email@address.com",
+          "status":      "INVITED"
+        },
+        { 
+          . . .              . . .
+        }
+      ]
+    }
+
+
+
+<br><br><br><br>
+<p id="transaction_index"></p>
+## Group Purchase Transaction Index
+Interface for querying the payment related transactions assocaited with a specified group purchase.
 
 --- TBD ---
 
 
+**URL**: `https://API_ENDPOINT/purchases.json` <br />
+
+**PARAMETERS**
+
+- `api_key` _(string)_  -  [REQUIRED] The Merchant's API key (a secret authorization token).This can be 
+obtained from the merchant's master user account.
+- `merchant_id` _(string)_  -  Constrains purchases to those with this merchant id.
+- `inventory_id`    _(string)_  -  Constrains purchases to those with this inventory id.
+- `purchase_id`     _(string)_  -  Constrains purchases to the one with this purchase id.
+- `created_after`   _(date)_    -  Constrains purchases to those created on or after this.  (inclusive start of date range)
+- `created_before`  _(date)_    -  Constrains purchases to those created before.  (exclusive end of date range)
+- `status`  _(array of string)_  -  Constrains purchases to those w. matching status states.  (See Group Purchase 'status' [link here] for possible values)
+
+#### FUNCTION 
+  Provides a RESTful way for merchants to query status and parameters for a filtered subset of PayByGroups over a 
+  given date range at any point. 
+
+This API provides three querying mechanisms that can be employed in combination as needed:
+
+1. Group Purchases can be retrieved by purchase\_id (both merchant, and PayByGroup ids)
+2. Group Purchases can be retrieved by conjunction of constraints on Purchase field values (status, etc.)
+3. Group Purchases can be retrieved by selected those that has a specific state change occur within a specified time window.
+   This allows the merchant to reliably process all purchases that at a specific point in their life cycle (like completion, or expiration).
+
+
+<br />
+**RESPONSE**
+
+Returns a hash with `group_purchase` objects mapped to an array of group purchase descriptors for each existing group purchase that matches the joint constraints defined by the request parameters. Each group purchase descriptor in turn is a hash of parameters desribing the current state of that group purchase.
+
+Example results:
+
+    { “group_purchases": 
+      [
+        { "id”:     "ABC_12345",
+          "status":          "GP_MERCHANT_PAID",
+          “name”:   “1600 Whitmarsh Avenue”,
+          "commit_deadline": "2013-04-19T15:54:05-07:00",
+          "min_people": 2,
+          "max_people": 5,
+          "splitting_method_type": "GroupPurchases::SimpleSplit",
+          "purchase_cost: "1500.00",
+          "merchant_id": "test",
+          "merchant_name": "John Doe"
+        },
+        { 
+          . . .              . . .
+        }
+      ]
+    }
 
 
 
