@@ -65,6 +65,7 @@ The following describes the approach used by PayByGroup APIs unless explicitly s
 - `401 Unauthorized` - you are not authorized to perform this action
 - `403 Forbidden` - you do not have permission for this action
 - `404 Not Found` - requested API endpoint doesn't exist
+- `405 Method Not Allowed` - requested action is not allowed in current state
 - `500 Internal Server Error` - error on server
 
 
