@@ -1,4 +1,3 @@
-
 # PayByGroup v1.1 API Reference
 
 Reference documentation for all merchant-facing, programmatic, PayByGroup interfaces. 
@@ -74,23 +73,23 @@ The following describes the approach used by PayByGroup APIs unless explicitly s
 <br />
 ### Merchant Initiated APIs
 
-Action    | Resource                                                         | Description
-----------| ----------------------------------------------------------------- | ------------
-GET       | [/purchases](#purchase_index)                          | Returns the details for matching selection of purchases
+Action    | Resource                                          | Description
+----------| --------------------------------------------------| ----------------------------------------------------------
+GET       | [/purchases](#purchase_index)                     | Returns the details for matching selection of purchases
 GET       | [/purchases/:id](#purchase_show)                  | Returns the details for single group purchase
-PUT       | 9 [/purchases/:id](#purchase_edit)                  | Allows merchant to update parameters of a purchase.
-POST      | 3. [/purchases/:id/:action](#purchase_action) &nbsp; &nbsp; &nbsp; &nbsp;  | Executes specified action on specified purchase
-GET       | 6 [purchases/:id/invitees](#invitees_index)             | Returns details about selected invitees for a purchase
-GET       | 7 [transactions](#transaction_index)                    | Returns the details for matching selection of transactions
+PUT       | [/purchases/:id](#purchase_edit)                  | Allows merchant to update parameters of a purchase.
+POST      | [/purchases/:id/:action](#purchase_action)        | Executes specified action on specified purchase
+GET       | [/purchases/:id/invitees](#invitees_index)        | Returns details about selected invitees for a purchase
+GET       | [/purchases/:id/transactions](#transaction_index) | Returns the details for matching selection of transactions
 
 <br />
 <br />
 ### PayByGroup Initiated APIs
-| Resources                                                         | Description
-| ----------------------------------------------------------------- | -------------
-| 4. [https://MERCHANT_HOST.COM/pbg_api_v1.1/purchases/:id/show](#purchase_pull_info)         | PBG requests details from merchant regarding a specific purchase
-| 8 [https://MERCHANT_HOST.COM/pbg_api_v1.1/purchases/:id/availability](#pbg_get_availablity) &nbsp; &nbsp;  | PBG requests details from merchant regarding inventory availablity for a specific purchase
-| 5 [https://MERCHANT_HOST.COM/pbg_api_v1.1/purchases/update](#pbg_push_purch_info)          | PBG pushes requested purchase updates to merchant
+Action    | Resources                                                                | Description
+----------| -------------------------------------------------------------------------|-------------------------------------------------------------------------------------------
+GET       | [https://{merchant_purchase_url}/:id](#purchase_pull_info)               | PBG requests details from merchant regarding a specific purchase
+POST      | [https://{merchant_purchase_url}/:id](#pbg_push_purch_info)              | PBG pushes requested purchase updates to merchant
+GET       | [https://{merchant_purchase_url}/:id/availability](#pbg_get_availablity) | PBG requests details from merchant regarding inventory availablity for a specific purchase
 
 
 
