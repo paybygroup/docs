@@ -5,8 +5,14 @@
       = @title || 'PayByGroup Merchant Documentation'
     %meta{ :charset => 'utf-8' }
     %script{ :src => 'http://code.jquery.com/jquery.min.js', :type => 'text/javascript' }
+    %link{ :href => '/css/github.css', :rel => 'stylesheet', :type => 'text/css' }
+    %script{ :src => '/javascripts/highlight.pack.js', :type => 'text/javascript' }
     %link{ :href => 'http://fonts.googleapis.com/css?family=Pacifico|Noticia+Text|Bree+Serif', :rel => 'stylesheet', :type => 'text/css' }
     %link{ :href => '/images/favicon.png', :rel => 'icon', :type => 'image/png'}
+    :javascript
+      $(document).ready(function() {
+        $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+      });
     = yield_content :head
   %body
     = yield
