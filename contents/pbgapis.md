@@ -102,7 +102,7 @@ GET       | [https://{merchant_purchase_url}/:id/availability](#pbg_get_availabl
 ## Purchase Index
 Interface for querying PayByGroup about existing group purchases.
 
-**URL**: `https://API_ENDPOINT/purchases.json` <br />
+**URL**: `https://API_ENDPOINT/purchases` <br />
 
 **PARAMETERS**
 
@@ -121,7 +121,7 @@ obtained from the merchant's master user account.
 
 This API provides three querying mechanisms that can be employed in combination as needed:
 
-1. Group Purchases can be retrieved by purchase\_id (both merchant, and PayByGroup ids)
+1. Group Purchases can be retrieved by purchase_id (both merchant, and PayByGroup ids)
 2. Group Purchases can be retrieved by conjunction of constraints on Purchase field values (status, etc.)
 3. Group Purchases can be retrieved by selected those that has a specific state change occur within a specified time window.
    This allows the merchant to reliably process all purchases that at a specific point in their life cycle (like completion, or expiration).
@@ -136,9 +136,9 @@ Example results:
 
     { “group_purchases": 
       [
-        { "id”:     "ABC_12345",
-          "status":          "GP_MERCHANT_PAID",
-          “name”:   “1600 Whitmarsh Avenue”,
+        { "id”: "ABC_12345",
+          "status": "GP_MERCHANT_PAID",
+          “name”: “1600 Whitmarsh Avenue”,
           "commit_deadline": "2013-04-19T15:54:05-07:00",
           "min_people": 2,
           "max_people": 5,
@@ -161,7 +161,7 @@ Example results:
 
 Interface allowing a merchant to access the current state and parameters for a single group purchase using the `purchase_id` that the merchant supplied when this group purchase was created.
 
-**URL**: `https://API_ENDPOINT/purchases/:id.json` <br />
+**URL**: `https://API_ENDPOINT/purchases/:id` <br />
 
 **PARAMETERS**
 
@@ -213,7 +213,7 @@ Allows merchant to edit properties of an existing purchase.
 
 Provides API control over actions that can be taken by the merchant on a given PayByGroup.
 
-**URL**: `https://API_ENDPOINT/purchases/:id/action` <br />
+**URL**: `https://API_ENDPOINT/purchases/:id/:action` <br />
 
 **PARAMETERS**
 
@@ -255,13 +255,13 @@ Provides API control over actions that can be taken by the merchant on a given P
 ## Invitees Index
 Interface for querying PayByGroup about users associated with a existing group purchase.
 
-**URL**: `https://API_ENDPOINT/purchases/:id/index.json` <br />
+**URL**: `https://API_ENDPOINT/purchases/:id/invitees` <br />
 
 **PARAMETERS**
 
 - `api_key` _(string)_  -  [REQUIRED] The Merchant's API key (a secret authorization token).This can be 
 obtained from the merchant's master user account.
-- `:id` _(string)_  -  Group purchase_id contained in base URL
+- `id` _(string)_  -  Group purchase_id contained in base URL
 
 #### FUNCTION 
   Provides a RESTful way for merchants to query status and parameters the set of all users associated with a group purchase.
@@ -269,7 +269,7 @@ obtained from the merchant's master user account.
 
 <br />
 **RESPONSE**
-  Returns a hash with `inivtees` array containig an info hash for each invitee account.
+  Returns a hash with `invitees` array containig an info hash for each invitee account.
 
   Each user info hash contains:
 
@@ -278,7 +278,7 @@ obtained from the merchant's master user account.
   - `user_id ` -- an integer that uniquely identifies this user.  This id be shared across group purchases in the case
     that a since user (with a sigle login) is part of multiple group purchases.
   - `user_email` -- the current email address for this invitee.
-  - `status` -- the current status of this inivitee.  (IVAN PLEASE EDIT THESE  'ORGANIZER', 'INVITED', 'ACCEPTED', ...)
+  - `status` -- the current status of this inivitee. One of the following: 'ORGANIZER', 'INVITED', 'SIGNED_UP', 'ACCEPTED', 'WITHDRAWN'.
 
 Example results:
 
@@ -302,61 +302,46 @@ Example results:
 ## Group Purchase Transaction Index
 Interface for querying the payment related transactions assocaited with a specified group purchase.
 
---- TBD ---
-
-
-**URL**: `https://API_ENDPOINT/purchases.json` <br />
+**URL**: `https://API_ENDPOINT/purchases/:id/transactions` <br />
 
 **PARAMETERS**
 
 - `api_key` _(string)_  -  [REQUIRED] The Merchant's API key (a secret authorization token).This can be 
 obtained from the merchant's master user account.
-- `merchant_id` _(string)_  -  Constrains purchases to those with this merchant id.
-- `inventory_id`    _(string)_  -  Constrains purchases to those with this inventory id.
-- `purchase_id`     _(string)_  -  Constrains purchases to the one with this purchase id.
-- `created_after`   _(date)_    -  Constrains purchases to those created on or after this.  (inclusive start of date range)
-- `created_before`  _(date)_    -  Constrains purchases to those created before.  (exclusive end of date range)
-- `status`  _(array of string)_  -  Constrains purchases to those w. matching status states.  (See Group Purchase 'status' [link here] for possible values)
+- `id` _(string)_  -  Group purchase_id contained in base URL
 
 #### FUNCTION 
-  Provides a RESTful way for merchants to query status and parameters for a filtered subset of PayByGroups over a 
-  given date range at any point. 
-
-This API provides three querying mechanisms that can be employed in combination as needed:
-
-1. Group Purchases can be retrieved by purchase\_id (both merchant, and PayByGroup ids)
-2. Group Purchases can be retrieved by conjunction of constraints on Purchase field values (status, etc.)
-3. Group Purchases can be retrieved by selected those that has a specific state change occur within a specified time window.
-   This allows the merchant to reliably process all purchases that at a specific point in their life cycle (like completion, or expiration).
-
+  Provides a RESTful way for merchants to query the payment related transactions assocaited with a specified group purchase.
 
 <br />
 **RESPONSE**
+  Returns a hash with `transactions` array containig an info hash for each invitee account.
 
-Returns a hash with `group_purchase` objects mapped to an array of group purchase descriptors for each existing group purchase that matches the joint constraints defined by the request parameters. Each group purchase descriptor in turn is a hash of parameters desribing the current state of that group purchase.
+  Each user info hash contains:
 
+  - `id` -- an integer that uniquely identifies this invitee 'slot'.  This id will be unique across all invitees across 
+    all group purchases managed by PayByGroup
+  - `user_id ` -- an integer that uniquely identifies this user.  This id be shared across group purchases in the case
+    that a since user (with a sigle login) is part of multiple group purchases.
+  - `action` -- name of the action recorded in a given transaction. One of the following: "AUTH", "CAPTURE", "REFUND", "PAY_OUT"
+  - `amount` -- amount of money involved.
+  - `created_at` -- time when transaction was created.
+  
 Example results:
 
-    { “group_purchases": 
+    { “transactions": 
       [
-        { "id”:     "ABC_12345",
-          "status":          "GP_MERCHANT_PAID",
-          “name”:   “1600 Whitmarsh Avenue”,
-          "commit_deadline": "2013-04-19T15:54:05-07:00",
-          "min_people": 2,
-          "max_people": 5,
-          "splitting_method_type": "GroupPurchases::SimpleSplit",
-          "purchase_cost: "1500.00",
-          "merchant_id": "test",
-          "merchant_name": "John Doe"
+        { "id”: 165412358,
+          "user_id": 9331,
+          "action": "AUTHORIZE",
+          "amount": "123.45",
+          "created_at": "2013-01-11T19:20:30-08:00"
         },
         { 
           . . .              . . .
         }
       ]
     }
-
-
 
 
 
@@ -374,7 +359,10 @@ Allows PayByGroup to query the merchant for additional parameters about a purcha
 Gather information about a potential purchase from the merchant using the 'purchase_id' passed from the merchant to PBG when the user chooses to create a PayByGroup. Any optional variables may be set universally and will apply to all purchases unless overridden in a response parameter here. 
   
 URL:   
-http://MERCHANT_API_IP_ADDRESS/purchase/pull_info.json?merchant_id=XXX
+`https://{merchant_purchase_url}/:purchase_id`
+
+METHOD:
+`GET`
 
 
 #### REQUEST PARAMETERS
@@ -387,25 +375,13 @@ http://MERCHANT_API_IP_ADDRESS/purchase/pull_info.json?merchant_id=XXX
 - Standard response parameters as listed in the conventions section may be employed by the merchant as 
   appropriate.
 
-
-[GORAN:  look at gp_create to see existing call to this API.  Add list of parameters that are
-whitelisted there into the docs here.]
-
-
-• :purchase_cost currency [merchant] -- Idealized total cost of the purchase (including deposits, taxes, and fees). This is the amount PBG sends to the merchant when the PayByGroup completes, unless merchant collected an organizer deposit
-OR
-• :cost_per_person currency [merchant] -- Total cost of one spot (including deposits, taxes, and fees). This amount, multiplied by the total number of people in the group, is sent to the merchant when the PayByGroup completes
-• :purchase_image_url url [merchant] -- URL of the .png or .jpg image that best represents what is being purchased. It is scaled to be the main image on the dashboard. Image is downloaded from URL at the time of the call and proportionately resized so it is 270 pixels high. If its width is greater than 400 pixels, the left and right edges are proportionately clipped to reduce the height to 270 pixels.
-
-
-• :purchase_name
-• :purchase_description
-• :purchase_link_url
-• :merchant_org_email 
-
-
-
-
+  - purchase_cost currency [merchant] -- Idealized total cost of the purchase (including deposits, taxes, and fees). This is the amount PBG sends to the merchant when the PayByGroup completes, unless merchant collected an organizer deposit.
+  OR
+  - cost_per_person currency [merchant] -- Total cost of one spot (including deposits, taxes, and fees). This amount, multiplied by the total number of people in the group, is sent to the merchant when the PayByGroup completes.
+  - purchase_image_url url [merchant] -- URL of the .png or .jpg image that best represents what is being purchased. It is scaled to be the main image on the dashboard. Image is downloaded from URL at the time of the call and proportionately resized so it is 270 pixels high. If its width is greater than 400 pixels, the left and right edges are proportionately clipped to reduce the height to 270 pixels.
+  - purchase_name string [merchant] -- Name for this particular purchase.
+  - purchase_description text [merchant] -- Detailed information about this purchase.
+  - purchase_link_url url [merchant] -- URL link back to this specific purchase on the merchant site.
 
 
 <br><br><br><br>
@@ -415,12 +391,15 @@ OR
 
 OBJECTIVE
 Enable PayByGroup to push all values for a certain PayByGroup to the merchant anytime one or more values on that PayByGroup changes. The important values that, when updated, trigger the Change Push API are:
-• :status
-• :commit_deadline
-• :num_people
+- :status
+- :commit_deadline
+- :num_people
 
 URL
-http://MERCHANT_IP_ADDRESS?merchant_id=XXX
+`https://{merchant_purchase_url}/:purchase_id`
+
+METHOD
+`POST`
 
 REQUEST PARAMS
 All input and output parameters for each group purchase that has had one of the values specified above changed since the last time the Change Push API was triggered 
@@ -458,17 +437,20 @@ OBJECTIVE
 Allows PBG to query and update the status of the inventory associated with a particular group purchase. This is used to improve the user experience for a fully automated integration so that the user may be notified the inventory is not available before submitting payment.
 
 URL
-http://MERCHANT_IP_ADDRESS?merchant_id=XXX
+`https://{merchant_purchase_url}/:purchase_id/availability`
+
+METHOD
+`GET`
 
 REQUEST PARAMS (both required)
-• :merchant_auth string [PBG] -- A 32-character merchant authorization token
-• :purchase_id string [merchant] – Unique ID for this single purchase supplied by the merchant. Retained by PBG and merchant for at least one calendar year and required for most APIs
+- :merchant_auth string [PBG] -- A 32-character merchant authorization token
+- :purchase_id string [merchant] – Unique ID for this single purchase supplied by the merchant. Retained by PBG and merchant for at least one calendar year and required for most APIs
 
 RESPONSE PARAMS
-• :inventory_state symbol [merchant] – Specifies the current state of the inventory underlying a purchase. Possible values are:
-o :1 -- available – The inventory is still available
-o :2 -- unavailable – The inventory is no longer available
-o :3 -- unknown – The status of the inventory cannot be instantly determined
+- :inventory_state symbol [merchant] -– Specifies the current state of the inventory underlying a purchase. Possible values are:
+  - available –- The inventory is still available
+  - unavailable –- The inventory is no longer available
+  - unknown –- The status of the inventory cannot be instantly determined
 
 Example format:
 {"result":      “available”}
