@@ -87,8 +87,8 @@ GET       | [/purchases/:id/transactions](#transaction_index) | Returns the deta
 ### PayByGroup Initiated APIs
 Action    | Resources                                                                | Description
 ----------| -------------------------------------------------------------------------|-------------------------------------------------------------------------------------------
-GET       | [https://{merchant_purchase_url}/:id](#purchase_pull_info)               | PBG requests details from merchant regarding a specific purchase
-POST      | [https://{merchant_purchase_url}/:id](#pbg_push_purch_info)              | PBG pushes requested purchase updates to merchant
+GET       | [https://{merchant_purchase_url}/:id/pull](#purchase_pull_info)          | PBG requests details from merchant regarding a specific purchase
+POST      | [https://{merchant_purchase_url}/:id/push](#pbg_push_purch_info)         | PBG pushes requested purchase updates to merchant
 GET       | [https://{merchant_purchase_url}/:id/availability](#pbg_get_availablity) | PBG requests details from merchant regarding inventory availablity for a specific purchase
 
 
@@ -278,7 +278,8 @@ obtained from the merchant's master user account.
   - `user_id ` -- an integer that uniquely identifies this user.  This id be shared across group purchases in the case
     that a since user (with a sigle login) is part of multiple group purchases.
   - `user_email` -- the current email address for this invitee.
-  - `status` -- the current status of this inivitee. One of the following: 'ORGANIZER', 'INVITED', 'SIGNED_UP', 'ACCEPTED', 'WITHDRAWN'.
+  - `role` -- the current role of this inivitee. 'ORGANIZER' or 'INVITEE'.
+  - `status` -- the current status of this inivitee. One of the following: 'INVITED', 'ACCEPTED', 'WITHDRAWN'.
 
 Example results:
 
@@ -287,7 +288,8 @@ Example results:
         { "id”:          192433,
           "user_id":     9331,
           "user_email":  "user.email@address.com",
-          "status":      "INVITED"
+          "role":        "ORGANIZER"
+          "status":      "ACCEPTED"
         },
         { 
           . . .              . . .
@@ -323,7 +325,7 @@ obtained from the merchant's master user account.
     all group purchases managed by PayByGroup
   - `user_id ` -- an integer that uniquely identifies this user.  This id be shared across group purchases in the case
     that a since user (with a sigle login) is part of multiple group purchases.
-  - `action` -- name of the action recorded in a given transaction. One of the following: "AUTH", "CAPTURE", "REFUND", "PAY_OUT"
+  - `action` -- name of the action recorded in a given transaction. One of the following: "CAPTURE", "REVERSE", "PAY_OUT"
   - `amount` -- amount of money involved.
   - `created_at` -- time when transaction was created.
   
@@ -333,7 +335,7 @@ Example results:
       [
         { "id”: 165412358,
           "user_id": 9331,
-          "action": "AUTHORIZE",
+          "action": "CAPTURE",
           "amount": "123.45",
           "created_at": "2013-01-11T19:20:30-08:00"
         },
@@ -359,7 +361,7 @@ Allows PayByGroup to query the merchant for additional parameters about a purcha
 Gather information about a potential purchase from the merchant using the 'purchase_id' passed from the merchant to PBG when the user chooses to create a PayByGroup. Any optional variables may be set universally and will apply to all purchases unless overridden in a response parameter here. 
   
 URL:   
-`https://{merchant_purchase_url}/:purchase_id`
+`https://{merchant_purchase_url}/:purchase_id/pull`
 
 METHOD:
 `GET`
@@ -396,7 +398,7 @@ Enable PayByGroup to push all values for a certain PayByGroup to the merchant an
 - :num_people
 
 URL
-`https://{merchant_purchase_url}/:purchase_id`
+`https://{merchant_purchase_url}/:purchase_id/push`
 
 METHOD
 `POST`
