@@ -15,7 +15,7 @@ Below we list the parameters that control this informational Light box.
 
 PayByGroup HTML Elements are activated by a single call to our Javascript library.  
 
-    <script src="https://lets.paybygroup.com/api_v1.1/pbg_bootstrap.js"  
+    <script src="https://lets.paybygroup.com/api/v1/pbg_bootstrap.js"  
             data-merchant-id="XXXXXXXX"></script>
 
 
