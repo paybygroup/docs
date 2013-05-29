@@ -26,7 +26,8 @@ Any HTML element can be used to trigger a PayByGoup information light box by add
 attribute.  Here is an example of a Light box that uses the default descriptive elements  for the Light box.
 
     <div class="pbg_info"
-         data-button-icon="pbg_transparent_logo_small"  data-button-width="200"></div>
+         data-button-icon="pbg_transparent_logo_small"  
+         data-button-width="200"></div>
 
 
 
