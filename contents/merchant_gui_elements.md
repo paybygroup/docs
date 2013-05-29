@@ -25,15 +25,15 @@ This script must be invoked after all PayByGroup elements are loaded (typically 
 Any HTML element can be used to trigger a PayByGoup information light box by adding a 'pbg_info' value to its class
 attribute.  Here is an example of a Light box that uses the default descriptive elements  for the Light box.
 
-    <div class="pbg_info" data-merchant-id="cabo" 
+    <div class="pbg_info"
          data-button-icon="pbg_transparent_logo_small"  data-button-width="200"></div>
 
 
 
 Here is an example of a Light box that overrides the call to action to goto create a PayByGroup:
     <div class="pbg_info" data-button-icon="horizontal" 
-       data-merchant-id="cabo" data-purchase-id="1234" 
-     data-Light box-button-action="to_pbg"></div>
+         data-purchase-id="1234" 
+         data-Light box-button-action="to_pbg"></div>
 
 ---------
 FEDE NOTES:
