@@ -77,7 +77,7 @@ Action    | Resource                                          | Description
 ----------| --------------------------------------------------| ----------------------------------------------------------
 GET       | [/purchases](#purchase_index)                     | Returns the details for matching selection of purchases
 GET       | [/purchases/:id](#purchase_show)                  | Returns the details for single group purchase
-PUT       | [/purchases/:id](#purchase_edit)                  | Allows merchant to update parameters of a purchase.
+POST      | [/purchases/:id](#purchase_edit)                  | Allows merchant to update parameters of a purchase.
 POST      | [/purchases/:id/:action](#purchase_action)        | Executes specified action on specified purchase
 GET       | [/purchases/:id/invitees](#invitees_index)        | Returns details about selected invitees for a purchase
 GET       | [/purchases/:id/transactions](#transaction_index) | Returns the details for matching selection of transactions
@@ -202,9 +202,25 @@ Example results format:
 FUNCTIONS
 Allows merchant to edit properties of an existing purchase.
 
+**URL**: `https://API_ENDPOINT/purchases/:id`
 
---- TBD ---
+**METOD**: `POST`
 
+**PARAMETERS**
+
+- `api_key` _(string)_                - [REQUIRED] The Merchant's API key (a secret authorization token).
+- `purchase_id` _(string)_            - [REQUIRED] The ID of the purchase whose infomation is to be returned.
+- `group_purchase` _(hash)_           - [REQUIRED] The hash containing required changes.
+  - `name` _(name)_
+  - `total_cost` _(currency)_
+  - `purchase_description` _(text)_
+  - `trigger_url` _(url)_
+  - `remote_picture_url` _(url)_
+  - `purchase_deadline` _(date)_
+
+**RESPONSE**
+
+- Standard response parameters as listed in the conventions section are employed.
 
 
 <br><br><br><br>
