@@ -64,7 +64,7 @@ informational Light box.
 
 #### Example HTML Snipits invoking the PBG Light box
 
-The HTML must contain the PBG bootstrap.js:
+The HTML must contain the PBG loader.js:
     <script src="https://lets.paybygroup.com/api/v1/loader.js"  
             data-merchant-id="cabo"></script>
 
