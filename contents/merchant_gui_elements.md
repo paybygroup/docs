@@ -15,7 +15,7 @@ Below we list the parameters that control this informational Light box.
 
 PayByGroup HTML Elements are activated by a single call to our Javascript library.  
 
-    <script src="https://lets.paybygroup.com/api/v1/pbg_bootstrap.js"  
+    <script src="https://lets.paybygroup.com/api/v1/loader.js"  
             data-merchant-id="XXXXXXXX"></script>
 
 
@@ -36,16 +36,6 @@ Here is an example of a Light box that overrides the call to action to goto crea
          data-purchase-id="1234" 
          data-Light box-button-action="to_pbg"></div>
 
----------
-FEDE NOTES:
-
-- We need to ensure our script runs at correct time even if user does not put it in correct spot.
-
-- will load file /assets/javascript/merch/client_js/XXXXX.js
-- will invoke method XXXXXX()    # which should be defined with XXXXXX.js
-   - typically that method will call initialize_pbg_elements()
-
-----------
 
 These parameters are typically supplied directly to PayByGroup as a simple JSON hash
 of values, but each parameter may also be directly encoded (or overridden) by supplying
@@ -75,7 +65,8 @@ informational Light box.
 #### Example HTML Snipits invoking the PBG Light box
 
 The HTML must contain the PBG bootstrap.js:
-    <script src="/merch/integrated/bootstrap.js"></script>
+    <script src="https://lets.paybygroup.com/api/v1/loader.js"  
+            data-merchant-id="cabo"></script>
 
 
 The Light box itself is triggered by any HTML element (e.g. a `DIV`) with a `pbg_info` class.
