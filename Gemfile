@@ -1,10 +1,10 @@
-source :rubygems
-source :gemcutter
+source 'https://rubygems.org'
 
 gem "sinatra"
 gem "sinatra-reloader"
-gem "sinatra-content-for"
+gem 'sinatra-contrib'
 gem "haml"
 gem "sass"
 gem "rdiscount"
 gem "nokogiri"
+gem 'pry'

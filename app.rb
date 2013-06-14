@@ -1,12 +1,13 @@
 # encoding: UTF-8
 
 require 'sinatra'
-require 'sinatra/content_for'
+require 'sinatra/contrib/all'
 require 'sinatra/reloader' if development?
 require 'haml'
 require 'sass'
 require 'rdiscount'
 require 'nokogiri'
+require 'pry'
 
 use Rack::Auth::Basic, "Restricted Area" do |username, password|
   [username, password] == ['merchant', 'docs']
@@ -19,7 +20,8 @@ end
 
 get '/:article' do
   @content = RDiscount.new( File.open("contents/" + params["article"].gsub("-", "_").concat(".md")).read ).to_html
-  doc_title = Nokogiri::HTML::DocumentFragment.parse( @content ).css('h1').inner_html()  
+  doc_title = Nokogiri::HTML::DocumentFragment.parse( @content ).css('h1').first.inner_html()
+  @sidebar = Nokogiri::HTML::DocumentFragment.parse( @content ).css('h4')
   @title = "#{doc_title} | PayByGroup Documentation"
   haml :article
 end

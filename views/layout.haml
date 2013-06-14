@@ -5,14 +5,34 @@
       = @title || 'PayByGroup Merchant Documentation'
     %meta{ :charset => 'utf-8' }
     %script{ :src => 'http://code.jquery.com/jquery.min.js', :type => 'text/javascript' }
+    %link{ :href => '/css/documentation.css', :rel => 'stylesheet', :type => 'text/css' }
     %link{ :href => '/css/github.css', :rel => 'stylesheet', :type => 'text/css' }
     %script{ :src => '/javascripts/highlight.pack.js', :type => 'text/javascript' }
-    %link{ :href => 'http://fonts.googleapis.com/css?family=Pacifico|Noticia+Text|Bree+Serif', :rel => 'stylesheet', :type => 'text/css' }
-    %link{ :href => '/images/favicon.png', :rel => 'icon', :type => 'image/png'}
+    %script{ :src => '/javascripts/sidebar.js', :type => 'text/javascript' }
     :javascript
       $(document).ready(function() {
         $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
       });
     = yield_content :head
   %body
-    = yield
+    #header-wrapper
+      #header
+        %div
+          %a.logo{:href => "/"}
+            %img{:alt => "PayByGroup API", :height => "45", :src => "/images/paybygroup.png"}/
+          %ul.nav
+            %li.api-status
+              %a.good{:href => "https://status.github.com", :title => "API Status: good. Click for details.", :style => "width: 100px;display: block;"}
+                Status: good
+                %img{:src => "/images/status-icon-good.png", :style => "height: 16px; width: 16px;"}/
+            %li
+              %a{:href => "#"} API v1
+            %li
+              %a{:href => "#"} Changes
+            %li
+              %a{:href => "#"} Support
+
+    #wrapper
+      = yield
+    = haml :footer
+
