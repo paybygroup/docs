@@ -22,9 +22,9 @@
             %img{:alt => "PayByGroup API", :height => "45", :src => "/images/paybygroup.png"}/
           %ul.nav
             %li.api-status
-              %a.good{:href => "https://status.github.com", :title => "API Status: good. Click for details.", :style => "width: 100px;display: block;"}
-                Status: good
-                %img{:src => "/images/status-icon-good.png", :style => "height: 16px; width: 16px;"}/
+              %a{:href => "https://lets.paybygroup.com", :title => "PayByGroup Status.", :class => "#{@@status == 'up' ? 'good' : 'major' }"}
+                Status:
+                = @@status
               %li
                 %a{:href => "/"} main
               %li

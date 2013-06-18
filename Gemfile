@@ -8,3 +8,4 @@ gem "sass"
 gem "rdiscount"
 gem "nokogiri"
 gem 'pry'
+gem 'pingdom-client'
