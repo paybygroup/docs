@@ -10,7 +10,7 @@ require 'nokogiri'
 require 'pry'
 require 'pingdom-client'
 
-@@status = get_status
+@@status = 'up'
 @@last_check_status = Time.current
 
 use Rack::Auth::Basic, "Restricted Area" do |username, password|
