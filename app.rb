@@ -31,6 +31,7 @@ def get_status
 end
 
 get '/' do
+  @@status = 'up' unless defined? @@status
   client = Pingdom::Client.new(
     :username => 'webmaster@paybygroup.com', 
     :password => 'newcrew11', 
@@ -40,7 +41,7 @@ get '/' do
 end
 
 get '/:article' do
-
+  @@status = 'up' unless defined? @@status
   @content = RDiscount.new( File.open("contents/" + params["article"].gsub("-", "_").concat(".md")).read ).to_html
   doc_title = Nokogiri::HTML::DocumentFragment.parse( @content ).css('h1').first.inner_html()
   @sidebar = Nokogiri::HTML::DocumentFragment.parse( @content ).css('h4')
