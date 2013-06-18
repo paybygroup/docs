@@ -24,7 +24,8 @@
             %li.api-status
               %a{:href => "https://lets.paybygroup.com", :title => "PayByGroup Status.", :class => "#{(defined? @@status && @@status == 'up' ) ? 'good' : 'major' }"}
                 Status:
-                = @@status if defined? @@status
+                - if defined? @@status
+                  = @@status
               %li
                 %a{:href => "/"} main
               %li
