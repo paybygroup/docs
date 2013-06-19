@@ -11,7 +11,7 @@ merchants with considerable flexibility in configuring how PayByGroup is present
 Below we list the parameters that control this informational Light box.
 
 
-#### Adding PayByGroup on a merchant site
+## Adding PayByGroup on a merchant site
 
 1. Copy and place the code snippet just before the closing `</body>`.
 
@@ -26,7 +26,7 @@ Below we list the parameters that control this informational Light box.
         <div class="pbg_info" data-popup-target="_blank" data-purchase-cost="1337"></div>
 
 
-#### Light box data attributes
+## Light box data attributes
 <dl>
   <dt>step1</dt>
   <dd>Text content for step 1.</dd>
@@ -52,9 +52,5 @@ Below we list the parameters that control this informational Light box.
   <dd>This parameter can be used (in conjunction with design work at PayByGroup) to provide a completely different skin for the look and feel for the informational Light box. By default this paramter maps to the <code>default</code> skin.</dd>
 </dl>
 
-
-
-
-#### Example HTML Snipits invoking the PBG Light box
-
+## Group purchase
 

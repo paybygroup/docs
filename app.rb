@@ -47,7 +47,7 @@ get '/:article' do
   @status = get_status
   @content = GitHub::Markup.render( "contents/" + params["article"].gsub("-", "_").concat(".md"))
   doc_title = Nokogiri::HTML::DocumentFragment.parse( @content ).css('h1').first.inner_html()
-  @sidebar = Nokogiri::HTML::DocumentFragment.parse( @content ).css('h4')
+  @sidebar = Nokogiri::HTML::DocumentFragment.parse( @content ).css('h2')
   @title = "#{doc_title} | PayByGroup Documentation"
   haml :article
 end

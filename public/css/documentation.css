@@ -929,3 +929,19 @@ li.api-status img {
 .full {
   width: 100%;
 }
+
+dt span {
+  color: #4B4B4B;
+}
+
+.content dl ul {
+  margin-top: 0px;
+}
+
+dl ul li{
+  list-style: none;
+}
+
+dl ul li strong {
+  margin-right: 5px;
+}

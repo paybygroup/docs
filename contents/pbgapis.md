@@ -3,7 +3,6 @@
 Reference documentation for all merchant-facing, programmatic, PayByGroup interfaces. 
 (See [API conventions](#api_conventions) for details common across all APIs.)
 
-<br />
 <p id="api_conventions"></p>
 ## API Conventions
 The following describes the approach used by PayByGroup APIs unless explicitly stated otherwise.
