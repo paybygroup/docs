@@ -367,7 +367,7 @@ Example results:
 # MERCHANT PROVIDED API HOOKS
 
 <br><br><br><br>
-< id="purchase_pull_info"></p>
+<p id="purchase_pull_info"></p>
 ## **Purchase Pull** -- 
 
 FUNCTION
@@ -420,28 +420,29 @@ METHOD
 `POST`
 
 #### REQUEST PARAMETERS
-- **:api\_key**       _(string)_   --  [REQUIRED]  The Merchant's API key.
-- **:purchase\_id**   _(string)_   –-  [REQUIRED]  The id of the purchase to be manipulated.
-- **:group\_purchase  _(hash)_     –-  [REQUIRED]  Purchase attributes
+- **:api\_key**         _(string)_   --  [REQUIRED]  The Merchant's API key.
+- **:purchase\_id**     _(string)_   –-  [REQUIRED]  The id of the purchase to be manipulated.
+- **:group\_purchase**  _(hash)_     –-  [REQUIRED]  Purchase attributes.
 
 
 Example format:
-  { "api_key":                   "XXXXXXXXXX",
-    "purchase_id":    "123"
-    "group_purchase": {
-      "id":                 "123",
-      "status":             "ACTIVE",
-      "name":               "Lorem ipsum",
-      "commit_deadline":    "2013-06-19",
-      "min_people":         "1",
-      "max_people":         "10",
-      "splitting_type":     "even_split",
-      "purchase_cost":      "1000.00",
-      "purchase_id":        "98765",
-      "merchant_id":        "EXMR",
-      "merchant_name":      "Example Merchant"
+
+    { "api_key":                   "XXXXXXXXXX",
+      "purchase_id":    "123",
+      "group_purchase": {
+        "id":                 "123",
+        "status":             "ACTIVE",
+        "name":               "Lorem ipsum",
+        "commit_deadline":    "2013-06-19",
+        "min_people":         "1",
+        "max_people":         "10",
+        "splitting_type":     "even_split",
+        "purchase_cost":      "1000.00",
+        "purchase_id":        "98765",
+        "merchant_id":        "EXMR",
+        "merchant_name":      "Example Merchant"
+      }
     }
-  }
 
 #### RESPONSE PARAMS
 Example format:
