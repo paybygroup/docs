@@ -134,21 +134,22 @@ Returns a hash with `group_purchase` objects mapped to an array of group purchas
 
 Example results:
 
-    { "group_purchases": 
+    { "group_purchases":
       [
-        { "id": "ABC_12345",
+        {
+          "id": "ABC_12345",
           "status": "GP_MERCHANT_PAID",
           "name": "1600 Whitmarsh Avenue",
           "commit_deadline": "2013-04-19T15:54:05-07:00",
           "min_people": 2,
           "max_people": 5,
           "splitting_method_type": "GroupPurchases::SimpleSplit",
-          "purchase_cost: "1500.00",
+          "purchase_cost": "1500.00",
           "merchant_id": "test",
           "merchant_name": "John Doe"
         },
-        { 
-          . . .              . . .
+        {
+
         }
       ]
     }
@@ -176,7 +177,7 @@ Returns a hash with `group_purchase` mapped the group purchase descriptor as des
 Example results format:
 
     {
-        "group_purchase": 
+        "group_purchase":
         {
           "id": "ABC_12345",
           "status": "GP_MERCHANT_PAID",
@@ -185,8 +186,8 @@ Example results format:
           "min_people": 2,
           "max_people": 5,
           "splitting_method_type": "GroupPurchases::SimpleSplit",
-          "purchase_cost: "1500.00",
-          "purchase_id: "Some Purchase",
+          "purchase_cost": "1500.00",
+          "purchase_id": "Some Purchase",
           "merchant_id": "test",
           "merchant_name": "John Doe"
         }
@@ -299,16 +300,16 @@ obtained from the merchant's master user account.
 
 Example results:
 
-    { "invitees": 
+    { "invitees":
       [
         { "id":          192433,
           "user_id":     9331,
           "user_email":  "user.email@address.com",
-          "role":        "ORGANIZER"
+          "role":        "ORGANIZER",
           "status":      "ACCEPTED"
         },
-        { 
-          . . .              . . .
+        {
+
         }
       ]
     }
@@ -355,8 +356,8 @@ Example results:
           "amount": "123.45",
           "created_at": "2013-01-11T19:20:30-08:00"
         },
-        { 
-          . . .              . . .
+        {
+          
         }
       ]
     }
@@ -446,7 +447,7 @@ Example format:
 
 #### RESPONSE PARAMS
 Example format:
-{"result":       true}
+    {"result":       true}
 
 
 
@@ -476,4 +477,4 @@ METHOD
   - unknown –- The status of the inventory cannot be instantly determined
 
 Example format:
-{"result":      "available"}
+    {"result":      "available"}

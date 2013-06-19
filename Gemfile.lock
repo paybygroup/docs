@@ -12,6 +12,7 @@ GEM
       multipart-post (~> 1.1.0)
       rack (>= 1.1.0, < 2)
       rack (>= 1.1.0, < 2)
+    github-markup (0.7.5)
     haml (3.1.7)
     i18n (0.5.0)
     method_source (0.8.1)
@@ -55,6 +56,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  github-markup
   haml
   nokogiri
   pingdom-client

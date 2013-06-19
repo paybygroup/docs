@@ -9,3 +9,4 @@ gem "rdiscount"
 gem "nokogiri"
 gem 'pry'
 gem 'pingdom-client'
+gem 'github-markup'

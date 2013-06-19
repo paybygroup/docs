@@ -9,6 +9,7 @@ require 'rdiscount'
 require 'nokogiri'
 require 'pry'
 require 'pingdom-client'
+require 'github/markup'
 
 @@status = 'up'
 @@last_check_status = Time.current
@@ -38,13 +39,13 @@ get '/' do
     :username => 'webmaster@paybygroup.com',
     :password => 'newcrew11',
     :key => 'ynla346encc9zl3ou0rsdxd3d5uzylrx')
-  @index = RDiscount.new( File.open("contents/index.md").read ).to_html
+  @index = GitHub::Markup.render("contents/index.md")
   haml :index
 end
 
 get '/:article' do
   @status = get_status
-  @content = RDiscount.new( File.open("contents/" + params["article"].gsub("-", "_").concat(".md")).read ).to_html
+  @content = GitHub::Markup.render( "contents/" + params["article"].gsub("-", "_").concat(".md"))
   doc_title = Nokogiri::HTML::DocumentFragment.parse( @content ).css('h1').first.inner_html()
   @sidebar = Nokogiri::HTML::DocumentFragment.parse( @content ).css('h4')
   @title = "#{doc_title} | PayByGroup Documentation"

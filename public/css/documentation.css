@@ -132,6 +132,7 @@ dt {
 dd {
   padding-left: 1em;
   margin-bottom: 1em;
+  margin-left: 0;
 }
 
 dd + dd {
@@ -562,7 +563,7 @@ pre {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  background-color: #FAFAFB;
+  background-color: #f8f8ff;
   color: #393939;
   margin: 0px;
 }

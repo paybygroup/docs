@@ -11,46 +11,47 @@ merchants with considerable flexibility in configuring how PayByGroup is present
 Below we list the parameters that control this informational Light box.
 
 
-#### Adding PayByGroup Components on a merchant site
+#### Adding PayByGroup on a merchant site
 
-Copy and place the code snippet just before the closing `</head>`.
+1. Copy and place the code snippet just before the closing `</body>`.
 
-    <script src="https://lets.paybygroup.com/api/v1/loader.js"
-            data-merchant-id="XXXXXXXX"></script>
+        <script src="https://lets.paybygroup.com/api/v1/loader.js"
+                data-merchant-id="XXXXXXXX"></script>
 
-Any HTML element can be used to trigger a PayByGoup information light box by adding a **'pbg_info'** value to its class attribute.  Here is an example of a Light box that uses the default behavior.
+2. Any HTML element can be used to trigger a PayByGoup information light box by adding a **'pbg_info'** value to its class attribute.  Here is an example of a Light box that uses the default behavior.
 
-    <div class="pbg_info"></div>
+        <div class="pbg_info"></div>
 
-Here is an example of a Light box that overrides the call to action to goto create a PayByGroup:
-    <div class="pbg_info" data-button-icon="horizontal"
-         data-purchase-id="1234"
-         data-Light box-button-action="to_pbg"></div>
+    Here is an example of a Light box that overrides the window where the PayByGroup is loaded and the price:
+        <div class="pbg_info" data-popup-target="_blank" data-purchase-cost="1337"></div>
 
 
-These parameters are typically supplied directly to PayByGroup as a simple JSON hash
-of values, but each parameter may also be directly encoded (or overridden) by supplying
-an attribute on the HTML DIV used to launch the Light box.  So for example, data-Light box-button-action='to_pbg'
-is often used to convert the default informational Light box, into a second Light box whose call to action will
-go to PayByGroup purchase creation page, rather than the default button-action which simply closes the
-informational Light box.
-
-#### Light box Parameters
-
-- **step1** -- Text content for step 1.
-- **step2** -- Text content for step 2.
-- **step3** -- Text content for step 3.
-- **button-prefix** -- Text to the left of the Light box's primary call to action.
-- **button-action** -- Action taken by the Light box's primary call to action button.
+#### Light box data attributes
+<dl>
+  <dt>step1</dt>
+  <dd>Text content for step 1.</dd>
+  <dt>step2</dt>
+  <dd>Text content for step 2.</dd>
+  <dt>step3</dt>
+  <dd>Text content for step 3.</dd>
+  <dt>button-prefix</dt>
+  <dd>Text to the left of the Light box's primary call to action.</dd>
+  <dt>button-action</dt>
+  <dd>Action taken by the Light box's primary call to action button.
   By default the action is `close`, the other legal value is 'to_pbg' which causes
-  the informational Light box to progress to the create PayByGroup page.
-- **footer** -- "Details" text shown in the footer of the Light box.
-- **footer-link** -- The textual content of the optional 'more info' link in the footer.
-- **footer-link-url** -- The absolute or relative URL target for the optional footer link
-- **popup-target** -- This parameter will indicate the target window that will load the create PayByGroup page. It follows the same convention as a regular target link attribute. Defaults to `self`.
-- **partial-name** -- This parameter can be used (in conjunction with design work at PayByGroup) to
-  provide a completely different skin for the look and feel for the informational Light box
-  By default this paramter maps to the `'default'` skin.
+  the informational Light box to progress to the create PayByGroup page.</dd>
+  <dt>footer</dt>
+  <dd>"Details" text shown in the footer of the Light box.</dd>
+  <dt>footer-link</dt>
+  <dd>The textual content of the optional 'more info' link in the footer.</dd>
+  <dt>footer-link-url</dt>
+  <dd>The absolute or relative URL target for the optional footer link.</dd>
+  <dt>popup-target</dt>
+  <dd>This parameter will indicate the target window that will load the create PayByGroup page. It follows the same convention as a regular target <a href="http://www.w3schools.com/tags/att_link_target.asp">link attribute</a>. Defaults to <code>self</code>.</dd>
+  <dt>partial-name</dt>
+  <dd>This parameter can be used (in conjunction with design work at PayByGroup) to provide a completely different skin for the look and feel for the informational Light box. By default this paramter maps to the <code>default</code> skin.</dd>
+</dl>
+
 
 
 
