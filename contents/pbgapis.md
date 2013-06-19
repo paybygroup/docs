@@ -134,11 +134,11 @@ Returns a hash with `group_purchase` objects mapped to an array of group purchas
 
 Example results:
 
-    { “group_purchases": 
+    { "group_purchases": 
       [
-        { "id”: "ABC_12345",
+        { "id": "ABC_12345",
           "status": "GP_MERCHANT_PAID",
-          “name”: “1600 Whitmarsh Avenue”,
+          "name": "1600 Whitmarsh Avenue",
           "commit_deadline": "2013-04-19T15:54:05-07:00",
           "min_people": 2,
           "max_people": 5,
@@ -180,7 +180,7 @@ Example results format:
         {
           "id": "ABC_12345",
           "status": "GP_MERCHANT_PAID",
-          "name": “1600 Whitmarsh Avenue”,
+          "name": "1600 Whitmarsh Avenue",
           "commit_deadline": "2013-04-19T15:54:05-07:00",
           "min_people": 2,
           "max_people": 5,
@@ -299,9 +299,9 @@ obtained from the merchant's master user account.
 
 Example results:
 
-    { “invitees": 
+    { "invitees": 
       [
-        { "id”:          192433,
+        { "id":          192433,
           "user_id":     9331,
           "user_email":  "user.email@address.com",
           "role":        "ORGANIZER"
@@ -347,9 +347,9 @@ obtained from the merchant's master user account.
   
 Example results:
 
-    { “transactions": 
+    { "transactions": 
       [
-        { "id”: 165412358,
+        { "id": 165412358,
           "user_id": 9331,
           "action": "CAPTURE",
           "amount": "123.45",
@@ -419,28 +419,34 @@ URL
 METHOD
 `POST`
 
-REQUEST PARAMS
-All input and output parameters for each group purchase that has had one of the values specified above changed since the last time the Change Push API was triggered 
+#### REQUEST PARAMETERS
+- **:api\_key**       _(string)_   --  [REQUIRED]  The Merchant's API key.
+- **:purchase\_id**   _(string)_   –-  [REQUIRED]  The id of the purchase to be manipulated.
+- **:group\_purchase  _(hash)_     –-  [REQUIRED]  Purchase attributes
+
 
 Example format:
-{“merchant_auth”:                   “XXXXXXXXXX”,
-  "events": [   
-    {"purchase_id:    "ABC_12345",
-     "status":      "collected",
-     “purchase_name”:   “1600 Whitmarsh Avenue”
-     …        …
+  { "api_key":                   "XXXXXXXXXX",
+    "purchase_id":    "123"
+    "group_purchase": {
+      "id":                 "123",
+      "status":             "ACTIVE",
+      "name":               "Lorem ipsum",
+      "commit_deadline":    "2013-06-19",
+      "min_people":         "1",
+      "max_people":         "10",
+      "splitting_type":     "even_split",
+      "purchase_cost":      "1000.00",
+      "purchase_id":        "98765",
+      "merchant_id":        "EXMR",
+      "merchant_name":      "Example Merchant"
     }
-    {"purchase_id:    "ABC_98765",
-     "status":      "payment_completed",
-     ...        …
-    }
-  ]
-}
+  }
 
-RESPONSE PARAMS
+#### RESPONSE PARAMS
 Example format:
-{“result”:       true} 
-{“result”:       false}
+  {"result":       true} 
+  {"result":       false}
 
 
 
@@ -460,17 +466,15 @@ URL
 METHOD
 `GET`
 
-REQUEST PARAMS (both required)
-- :merchant_auth string [PBG] -- A 32-character merchant authorization token
-- :purchase_id string [merchant] – Unique ID for this single purchase supplied by the merchant. Retained by PBG and merchant for at least one calendar year and required for most APIs
+#### REQUEST PARAMS
+- **:api\_key**       _(string)_   --  [REQUIRED]  The Merchant's API key.
+- **:purchase\_id**   _(string)_   –-  [REQUIRED]  The id of the purchase to be manipulated.
 
-RESPONSE PARAMS
-- :inventory_state symbol [merchant] -– Specifies the current state of the inventory underlying a purchase. Possible values are:
+#### RESPONSE PARAMS
+- inventory_state name [merchant] -– Specifies the current state of the inventory underlying a purchase. Possible values are:
   - available –- The inventory is still available
   - unavailable –- The inventory is no longer available
   - unknown –- The status of the inventory cannot be instantly determined
 
 Example format:
-{"result":      “available”}
-
-
+{"result":      "available"}
