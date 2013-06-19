@@ -427,8 +427,8 @@ METHOD
 
 Example format:
 
-    { "api_key":                   "XXXXXXXXXX",
-      "purchase_id":    "123",
+    { "api_key":  "XXXXXXXXXX",
+      "purchase_id":  "123",
       "group_purchase": {
         "id":                 "123",
         "status":             "ACTIVE",
@@ -446,9 +446,7 @@ Example format:
 
 #### RESPONSE PARAMS
 Example format:
-  {"result":       true} 
-  {"result":       false}
-
+{"result":       true}
 
 
 
