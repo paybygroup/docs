@@ -6,14 +6,21 @@
   <dd>
     <ul>
       <li><strong>"incomplete"</strong>The PayByGroup was initiated by the merchant but never completed by the organizer.</li>
+      <li><strong>"new"</strong>The PayByGroup has begun and all the user data has been supplied.</li>
+      <li><strong>"input_complete"</strong>The PayByGroup has begun by the organizer but not completed signup for this purchase.</li>
+      <li><strong>"not_claimed"</strong>Orgnaizer should make deposit to hold purchase.</li>
       <li><strong>"active"</strong>The PayByGroup was successfully created but has not yet tipped. The organizer can send payment to the merchant at any point prior to the tipping point being reached by making up the shortfall on their own.</li>
-      <li><strong>"tipped"</strong>PayByGroup has reached its tipping point, and the organizer is able to send payment to the merchant.</li>
-      <li><strong>"pending"</strong>Organizer has submitted payment to merchant and is awaiting confirmation.</li>
-      <li><strong>"collected"</strong>Full payment for the PayByGroup has been collected and is in the process of being paid out to the merchant.</li>
-      <li><strong>"payment_completed"</strong>The PayByGroup tipped, organizer authorized payment, and funds were deposited to the merchant’s bank account.</li>
-      <li><strong>"expired"</strong>The purchase_deadline passed without payment being submitted.</li>
-      <li><strong>"canceled"</strong>The organizer or merchant canceled the PayByGroup.</li>
-      <li><strong>"failed"</strong>Payment was submitted, but full funds could not be collected and paid to the merchant.</li>
+      <li><strong>"invitations_sent"</strong>Active, and initial invitations sent.</li>
+      <li><strong>"payment_failed"</strong>Payments failed to complete.</li>
+      <li><strong>"funds_collected_but_ach_failed"</strong>Funds Collected but ACH Failed.</li>
+      <li><strong>"payment_commited"</strong>Organizer has approved the purchase and it is in the process of authorizing payments.</li>
+      <li><strong>"payment_authorized"</strong>Payment Authorized and waits for merchant approval.</li>
+      <li><strong>"payment_approved"</strong>Payment Authorized and has been approved by the merchant.</li>
+      <li><strong>"payment_collected"</strong>Payment collected from users.</li>
+      <li><strong>"merchant_paid"</strong>Payment to merchant confirmed.</li>
+      <li><strong>"canceled"</strong>PayByGroup canceled by organizer.</li>
+      <li><strong>"refund_requested_by_merchant"</strong>Refund requested by merchant.</li>
+      <li><strong>"refund_completed"</strong>Refund has been completed.</li>
     </ul>
   </dd>
 </dl>
