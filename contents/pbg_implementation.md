@@ -32,7 +32,7 @@ the Gpay1 implementation.
 - GEMS
   - astrails -- uses sec-config to send postgres DB state to S3
 
-- CONFIG 
+- CONFIG
   - config/sec_config.yml  -- contains secret key for S3 access.
                               (add key and secret from from AWS)
   - config/safe.rb         -- contains config of gem  (e.g. where DB and S3 are, etc.)
@@ -67,7 +67,7 @@ gp_merchant_invoiced
 Processing Fees
 
 Convenience Fees --
-:fee_for_invitee       
+:fee_for_invitee
 :fee_for_organizer
 :fee_implicit_for_purchase
 

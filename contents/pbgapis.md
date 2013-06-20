@@ -1,6 +1,6 @@
 # PayByGroup v1.1 API Reference
 
-Reference documentation for all merchant-facing, programmatic, PayByGroup interfaces. 
+Reference documentation for all merchant-facing, programmatic, PayByGroup interfaces.
 (See [API conventions](#api_conventions) for details common across all APIs.)
 
 <p id="api_conventions"></p>
@@ -11,7 +11,7 @@ The following describes the approach used by PayByGroup APIs unless explicitly s
   - Data is transferred as URL encoded parameters.
   - Responses are encoded as a single JSON encoded hash in the HTTP response body.
   - The HTTP response mimetype is `application/json`.
-  - The calling parameters for all API calls must contain the `api_key` parameter containing the merchant-specific 
+  - The calling parameters for all API calls must contain the `api_key` parameter containing the merchant-specific
     authorization token obtained from the merchant account's PayByGroup dashboard.
   - All requests must be `HTTPS`
 
@@ -19,24 +19,24 @@ The following describes the approach used by PayByGroup APIs unless explicitly s
   - All API calls must originate from one of the `PBG_ADDRESSES` below or from the supplied `MERCHANT_API_URL`s.
   - In production all calls to PBG must be to the `production` API endpoint below.
   - Staging/testing of new API interactions will typically be done using the `test` or `dev2` addresses below.
-  - API calls that originate from PBG to the merchant follow the same format above, and will 
+  - API calls that originate from PBG to the merchant follow the same format above, and will
     provide the same `merchant_auth` and `action` keys.
 
 #### DATATYPES
   - Datetime format used is `ISO 8601`
     - Date: `YYYY-MM-DD`
     - Datetime: `YYYY-MM-DDTHH:MM:SS-0800`
-    (For simplicity, midnight PST time is the expiration time for all PayByGroups. That way no group is surprised 
+    (For simplicity, midnight PST time is the expiration time for all PayByGroups. That way no group is surprised
     to have theirs expire before midnight in their local time, and the expiration does not need to be conditioned
     on the location of one or more users.)
   - CURRENCY: "#####.##" -- The current format is a simple decimal encoded as a string representing US dollars.
     - Our future format will include currency indicators:  "###.## USD"
       A string containing a decimal followed by a space and a currency indicator
       (e.g. "USD" for US dollars)
-    
+
 #### API ENDPOINTS
- - `production` - https://lets.paybygroup.com/api/v1.1/
- - `test` - https://lets2.paybygroup.com/api/v1.1/
+ - `production` - https://lets.paybygroup.com/api/v1/
+ - `test` - https://lets2.paybygroup.com/api/v1/
  - 50.57.115.142 (dev2)
  - 50.57.106.140 (dev1)
 
@@ -105,7 +105,7 @@ Interface for querying PayByGroup about existing group purchases.
 
 **PARAMETERS**
 
-- `api_key` _(string)_  -  [REQUIRED] The Merchant's API key (a secret authorization token).This can be 
+- `api_key` _(string)_  -  [REQUIRED] The Merchant's API key (a secret authorization token).This can be
 obtained from the merchant's master user account.
 - `merchant_id` _(string)_  -  Constrains purchases to those with this merchant id.
 - `inventory_id`    _(string)_  -  Constrains purchases to those with this inventory id.
@@ -114,9 +114,9 @@ obtained from the merchant's master user account.
 - `created_before`  _(date)_    -  Constrains purchases to those created before.  (exclusive end of date range)
 - `status`  _(array of string)_  -  Constrains purchases to those w. matching status states.  (See Group Purchase 'status' [link here] for possible values)
 
-#### FUNCTION 
-  Provides a RESTful way for merchants to query status and parameters for a filtered subset of PayByGroups over a 
-  given date range at any point. 
+#### FUNCTION
+  Provides a RESTful way for merchants to query status and parameters for a filtered subset of PayByGroups over a
+  given date range at any point.
 
 This API provides three querying mechanisms that can be employed in combination as needed:
 
@@ -235,23 +235,23 @@ Provides API control over actions that can be taken by the merchant on a given P
 
 - `api_key` _(string)_ - [REQUIRED] The Merchant's API key (a secret authorization token).
 - `purchase_id` _(string)_ - [REQUIRED] The ID of the purchase whose infomation is to be returned.
-- `action` _(string)_   --  [REQUIRED]  The action (listed below) to be performed on the purchase. 
+- `action` _(string)_   --  [REQUIRED]  The action (listed below) to be performed on the purchase.
 
 
 **AVAILALABLE ACTIONS**
 
-- `delete` - Completely removes a purchase from the PayByGroup system.  Use with care, will "break" 
+- `delete` - Completely removes a purchase from the PayByGroup system.  Use with care, will "break"
   email links sent to users relating to this purchase.  (Cancel should generally be used instead of delete for most purchases, unless the merchant knows 'real' users are not involved with this purchase. Available for any purchase where no funds have been collected.
-- `cancel` - Permanently cancels this PayByGroup, refunds any transacations, and cancels any 
-  credit card authorizations currently in place.  Available for any purchase where no user 
+- `cancel` - Permanently cancels this PayByGroup, refunds any transacations, and cancels any
+  credit card authorizations currently in place.  Available for any purchase where no user
   funds are currently captured.
-- `collect_funds` - Confirms that the inventory is available to complete the purchase and triggers 
-  transfer of funds to the merchant’s bank account.  Available when the purchase is in the state of org_commit 
+- `collect_funds` - Confirms that the inventory is available to complete the purchase and triggers
+  transfer of funds to the merchant’s bank account.  Available when the purchase is in the state of org_commit
   (this state)
-- `refund` - Returns all funds collected for this PayByGroup and cancels any existing authorizations 
+- `refund` - Returns all funds collected for this PayByGroup and cancels any existing authorizations
   on credit cards tied to this PayByGroup.  Available after funds (some) have been collected.
-- `set_unavailable` - Notifies the organizer and merchant’s agent that the specific inventory is no 
-  longer available and prompts them to settle on substitute inventory with the organizer to which 
+- `set_unavailable` - Notifies the organizer and merchant’s agent that the specific inventory is no
+  longer available and prompts them to settle on substitute inventory with the organizer to which
   to apply this PayByGroup.  Available after a purchase has been claimed by the organizer, and before it has been cancelled or collected.
 
 
@@ -275,11 +275,11 @@ Interface for querying PayByGroup about users associated with a existing group p
 
 **PARAMETERS**
 
-- `api_key` _(string)_  -  [REQUIRED] The Merchant's API key (a secret authorization token).This can be 
+- `api_key` _(string)_  -  [REQUIRED] The Merchant's API key (a secret authorization token).This can be
 obtained from the merchant's master user account.
 - `id` _(string)_  -  Group purchase_id contained in base URL
 
-#### FUNCTION 
+#### FUNCTION
   Provides a RESTful way for merchants to query status and parameters the set of all users associated with a group purchase.
   This includes all explicitily invited users as well as any initees that signed up using one of the 'public link' methods.
 
@@ -289,7 +289,7 @@ obtained from the merchant's master user account.
 
   Each user info hash contains:
 
-  - `id` -- an integer that uniquely identifies this invitee 'slot'.  This id will be unique across all invitees across 
+  - `id` -- an integer that uniquely identifies this invitee 'slot'.  This id will be unique across all invitees across
     all group purchases managed by PayByGroup
   - `user_id ` -- an integer that uniquely identifies this user.  This id be shared across group purchases in the case
     that a since user (with a sigle login) is part of multiple group purchases.
@@ -324,11 +324,11 @@ Interface for querying the payment related transactions assocaited with a specif
 
 **PARAMETERS**
 
-- `api_key` _(string)_  -  [REQUIRED] The Merchant's API key (a secret authorization token).This can be 
+- `api_key` _(string)_  -  [REQUIRED] The Merchant's API key (a secret authorization token).This can be
 obtained from the merchant's master user account.
 - `id` _(string)_  -  Group purchase_id contained in base URL
 
-#### FUNCTION 
+#### FUNCTION
   Provides a RESTful way for merchants to query the payment related transactions assocaited with a specified group purchase.
 
 <br />
@@ -344,10 +344,10 @@ obtained from the merchant's master user account.
   - `action` -- name of the action recorded in a given transaction. One of the following: "CAPTURE", "REVERSE", "PAY_OUT"
   - `amount` -- amount of money involved.
   - `created_at` -- time when transaction was created.
-  
+
 Example results:
 
-    { "transactions": 
+    { "transactions":
       [
         { "id": 165412358,
           "user_id": 9331,
@@ -368,15 +368,15 @@ Example results:
 
 <br><br><br><br>
 <p id="purchase_pull_info"></p>
-## **Purchase Pull** -- 
+## **Purchase Pull** --
 
 FUNCTION
-Allows PayByGroup to query the merchant for additional parameters about a purchase.  
+Allows PayByGroup to query the merchant for additional parameters about a purchase.
 
 
-Gather information about a potential purchase from the merchant using the 'purchase_id' passed from the merchant to PBG when the user chooses to create a PayByGroup. Any optional variables may be set universally and will apply to all purchases unless overridden in a response parameter here. 
-  
-URL:   
+Gather information about a potential purchase from the merchant using the 'purchase_id' passed from the merchant to PBG when the user chooses to create a PayByGroup. Any optional variables may be set universally and will apply to all purchases unless overridden in a response parameter here.
+
+URL:
 `https://{merchant_purchase_url}/:purchase_id/pull`
 
 METHOD:

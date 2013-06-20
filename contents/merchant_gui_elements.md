@@ -15,7 +15,7 @@ Below we list the parameters that control this informational Light box.
 
 1. Copy and place the code snippet just before the closing `</body>`.
 
-        <script src="https://lets.paybygroup.com/api/v1/loader.js"
+        <script src="https://lets.paybygroup.com/snippet/v1/loader.js"
                 data-merchant-id="XXXXXXXX"></script>
 
 2. Any HTML element can be used to trigger a PayByGoup information light box by adding a **'pbg_info'** value to its class attribute.  Here is an example of a Light box that uses the default behavior.
