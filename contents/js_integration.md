@@ -1,14 +1,14 @@
-# PayByGroup Merchant GUI Elements Documentation
+# PayByGroup JS Integration
 
-This document covers the configuration and usage of the GUI elements PayByGroup provides for adding functionality to merchant interfaces.
+![PayByGroup Light box](/images/popup.png)
 
 
-### PayByGroup Light box
+<!-- ### PayByGroup Light box
 
 The PBG Light box provides the end user with information about the PayByGroup services
 and optionally provides them with the ability to initiate a new PayByGroup.  The light box is designed to provide
 merchants with considerable flexibility in configuring how PayByGroup is presented to their customers.
-Below we list the parameters that control this informational Light box.
+Below we list the parameters that control this informational Light box. -->
 
 
 ## Adding PayByGroup on a Merchant Site
@@ -18,15 +18,35 @@ Below we list the parameters that control this informational Light box.
         <script src="https://lets.paybygroup.com/snippet/v1/loader.js"
                 data-merchant-id="XXXXXXXX"></script>
 
-2. Any HTML element can be used to trigger a PayByGoup information light box by adding a **'pbg_info'** value to its class attribute.  Here is an example of a Light box that uses the default behavior.
+2. Any HTML element can be used to trigger a PayByGoup information light box by adding a **pbg_info** value to its class attribute.  For example.
 
         <div class="pbg_info"></div>
 
-    Here is an example of a Light box that overrides the window where the PayByGroup is loaded and the price:
-        <div class="pbg_info" data-popup-target="_blank" data-purchase-cost="1337"></div>
+    This will generate the following button.
+    ![PayByGroup Button](/images/pbg_orange.png)
 
+3. Make it rain! ![Show me the kwan](/images/dollar.png)
 
-## Light Box Data Attributes
+## Data Attributes
+In order to customize your PayByGroup you need to add the following data attributes to your **pbg_info** element.
+
+<div class="alert tip">
+  <p><strong>Tip</strong>: Remember to add data attributes in the element in the following way <code>data-purchase-name="Hello world"</code> .</p>
+</div>
+<dl>
+  <dt>purchase-image-url</dt>
+  <dd>URL for the PayByGroup image.</dd>
+  <dt>purchase-name</dt>
+  <dd>Name of the product/service for the PayByGroup.</dd>
+  <dt>purchase-id</dt>
+  <dd>Your ID used to identify the purchase for your records.</dd>
+  <dt>purchase-cost</dt>
+  <dd>Total cost of the purchase.</dd>
+</dl>
+<br>
+<hr>
+<br>
+## Advanced Light Box Data Attributes
 <dl>
   <dt>step1</dt>
   <dd>Text content for step 1.</dd>
