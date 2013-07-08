@@ -41,8 +41,13 @@ In order to customize your PayByGroup you need to add the following data attribu
   <dt>purchase-id</dt>
   <dd>Your ID used to identify the purchase for your records.</dd>
   <dt>purchase-cost</dt>
-  <dd>Total cost of the purchase.</dd>
+  <dd>Total cost of the purchase in dollars. i.e. 45.80</dd>
+  <dt>purchase-description</dt>
+  <dd>Description of the purchase.</dd>
 </dl>
+An example of all attributes would be:
+    <div class="pbg_info" data-purchase-image-url="http://example.com/picture.png" data-purchase-name="Awesome Escape"
+    data-purchase-id="ESCAPE-23" data-purchase-cost="500.45" data-purchase-description="Great rental for 3 people with lake view." ></div>
 <br>
 <hr>
 <br>
