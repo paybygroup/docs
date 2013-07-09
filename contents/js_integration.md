@@ -11,7 +11,7 @@ merchants with considerable flexibility in configuring how PayByGroup is present
 Below we list the parameters that control this informational Light box. -->
 
 
-## Adding PayByGroup on a Merchant Site
+## Adding PayByGroup in < 5 minutes
 
 1. Copy and place the code snippet just before the closing `</body>`.
 
@@ -46,8 +46,7 @@ In order to customize your PayByGroup you need to add the following data attribu
   <dd>Description of the purchase.</dd>
 </dl>
 An example of all attributes would be:
-    <div class="pbg_info" data-purchase-image-url="http://example.com/picture.png" data-purchase-name="Awesome Escape"
-    data-purchase-id="ESCAPE-23" data-purchase-cost="500.45" data-purchase-description="Great rental for 3 people with lake view." ></div>
+    <div class="pbg_info" data-purchase-image-url="http://example.com/picture.png" data-purchase-name="Awesome Escape" data-purchase-id="ESCAPE-23" data-purchase-cost="500.45" data-purchase-description="Great rental for 3 people with lake view." ></div>
 <br>
 <hr>
 <br>
