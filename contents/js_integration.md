@@ -62,7 +62,7 @@ An example of all attributes would be:
   <dd>Text to the left of the Light box's primary call to action.</dd>
   <dt>button-action</dt>
   <dd>Action taken by the Light box's primary call to action button.
-  By default the action is `close`, the other legal value is 'to_pbg' which causes
+  By default the action is <code>close</code>, the other legal value is <code>to_pbg</code> which causes
   the informational Light box to progress to the create PayByGroup page.</dd>
   <dt>footer</dt>
   <dd>"Details" text shown in the footer of the Light box.</dd>
