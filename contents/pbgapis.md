@@ -1,85 +1,33 @@
-# PayByGroup v1.1 API Reference
+# PayByGroup v1 API Reference
 
 Reference documentation for all merchant-facing, programmatic, PayByGroup interfaces.
-(See [API conventions](#api_conventions) for details common across all APIs.)
+(See [API conventions](/api_conventions) for details common across all APIs.)
 
-<p id="api_conventions"></p>
-## API Conventions
-The following describes the approach used by PayByGroup APIs unless explicitly stated otherwise.
+### API Endpoint
+    https://lets.paybygroup.com/api/v1/
 
-#### FORMAT
-  - Data is transferred as URL encoded parameters.
-  - Responses are encoded as a single JSON encoded hash in the HTTP response body.
-  - The HTTP response mimetype is `application/json`.
-  - The calling parameters for all API calls must contain the `api_key` parameter containing the merchant-specific
-    authorization token obtained from the merchant account's PayByGroup dashboard.
-  - All requests must be `HTTPS`
+### Authentication
+You need to include the following credentials as parameters.
+<pre class="terminal">
+  $ curl -i "https://lets.paybygroup.com/api/v1/?api_key=XXX"
 
-#### ADDRESSING
-  - All API calls must originate from one of the `PBG_ADDRESSES` below or from the supplied `MERCHANT_API_URL`s.
-  - In production all calls to PBG must be to the `production` API endpoint below.
-  - Staging/testing of new API interactions will typically be done using the `test` or `dev2` addresses below.
-  - API calls that originate from PBG to the merchant follow the same format above, and will
-    provide the same `merchant_auth` and `action` keys.
+  HTTP/1.1 200 OK
+  Content-Type: application/json
 
-#### DATATYPES
-  - Datetime format used is `ISO 8601`
-    - Date: `YYYY-MM-DD`
-    - Datetime: `YYYY-MM-DDTHH:MM:SS-0800`
-    (For simplicity, midnight PST time is the expiration time for all PayByGroups. That way no group is surprised
-    to have theirs expire before midnight in their local time, and the expiration does not need to be conditioned
-    on the location of one or more users.)
-  - CURRENCY: "#####.##" -- The current format is a simple decimal encoded as a string representing US dollars.
-    - Our future format will include currency indicators:  "###.## USD"
-      A string containing a decimal followed by a space and a currency indicator
-      (e.g. "USD" for US dollars)
+  {
+    message: "Welcome to PayByGroup"
+  }
+</pre>
 
-#### API ENDPOINTS
- - `production` - https://lets.paybygroup.com/api/v1/
- - `test` - https://lets2.paybygroup.com/api/v1/
- - 50.57.115.142 (dev2)
- - 50.57.106.140 (dev1)
-
-#### MERCHANT\_API\_URL
-- IP address supplied by the merchant
-
-#### MERCHANT\_AUTH
-- 32-character sequence of printable ASCII characters
-
-#### RESPONSE FORMAT
-- All client error (4xx) API calls return a hash with the following parameters along with parameters specific
-   to each API call.
-
-    - `user_message`: An optional English language message suitable for display to the end user.
-    - `developer_message`: A more detailed message affording the developer greater insight into the error.
-    - `more_info`: Additional information, e.g. a link to documentation
-
-
-#### HTTP STATUS CODES
-
-- `200 OK` - returned after successful GET request
-- `201 Created` - returned after successful POST request
-- `400 Bad Request` - malformed API request
-- `401 Unauthorized` - you are not authorized to perform this action
-- `403 Forbidden` - you do not have permission for this action
-- `404 Not Found` - requested API endpoint doesn't exist
-- `405 Method Not Allowed` - requested action is not allowed in current state
-- `500 Internal Server Error` - error on server
-
-
-<br />
-<br />
-<br />
 ### Merchant Initiated APIs
 
 Action    | Resource                                          | Description
 ----------| --------------------------------------------------| ----------------------------------------------------------
-GET       | [/purchases](#purchase_index)                     | Returns the details for matching selection of purchases
-GET       | [/purchases/:id](#purchase_show)                  | Returns the details for single group purchase
-POST      | [/purchases/:id](#purchase_edit)                  | Allows merchant to update parameters of a purchase.
-POST      | [/purchases/:id/:action](#purchase_action)        | Executes specified action on specified purchase
-GET       | [/purchases/:id/invitees](#invitees_index)        | Returns details about selected invitees for a purchase
-GET       | [/purchases/:id/transactions](#transaction_index) | Returns the details for matching selection of transactions
+GET       | [/group_purchases](#purchase_index)                     | Returns the details for matching selection of purchases
+GET       | [/group_purchases/:id](#purchase_show)                  | Returns the details for single group purchase
+POST      | [/group_purchases/:id/:action](#purchase_action)        | Executes specified action on specified purchase
+GET       | [/group_purchases/:id/invitees](#invitees_index)        | Returns details about selected invitees for a purchase
+GET       | [/group_purchases/:id/transactions](#transaction_index) | Returns the details for matching selection of transactions
 
 <br />
 <br />
@@ -192,35 +140,6 @@ Example results format:
         }
     }
 
-
-
-
-<br /><br /><br /><br />
-<p id="purchase_edit"></p>
-## **Purchase Edit**
-
-FUNCTIONS
-Allows merchant to edit properties of an existing purchase.
-
-**URL**: `https://API_ENDPOINT/purchases/:id`
-
-**METOD**: `POST`
-
-**PARAMETERS**
-
-- `api_key` _(string)_                - [REQUIRED] The Merchant's API key (a secret authorization token).
-- `purchase_id` _(string)_            - [REQUIRED] The ID of the purchase whose infomation is to be returned.
-- `group_purchase` _(hash)_           - [REQUIRED] The hash containing required changes.
-  - `name` _(name)_
-  - `total_cost` _(currency)_
-  - `purchase_description` _(text)_
-  - `trigger_url` _(url)_
-  - `remote_picture_url` _(url)_
-  - `purchase_deadline` _(date)_
-
-**RESPONSE**
-
-- Standard response parameters as listed in the conventions section are employed.
 
 
 <br><br><br><br>

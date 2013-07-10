@@ -51,7 +51,16 @@ An example of all attributes would be:
 <hr>
 <br>
 ## Advanced Light Box Data Attributes
+![PayByGroup Demo Light Box](/images/demo_light_box.png)
 <dl>
+  <dt>button-action</dt>
+  <dd>Action taken by the Light box's primary call to action button.
+  By default the action is <code>close</code>, the other legal value is <code>to_pbg</code> which causes
+  the informational Light box to progress to the create PayByGroup page.</dd>
+  <dt>popup-target</dt>
+  <dd>This parameter will indicate the target window that will load the create PayByGroup page. It follows the same convention as a regular target <a href="http://www.w3schools.com/tags/att_link_target.asp">link attribute</a>. Defaults to <code>self</code>.</dd>
+  <dt>popup-button</dt>
+  <dd>Text for the action button on the Light box.</dd>
   <dt>step1</dt>
   <dd>Text content for step 1.</dd>
   <dt>step2</dt>
@@ -60,18 +69,12 @@ An example of all attributes would be:
   <dd>Text content for step 3.</dd>
   <dt>button-prefix</dt>
   <dd>Text to the left of the Light box's primary call to action.</dd>
-  <dt>button-action</dt>
-  <dd>Action taken by the Light box's primary call to action button.
-  By default the action is <code>close</code>, the other legal value is <code>to_pbg</code> which causes
-  the informational Light box to progress to the create PayByGroup page.</dd>
   <dt>footer</dt>
   <dd>"Details" text shown in the footer of the Light box.</dd>
   <dt>footer-link</dt>
   <dd>The textual content of the optional 'more info' link in the footer.</dd>
   <dt>footer-link-url</dt>
   <dd>The absolute or relative URL target for the optional footer link.</dd>
-  <dt>popup-target</dt>
-  <dd>This parameter will indicate the target window that will load the create PayByGroup page. It follows the same convention as a regular target <a href="http://www.w3schools.com/tags/att_link_target.asp">link attribute</a>. Defaults to <code>self</code>.</dd>
   <dt>partial-name</dt>
   <dd>This parameter can be used (in conjunction with design work at PayByGroup) to provide a completely different skin for the look and feel for the informational Light box. By default this paramter maps to the <code>default</code> skin.</dd>
 </dl>
