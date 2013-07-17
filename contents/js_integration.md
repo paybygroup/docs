@@ -42,11 +42,33 @@ In order to customize your PayByGroup you need to add the following data attribu
   <dd>Your ID used to identify the purchase for your records.</dd>
   <dt>purchase-cost</dt>
   <dd>Total cost of the purchase in dollars. i.e. 45.80</dd>
+  <dt>purchase-link-url</dt>
+  <dd>URL for the page of the product/service.</dd>
   <dt>purchase-description</dt>
   <dd>Description of the purchase.</dd>
 </dl>
 An example of all attributes would be:
-    <div class="pbg_info" data-purchase-image-url="http://example.com/picture.png" data-purchase-name="Awesome Escape" data-purchase-id="ESCAPE-23" data-purchase-cost="500.45" data-purchase-description="Great rental for 3 people with lake view." ></div>
+    <div class="pbg_info"
+      data-purchase-image-url="http://example.com/picture.png"
+      data-purchase-name="Awesome Escape"
+      data-purchase-id="ESCAPE-23"
+      data-purchase-cost="500.45"
+      data-purchase-link-url="http://example.com/property"
+      data-purchase-description="Great rental for 3 people with lake view." >
+    </div>
+<br>
+<hr>
+<br>
+## Other Commonly Used Data Attributes
+These attributes are used on a need basis depending on your product/service.
+<dl>
+  <dt>purchase-start-date</dt>
+  <dd>If your service needs to store a start date. i.e. Reservation start date.</dd>
+  <dt>purchase-start-date</dt>
+  <dd>If your service needs to store an end date. i.e. Reservation end date.</dd>
+  <dt>min-people</dt>
+  <dd>Minimum amount of people for the group purchase.</dd>
+</dl>
 <br>
 <hr>
 <br>

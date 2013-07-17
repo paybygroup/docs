@@ -995,3 +995,55 @@ a[href^='info#']:hover {
 .hide {
   display: none;
 }
+
+.info_unit {
+  width: 65%;
+  margin-left: 40px;
+}
+
+.info_unit  h1{
+  margin: 30px 0 0;
+  font-size: 52px;
+  color: #999;
+  border-bottom: 0;
+  font-family: Helvetica;
+  font-weight: 300;
+}
+
+.info_unit p {
+  color: #6F6F6F;
+  font-size: 14px;
+}
+
+ul#squares {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+ul#squares li {
+  width: 300px;
+  display: inline-block;
+  border: 1px solid #cacaca;
+  padding: 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-clip: padding-box;
+  background-color: #f8f8ff;
+  color: #393939;
+  text-align: center;
+}
+
+ul#squares li:hover {
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+ul#squares li:first-child {
+  margin-right: 40px;
+}
+
+ul#squares li img {
+  width: 100%;
+}
