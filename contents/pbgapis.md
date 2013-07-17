@@ -7,7 +7,7 @@ Reference documentation for all merchant-facing, programmatic, PayByGroup interf
     https://lets.paybygroup.com/api/v1/
 
 ### Authentication
-You need to include the following credentials as parameters.
+You need to include `api_key` to authenticate.
 <pre class="terminal">
   $ curl -i "https://lets.paybygroup.com/api/v1/?api_key=XXX"
 
@@ -26,17 +26,40 @@ Action    | Resource                                          | Description
 GET       | [/group_purchases](#purchase_index)                     | Returns the details for matching selection of purchases
 GET       | [/group_purchases/:id](#purchase_show)                  | Returns the details for single group purchase
 POST      | [/group_purchases/:id/:action](#purchase_action)        | Executes specified action on specified purchase
+DELETE      | [/group_purchases/:id/delete](#purchase_delete)        | Completely removes a purchase from the PayByGroup system [](info#purchase_delete_info)
+DELETE      | [/group_purchases/:id/cancel](#purchase_cancel)        | Permanently cancels this PayByGroup, refunds any transacations, and cancels any credit card authorizations currently in place [](info#purchase_cancel_info)
+POST      | [/group_purchases/:id/collect_funds](#purchase_collect_funds)        | Confirms that the inventory is available to complete the purchase and triggers transfer of funds to the merchant’s bank account [](info#purchase_collect_funds_info)
+POST      | [/group_purchases/:id/refund](#purchase_refund)        | Returns all funds collected for this PayByGroup and cancels any existing authorizations on credit cards tied to this PayByGroup [](info#purchase_refund_info)
+PUT      | [/group_purchases/:id/set_unavailable](#purchase_set_unavailable)        | Notifies the organizer and merchant’s agent that the specific inventory is no longer available and prompts them to settle on substitute inventory with the organizer to which to apply this PayByGroup [](info#purchase_set_unavailable_info)
 GET       | [/group_purchases/:id/invitees](#invitees_index)        | Returns details about selected invitees for a purchase
 GET       | [/group_purchases/:id/transactions](#transaction_index) | Returns the details for matching selection of transactions
+
+<div class="hide">
+  <div class="well" id="purchase_delete_info">
+Use with care, will "break" email links sent to users relating to this purchase.  (Cancel should generally be used instead of delete for most purchases, unless the merchant knows 'real' users are not involved with this purchase. Available for any purchase where no funds have been collected.
+  </div>
+  <div class="well" id="purchase_cancel_info">
+    Available for any purchase where no user funds are currently captured.
+  </div>
+  <div class="well" id="purchase_collect_funds_info">
+    Available when the purchase is in the state of org_commit (this state).
+  </div>
+  <div class="well" id="purchase_refund_info">
+    Available after funds (some) have been collected.
+  </div>
+  <div class="well" id="purchase_set_unavailable_info">
+    Available after a purchase has been claimed by the organizer, and before it has been cancelled or collected.
+  </div>
+</div>
 
 <br />
 <br />
 ### PayByGroup Initiated APIs
 Action    | Resources                                                                | Description
 ----------| -------------------------------------------------------------------------|-------------------------------------------------------------------------------------------
-GET       | [https://{merchant_purchase_url}/:id/pull](#purchase_pull_info)          | PBG requests details from merchant regarding a specific purchase
-POST      | [https://{merchant_purchase_url}/:id/push](#pbg_push_purch_info)         | PBG pushes requested purchase updates to merchant
-GET       | [https://{merchant_purchase_url}/:id/availability](#pbg_get_availablity) | PBG requests details from merchant regarding inventory availablity for a specific purchase
+GET       | [/group_purchases/:id/pull](#purchase_pull_info)          | PBG requests details from merchant regarding a specific purchase
+POST      | [/group_purchases/:id/push](#pbg_push_purch_info)         | PBG pushes requested purchase updates to merchant
+GET       | [/group_purchases/:id/availability](#pbg_get_availablity) | PBG requests details from merchant regarding inventory availablity for a specific purchase
 
 
 
@@ -139,49 +162,6 @@ Example results format:
           "merchant_name": "John Doe"
         }
     }
-
-
-
-<br><br><br><br>
-<p id="purchase_action"></p>
-## **Purchase Action**
-
-Provides API control over actions that can be taken by the merchant on a given PayByGroup.
-
-**URL**: `https://API_ENDPOINT/purchases/:id/:action` <br />
-
-**PARAMETERS**
-
-- `api_key` _(string)_ - [REQUIRED] The Merchant's API key (a secret authorization token).
-- `purchase_id` _(string)_ - [REQUIRED] The ID of the purchase whose infomation is to be returned.
-- `action` _(string)_   --  [REQUIRED]  The action (listed below) to be performed on the purchase.
-
-
-**AVAILALABLE ACTIONS**
-
-- `delete` - Completely removes a purchase from the PayByGroup system.  Use with care, will "break"
-  email links sent to users relating to this purchase.  (Cancel should generally be used instead of delete for most purchases, unless the merchant knows 'real' users are not involved with this purchase. Available for any purchase where no funds have been collected.
-- `cancel` - Permanently cancels this PayByGroup, refunds any transacations, and cancels any
-  credit card authorizations currently in place.  Available for any purchase where no user
-  funds are currently captured.
-- `collect_funds` - Confirms that the inventory is available to complete the purchase and triggers
-  transfer of funds to the merchant’s bank account.  Available when the purchase is in the state of org_commit
-  (this state)
-- `refund` - Returns all funds collected for this PayByGroup and cancels any existing authorizations
-  on credit cards tied to this PayByGroup.  Available after funds (some) have been collected.
-- `set_unavailable` - Notifies the organizer and merchant’s agent that the specific inventory is no
-  longer available and prompts them to settle on substitute inventory with the organizer to which
-  to apply this PayByGroup.  Available after a purchase has been claimed by the organizer, and before it has been cancelled or collected.
-
-
-**RESPONSE**
-
-- Standard response parameters as listed in the conventions section are employed.
-
-
-
-
-
 
 
 

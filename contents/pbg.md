@@ -7,7 +7,7 @@
 
 <br><br>
 
-- [Integration Documentationn](/merchant_gui_elements)  --  PayByGroup merchant integration documentation
+- [Integration Documentation](/merchant_gui_elements)  --  PayByGroup merchant integration documentation
 
 - [API Reference](/pbgapis)  --  API Reference Documentation
 
