@@ -26,5 +26,9 @@ $(function() {
     $(".to_delete").remove()
   })
 
+  $.each($("h4 + pre"), function() {
+    var type_name = $(this).prev();
+    $(this).append(type_name);
+  })
 
 });

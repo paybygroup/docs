@@ -267,7 +267,7 @@ Example results:
 
 <br><br><br><br>
 <p id="purchase_pull_info"></p>
-## **Purchase Pull** --
+## **Purchase Pull**
 
 FUNCTION
 Allows PayByGroup to query the merchant for additional parameters about a purchase.
@@ -303,7 +303,7 @@ METHOD:
 
 <br><br><br><br>
 <p id="pbg_push_purch_info"></p>
-## **PBG Push Purchase Info** --
+## **PBG Push Purchase Info**
 
 
 OBJECTIVE
@@ -352,7 +352,7 @@ Example format:
 
 <br><br><br><br>
 <p id="pbg_get_availablity"></p>
-## **PBG Get Inventory Availability** --
+## **PBG Get Inventory Availability**
 
 
 OBJECTIVE

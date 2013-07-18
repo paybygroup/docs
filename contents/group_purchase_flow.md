@@ -1,0 +1,97 @@
+# Group Purchase Flow
+
+## How to complete a Group Purchase
+For this flow to work, you need to setup your [API configuration](/api_configuration) so we can know to which URL we need to post messages about the group purchases.
+
+### 1. PayByGroup Sends Availability Request
+Once all the users that are part of the group purchase have commited to pay for the group purchase, we will send the following JSON to the `Merchant API URL` using a `POST` request.
+The callback should include a boolean `value` field which indicates if there is availability `true` or not `false`.
+
+#### Request
+     {
+      "action": "availability",
+      "date": "2013-07-16T15:55Z",
+      "purchase_id": "XXX",
+      "group_purchase": {
+        "id":                 "123",
+        "status":             "ACTIVE",
+        "name":               "Lorem ipsum",
+        "commit_deadline":    "2013-06-19",
+        "min_people":         "1",
+        "max_people":         "10",
+        "splitting_type":     "even_split",
+        "purchase_cost":      "1000.00",
+        "purchase_id":        "98765",
+        "merchant_id":        "EXMR",
+        "merchant_name":      "Example Merchant",
+        "purchase_users":     "5"
+        }
+     }
+
+<br>
+
+#### Callback
+    Status: 200 OK
+
+    {
+      "action": "availability",
+      "value": true
+    }
+
+### 2. PayByGroup Authorizes Credit Cards
+We will go through the credit cards and authorize them, if one or more of the cards generate errors we `POST` a message (`availability_release`) to the `Merchant API URL` in order to release availability. After the `availability_release` has been sent the purchase users will fix the problems with their cards and try again to send the `availability`.
+#### Request
+     {
+      "action": "availability_release",
+      "date": "2013-07-16T15:55Z",
+      "purchase_id": "XXX",
+      "group_purchase": {
+        "id":                 "123",
+        "status":             "ACTIVE",
+        "name":               "Lorem ipsum",
+        "commit_deadline":    "2013-06-19",
+        "min_people":         "1",
+        "max_people":         "10",
+        "splitting_type":     "even_split",
+        "purchase_cost":      "1000.00",
+        "purchase_id":        "98765",
+        "merchant_id":        "EXMR",
+        "merchant_name":      "Example Merchant",
+        "purchase_users":     "5"
+        }
+     }
+
+### 3. PayByGroup Sends Confirmation to Capture Payments
+We send a `POST` request to the `Merchant API URL` requesting confirmation for capturing the payment.
+The callback should include a boolean `value` field which indicates if there is availability `true` or not `false`.
+
+#### Request
+     {
+      "action": "confirmation",
+      "date": "2013-07-16T15:55Z",
+      "purchase_id": "XXX",
+      "group_purchase": {
+        "id":                 "123",
+        "status":             "ACTIVE",
+        "name":               "Lorem ipsum",
+        "commit_deadline":    "2013-06-19",
+        "min_people":         "1",
+        "max_people":         "10",
+        "splitting_type":     "even_split",
+        "purchase_cost":      "1000.00",
+        "purchase_id":        "98765",
+        "merchant_id":        "EXMR",
+        "merchant_name":      "Example Merchant",
+        "purchase_users":     "5"
+        }
+     }
+
+<br>
+
+#### Callback
+     Status: 200 OK
+
+     {
+       "action": "confirmation",
+       "value": true
+     }
