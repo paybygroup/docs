@@ -1,6 +1,7 @@
-# How to complete a Group Purchase through API
+# Group Purchase Flow
 
-For this flow to work, you need to send us your **Merchant API URL** so we can know where to post messages about the group purchases.
+## How to complete a Group Purchase
+For this flow to work, you need to setup your [API configuration](/api_configuration) so we can know to which URL we need to post messages about the group purchases.
 
 ## 1. PayByGroup Sends Availability Request
 Once all the users that are part of the group purchase have commited to pay for the group purchase, we will send the following JSON to the `Merchant API URL` using a `POST` request.
