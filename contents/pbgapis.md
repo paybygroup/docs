@@ -25,14 +25,14 @@ Action    | Resource                                          | Description
 ----------| --------------------------------------------------| ----------------------------------------------------------
 GET       | [/group_purchases](#purchase_index)                     | Returns the details for matching selection of purchases
 GET       | [/group_purchases/:purchase_id](#purchase_show)                  | Returns the details for single group purchase
-POST      | [/group_purchases/:id/:action](#purchase_action)        | Executes specified action on specified purchase
-DELETE      | [/group_purchases/:id/delete](#purchase_delete)        | Completely removes a purchase from the PayByGroup system [](info#purchase_delete_info)
-DELETE      | [/group_purchases/:id/cancel](#purchase_cancel)        | Permanently cancels this PayByGroup, refunds any transacations, and cancels any credit card authorizations currently in place [](info#purchase_cancel_info)
 POST      | [/group_purchases/:id/collect_funds](#purchase_collect_funds)        | Confirms that the inventory is available to complete the purchase and triggers transfer of funds to the merchant’s bank account [](info#purchase_collect_funds_info)
-POST      | [/group_purchases/:id/refund](#purchase_refund)        | Returns all funds collected for this PayByGroup and cancels any existing authorizations on credit cards tied to this PayByGroup [](info#purchase_refund_info)
 PUT      | [/group_purchases/:id/set_unavailable](#purchase_set_unavailable)        | Notifies the organizer and merchant’s agent that the specific inventory is no longer available and prompts them to settle on substitute inventory with the organizer to which to apply this PayByGroup [](info#purchase_set_unavailable_info)
+PUT      | [/group_purchases/:id/cancel](#purchase_cancel)        | Permanently cancels this PayByGroup, refunds any transacations, and cancels any credit card authorizations currently in place [](info#purchase_cancel_info)
+POST      | [/group_purchases/:id/refund](#purchase_refund)        | Returns all funds collected for this PayByGroup and cancels any existing authorizations on credit cards tied to this PayByGroup [](info#purchase_refund_info)
 GET       | [/group_purchases/:id/invitees](#invitees_index)        | Returns details about selected invitees for a purchase
 GET       | [/group_purchases/:id/transactions](#transaction_index) | Returns the details for matching selection of transactions
+DELETE      | [/group_purchases/:id/delete](#purchase_delete)        | Completely removes a purchase from the PayByGroup system [](info#purchase_delete_info)
+
 
 <div class="hide">
   <div class="well" id="purchase_delete_info">
@@ -221,27 +221,15 @@ METHOD:
   - purchase_link_url url [merchant] -- URL link back to this specific purchase on the merchant site.
 
 
-<br><br><br><br>
+<br><br><br><br> -->
+<br><br>
 <p id="pbg_push_purch_info"></p>
-## **PBG Push Purchase Info**
+## **Group Purchase Updated**
+When a Group Purchase gets updated we will `POST` to the `Merchant API URL` information of the changes. The attributes that when updated will trigger this action are :
 
+- `status`
+- `commit_deadline`
 
-OBJECTIVE
-Enable PayByGroup to push all values for a certain PayByGroup to the merchant anytime one or more values on that PayByGroup changes. The important values that, when updated, trigger the Change Push API are:
-- :status
-- :commit_deadline
-- :num_people
-
-URL
-`https://{merchant_purchase_url}/:purchase_id/push`
-
-METHOD
-`POST`
-
-#### REQUEST PARAMETERS
-- **:api\_key**         _(string)_   --  [REQUIRED]  The Merchant's API key.
-- **:purchase\_id**     _(string)_   –-  [REQUIRED]  The id of the purchase to be manipulated.
-- **:group\_purchase**  _(hash)_     –-  [REQUIRED]  Purchase attributes.
 
 
 Example format:
@@ -263,37 +251,3 @@ Example format:
       }
     }
 
-#### RESPONSE PARAMS
-Example format:
-    {"result":       true}
-
-
-
-
-<br><br><br><br>
-<p id="pbg_get_availablity"></p>
-## **PBG Get Inventory Availability**
-
-
-OBJECTIVE
-Allows PBG to query and update the status of the inventory associated with a particular group purchase. This is used to improve the user experience for a fully automated integration so that the user may be notified the inventory is not available before submitting payment.
-
-URL
-`https://{merchant_purchase_url}/:purchase_id/availability`
-
-METHOD
-`GET`
-
-#### REQUEST PARAMS
-- **:api\_key**       _(string)_   --  [REQUIRED]  The Merchant's API key.
-- **:purchase\_id**   _(string)_   –-  [REQUIRED]  The id of the purchase to be manipulated.
-
-#### RESPONSE PARAMS
-- inventory_state name [merchant] -– Specifies the current state of the inventory underlying a purchase. Possible values are:
-  - available –- The inventory is still available
-  - unavailable –- The inventory is no longer available
-  - unknown –- The status of the inventory cannot be instantly determined
-
-Example format:
-    {"result":      "available"}
- -->
