@@ -11,6 +11,10 @@ $(function() {
   var currentYear = (new Date).getFullYear();
   $("#year").text( (new Date).getFullYear() );
 
+  $("a[href^='info#']").click(function(e) {
+    e.preventDefault();
+  });
+
   $("a[href^='info#']").hover(function() {
     var name_of_id = $(this).attr('href').replace('info', '');
     var new_element = $(name_of_id).clone();

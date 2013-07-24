@@ -47,7 +47,7 @@ Some or all are set when the PayByGroup is created via the Purchase Create API, 
   <dl>Dashboard summary text supplied by the merchant and describing the details of what is being purchased. Basic HTML elements are allowed for formatting.</dl>
   <dt>purchase_link_url  <code><i>url</i></code></dt>
   <dl>URL linking back to the merchant’s site for the item being purchased or a shopping cart listing all the items being purchased part of this PayByGroup.</dl>
-  <dt>inventory_id  <code><i>string</i></code></dt>
+  <dt>purchase_inventory_id  <code><i>string</i></code></dt>
   <dl>An ID provided by the merchant that represents a piece of inventory that may be involved in multiple purchases, e.g. a house that is booked for different times in separate PayByGroups.</dl>
   <dt>hold_type  <code><i>string</i></code></dt>
   <dl>Must be one of:
@@ -84,6 +84,10 @@ purchase. Possible values are:
   <dl>Idealized total cost of the purchase (including deposits, taxes, and fees). This is the amount PBG sends to the merchant when the PayByGroup completes, unless merchant collected an organizer deposit.</dl>
   <dt>cost_per_person <code><i>currency</i></code></dt>
   <dl>Total cost of one spot (including deposits, taxes, and fees). This amount, multiplied by the total number of people in the group, is sent to the merchant when the PayByGroup completes.</dl>
+  <dt>min-min-people <code><i>integer</i></code></dt>
+  <dl>Minimum users who must be part of the Group Purchase in order for it to complete.</dl>
+  <dt>max-max-people <code><i>integer</i></code></dt>
+  <dl>Maximum users who are allowed to be part of the Group Purchase.</dl>
   <dt>organizer_deposit <code><i>currency</i></code></dt>
   <dl>Amount of the deposit required from the organizer in order to allow for a <strong>"deposit_hold"</strong>. This amount is paid by the organizer at the time the purchase is created.</dl>
   <dt>pbg_collects_org_deposit <code><i>object</i></code></dt>

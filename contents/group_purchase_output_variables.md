@@ -1,6 +1,6 @@
 # Group Purchase Output Variables
 
-## Purchase Status
+## Group Purchase Status
 <dl>
   <dt>status <code><i>string</i></code></dt>
   <dd>
@@ -25,7 +25,7 @@
   </dd>
 </dl>
 
-## Purchase Details
+## Group Purchase Details
 <dl>
   <dt>name <code><i>string</i></code></dt>
   <dl>Name for this particular Group Purchase assigned by the organizer when it was created.</dl>

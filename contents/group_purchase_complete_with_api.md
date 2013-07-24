@@ -1,12 +1,12 @@
-# Group Purchase Flow
+# How to complete a Group Purchase with API
+<div class="alert tip">
+  <p><strong>Before you continue</strong>: For this flow to work, you need to setup your <code>Merchant API URL</code> so we can know to which URL we need to post messages about the group purchases. <a href="mailto:merchants@paybygroup.com?subject=Merchant API URL Setup">Contact Us</a> .</p>
+</div>
 
-## How to complete a Group Purchase
-For this flow to work, you need to setup your [API configuration](/api_configuration) so we can know to which URL we need to post messages about the group purchases.
 
 ## 1. PayByGroup Sends Availability Request
 Once all the users that are part of the group purchase have commited to pay for the group purchase, we will send the following JSON to the `Merchant API URL` using a `POST` request.
-The callback should include a boolean `value` field which indicates if there is availability `true` or not `false`.
-
+The callback should return a status of `200` is true and a `204` if false.
 #### Request
      {
       "action": "availability",
@@ -33,13 +33,9 @@ The callback should include a boolean `value` field which indicates if there is 
 #### Callback
     Status: 200 OK
 
-    {
-      "action": "availability",
-      "value": true
-    }
 
 ## 2. PayByGroup Authorizes Captures Payment
-We will go through the credit cards and capture payments. If the purchase is successful we send a`POST` request indicating so.
+We will go through the credit cards and capture payments. If the purchase is successful we send a `POST` request indicating so.
 #### Request
      {
       "action": "purchase_complete",

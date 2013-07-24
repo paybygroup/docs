@@ -18,7 +18,7 @@ Below we list the parameters that control this informational Light box. -->
         <script src="https://lets.paybygroup.com/snippet/v1/loader.js"
                 data-merchant-id="XXXXXXXX"></script>
 
-2. Any HTML element can be used to trigger a PayByGoup information light box by adding a **pbg_info** value to its class attribute.  For example.
+2. Any HTML element can be used to trigger a PayByGoup information light box by adding a **pbg_info** value to its class attribute. If the HTML element is empty we will populate it with the PayByGroup button. For example.
 
         <div class="pbg_info"></div>
 
@@ -66,8 +66,8 @@ These attributes are used on a need basis depending on your product/service.
   <dd>If your service needs to store a start date. i.e. Reservation start date.</dd>
   <dt>purchase-start-date</dt>
   <dd>If your service needs to store an end date. i.e. Reservation end date.</dd>
-  <dt>min-people</dt>
-  <dd>Minimum amount of people for the group purchase.</dd>
+  <dt>hold-deadline</dt>
+  <dd>Date on which the hold expires and the inventory becomes subject to availability.</dd>
 </dl>
 <br>
 <hr>
@@ -77,8 +77,8 @@ These attributes are used on a need basis depending on your product/service.
 <dl>
   <dt>button-action</dt>
   <dd>Action taken by the Light box's primary call to action button.
-  By default the action is <code>close</code>, the other legal value is <code>to_pbg</code> which causes
-  the informational Light box to progress to the create PayByGroup page.</dd>
+  By default the action is <code>to_pbg</code> which sends the user to create a PayByGroup using the parameters specified for the group purchase.The other legal value is <code>close</code> which causes
+  the informational Light box to close.</dd>
   <dt>popup-target</dt>
   <dd>This parameter will indicate the target window that will load the create PayByGroup page. It follows the same convention as a regular target <a href="http://www.w3schools.com/tags/att_link_target.asp">link attribute</a>. Defaults to <code>self</code>.</dd>
   <dt>popup-button</dt>
@@ -89,16 +89,12 @@ These attributes are used on a need basis depending on your product/service.
   <dd>Text content for step 2.</dd>
   <dt>step3</dt>
   <dd>Text content for step 3.</dd>
-  <dt>button-prefix</dt>
-  <dd>Text to the left of the Light box's primary call to action.</dd>
   <dt>footer</dt>
   <dd>"Details" text shown in the footer of the Light box.</dd>
   <dt>footer-link</dt>
   <dd>The textual content of the optional 'more info' link in the footer.</dd>
   <dt>footer-link-url</dt>
   <dd>The absolute or relative URL target for the optional footer link.</dd>
-  <dt>partial-name</dt>
-  <dd>This parameter can be used (in conjunction with design work at PayByGroup) to provide a completely different skin for the look and feel for the informational Light box. By default this paramter maps to the <code>default</code> skin.</dd>
 </dl>
 
 ## Group Purchase Attributes

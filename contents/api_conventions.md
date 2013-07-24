@@ -30,9 +30,6 @@ The following describes the approach used by PayByGroup APIs unless explicitly s
 
 #### API ENDPOINTS
  - `production` - https://lets.paybygroup.com/api/v1/
- - `test` - https://lets2.paybygroup.com/api/v1/
- - 50.57.115.142 (dev2)
- - 50.57.106.140 (dev1)
 
 #### MERCHANT\_API\_URL
 - IP address supplied by the merchant
