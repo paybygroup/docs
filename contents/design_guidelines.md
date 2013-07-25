@@ -1,3 +1,7 @@
+<html>
+<body>
+
+
 ## Highlighting PayByGroup Features
 
 These guidelines cover the recommended practices for adding the PayByGroup option to your website. They are based on lessons gathered from our clients who have maximized the value of adding PayByGroup to their business and thereby increased their sales conversion rates to very high levels.
@@ -22,16 +26,16 @@ Including a note on your homepage or primary landing page that shows PayByGroup 
 
 Copy Examples:
 
-`Need to split the cost? We now offer PayByGroupXXXPAYBYGROUP IMAGE. Learn more`    
+Need to split the cost? We now offer [PayByGroup](http://paybygroup.com). Learn more   
 
-`Traveling with multiple parties? We now offer PayByGroupXXXPAYBYGROUP IMAGE. Learn more`
+Traveling with multiple parties? We now offer [PayByGroup](http://paybygroup.com). Learn more
 
 
 Visual Examples:
 
-`XXXPAYBYGROUP VISUAL MOCKUP IMAGE 1`
+XXXPAYBYGROUP VISUAL MOCKUP IMAGE 1
 
-`XXXPAYBYGROUP VISUAL MOCKUP IMAGE 2`
+XXXPAYBYGROUP VISUAL MOCKUP IMAGE 2
 
 
 ## Continuous Context
@@ -43,27 +47,29 @@ If they aren’t aware you offer PayByGroup and you don’t inform them at each 
 
 Copy Examples:
 
-`Worried about fronting all the money? Choose PayByGroupXXXPAYBYGROUP IMAGE at checkout. Learn more.`
+Worried about fronting all the money? Choose [PayByGroup](http://paybygroup.com) at checkout. Learn more.
 
-`Traveling with others? Choose PayByGroupXXXPAYBYGROUP IMAGE at checkout. Learn more.`
+Traveling with others? Choose [PayByGroup](http://paybygroup.com) at checkout. Learn more.
 
 Visual Examples:
 
-`XXXPAYBYGROUP VISUAL MOCKUP IMAGE 3`
+XXXPAYBYGROUP VISUAL MOCKUP IMAGE 3
 
 ##Available When They Need It
 
 There are two places where users expect PayByGroup to be available as an option:
+<dl>
+<il>1.  As soon as the total cost is clear </il></p>
 
-<dt>1.  As soon as the total cost is clear </dt>
 
 <dd>a.	This is a significant drop-off point for many businesses </dd>
 
-<dd>b.	PayByGroup is able to get users to continue a purchase they otherwise would have abandoned
+<dd>b.	PayByGroup is able to get users to continue a purchase they otherwise would have abandoned </dd>
 
-<dt>2.	On the checkout page
+<il>2.	On the checkout page </il>
 
-<dd>a.	Because users are accustomed to options with “Pay” in the name to be found on the checkout page, many of them look for the PayByGroup option here 
+<dd>a.	Because users are accustomed to options with “Pay” in the name to be found on the checkout page, many of them look for the PayByGroup option here </dl>
+</dd>
 
 For merchants with a single checkout page, which also serves as the first place the total cost is displayed, these two locations are the same. In those cases, that page is where PayByGroup should go.
 
@@ -74,13 +80,97 @@ The best way to present the option at the checkout step is by asking users wheth
 
 Copy Examples:
 
-`Split the cost with PayByGroupXXXPAYBYGROUP IMAGE. How it works.`
 
-`We now offer PayByGroupXXXPAYBYGROUP IMAGE. View details.`
+Split the cost with [PayByGroup](http://paybygroup.com). How it works.
+
+We now offer [PayByGroup](http://paybygroup.com). View details.
 
 Visual Examples:
 
-`Add XXXPAYBYGROUP VISUAL MOCKUP IMAGE 4`
+Add XXXPAYBYGROUP VISUAL MOCKUP IMAGE 4
 
 ##Logo and Graphic Guidelines
+
+For any implementation of PayByGroup on a merchant site, the following guidelines must be followed whenever the PayByGroup brand name or logo is used.
+
+•	Whenever the word “PayByGroup” is shown, it must be displayed using one of the Hosted PayByGroup Elements listed below. <sup>1</sup> 
+
+•	If you wish to use buttons that precisely match the colors of your site, you must choose other language for the button so as not to use the PayByGroup logo. In this case, the button must include “powered by PayByGroup” below, to the right, or surrounding the button using one of the Hosted PayByGroup Elements listed below. 
+
+•	The copy describing that PayByGroup is available or prompting users to choose PayByGroup on the product or checkout page must come from one of the PayByGroup Copy Elements below. <sup>2</sup>
+
+**Hosted PayByGroup Elements**
+
+•	Small Logo: paybygroup_text_logo_small [PayByGroup](http://paybygroup.com)
+
+•	PayByGroup Button: ![PayByGroup Button](/images/pbg_orange.png) 
+
+•	PayByGroup Button Hover State: pbg_orange_hover  
+
+**PayByGroup Copy Elements**<sup>3</sup>
+<p> <i> Full Example </i> </p>
+
+INSERT IMAGE OF COPY SEGMENTS
+
+<p> <i> Part One - Prompt </i> </p>
+Need to split the cost?
+
+Want to split the cost?
+
+Worried about fronting all the money? 
+
+Traveling with others? 
+
+Going with others?
+
+Traveling with multiple parties? 
+
+Going with multiple parties?
+
+Not ready to book quite yet?
+
+Still getting your group together?
+
+
+<p> <i> Part Two - Explanation </i> </p>
+
+We now offer (PayByGroup).
+
+Choose [PayByGroup](http://paybygroup.com) at checkout.
+
+Split the cost with [PayByGroup](http://paybygroup.com).
+
+Use [PayByGroup](http://paybygroup.com) to buy with friends and family.
+
+Use [PayByGroup](http://paybygroup.com) to book with friends and family.
+
+Start a [PayByGroup](http://paybygroup.com) to get your group together.
+
+Don’t front the whole cost alone. Choose [PayByGroup](http://paybygroup.com).
+
+Find out who’s in and split this cost with friends and family using [PayByGroup](http://paybygroup.com).
+
+Split the cost with friends and family using [PayByGroup](http://paybygroup.com).
+
+Quickly and easily get everyone on board using [PayByGroup](http://paybygroup.com).
+
+
+<p> <i> Part Three - Call to Action </i> </p>
+
+Learn more
+
+View details
+
+More info
+
+How it works
+
+<sup>1</sup>  The only exception to this guideline is when a checkout page’s technical constraints require a text-only use of “PayByGroup” for the user to choose it as their option
+
+<sup>2</sup>  If you wish to use different copy, you may request approval and suggest it be added to the list of allowable copy by emailing merchants@paybygroup.com 
+
+<sup>3</sup>  TIP: You may substitute your merchant name – e.g. “Bob’s Vacation Rentals now offers PayByGroup” – for “We” in any of the PayByGroup Copy Elements
+
+</body>
+</html>
 
