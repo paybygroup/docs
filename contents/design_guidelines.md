@@ -1,7 +1,4 @@
-<html>
-<body>
-
-
+# Design Guidelines 
 ## Highlighting PayByGroup Features
 
 These guidelines cover the recommended practices for adding the PayByGroup option to your website. They are based on lessons gathered from our clients who have maximized the value of adding PayByGroup to their business and thereby increased their sales conversion rates to very high levels.
@@ -170,7 +167,3 @@ How it works
 <sup>2</sup>  If you wish to use different copy, you may request approval and suggest it be added to the list of allowable copy by emailing merchants@paybygroup.com 
 
 <sup>3</sup>  TIP: You may substitute your merchant name – e.g. “Bob’s Vacation Rentals now offers PayByGroup” – for “We” in any of the PayByGroup Copy Elements
-
-</body>
-</html>
-
