@@ -6,7 +6,7 @@
 
 ## 1. PayByGroup Sends Availability Request
 Once all the users that are part of the group purchase have commited to pay for the group purchase, we will send the following JSON to the `Merchant API URL` using a `POST` request.
-The callback should return a status of `200` is true and a `204` if false.
+The callback should return a status of `200` if true and a `204` if false.
 #### Request
      {
       "action": "availability",
