@@ -21,7 +21,8 @@ No other data attributes need to be defined for the informational units, though 
 
 Here is an example of an informational unit:
 
-IMAGE
+
+![Info Unit](/images/info_unit.png)
 
 
 #### Part 2 - Use PayByGroup Option
@@ -34,5 +35,6 @@ Place the option to use PayByGroup at the earliest point on your site where the 
 
 Here is an example of the option to use PayByGroup where the button has been styled to match the merchant's existing site:
 
-IMAGE
+![Use PayByGroup](/images/use_paybygroup.png)
+
 
