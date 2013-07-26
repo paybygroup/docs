@@ -6,15 +6,14 @@ The following describes the approach used by PayByGroup APIs unless explicitly s
   - Responses are encoded as a single JSON encoded hash in the HTTP response body.
   - The HTTP response mimetype is `application/json`.
   - The calling parameters for all API calls must contain the `api_key` parameter containing the merchant-specific
-    authorization token obtained from the merchant account's PayByGroup dashboard.
+    authorization token obtained from the PayByGroup dashboard of master user account for a given merchant.
   - All requests must be `HTTPS`
 
 #### ADDRESSING
   - All API calls must originate from one of the `PBG_ADDRESSES` below or from the supplied `MERCHANT_API_URL`s.
   - In production all calls to PBG must be to the `production` API endpoint below.
-  - Staging/testing of new API interactions will typically be done using the `test` or `dev2` addresses below.
-  - API calls that originate from PBG to the merchant follow the same format above, and will
-    provide the same `merchant_auth` and `action` keys.
+<!--  - Staging/testing of new API interactions will typically be done using the `test` or `dev2` addresses below. -->
+  - API calls that originate from PBG to the merchant follow the same format above.
 
 #### DATATYPES
   - Datetime format used is `ISO 8601`
