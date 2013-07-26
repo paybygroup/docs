@@ -1,4 +1,3 @@
-
 <div class="info_unit">
   <h1>Connect with <span style="color:black;">us</span> </h1>
   <p>By integrating with us you will be able to create your <span style="color:black;">group purchases</span> tied in to your system.</p>
@@ -19,8 +18,13 @@
       </li>
   </ul>
 
-### Reference
+### Functionality
 >- [Automate Completion of Group Purchase with API](/group_purchase_complete_with_api)  --  How to complete a group purchase through the API
+
+### Reference
 >- [Merchant Input Variables](/merchant_input_variables)  --  Attributes for a merchant to customize their group purchase
 >- [Group Purchase Output Variables](/group_purchase_output_variables)  --  Attributes to query from a group purchase
 >- [API Conventions](/api_conventions)  --  Conventions used in our API
+
+### Design
+>- [Design Guidelines](/design_guidelines)  --  Rules and recommendations for displaying PayByGroup on your site
