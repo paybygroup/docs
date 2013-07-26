@@ -9,7 +9,7 @@ Add an informational unit using any of the copy and design examples listed in th
 •   Search results page
 •   Product listing page
 
-You may customize the look and feel to match your site as long as the IMAGELINKPayByGroup LogoIMAGELINK is included whenever the term "PayByGroup" is used.
+You may customize the look and feel to match your site as long as the IMAGELINKPayByGroup LogoIMAGELINK is included whenever the term _PayByGroup_ is used.
 
 When clicked, the informational unit displays the lightbox explaining how PayByGroup works, and the only option on the lightbox is to close it and keep browsing.
 

@@ -1047,3 +1047,10 @@ ul#squares li:first-child {
 ul#squares li img {
   width: 100%;
 }
+
+
+em {
+    color: #e54e19;
+  font-style: normal;
+  font-size: 1.2em;
+}
