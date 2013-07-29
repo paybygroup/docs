@@ -4,7 +4,7 @@ For this flow to work, you need to send us your **Merchant API URL** so we can k
 
 ## 1. PayByGroup Sends Availability Request
 Once all the users that are part of the group purchase have commited to pay for the group purchase, we will send the following JSON to the `Merchant API URL` using a `POST` request.
-The callback should include a boolean `value` field which indicates if there is availability `true` or not `false`.
+The callback should be only a `Status` response, a `202 Accepted` if availability is `true` and a `204 No Content` if `false`.
 
 #### Request
      {
@@ -30,12 +30,8 @@ The callback should include a boolean `value` field which indicates if there is 
 <br>
 
 #### Callback
-    Status: 200 OK
+    Status: 202 Accepted
 
-    {
-      "action": "availability",
-      "value": true
-    }
 
 ## 2. PayByGroup Authorizes Captures Payment
 We will go through the credit cards and capture payments. If the purchase is successful we send a`POST` request indicating so.

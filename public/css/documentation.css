@@ -1021,7 +1021,7 @@ ul#squares {
 }
 
 ul#squares li {
-  width: 300px;
+  width: 30%;
   display: inline-block;
   border: 1px solid #cacaca;
   padding: 10px;
@@ -1041,7 +1041,7 @@ ul#squares li:hover {
 }
 
 ul#squares li:first-child {
-  margin-right: 40px;
+  /*margin-right: 40px;*/
 }
 
 ul#squares li img {

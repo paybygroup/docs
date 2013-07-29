@@ -88,14 +88,14 @@ Interface for querying PayByGroup about existing group purchases.
 
 **PARAMETERS**
 
-- `api_key` _(string)_  -  [REQUIRED] The Merchant's API key (a secret authorization token).This can be
+- `api_key` __(string)__  -  [REQUIRED] The Merchant's API key (a secret authorization token).This can be
 obtained from the merchant's master user account.
-- `merchant_id` _(string)_  -  Constrains purchases to those with this merchant id.
-- `inventory_id`    _(string)_  -  Constrains purchases to those with this inventory id.
-- `purchase_id`     _(string)_  -  Constrains purchases to the one with this purchase id.
-- `created_after`   _(date)_    -  Constrains purchases to those created on or after this.  (inclusive start of date range)
-- `created_before`  _(date)_    -  Constrains purchases to those created before.  (exclusive end of date range)
-- `status`  _(array of string)_  -  Constrains purchases to those w. matching status states.  (See [Group Purchase Status](/group_purchase_output_variables) for possible values)
+- `merchant_id` __(string)__  -  Constrains purchases to those with this merchant id.
+- `inventory_id`    __(string)__  -  Constrains purchases to those with this inventory id.
+- `purchase_id`     __(string)__  -  Constrains purchases to the one with this purchase id.
+- `created_after`   __(date)__    -  Constrains purchases to those created on or after this.  (inclusive start of date range)
+- `created_before`  __(date)__    -  Constrains purchases to those created before.  (exclusive end of date range)
+- `status`  __(array of string)__  -  Constrains purchases to those w. matching status states.  (See [Group Purchase Status](/group_purchase_output_variables) for possible values)
 
 
 
