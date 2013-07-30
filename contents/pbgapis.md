@@ -110,8 +110,7 @@ Call for querying PayByGroup about users associated with an existing group purch
 
   Each user info hash contains:
 
-  - `id` -- an integer that uniquely identifies this invitee 'slot'.  This id will be unique across all invitees across
-    all group purchases.
+  - `id` -- an integer that uniquely identifies this invitee 'slot'.  This id will be unique across all invitees across all group purchases.
   - `user_id ` -- an integer that uniquely identifies this user. This will be unique to all users using PayByGroup.
   - `user_email` -- the current email address for this user.
   - `role` -- the current role of this invitee. 'ORGANIZER' or 'INVITEE'.
@@ -145,8 +144,7 @@ Call for querying the payment transactions associated with a specified group pur
 
   Each transaction contains:
 
-  - `id` -- an integer that uniquely identifies this invitee 'slot'.  This id will be unique across all invitees across 
-    all group purchases managed by PayByGroup.
+  - `id` -- an integer that uniquely identifies this invitee 'slot'.  This id will be unique across all invitees across all group purchases.
   - `user_id ` -- an integer that uniquely identifies this user. This will be unique to all users using PayByGroup.
   - `action` -- name of the action recorded in a given transaction. One of the following: "CAPTURE", "REVERSE", "PAY_OUT"
   - `amount` -- amount of money involved.
@@ -225,7 +223,7 @@ METHOD:
 <br><br>
 <p id="pbg_push_purch_info"></p>
 ## **Group Purchase Updated**
-When a Group Purchase gets updated we will `POST` to the `Merchant API URL` information of the changes. The attributes that when updated will trigger this action are :
+When a Group Purchase gets updated we will `POST` to the `Merchant API URL` the group purchase record with all of the updated details. The attributes that, when updated, will trigger this action are:
 
 - `status`
 - `commit_deadline`
