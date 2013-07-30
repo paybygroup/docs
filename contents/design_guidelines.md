@@ -76,17 +76,18 @@ For other merchants that have a quote page or a widget that displays the total c
 The best way to present the option at the checkout step is by asking users whether they want to split the cost OR complete the booking themselves. For the users that need to get others on board, presenting an either/or option makes it seem like a trusted option offered by the merchant and not an unknown, risky option. 
 
 
-Copy Examples:
+#### Copy Examples:
 
+Split the cost with *PayByGroup*. How it works.
 
-Split the cost with [PayByGroup](http://paybygroup.com). How it works.
+We now offer PAYBYGROUP LOGO. View details.
 
-We now offer [PayByGroup](http://paybygroup.com). View details.
+#### Visual Examples:
 
-Visual Examples:
-
-Add XXXPAYBYGROUP VISUAL MOCKUP IMAGE 4
-
+sample_poweredbypaybygroup_box.png
+<br>
+<hr>
+<br>
 ##Logo and Graphic Guidelines
 
 For any implementation of PayByGroup on a merchant site, the following guidelines must be followed whenever the PayByGroup brand name or logo is used.
