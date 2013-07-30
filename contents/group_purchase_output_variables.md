@@ -32,11 +32,11 @@
   <dt>details_text <code><i>text</i></code></dt>
   <dl>Extra explanation provided by the organizer and displayed on the dashboard for this PayByGroup.</dl>
   <dt>min_people <code><i>integer</i></code></dt>
-  <dl>Minimum number of people required by the organizer for the PayByGroup to tip.</dl>
+  <dl>Minimum number of people required by the organizer for the PayByGroup to tip. Must be greater than or equal to `min_min_people` if that constraint is set by the merchant.</dl>
   <dt>max_people <code><i>integer</i></code></dt>
-  <dl>Maximum number of people allowed by the organizer to join the PayByGroup.</dl>
+  <dl>Maximum number of people allowed by the organizer to join the PayByGroup. Must be less than or equal to `max_max_people` if that constraint is set by the merchant.</dl>
   <dt>commit_deadline <code><i>date</i></code></dt>
-  <dl>Date set by organizer by which invitees must respond. It cannot be set later than the purchase_deadline as set by the merchant.</dl>
+  <dl>Date set by organizer by which invitees must respond. It cannot be set later than the `purchase_deadline` as set by the merchant.</dl>
   <dt>invite_subject <code><i>string</i></code></dt>
   <dl>Text of the email subject line used by the organizer when sending invitations.</dl>
   <dt>invite_message <code><i>string</i></code></dt>
