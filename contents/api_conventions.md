@@ -6,22 +6,19 @@ The following describes the approach used by PayByGroup APIs unless explicitly s
   - Responses are encoded as a single JSON encoded hash in the HTTP response body.
   - The HTTP response mimetype is `application/json`.
   - The calling parameters for all API calls must contain the `api_key` parameter containing the merchant-specific
-    authorization token obtained from the PayByGroup dashboard of master user account for a given merchant.
+    authorization token obtained from the PayByGroup dashboard of the master user account for a given merchant.
   - All requests must be `HTTPS`
 
 #### ADDRESSING
   - All API calls must originate from one of the `PBG_ADDRESSES` below or from the supplied `MERCHANT_API_URL`s.
-  - In production all calls to PBG must be to the `production` API endpoint below.
-<!--  - Staging/testing of new API interactions will typically be done using the `test` or `dev2` addresses below. -->
-  - API calls that originate from PBG to the merchant follow the same format above.
+  - In production all calls to PBG must be to the `production` API endpoint below.<!--  - Staging/testing of new API interactions will typically be done using the `test` or `dev2` addresses below. -->
+- API calls that originate from PBG to the merchant follow the same format above.
 
 #### DATATYPES
   - Datetime format used is `ISO 8601`
     - Date: `YYYY-MM-DD`
     - Datetime: `YYYY-MM-DDTHH:MM:SS-0800`
-    (For simplicity, midnight PST time is the expiration time for all PayByGroups. That way no group is surprised
-    to have theirs expire before midnight in their local time, and the expiration does not need to be conditioned
-    on the location of one or more users.)
+    (For simplicity, midnight PST time is the expiration time for all PayByGroups. That way no group is surprised to have theirs expire before midnight in their local time, and the expiration does not need to be conditioned on the location of one or more users.)
   - CURRENCY: "#####.##" -- The current format is a simple decimal encoded as a string representing US dollars.
     - Our future format will include currency indicators:  "###.## USD"
       A string containing a decimal followed by a space and a currency indicator
