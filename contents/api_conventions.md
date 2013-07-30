@@ -11,8 +11,8 @@ The following describes the approach used by PayByGroup APIs unless explicitly s
 
 #### ADDRESSING
   - All API calls must originate from one of the `PBG_ADDRESSES` below or from the supplied `MERCHANT_API_URL`s.
-  - In production all calls to PBG must be to the `production` API endpoint below. <!--  - Staging/testing of new API interactions will typically be done using the `test` or `dev2` addresses below. -->
-- API calls that originate from PBG to the merchant follow the same format above.
+  - In production all calls to PBG must be to the `production` API endpoint below.
+  - API calls that originate from PBG to the merchant follow the same format above.
 
 #### DATATYPES
   - Datetime format used is `ISO 8601`
