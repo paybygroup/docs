@@ -102,7 +102,7 @@ obtained from the merchant's master user account.
 
 <br><br>
 <p id="invitees_index"></p>
-## Invitees
+## Group Purchase Invitees
 Call for querying PayByGroup about users associated with an existing group purchase.
 
 **RESPONSE**
