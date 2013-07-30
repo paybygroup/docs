@@ -80,7 +80,7 @@ The best way to present the option at the checkout step is by asking users wheth
 
 Split the cost with *PayByGroup*. How it works.
 
-We now offer PAYBYGROUP LOGO. View details.
+We now offer _PayByGroup_. View details.
 
 #### Visual Examples:
 
