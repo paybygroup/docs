@@ -60,7 +60,7 @@ We will go through the credit cards and capture payments. If the purchase is suc
 #### Callback
       Status: 200 OK
 
-If one or more of the cards **FAIL** we `POST` a message (`availability_release`) to the `Merchant API URL` in order to release availability. After the `availability_release` has been sent the purchase users will fix the problems with their cards and try again to send the `availability`.
+If one or more of the cards **FAIL** we `POST` a message (`availability_release`) to the `Merchant API URL` in order to release availability. After the `availability_release` has been sent the members of the group will fix the problems with their cards and try again to send the `availability`.
 #### Request
      {
       "action": "availability_release",
