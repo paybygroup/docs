@@ -5,22 +5,22 @@
   <dt>status <code><i>string</i></code></dt>
   <dd>
     <ul>
-      <li><strong>"incomplete"</strong>The PayByGroup was initiated by the merchant, but the organizer never completed setting it up.</li>
-      <li><strong>"new"</strong>The Organizer reached the page to set the details of their PayByGroup.</li>
-      <li><strong>"input_complete"</strong>The Organizer has set all the details of their PayByGroup but not completed signup to complete creation of the purchase.</li>
-      <li><strong>"deposit_required"</strong>Organizer must insert payment info and make deposit to hold the purchase.</li>
-      <li><strong>"active"</strong>The PayByGroup was successfully created but has not yet tipped. The organizer can send payment to the merchant at any point prior to the tipping point being reached by making up the shortfall on their own.</li>
-      <li><strong>"invitations_sent"</strong>Active, and initial invitations sent.</li>
-      <li><strong>"payment_commited"</strong>Organizer has approved the purchase, and payments are in the process of being authorize.</li>
-      <li><strong>"payment_authorized"</strong>Payments have all bene authorized, and the purchase is awaiting final merchant approval.</li>
-      <li><strong>"payment_approved"</strong>Payment has been approved by the merchant.</li>
-      <li><strong>"payment_collected"</strong>All payments have been captured from users.</li>
-      <li><strong>"merchant_paid"</strong>Payment has been successfully completed to the merchant.</li>
-      <li><strong>"canceled"</strong>PayByGroup canceled by organizer or merchant.</li>
-      <li><strong>"payment_failed"</strong>Payments failed to complete.</li>
-      <li><strong>"funds_collected_but_ach_failed"</strong>Payment was collected successfully, but the payout to the merchant failed.</li>
-      <li><strong>"refund_requested_by_merchant"</strong>The merchant has initiated a full or partial refund.</li>
-      <li><strong>"refund_completed"</strong>The requested refund has successfully completed.</li>
+      <li><strong>"GP_NOT_CLAIMED"</strong>The PayByGroup was initiated by the merchant, but the organizer never completed setting it up.</li>
+      <li><strong>"GP_NEW"</strong>The Organizer reached the page to set the details of their PayByGroup.</li>
+      <li><strong>"GP_INPUT_COMPLETE"</strong>The Organizer has set all the details of their PayByGroup but not completed signup to complete creation of the purchase.</li>
+      <li><strong>"GP_DEPOSIT_REQUIRED"</strong>Organizer must insert payment info and make deposit to hold the purchase.</li>
+      <li><strong>"GP_ACTIVE"</strong>The PayByGroup was successfully created but has not yet tipped. The organizer can send payment to the merchant at any point prior to the tipping point being reached by making up the shortfall on their own.</li>
+      <li><strong>"GP_HAS_INVITEES"</strong>Active, and initial invitations sent.</li>
+      <li><strong>"GP_ORG_COMMIT"</strong>Organizer has approved the purchase, and payments are in the process of being authorized.</li>
+      <li><strong>"GP_AUTHORIZED"</strong>Payments have all been authorized, and the purchase is awaiting final merchant approval.</li>
+      <li><strong>"GP_MERCH_COMMIT"</strong>Payment has been approved by the merchant.</li>
+      <li><strong>"GP_COLLECTED"</strong>All payments have been captured from users.</li>
+      <li><strong>"GP_MERCHANT_PAID"</strong>Payment has been successfully completed to the merchant.</li>
+      <li><strong>"GP_CANCELED"</strong>PayByGroup canceled by organizer or merchant.</li>
+      <li><strong>"GP_FAILED"</strong>Payments failed to complete.</li>
+      <li><strong>"GP_PAYOUT_FAILED"</strong>Payment was collected successfully, but the payout to the merchant failed.</li>
+      <li><strong>"GP_REFUND_REQUESTED"</strong>The merchant has initiated a full or partial refund.</li>
+      <li><strong>"GP_REFUNDED"</strong>The requested refund has successfully completed.</li>
     </ul>
   </dd>
 </dl>
