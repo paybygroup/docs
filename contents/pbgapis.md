@@ -119,7 +119,7 @@ Call for querying PayByGroup about users associated with an existing group purch
 
 Each user info hash contains one of the following depending on how the cost was split:
 
-  - `number_of_spots" -- if the total cost was split evenly or the cost is a fixed amount per person, then this value indicates how many spots this user claimed.
+  - `number_of_spots` -- if the total cost was split evenly or the cost is a fixed amount per person, then this value indicates how many spots this user claimed.
   - `amount_committed` -- if each user was able to enter the amount they are willing to contribute to the total cost, then this value is the amount to which they committed.
 
 Each user info hash may contain the following values if they are available:
@@ -136,7 +136,7 @@ Example results:
           "user_id":     9331,
           "user_email":  "user.email@address.com",
           "role":        "ORGANIZER",
-          "status":      "ACCEPTED"
+          "status":      "ACCEPTED",
           "opt_in":     "true",
           "age":         "34",
           "location":  "New York, New York",
@@ -176,9 +176,9 @@ Example results:
         { "id": 165412358,
           "user_id": 9331,
           "amount": "123.45",
-          "nett_amount": "120.00"
-          "convenience_fee": "2.00"
-          "merchant_fee": "1.45"
+          "nett_amount": "120.00",
+          "convenience_fee": "2.00",
+          "merchant_fee": "1.45",
           "created_at": "2013-01-11T19:20:30-08:00"
         },
         {
@@ -260,7 +260,7 @@ Example format:
         "status":             "ACTIVE",
         "name":               "Lorem ipsum",
         "commit_deadline":    "2013-06-19",
-        "min_people":         "1",
+        "min_people":         "5",
         "max_people":         "10",
         "splitting_type":     "even_split",
         "purchase_cost":      "1000.00",
