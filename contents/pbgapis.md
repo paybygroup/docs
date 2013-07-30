@@ -1,15 +1,15 @@
 # PayByGroup v1 API Reference
 
-Reference documentation for all merchant-facing, programmatic, PayByGroup interfaces.
+Reference documentation for all merchant-facing, programmatic interfaces with PayByGroup.
 (See [API conventions](/api_conventions) for details common across all APIs.)
 
 ### API Endpoint
     https://lets.paybygroup.com/api/v1/
 
 ### Authentication
-You need to include `api_key` to authenticate.
+You need to include `merchant_id` and `api_key` to authenticate.
 <pre class="terminal">
-  $ curl -i "https://lets.paybygroup.com/api/v1/?api_key=XXX"
+  $ curl -i "https://lets.paybygroup.com/api/v1/?merchant_id=XXX&api_key=XXX"
 
   HTTP/1.1 200 OK
   Content-Type: application/json
@@ -23,15 +23,15 @@ You need to include `api_key` to authenticate.
 
 Action    | Resource                                          | Description
 ----------| --------------------------------------------------| ----------------------------------------------------------
-GET       | [/group_purchases](#purchase_index)                     | Returns the details for matching selection of purchases
-GET       | [/group_purchases/:purchase_id](#purchase_show)                  | Returns the details for single group purchase
-POST      | [/group_purchases/:id/collect_funds](#purchase_collect_funds)        | Confirms that the inventory is available to complete the purchase and triggers transfer of funds to the merchant’s bank account [](info#purchase_collect_funds_info)
-PUT      | [/group_purchases/:id/set_unavailable](#purchase_set_unavailable)        | Notifies the organizer and merchant’s agent that the specific inventory is no longer available and prompts them to settle on substitute inventory with the organizer to which to apply this PayByGroup [](info#purchase_set_unavailable_info)
-PUT      | [/group_purchases/:id/cancel](#purchase_cancel)        | Permanently cancels this PayByGroup, refunds any transacations, and cancels any credit card authorizations currently in place [](info#purchase_cancel_info)
-POST      | [/group_purchases/:id/refund](#purchase_refund)        | Returns all funds collected for this PayByGroup and cancels any existing authorizations on credit cards tied to this PayByGroup [](info#purchase_refund_info)
-GET       | [/group_purchases/:id/invitees](#invitees_index)        | Returns details about selected invitees for a purchase
-GET       | [/group_purchases/:id/transactions](#transaction_index) | Returns the details for matching selection of transactions
-DELETE      | [/group_purchases/:id/delete](#purchase_delete)        | Completely removes a purchase from the PayByGroup system [](info#purchase_delete_info)
+GET       | [/group_purchases](https://lets.paybygroup.com/api/v1/group_purchases)                     | Returns the details for matching selection of purchases
+GET       | [/group_purchases/:purchase_id](https://lets.paybygroup.com/api/v1/group_purchases/:purchase_id)                  | Returns the details for single group purchase
+POST      | [/group_purchases/:id/collect_funds](https://lets.paybygroup.com/api/v1/group_purchases/:id/collect_funds)        | Confirms that the inventory is available to complete the purchase and triggers final capture of the funds to the merchant's account [](info#purchase_collect_funds_info)
+PUT      | [/group_purchases/:id/set_unavailable](https://lets.paybygroup.com/api/v1/group_purchases/:id/set_unavailable)        | Notifies the organizer and the merchant by email that the specific inventory is no longer available and prompts the merchant to contact the organizer regarding substitute inventory to which to apply this PayByGroup [](info#purchase_set_unavailable_info)
+PUT      | [/group_purchases/:id/cancel](https://lets.paybygroup.com/api/v1/group_purchases/:id/cancel)        | Permanently cancels this PayByGroup, refunds any transacations, and cancels any credit card authorizations currently in place [](info#purchase_cancel_info)
+POST      | [/group_purchases/:id/refund](https://lets.paybygroup.com/api/v1/group_purchases/:id/refund)        | Returns all funds collected for this PayByGroup and cancels any existing authorizations on credit cards tied to this PayByGroup [](info#purchase_refund_info)
+GET       | [/group_purchases/:id/invitees](https://lets.paybygroup.com/api/v1/group_purchases/:id/invitees)        | Returns details on all members of the selected group purchase 
+GET       | [/group_purchases/:id/transactions](https://lets.paybygroup.com/api/v1/group_purchases/:id/transactions) | Returns the details for all transactions that are part of the selected group purchase
+DELETE      | [/group_purchases/:id/delete](https://lets.paybygroup.com/api/v1/group_purchases/:id/delete)        | Completely removes a purchase from the PayByGroup system (Use with EXTREME CAUTION) [](info#purchase_delete_info)
 
 
 <div class="hide">
@@ -42,13 +42,13 @@ Use with care, will "break" email links sent to users relating to this purchase.
     Available for any purchase where no user funds are currently captured.
   </div>
   <div class="well" id="purchase_collect_funds_info">
-    Available when the purchase is in the state of org_commit (this state).
+    Available when the status of the purchase is payment_authorized.
   </div>
   <div class="well" id="purchase_refund_info">
-    Available after funds (some) have been collected.
+    Available after some or all of the funds have been collected.
   </div>
   <div class="well" id="purchase_set_unavailable_info">
-    Available after a purchase has been claimed by the organizer, and before it has been cancelled or collected.
+    Available after a purchase has been claimed by the organizer and before it has been cancelled or collected.
   </div>
 </div>
 
@@ -57,10 +57,10 @@ Use with care, will "break" email links sent to users relating to this purchase.
 
 <p id="purchase_index"></p>
 ## Group Purchase Search
-Interface for querying PayByGroup about existing group purchases.
+Querying PayByGroup about existing group purchases using certain parameters.
 
 <pre class="terminal">
-  $ curl -i "https://lets.paybygroup.com/api/v1/group_purchases?PARAMETER=XXX&api_key=XXX"
+  $ curl -i "https://lets.paybygroup.com/api/v1/group_purchases?PARAMETER=XXX&merchant_id=XXX&api_key=XXX"
 
   HTTP/1.1 200 OK
   Content-Type: application/json
@@ -88,14 +88,14 @@ Interface for querying PayByGroup about existing group purchases.
 
 **PARAMETERS**
 
-- `api_key` __(string)__  -  [REQUIRED] The Merchant's API key (a secret authorization token).This can be
+- `api_key` __(string)__  -  The Merchant's API key (a secret authorization token).This can be
 obtained from the merchant's master user account.
-- `merchant_id` __(string)__  -  Constrains purchases to those with this merchant id.
-- `inventory_id`    __(string)__  -  Constrains purchases to those with this inventory id.
-- `purchase_id`     __(string)__  -  Constrains purchases to the one with this purchase id.
-- `created_after`   __(date)__    -  Constrains purchases to those created on or after this.  (inclusive start of date range)
-- `created_before`  __(date)__    -  Constrains purchases to those created before.  (exclusive end of date range)
-- `status`  __(array of string)__  -  Constrains purchases to those w. matching status states.  (See [Group Purchase Status](/group_purchase_output_variables) for possible values)
+- `merchant_id` __(string)__  -  Constrains purchases returned to those with this merchant id.
+- `inventory_id`    __(string)__  -  Constrains purchases returned to those with this inventory id.
+- `purchase_id`     __(string)__  -  Constrains purchases returned to the one with this purchase id.
+- `created_after`   __(date)__    -  Constrains purchases returned to those created on or after this.  (inclusive of start of date range)
+- `created_before`  __(date)__    -  Constrains purchases returned to those created before this date (exclusive of end of date range).
+- `status`  __(array of string)__  -  Constrains purchases to those with matching status states.  (See [Group Purchase Status](/group_purchase_output_variables) for possible values)
 
 
 
@@ -103,19 +103,19 @@ obtained from the merchant's master user account.
 <br><br>
 <p id="invitees_index"></p>
 ## Invitees
-Call for querying PayByGroup about users associated with a existing group purchase.
+Call for querying PayByGroup about users associated with an existing group purchase.
 
 **RESPONSE**
-  Returns a hash with `invitees` array containig an info hash for each invitee account.
+  Returns a hash with `invitees` array containing an info hash for each member of the group.
 
   Each user info hash contains:
 
   - `id` -- an integer that uniquely identifies this invitee 'slot'.  This id will be unique across all invitees across
-    all group purchases managed by PayByGroup
+    all group purchases.
   - `user_id ` -- an integer that uniquely identifies this user. This will be unique to all users using PayByGroup.
-  - `user_email` -- the current email address for this invitee.
-  - `role` -- the current role of this inivitee. 'ORGANIZER' or 'INVITEE'.
-  - `status` -- the current status of this inivitee. One of the following: 'INVITED', 'ACCEPTED', 'WITHDRAWN'.
+  - `user_email` -- the current email address for this user.
+  - `role` -- the current role of this invitee. 'ORGANIZER' or 'INVITEE'.
+  - `status` -- the current status of this invitee. One of the following: 'INVITED', 'ACCEPTED', 'WITHDRAWN'.
 
 Example results:
 
@@ -138,10 +138,10 @@ Example results:
 <br><br>
 <p id="transaction_index"></p>
 ## Group Purchase Transactions
-Call for querying the payment related transactions assocaited with a specified group purchase.
+Call for querying the payment transactions associated with a specified group purchase.
 
 **RESPONSE**
-  Returns a hash with `transactions` array containig an info hash for each invitee account.
+  Returns a hash with `transactions` array containig an info hash for each transaction.
 
   Each transaction contains:
 
