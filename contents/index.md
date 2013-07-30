@@ -24,9 +24,6 @@
       </li>
   </ul>
 
-### Functionality
->- [Automate Completion of Group Purchase with API](/group_purchase_complete_with_api)  --  How to complete a group purchase through the API
-
 ### Reference
 >- [Merchant Input Variables](/merchant_input_variables)  --  Attributes for a merchant to customize their group purchase
 >- [Group Purchase Output Variables](/group_purchase_output_variables)  --  Attributes to query from a group purchase
@@ -34,3 +31,4 @@
 
 ### Design
 >- [Design Guidelines](/design_guidelines)  --  Rules and recommendations for displaying PayByGroup on your site
+>- [Design Assets](/design_assets)  --  Assets and elements you can use when including PayByGroup on your site
