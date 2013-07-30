@@ -115,6 +115,18 @@ Call for querying PayByGroup about users associated with an existing group purch
   - `user_email` -- the current email address for this user.
   - `role` -- the current role of this invitee. 'ORGANIZER' or 'INVITEE'.
   - `status` -- the current status of this invitee. One of the following: 'INVITED', 'ACCEPTED', 'WITHDRAWN'.
+  - `opt_in` -- if `true` then this user has agreed to receive marketing emails from the merchant, but if `false` no marketing emails may be sent, only transactional emails.
+
+Each user info hash contains one of the following depending on how the cost was split:
+
+  - `number_of_spots" -- if the total cost was split evenly or the cost is a fixed amount per person, then this value indicates how many spots this user claimed.
+  - `amount_committed` -- if each user was able to enter the amount they are willing to contribute to the total cost, then this value is the amount to which they committed.
+
+Each user info hash may contain the following values if they are available:
+
+  - `age` -- the user's age in years at the time they committed to the purchase.
+  - `location` -- the geographic location of the user, typically returned as `city, state`.
+  - `gender` -- the gender of the user returned as either `male` or `female`.
 
 Example results:
 
@@ -125,6 +137,11 @@ Example results:
           "user_email":  "user.email@address.com",
           "role":        "ORGANIZER",
           "status":      "ACCEPTED"
+          "opt_in":     "true",
+          "age":         "34",
+          "location":  "New York, New York",
+          "gender":   "male",
+          "number_of_spots":    "1"
         },
         {
 
@@ -146,18 +163,22 @@ Call for querying the payment transactions associated with a specified group pur
 
   - `id` -- an integer that uniquely identifies this invitee 'slot'.  This id will be unique across all invitees across all group purchases.
   - `user_id ` -- an integer that uniquely identifies this user. This will be unique to all users using PayByGroup.
-  - `action` -- name of the action recorded in a given transaction. One of the following: "CAPTURE", "REVERSE", "PAY_OUT"
-  - `amount` -- amount of money involved.
-  - `created_at` -- time when transaction was created.
-
+  - `amount` -- total amount of money involved in the transaction.
+  - `convenience_fee` -- portion of the `amount` that is charged to consumers above the base amount of their share and due to PayByGroup. It is retained by PayByGroup (if using PayByGroup's processor) or direct debited from the merchant on a bi-weekly basis (if using a third-party gateway).
+  - `merchant_fee` -- portion of the `amount` that is charged to the merchant and due to PayByGroup. It is deducted from the base amount of the user's share (if using PayByGroup's processor) or direct debited from the merchant on a bi-weekly basis (if using a third-party gateway).
+  - `nett_amount` -- amount of money that is ultimately received by the merchant, net of the `convenience_fee` and `merchant_fee`.
+  - `created_at` -- time when the transaction was created.
+<!-- `action` -- name of the action recorded in a given transaction. One of the following: "CAPTURE", "REVERSE", "PAY_OUT" -->
 Example results:
 
     { "transactions":
       [
         { "id": 165412358,
           "user_id": 9331,
-          "action": "CAPTURE",
           "amount": "123.45",
+          "nett_amount": "120.00"
+          "convenience_fee": "2.00"
+          "merchant_fee": "1.45"
           "created_at": "2013-01-11T19:20:30-08:00"
         },
         {
