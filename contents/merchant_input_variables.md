@@ -6,7 +6,7 @@
 ## Merchant Configuration
 <dl>
   <dt>merchant_auth <code><i>string</i></code></dt>
-  <dd>A CONSTANT authorization token used for authorization on all calls between merchant and PBG.</dd>
+  <dd>A 32-character sequence of printable ASCII characters.</dd>
  <!-- <dt>merchant_api_url <code><i>url</i></code></dt>
   <dd>Used to display on credit card statements and cannot be greater than 11 characters.</dd> -->
   <dt>merchant_agent_email <code><i>string</i></code></dt>
