@@ -60,7 +60,7 @@ An example of all attributes would be:
 <hr>
 <br>
 ## Other Commonly Used Data Attributes
-These attributes are used on a need basis depending on your product/service.
+These attributes are used on an as needed basis depending on your product/service.
 <dl>
   <dt>purchase-start-date</dt>
   <dd>If your service needs to store a start date. i.e. Reservation start date.</dd>
@@ -73,17 +73,15 @@ These attributes are used on a need basis depending on your product/service.
 <hr>
 <br>
 ## Sample Implementation
-<br>
 #### Part 1 - Informational Unit(s)
-<br>
 Add an informational unit using any of the copy and design examples listed in the [Design Guidelines](/design_guidelines)
- on one or more of the following pages:
+ on one or more of the following pages of your website:
 
 •   Homepage <br>
 •   Search results page <br>
 •   Product listing page
 
-You may customize the look and feel to match your site as long as the IMAGELINKPayByGroup LogoIMAGELINK is included whenever the term "PayByGroup" is used.
+You may customize the look and feel to match your site as long as the [PayByGroup Logo] (https://lets.paybygroup.com/assets/paybygroup-text-small.png) is included whenever the term "PayByGroup" is used.<sup>1</sup> We recommend you use the version hosted by PayByGroup to eliminate the need to change your code if the logo is updated. 
 
 When clicked, the informational unit displays the lightbox explaining how PayByGroup works, and the only option on the lightbox is to close it and keep browsing.
 
@@ -98,9 +96,7 @@ Here is an example of an informational unit:
 
 ![Info Unit](/images/info_unit.png)
 
-<br>
-<br>
-#### Part 2 - Use PayByGroup Option
+#### Part 2 - Option to Use PayByGroup
 
 Place the option to use PayByGroup at the earliest point on your site where the total cost is available - including all taxes, fees, and options. This will typically be on the first page of your checkout process.
 
@@ -112,19 +108,18 @@ Here is an example of the option to use PayByGroup where the div and button have
 
 ![Use PayByGroup](/images/use_paybygroup.png)
 <br>
+<hr>
 <br>
-<br>
-## Advanced Light Box Data Attributes
+## Advanced Lightbox Data Attributes
 ![PayByGroup Demo Light Box](/images/demo_light_box.png)
 <dl>
   <dt>button-action</dt>
-  <dd>Action taken by the Light box's primary call to action button.
-  By default the action is <code>to_pbg</code> which sends the user to create a PayByGroup using the parameters specified for the group purchase.The other legal value is <code>close</code> which causes
-  the informational Light box to close.</dd>
+  <dd>Action taken by the lightbox's primary call to action button.
+  By default the action is <code>to_pbg</code> which triggers the option to use PayByGroup and sends the user to PayByGroup using the parameters specified for the group purchase.The other legal value is <code>close</code> which causes the informational lightbox to close.</dd>
   <dt>popup-target</dt>
-  <dd>This parameter will indicate the target window that will load the create PayByGroup page. It follows the same convention as a regular target <a href="http://www.w3schools.com/tags/att_link_target.asp">link attribute</a>. Defaults to <code>self</code>.</dd>
+  <dd>This parameter will indicate the target window that will load the Create PayByGroup page. It follows the same convention as a regular <a href="http://www.w3schools.com/tags/att_link_target.asp">target link attribute</a>. Defaults to <code>self</code>.</dd>
   <dt>popup-button</dt>
-  <dd>Text for the action button on the Light box.</dd>
+  <dd>Text for the primary call-to-action button on the lightbox.</dd>
   <dt>step1</dt>
   <dd>Text content for step 1.</dd>
   <dt>step2</dt>
@@ -132,13 +127,19 @@ Here is an example of the option to use PayByGroup where the div and button have
   <dt>step3</dt>
   <dd>Text content for step 3.</dd>
   <dt>footer</dt>
-  <dd>"Details" text shown in the footer of the Light box.</dd>
+  <dd>"Details" text shown in the footer of the lightbox.</dd>
   <dt>footer-link</dt>
-  <dd>The textual content of the optional 'more info' link in the footer.</dd>
+  <dd>The textual content of the optional 'more info' link to the lower right of the primary call-to-action button.</dd>
   <dt>footer-link-url</dt>
   <dd>The absolute or relative URL target for the optional footer link.</dd>
 </dl>
-
+<br>
+<hr>
+<br>
 ## Group Purchase Attributes
 
-The PBG Light box also takes parameters to modify the contents for the **group purchase**. These parameters can be found in [Merchant Input Variables](/merchant_input_variables)
+The PayByGroup lightbox also takes additional parameters to set many details for the group purchase. These parameters can be found in [Merchant Input Variables](/merchant_input_variables).
+<br>
+<hr>
+<br>
+<sup>1</sup> We recommend you use the version hosted by PayByGroup to eliminate the need to change your code if the logo is updated. 
