@@ -96,5 +96,7 @@ purchase. Possible values are:
   <dt>allow_specified_per_person <code><i>object</i></code></dt>
   <dl>Allow organizer to select the specified per person splitting method, which means each member of the group will specify the amount they are contributing. The tipping point is reached once the total dollar amount needed is committed.</dl>
 </dl>
-
+<br>
+<hr>
+<br>
 <sup>1</sup> Only one of either `purchase_cost` or `cost_per_person` should be provided for any given purchase
