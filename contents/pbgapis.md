@@ -132,16 +132,16 @@ Example results:
 
     { "invitees":
       [
-        { "id":          192433,
-          "user_id":     9331,
-          "user_email":  "user.email@address.com",
-          "role":        "ORGANIZER",
-          "status":      "ACCEPTED",
-          "opt_in":     "true",
-          "age":         "34",
-          "location":  "New York, New York",
-          "gender":   "male",
-          "number_of_spots":    "1"
+        { "id":               192433,
+          "user_id":          9331,
+          "user_email":       "user.email@address.com",
+          "role":             "ORGANIZER",
+          "status":           "ACCEPTED",
+          "opt_in":           "true",
+          "age":              "34",
+          "location":         "New York, New York",
+          "gender":           "male",
+          "number_of_spots":  "1"
         },
         {
 
@@ -173,13 +173,13 @@ Example results:
 
     { "transactions":
       [
-        { "id": 165412358,
-          "user_id": 9331,
-          "amount": "123.45",
-          "nett_amount": "120.00",
-          "convenience_fee": "2.00",
-          "merchant_fee": "1.45",
-          "created_at": "2013-01-11T19:20:30-08:00"
+        { "id":               165412358,
+          "user_id":          9331,
+          "amount":           "123.45",
+          "nett_amount":      "120.00",
+          "convenience_fee":  "2.00",
+          "merchant_fee":     "1.45",
+          "created_at":       "2013-01-11T19:20:30-08:00"
         },
         {
 
@@ -256,7 +256,7 @@ Example format:
     { "api_key":  "XXXXXXXXXX",
       "purchase_id":  "123",
       "group_purchase": {
-        "id":                 "123",
+        "id":                 123,
         "status":             "ACTIVE",
         "name":               "Lorem ipsum",
         "commit_deadline":    "2013-06-19",
