@@ -4,15 +4,15 @@
 #### Text Logo Only
 
 Tiny Text Logo<br>
-![Tiny Text Logo](https://lets.paybygroup.com/assets/pbg_logotiny.png)
+![Tiny Text Logo](https://lets.paybygroup.com/assets/pbg_logotiny.png)<br>
 [https://lets.paybygroup.com/assets/pbg_logotiny.png](https://lets.paybygroup.com/assets/pbg_logotiny.png)
 
-Small Text Logo
-![Small Text Logo](https://lets.paybygroup.com/assets/pbg_logosmall.png)
+Small Text Logo<br>
+![Small Text Logo](https://lets.paybygroup.com/assets/pbg_logosmall.png)<br>
 [https://lets.paybygroup.com/assets/pbg_logosmall.png](https://lets.paybygroup.com/assets/pbg_logosmall.png)
 
-Medium Text Logo
-![Medium Text Logo](https://lets.paybygroup.com/assets/pbg_logomedium.png)
+Medium Text Logo<br>
+![Medium Text Logo](https://lets.paybygroup.com/assets/pbg_logomedium.png)<br>
 [https://lets.paybygroup.com/assets/pbg_logomedium.png](https://lets.paybygroup.com/assets/pbg_logomedium.png)
 
 Large Text Logo
