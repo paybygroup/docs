@@ -1,5 +1,5 @@
 # Design Assets
-## Basic Assets
+## Logo Assets
 
 #### Text Logo Only
 
@@ -67,22 +67,28 @@ Huge Icon
 pbg_iconhuge.png
 (https://lets.paybygroup.com/assets/pbg_iconhuge.png)
 
-#### Pre-Made Informational Units (Image Format)
+## Pre-Made Informational Units (Image Format)
 
 Two-line We Offer PayByGroup Info Unit
 twoline_weofferpaybygroup.png
 (https://lets.paybygroup.com/assets/twoline_weofferpaybygroup.png)
 
-#### Pre-Made Informational Units (Customizable HTML Formats)
+## Pre-Made Informational Units (Customizable HTML Formats)
 
 
-#### Pre-Made Use PayByGroup Elements
+## Pre-Made Use PayByGroup Elements
 
 Transparent Powered By PayByGroup Box
 poweredbypaybygroup_box.png
 (https://lets.paybygroup.com/assets/poweredbypaybygroup_box.png)
 
+Orange PayByGroup Button
+![PayByGroup Button](https://lets.paybygroup.com/assets/pbg_orange.png) 
+(https://lets.paybygroup.com/assets/pbg_orange.png)
 
+Orange PayByGroup Button Hover State
+pbg_orange_hover.png
+(https://lets.paybygroup.com/assets/pbg_orange_hover.png)
 
 
 
