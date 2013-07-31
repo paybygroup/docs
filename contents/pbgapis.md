@@ -163,23 +163,29 @@ Call for querying the payment transactions associated with a specified group pur
 
   - `id` -- an integer that uniquely identifies this invitee 'slot'.  This id will be unique across all invitees across all group purchases.
   - `user_id ` -- an integer that uniquely identifies this user. This will be unique to all users using PayByGroup.
-  - `amount` -- total amount of money involved in the transaction.
-  - `convenience_fee` -- portion of the `amount` that is charged to consumers above the base amount of their share and due to PayByGroup. It is retained by PayByGroup (if using PayByGroup's processor) or direct debited from the merchant on a bi-weekly basis (if using a third-party gateway).
-  - `merchant_fee` -- portion of the `amount` that is charged to the merchant and due to PayByGroup. It is deducted from the base amount of the user's share (if using PayByGroup's processor) or direct debited from the merchant on a bi-weekly basis (if using a third-party gateway).
-  - `nett_amount` -- amount of money that is ultimately received by the merchant, net of the `convenience_fee` and `merchant_fee`.
+  - `amount` -- total amount of money involved in the transaction and charged to the user.
+  - `nett_amount` -- base amount of money that is due to the merchant for this transaction before the `merchant_fee` has been deducted. The sum of all `nett_amount` values should equal the total cost of the purchase once it has completed.
+  - `convenience_fee` -- portion of the `amount` that is charged to consumers above the `nett_amount` and due to PayByGroup. It is retained by PayByGroup (if using PayByGroup's processor) or direct debited from the merchant on a bi-weekly basis (if using a third-party gateway).
+  - `merchant_fee` -- portion of the `amount` that is charged to the merchant and due to PayByGroup. It is deducted from the `nett_amount` (if using PayByGroup's processor) or direct debited from the merchant on a bi-weekly basis (if using a third-party gateway).
+  - `pbg_adjustment` -- in certain cases a processor will not allow transactions below a certain size or have other constraints, or a transaction may need to be adjusted by a few cents so that all shares add to the total cost. These are rare instances, but those adjustments are reflected here.
   - `created_at` -- time when the transaction was created.
-<!-- `action` -- name of the action recorded in a given transaction. One of the following: "CAPTURE", "REVERSE", "PAY_OUT" -->
+
+<div class="alert tip">
+  <p><strong>NOTE</strong>: If a transaction record is for a refund, the `amount`, `nett_amount`, `convenience_fee`, and `merchant_fee` may all be negative values.</p>
+</div>
+
 Example results:
 
     { "transactions":
       [
-        { "id":               165412358,
-          "user_id":          9331,
-          "amount":           "123.45",
-          "nett_amount":      "120.00",
-          "convenience_fee":  "2.00",
-          "merchant_fee":     "1.45",
-          "created_at":       "2013-01-11T19:20:30-08:00"
+        { "id":                 165412358,
+          "user_id":            9331,
+          "amount":             "111.23",
+          "nett_amount":        "110.00",
+          "convenience_fee":    "1.23",
+          "merchant_fee":       "1.00",
+          "pbg_adjustment":     "0.00",
+          "created_at":         "2013-01-11T19:20:30-08:00"
         },
         {
 

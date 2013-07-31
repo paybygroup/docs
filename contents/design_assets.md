@@ -3,86 +3,102 @@
 
 #### Text Logo Only
 
-Tiny Text Logo
-![https://lets.paybygroup.com/assets/pbg_logotiny.png](Tiny Text Logo)
+Tiny Text Logo<br>
+![Tiny Text Logo](https://lets.paybygroup.com/assets/pbg_logotiny.png)<br>
 [https://lets.paybygroup.com/assets/pbg_logotiny.png](https://lets.paybygroup.com/assets/pbg_logotiny.png)
 
-Small Text Logo
-![https://lets.paybygroup.com/assets/pbg_logosmall.png](Small Text Logo)
+Small Text Logo<br>
+![Small Text Logo](https://lets.paybygroup.com/assets/pbg_logosmall.png)<br>
 [https://lets.paybygroup.com/assets/pbg_logosmall.png](https://lets.paybygroup.com/assets/pbg_logosmall.png)
 
-Medium Text Logo
-![https://lets.paybygroup.com/assets/pbg_logomedium.png](Medium Text Logo)
+Medium Text Logo<br>
+![Medium Text Logo](https://lets.paybygroup.com/assets/pbg_logomedium.png)<br>
 [https://lets.paybygroup.com/assets/pbg_logomedium.png](https://lets.paybygroup.com/assets/pbg_logomedium.png)
 
-Large Text Logo
-![https://lets.paybygroup.com/assets/pbg_logolarge.png](Large Text Logo)
+Large Text Logo<br>
+![Large Text Logo](https://lets.paybygroup.com/assets/pbg_logolarge.png)<br>
 [https://lets.paybygroup.com/assets/pbg_logolarge.png](https://lets.paybygroup.com/assets/pbg_logolarge.png)
 
-Huge Text Logo
-![https://lets.paybygroup.com/assets/pbg_logohuge.png](Huge Text Logo)
+Huge Text Logo<br>
+![Huge Text Logo](https://lets.paybygroup.com/assets/pbg_logohuge.png)<br>
 [https://lets.paybygroup.com/assets/pbg_logohuge.png](https://lets.paybygroup.com/assets/pbg_logohuge.png)
 
 #### Logo with Icon
 
-Tiny Text and Icon Logo
-![https://lets.paybygroup.com/assets/pbg_iconlogotiny.png](Tiny Text and Icon Logo)
+Tiny Text and Icon Logo<br>
+![Tiny Text and Icon Logo](https://lets.paybygroup.com/assets/pbg_iconlogotiny.png)<br>
 [https://lets.paybygroup.com/assets/pbg_iconlogotiny.png](https://lets.paybygroup.com/assets/pbg_iconlogotiny.png)
 
-Small Text and Icon Logo
-![https://lets.paybygroup.com/assets/pbg_iconlogosmall.png](Small Text and Icon Logo)
+Small Text and Icon Logo<br>
+![Small Text and Icon Logo](https://lets.paybygroup.com/assets/pbg_iconlogosmall.png)<br>
 [https://lets.paybygroup.com/assets/pbg_iconlogosmall.png](https://lets.paybygroup.com/assets/pbg_iconlogosmall.png)
 
-Medium Text and Icon Logo
-![https://lets.paybygroup.com/assets/pbg_iconlogomediuml.png](Medium Text and Icon Logo)
+Medium Text and Icon Logo<br>
+![Medium Text and Icon Logo](https://lets.paybygroup.com/assets/pbg_iconlogomedium.png)<br>
 [https://lets.paybygroup.com/assets/pbg_iconlogomedium.png](https://lets.paybygroup.com/assets/pbg_iconlogomedium.png)
 
-Large Text and Icon Logo
-![https://lets.paybygroup.com/assets/pbg_iconlogolarge.png](Large Text and Icon Logo)
+Large Text and Icon Logo<br>
+![Large Text and Icon Logo](https://lets.paybygroup.com/assets/pbg_iconlogolarge.png)<br>
 [https://lets.paybygroup.com/assets/pbg_iconlogolarge.png](https://lets.paybygroup.com/assets/pbg_iconlogolarge.png)
 
-Huge Text and Icon Logo
-![https://lets.paybygroup.com/assets/pbg_iconlogohuge.png](Huge Text and Icon Logo)
+Huge Text and Icon Logo<br>
+![Huge Text and Icon Logo](https://lets.paybygroup.com/assets/pbg_iconlogohuge.png)<br>
 [https://lets.paybygroup.com/assets/pbg_iconlogohuge.png](https://lets.paybygroup.com/assets/pbg_iconlogohuge.png)
 
 #### Icon Logo Only
 
-Tiny Icon
-![https://lets.paybygroup.com/assets/pbg_icontiny.png](Tiny Icon Logo)
+Tiny Icon<br>
+![Tiny Icon Logo](https://lets.paybygroup.com/assets/pbg_icontiny.png)<br>
 [https://lets.paybygroup.com/assets/pbg_icontiny.png] (https://lets.paybygroup.com/assets/pbg_icontiny.png)
 
-Small Icon
-![https://lets.paybygroup.com/assets/pbg_iconsmall.png](Small Icon Logo)
+Small Icon<br>
+![Small Icon Logo](https://lets.paybygroup.com/assets/pbg_iconsmall.png)<br>
 [https://lets.paybygroup.com/assets/pbg_iconsmall.png](https://lets.paybygroup.com/assets/pbg_iconsmall.png)
 
-Medium Icon
-![https://lets.paybygroup.com/assets/pbg_iconmedium.png](Medium Icon Logo)
+Medium Icon<br>
+![Medium Icon Logo](https://lets.paybygroup.com/assets/pbg_iconmedium.png)<br>
 [https://lets.paybygroup.com/assets/pbg_iconmedium.png](https://lets.paybygroup.com/assets/pbg_iconmedium.png)
 
-Large Icon
-![https://lets.paybygroup.com/assets/pbg_iconlarge.png](Large Icon Logo)
+Large Icon<br>
+![Large Icon Logo](https://lets.paybygroup.com/assets/pbg_iconlarge.png)<br>
 [https://lets.paybygroup.com/assets/pbg_iconlarge.png] (https://lets.paybygroup.com/assets/pbg_iconlarge.png)
 
-Huge Icon
-![https://lets.paybygroup.com/assets/pbg_iconhuge.png](Huge Icon Logo)
+Huge Icon<br>
+![Huge Icon Logo](https://lets.paybygroup.com/assets/pbg_iconhuge.png)<br>
 [https://lets.paybygroup.com/assets/pbg_iconhuge.png](https://lets.paybygroup.com/assets/pbg_iconhuge.png)
 
 ## Pre-Made Informational Units (Image Format)
 
-PayByGroup Info Unit 160x600
-![https://lets.paybygroup.com/assets/paybygroup_infounit_160x600.png](PayByGroup Info Unit 160x600)
+PayByGroup Info Unit 120x240<br>
+![PayByGroup Info Unit 120x240](https://lets.paybygroup.com/assets/paybygroup_infounit_120x240.png)<br>
+[https://lets.paybygroup.com/assets/paybygroup_infounit_120x240.png](https://lets.paybygroup.com/assets/paybygroup_infounit_120x240.png)
+
+PayByGroup Info Unit 160x600<br>
+![PayByGroup Info Unit 160x600](https://lets.paybygroup.com/assets/paybygroup_infounit_160x600.png)<br>
 [https://lets.paybygroup.com/assets/paybygroup_infounit_160x600.png](https://lets.paybygroup.com/assets/paybygroup_infounit_160x600.png)
 
-PayByGroup Info Unit 240x400
-![https://lets.paybygroup.com/assets/paybygroup_infounit_240x400.png](PayByGroup Info Unit 240x400)
+PayByGroup Info Unit 240x400<br>
+![PayByGroup Info Unit 240x400](https://lets.paybygroup.com/assets/paybygroup_infounit_240x400.png)<br>
 [https://lets.paybygroup.com/assets/paybygroup_infounit_240x400.png](https://lets.paybygroup.com/assets/paybygroup_infounit_240x400.png)
 
-PayByGroup Info Unit 300x250
-![https://lets.paybygroup.com/assets/paybygroup_infounit_300x250.png](PayByGroup Info Unit 300x250)
+PayByGroup Info Unit 300x100<br>
+![PayByGroup Info Unit 300x100](https://lets.paybygroup.com/assets/paybygroup_infounit_300x100.png)<br>
+[https://lets.paybygroup.com/assets/paybygroup_infounit_300x100.png](https://lets.paybygroup.com/assets/paybygroup_infounit_300x100.png)
+
+PayByGroup Info Unit 300x250<br>
+![PayByGroup Info Unit 300x250](https://lets.paybygroup.com/assets/paybygroup_infounit_300x250.png)<br>
 [https://lets.paybygroup.com/assets/paybygroup_infounit_300x250.png](https://lets.paybygroup.com/assets/paybygroup_infounit_300x250.png)
 
-Two-line We Offer PayByGroup Info Unit
-![https://lets.paybygroup.com/assets/twoline_weofferpaybygroup.png](Two Line We Offer PayByGroup Info Unit)
+PayByGroup Info Unit 469x60<br>
+![PayByGroup Info Unit 469x60](https://lets.paybygroup.com/assets/paybygroup_infounit_469x60.png)<br>
+[https://lets.paybygroup.com/assets/paybygroup_infounit_469x60.png](https://lets.paybygroup.com/assets/paybygroup_infounit_469x60.png)
+
+PayByGroup Info Unit 728x90<br>
+![PayByGroup Info Unit 728x90](https://lets.paybygroup.com/assets/paybygroup_infounit_728x90.png)<br>
+[https://lets.paybygroup.com/assets/paybygroup_infounit_728x90.png](https://lets.paybygroup.com/assets/paybygroup_infounit_728x90.png)
+
+Two-line We Offer PayByGroup Info Unit<br>
+![Two Line We Offer PayByGroup Info Unit](https://lets.paybygroup.com/assets/twoline_weofferpaybygroup.png)<br>
 [https://lets.paybygroup.com/assets/twoline_weofferpaybygroup.png](https://lets.paybygroup.com/assets/twoline_weofferpaybygroup.png)
 
 <!-- ## Pre-Made Informational Units (Customizable HTML Formats)
@@ -115,17 +131,17 @@ Beachfront Only checkout page box
 
 ## Pre-Made Use PayByGroup Elements
 
-Transparent Powered by PayByGroup Box
-![https://lets.paybygroup.com/assets/poweredbypaybygroup_box.png](Transparent Powered by PayByGroup Box)
+Transparent Powered by PayByGroup Box<br>
+![Transparent Powered by PayByGroup Box](https://lets.paybygroup.com/assets/poweredbypaybygroup_box.png)<br>
 [https://lets.paybygroup.com/assets/poweredbypaybygroup_box.png](https://lets.paybygroup.com/assets/poweredbypaybygroup_box.png)
 
-Orange PayByGroup Button
-![PayByGroup Button](Orange PayByGroup Button) 
-[(https://lets.paybygroup.com/assets/pbg_orange.png)](https://lets.paybygroup.com/assets/pbg_orange.png)
+Orange PayByGroup Button<br>
+![Orange PayByGroup Button](https://lets.paybygroup.com/images/merchant/elements/pbg_orange.png)<br>
+[https://lets.paybygroup.com/images/merchant/elements/pbg_orange.png](https://lets.paybygroup.com/images/merchant/elements/pbg_orange.png)
 
-Orange PayByGroup Button Hover State
-![(https://lets.paybygroup.com/assets/pbg_orange_hover.png)](Orange PayByGroup Button Hover State)
-[(https://lets.paybygroup.com/assets/pbg_orange_hover.png)](https://lets.paybygroup.com/assets/pbg_orange_hover.png)
+Orange PayByGroup Button Hover State<br>
+![Orange PayByGroup Button Hover State](https://lets.paybygroup.com/images/merchant/elements/pbg_orange_hover.png)<br>
+[https://lets.paybygroup.com/images/merchant/elements/pbg_orange_hover.png](https://lets.paybygroup.com/images/merchant/elements/pbg_orange_hover.png)
 
 
 
