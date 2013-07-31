@@ -32,9 +32,9 @@ Traveling with multiple parties? We now offer *PayByGroup*. Learn more
 
 #### Visual Examples:
 
-![/images/twoline_weofferpaybygroup.png](Two Line We Offer PayByGroup)
+![/images/twoline_weofferpaybygroup.png.png](Two Line We Offer PayByGroup)
 
-![/images/paybygroup_verticalinfounit.png](PayByGroup Vertical Info Unit)
+![/images/paybygroup_verticalinfounit.png.png](PayByGroup Vertical Info Unit)
 <br>
 <hr>
 <br>
@@ -53,7 +53,7 @@ Traveling with others? Choose *PayByGroup* at checkout. Learn more.
 
 #### Visual Examples:
 
-![/images/weofferpaybygroup_horizontalbox.png](We Offer PayByGroup Horizontal Box)
+![/images/weofferpaybygroup_horizontalbox.png.png](We Offer PayByGroup Horizontal Box)
 <br>
 <hr>
 <br>
@@ -84,7 +84,7 @@ We now offer *PayByGroup*. View details.
 
 #### Visual Examples:
 
-![/images/sample_poweredbypaybygroup_box.png](Sample Powered By PayByGroup Box)
+![/images/sample_poweredbypaybygroup_box.png.png](Sample Powered By PayByGroup Box)
 <br>
 <hr>
 <br>
@@ -106,6 +106,7 @@ We now offer *PayByGroup*. View details.
 
 ![/images/partsofcopy_image.png](Image of Copy Elements)
 
+<br>
 **Part One - Prompt**
 
 Need to split the cost?
@@ -126,7 +127,7 @@ Not ready to book quite yet?
 
 Still getting your group together?
 
-
+<br>
 **Part Two - Explanation**
 
 We now offer *PayByGroup*.
@@ -149,7 +150,7 @@ Split the cost with friends and family using *PayByGroup*.
 
 Quickly and easily get everyone on board using *PayByGroup*.
 
-
+<br>
 **Part Three - Call to Action**
 
 Learn more
