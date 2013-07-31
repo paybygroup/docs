@@ -10,7 +10,7 @@ The following describes the approach used by PayByGroup APIs unless explicitly s
   - All requests must be `HTTPS`
 
 #### ADDRESSING
-  - All API calls must originate from one of the `PBG_ADDRESSES` below or from the supplied `MERCHANT_API_URL`s.
+  - All API calls must originate from the `API_ENDPOINT` below or from the supplied `MERCHANT_API_URL`s.
   - In production all calls to PBG must be to the `production` API endpoint below.
   - API calls that originate from PBG to the merchant follow the same format above.
 
@@ -24,13 +24,13 @@ The following describes the approach used by PayByGroup APIs unless explicitly s
       A string containing a decimal followed by a space and a currency indicator
       (e.g. "USD" for US dollars)
 
-#### API ENDPOINTS
+#### API ENDPOINT
  - `production` - https://lets.paybygroup.com/api/v1/
 
 #### MERCHANT\_API\_URL
-- IP address supplied by the merchant
+- URL supplied by the merchant
 
-#### MERCHANT\_AUTH
+#### API\_KEY
 - 32-character sequence of printable ASCII characters
 
 #### RESPONSE FORMAT
