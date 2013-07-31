@@ -1,5 +1,5 @@
 # Design Guidelines 
-## Highlighting PayByGroup Features
+## Placing PayByGroup on Your Site
 
 These guidelines cover the recommended practices for adding the PayByGroup option to your website. They are based on lessons gathered from our clients who have maximized the value of adding PayByGroup to their business and thereby increased their sales conversion rates to very high levels.
 
@@ -100,7 +100,7 @@ We now offer *PayByGroup*. View details.
 
   - The copy describing that PayByGroup is available or prompting users to choose PayByGroup on the product or checkout page must come from one of the PayByGroup Copy Elements below.<sup>2</sup>
 
-##PayByGroup Copy Elements<sup>3</sup>
+##PayByGroup Copy Elements
 
 **Full Example**
 
@@ -128,7 +128,7 @@ Not ready to book quite yet?
 Still getting your group together?
 
 <br>
-**Part Two - Explanation**
+**Part Two - Explanation** <sup>3</sup>
 
 We now offer *PayByGroup*.
 
