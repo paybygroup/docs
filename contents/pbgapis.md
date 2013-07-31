@@ -7,9 +7,9 @@ Reference documentation for all merchant-facing, programmatic interfaces with Pa
     https://lets.paybygroup.com/api/v1/
 
 ### Authentication
-You need to include `merchant_id` and `api_key` to authenticate.
+You need to include `api_key` to authenticate.
 <pre class="terminal">
-  $ curl -i "https://lets.paybygroup.com/api/v1/?merchant_id=XXX&api_key=XXX"
+  $ curl -i "https://lets.paybygroup.com/api/v1/?api_key=XXX"
 
   HTTP/1.1 200 OK
   Content-Type: application/json
@@ -60,7 +60,7 @@ Use with care, will "break" email links sent to users relating to this purchase.
 Querying PayByGroup about existing group purchases using certain parameters.
 
 <pre class="terminal">
-  $ curl -i "https://lets.paybygroup.com/api/v1/group_purchases?PARAMETER=XXX&merchant_id=XXX&api_key=XXX"
+  $ curl -i "https://lets.paybygroup.com/api/v1/group_purchases?PARAMETER=XXX&api_key=XXX"
 
   HTTP/1.1 200 OK
   Content-Type: application/json

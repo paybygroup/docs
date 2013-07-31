@@ -5,7 +5,7 @@
 
 ## Merchant Configuration
 <dl>
-  <dt>merchant_auth <code><i>string</i></code></dt>
+  <dt>api_key <code><i>string</i></code></dt>
   <dd>A 32-character sequence of printable ASCII characters.</dd>
  <!-- <dt>merchant_api_url <code><i>url</i></code></dt>
   <dd>Used to display on credit card statements and cannot be greater than 11 characters.</dd> -->
@@ -79,11 +79,11 @@ purchase. Possible values are:
 <dl>
   <dt>purchase_cost <code><i>currency</i></code></dt>
   <dl>Idealized total cost of the purchase (including deposits, taxes, and fees). This is the amount PayByGroup sends to the merchant when the PayByGroup completes, unless the merchant collected an organizer deposit as a portion of the total cost<sup>1</sup>.</dl>
-  <dt>cost_per_person <code><i>currency</i></code></dt>
+  <dt>pp_cost <code><i>currency</i></code></dt>
   <dl>Total cost of one spot (including deposits, taxes, and fees). This amount, multiplied by the total number of people in the group, is sent to the merchant when the PayByGroup completes<sup>1</sup>.</dl>
-  <dt>min-min-people <code><i>integer</i></code></dt>
+  <dt>min_min_people <code><i>integer</i></code></dt>
   <dl>Minimum users who must be part of the purchase in order for it to complete.</dl>
-  <dt>max-max-people <code><i>integer</i></code></dt>
+  <dt>max_max_people <code><i>integer</i></code></dt>
   <dl>Maximum users who are allowed to be part of the purchase.</dl>
   <dt>organizer_deposit <code><i>currency</i></code></dt>
   <dl>Amount of the deposit required from the organizer in order to allow for a `deposit_hold`. This amount is paid by the organizer at the time the purchase is created if `pbg_collects_org_deposit` is `true`.</dl>
