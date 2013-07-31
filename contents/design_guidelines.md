@@ -25,9 +25,9 @@ Including a note on your homepage or primary landing page that shows PayByGroup 
 
 #### Copy Examples:
 
-Need to split the cost? We now offer PAYBYGROUP LOGO. Learn more   
+Need to split the cost? We now offer *PayByGroup*. Learn more   
 
-Traveling with multiple parties? We now offer PAYBYGROUP LOGO. Learn more
+Traveling with multiple parties? We now offer *PayByGroup*. Learn more
 
 
 #### Visual Examples:
@@ -47,9 +47,9 @@ If they aren’t aware you offer PayByGroup and you don’t inform them at each 
 
 #### Copy Examples:
 
-Worried about fronting all the money? Choose PAYBYGROUP LOGO at checkout. Learn more.
+Worried about fronting all the money? Choose *PayByGroup* at checkout. Learn more.
 
-Traveling with others? Choose PAYBYGROUP LOGO at checkout. Learn more.
+Traveling with others? Choose *PayByGroup* at checkout. Learn more.
 
 #### Visual Examples:
 
@@ -80,7 +80,7 @@ The best way to present the option at the checkout step is by asking users wheth
 
 Split the cost with *PayByGroup*. How it works.
 
-We now offer _PayByGroup_. View details.
+We now offer *PayByGroup*. View details.
 
 #### Visual Examples:
 
@@ -90,28 +90,24 @@ sample_poweredbypaybygroup_box.png
 <br>
 ##Logo and Graphic Guidelines
 
-For any implementation of PayByGroup on a merchant site, the following guidelines must be followed whenever the PayByGroup brand name or logo is used.
+<div class="alert tip">
+  <p><strong>Alert</strong>: For any implementation of PayByGroup on a merchant site, the following guidelines must be followed whenever the PayByGroup brand name or logo is used.</p>
+</div>
 
-•	Whenever the word “PayByGroup” is shown, it must be displayed using one of the Hosted PayByGroup Elements listed below. <sup>1</sup> 
+  - Whenever the word “PayByGroup” is shown, it must be displayed using one of the Hosted [PayByGroup Design Assets] (/design_assets).<sup>1</sup> 
 
-•	If you wish to use buttons that precisely match the colors of your site, you must choose other language for the button so as not to use the PayByGroup logo. In this case, the button must include “powered by PayByGroup” below, to the right, or surrounding the button using one of the Hosted PayByGroup Elements listed below. 
+  - If you wish to use buttons that precisely match the colors of your site, you must choose other language for the button so as not to use the PayByGroup logo. In this case, the button must include “powered by PayByGroup” below, to the right, or surrounding the button using one of the [PayByGroup Design Assets] (/design_assets). 
 
-•	The copy describing that PayByGroup is available or prompting users to choose PayByGroup on the product or checkout page must come from one of the PayByGroup Copy Elements below. <sup>2</sup>
+  - The copy describing that PayByGroup is available or prompting users to choose PayByGroup on the product or checkout page must come from one of the PayByGroup Copy Elements below.<sup>2</sup>
 
-**Hosted PayByGroup Elements**
+##PayByGroup Copy Elements<sup>3</sup>
 
-•	Small Logo: paybygroup_text_logo_small [PayByGroup](http://paybygroup.com)
+**Full Example**
 
-•	PayByGroup Button: ![PayByGroup Button](/images/pbg_orange.png) 
+partsofcopy_image.png
 
-•	PayByGroup Button Hover State: pbg_orange_hover  
+**Part One - Prompt**
 
-**PayByGroup Copy Elements**<sup>3</sup>
-<p> <i> Full Example </i> </p>
-
-INSERT IMAGE OF COPY SEGMENTS
-
-<p> <i> Part One - Prompt </i> </p>
 Need to split the cost?
 
 Want to split the cost?
@@ -131,30 +127,30 @@ Not ready to book quite yet?
 Still getting your group together?
 
 
-<p> <i> Part Two - Explanation </i> </p>
+**Part Two - Explanation**
 
-We now offer (PayByGroup).
+We now offer *PayByGroup*.
 
-Choose [PayByGroup](http://paybygroup.com) at checkout.
+Choose *PayByGroup* at checkout.
 
-Split the cost with [PayByGroup](http://paybygroup.com).
+Split the cost with *PayByGroup*.
 
-Use [PayByGroup](http://paybygroup.com) to buy with friends and family.
+Use *PayByGroup* to buy with friends and family.
 
-Use [PayByGroup](http://paybygroup.com) to book with friends and family.
+Use *PayByGroup* to book with friends and family.
 
-Start a [PayByGroup](http://paybygroup.com) to get your group together.
+Start a *PayByGroup* to get your group together.
 
-Don’t front the whole cost alone. Choose [PayByGroup](http://paybygroup.com).
+Don’t front the whole cost alone. Choose *PayByGroup*.
 
-Find out who’s in and split this cost with friends and family using [PayByGroup](http://paybygroup.com).
+Find out who’s in and split this cost with friends and family using *PayByGroup*.
 
-Split the cost with friends and family using [PayByGroup](http://paybygroup.com).
+Split the cost with friends and family using *PayByGroup*.
 
-Quickly and easily get everyone on board using [PayByGroup](http://paybygroup.com).
+Quickly and easily get everyone on board using *PayByGroup*.
 
 
-<p> <i> Part Three - Call to Action </i> </p>
+**Part Three - Call to Action**
 
 Learn more
 
@@ -163,7 +159,9 @@ View details
 More info
 
 How it works
-
+<br>
+<hr>
+<br>
 <sup>1</sup>  The only exception to this guideline is when a checkout page’s technical constraints require a text-only use of “PayByGroup” for the user to choose it as their option
 
 <sup>2</sup>  If you wish to use different copy, you may request approval and suggest it be added to the list of allowable copy by emailing merchants@paybygroup.com 
