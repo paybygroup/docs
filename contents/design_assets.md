@@ -20,8 +20,8 @@ Large Text Logo<br>
 [https://lets.paybygroup.com/assets/pbg_logolarge.png](https://lets.paybygroup.com/assets/pbg_logolarge.png)
 
 Huge Text Logo<br>
-![Huge Text Logo](https://lets.paybygroup.com/assets/pbg_logohuge.png.png)<br>
-[https://lets.paybygroup.com/assets/pbg_logohuge.png.png](https://lets.paybygroup.com/assets/pbg_logohuge.png.png)
+![Huge Text Logo](https://lets.paybygroup.com/assets/pbg_logohuge.png)<br>
+[https://lets.paybygroup.com/assets/pbg_logohuge.png](https://lets.paybygroup.com/assets/pbg_logohuge.png)
 
 #### Logo with Icon
 
@@ -42,8 +42,8 @@ Large Text and Icon Logo<br>
 [https://lets.paybygroup.com/assets/pbg_iconlogolarge.png](https://lets.paybygroup.com/assets/pbg_iconlogolarge.png)
 
 Huge Text and Icon Logo<br>
-![Huge Text and Icon Logo](https://lets.paybygroup.com/assets/pbg_iconlogohuge.png)<br>
-[https://lets.paybygroup.com/assets/pbg_iconlogohuge.png](https://lets.paybygroup.com/assets/pbg_iconlogohuge.png)
+![Huge Text and Icon Logo](https://lets.paybygroup.com/assets/pbg_iconlogohuge.png.png)<br>
+[https://lets.paybygroup.com/assets/pbg_iconlogohuge.png.png](https://lets.paybygroup.com/assets/pbg_iconlogohuge.png.png)
 
 #### Icon Logo Only
 
