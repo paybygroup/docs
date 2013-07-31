@@ -32,9 +32,9 @@ Traveling with multiple parties? We now offer *PayByGroup*. Learn more
 
 #### Visual Examples:
 
-twoline_weofferpaybygroup.png
+![/images/twoline_weofferpaybygroup.png](Two Line We Offer PayByGroup)
 
-paybygroup_verticalinfounit.png
+![/images/paybygroup_verticalinfounit.png](PayByGroup Vertical Info Unit)
 <br>
 <hr>
 <br>
@@ -53,7 +53,7 @@ Traveling with others? Choose *PayByGroup* at checkout. Learn more.
 
 #### Visual Examples:
 
-weofferpaybygroup_horizontalbox.png
+![/images/weofferpaybygroup_horizontalbox.png](We Offer PayByGroup Horizontal Box)
 <br>
 <hr>
 <br>
@@ -84,7 +84,7 @@ We now offer *PayByGroup*. View details.
 
 #### Visual Examples:
 
-sample_poweredbypaybygroup_box.png
+![/images/sample_poweredbypaybygroup_box.png](Sample Powered By PayByGroup Box)
 <br>
 <hr>
 <br>
@@ -94,9 +94,9 @@ sample_poweredbypaybygroup_box.png
   <p><strong>Alert</strong>: For any implementation of PayByGroup on a merchant site, the following guidelines must be followed whenever the PayByGroup brand name or logo is used.</p>
 </div>
 
-  - Whenever the word “PayByGroup” is shown, it must be displayed using one of the Hosted [PayByGroup Design Assets] (/design_assets).<sup>1</sup> 
+  - Whenever the word “PayByGroup” is shown, it must be displayed using one of the Hosted [PayByGroup Design Assets](/design_assets). <sup>1</sup> 
 
-  - If you wish to use buttons that precisely match the colors of your site, you must choose other language for the button so as not to use the PayByGroup logo. In this case, the button must include “powered by PayByGroup” below, to the right, or surrounding the button using one of the [PayByGroup Design Assets] (/design_assets). 
+  - If you wish to use buttons that precisely match the colors of your site, you must choose other language for the button so as not to use the PayByGroup logo. In this case, the button must include “powered by PayByGroup” below, to the right, or surrounding the button using one of the [PayByGroup Design Assets](/design_assets). 
 
   - The copy describing that PayByGroup is available or prompting users to choose PayByGroup on the product or checkout page must come from one of the PayByGroup Copy Elements below.<sup>2</sup>
 
@@ -104,7 +104,7 @@ sample_poweredbypaybygroup_box.png
 
 **Full Example**
 
-partsofcopy_image.png
+![/images/partsofcopy_image.png](Image of Copy Elements)
 
 **Part One - Prompt**
 
