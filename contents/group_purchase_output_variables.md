@@ -28,7 +28,7 @@
 ## Group Purchase Details
 <dl>
   <dt>id <code><i>integer</i></code></dt>
-  <dl>System ID of this particular group purchase, which is used to query [the API](/pbgapis) for details on a particular group purchase.
+  <dl>System ID of this particular group purchase, which is used to query [the API](/pbgapis) for details on a particular group purchase.</dl>
   <dt>name <code><i>string</i></code></dt>
   <dl>Name for this particular Group Purchase assigned by the organizer when it was created.</dl>
   <dt>details_text <code><i>text</i></code></dt>

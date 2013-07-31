@@ -32,9 +32,9 @@ Traveling with multiple parties? We now offer *PayByGroup*. Learn more
 
 #### Visual Examples:
 
-![/images/twoline_weofferpaybygroup.png.png](Two Line We Offer PayByGroup)
+![Two Line We Offer PayByGroup](/images/twoline_weofferpaybygroup.png)
 
-![/images/paybygroup_verticalinfounit.png.png](PayByGroup Vertical Info Unit)
+![PayByGroup Vertical Info Unit](/images/paybygroup_verticalinfounit.png)
 <br>
 <hr>
 <br>
@@ -53,7 +53,7 @@ Traveling with others? Choose *PayByGroup* at checkout. Learn more.
 
 #### Visual Examples:
 
-![/images/weofferpaybygroup_horizontalbox.png.png](We Offer PayByGroup Horizontal Box)
+![We Offer PayByGroup Horizontal Box](/images/weofferpaybygroup_horizontalbox.png)
 <br>
 <hr>
 <br>
@@ -84,7 +84,7 @@ We now offer *PayByGroup*. View details.
 
 #### Visual Examples:
 
-![/images/sample_poweredbypaybygroup_box.png.png](Sample Powered By PayByGroup Box)
+![Sample Powered By PayByGroup Box](/images/sample_poweredbypaybygroup_box.png)
 <br>
 <hr>
 <br>
@@ -104,7 +104,7 @@ We now offer *PayByGroup*. View details.
 
 **Full Example**
 
-![/images/partsofcopy_image.png](Image of Copy Elements)
+![Image Explaining Copy Elements](/images/partsofcopy_image.png)
 
 <br>
 **Part One - Prompt**
