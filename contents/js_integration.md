@@ -81,7 +81,7 @@ Add an informational unit using any of the copy and design examples listed in th
 •   Search results page <br>
 •   Product listing page
 
-You may customize the look and feel to match your site as long as the [PayByGroup Logo] (https://lets.paybygroup.com/assets/paybygroup-text-small.png) is included whenever the term "PayByGroup" is used.<sup>1</sup> We recommend you use the version hosted by PayByGroup to eliminate the need to change your code if the logo is updated. 
+You may customize the look and feel to match your site as long as the PayByGroup Logo ([See Design Assets](/design assets)) is included whenever the term "PayByGroup" is used.<sup>1</sup> We recommend you use the version hosted by PayByGroup to eliminate the need to change your code if the logo is updated. 
 
 When clicked, the informational unit displays the lightbox explaining how PayByGroup works, and the only option on the lightbox is to close it and keep browsing.
 
@@ -91,7 +91,7 @@ When clicked, the informational unit displays the lightbox explaining how PayByG
 
 No other data attributes need to be defined for the informational units, though you can customize them if you like.
 
-Here is an example of an informational unit:
+Here is an example of an informational unit (see [Design Assets](/design_assets) for more):
 
 
 ![Info Unit](/images/info_unit.png)
