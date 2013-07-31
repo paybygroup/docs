@@ -1,6 +1,9 @@
 # Design Assets
 ## Logo Assets
 
+<div class="alert tip">
+  <p><strong>Tip</strong>: For recommendations on where and how to use these elements on your site, see the [Design Guidelines](/design_guidelines).</p>
+</div>
 #### Text Logo Only
 
 Tiny Text Logo<br>
