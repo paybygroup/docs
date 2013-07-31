@@ -42,8 +42,8 @@ Large Text and Icon Logo<br>
 [https://lets.paybygroup.com/assets/pbg_iconlogolarge.png](https://lets.paybygroup.com/assets/pbg_iconlogolarge.png)
 
 Huge Text and Icon Logo<br>
-![Huge Text and Icon Logo](https://lets.paybygroup.com/assets/pbg_iconlogohuge.png.png)<br>
-[https://lets.paybygroup.com/assets/pbg_iconlogohuge.png.png](https://lets.paybygroup.com/assets/pbg_iconlogohuge.png.png)
+![Huge Text and Icon Logo](https://lets.paybygroup.com/assets/pbg_iconlogohuge.png)<br>
+[https://lets.paybygroup.com/assets/pbg_iconlogohuge.png](https://lets.paybygroup.com/assets/pbg_iconlogohuge.png)
 
 #### Icon Logo Only
 
@@ -82,8 +82,8 @@ PayByGroup Info Unit 300x250<br>
 [https://lets.paybygroup.com/assets/paybygroup_infounit_300x250.png](https://lets.paybygroup.com/assets/paybygroup_infounit_300x250.png)
 
 Two-line We Offer PayByGroup Info Unit<br>
-![Two Line We Offer PayByGroup Info Unit](https://lets.paybygroup.com/assets/twoline_weofferpaybygroup.png.png)<br>
-[https://lets.paybygroup.com/assets/twoline_weofferpaybygroup.png.png](https://lets.paybygroup.com/assets/twoline_weofferpaybygroup.png.png)
+![Two Line We Offer PayByGroup Info Unit](https://lets.paybygroup.com/assets/twoline_weofferpaybygroup.png)<br>
+[https://lets.paybygroup.com/assets/twoline_weofferpaybygroup.png](https://lets.paybygroup.com/assets/twoline_weofferpaybygroup.png)
 
 <!-- ## Pre-Made Informational Units (Customizable HTML Formats)
 
@@ -116,16 +116,16 @@ Beachfront Only checkout page box
 ## Pre-Made Use PayByGroup Elements
 
 Transparent Powered by PayByGroup Box<br>
-![Transparent Powered by PayByGroup Box](https://lets.paybygroup.com/assets/poweredbypaybygroup_box.png.png)<br>
-[https://lets.paybygroup.com/assets/poweredbypaybygroup_box.png.png](https://lets.paybygroup.com/assets/poweredbypaybygroup_box.png.png)
+![Transparent Powered by PayByGroup Box](https://lets.paybygroup.com/assets/poweredbypaybygroup_box.png)<br>
+[https://lets.paybygroup.com/assets/poweredbypaybygroup_box.png](https://lets.paybygroup.com/assets/poweredbypaybygroup_box.png)
 
 Orange PayByGroup Button<br>
-![Orange PayByGroup Button](https://lets.paybygroup.com/assets/pbg_orange.png)<br>
-[https://lets.paybygroup.com/assets/pbg_orange.png](https://lets.paybygroup.com/assets/pbg_orange.png)
+![Orange PayByGroup Button](https://lets.paybygroup.com/images/merchant/elements/pbg_orange.png)<br>
+[https://lets.paybygroup.com/images/merchant/elements/pbg_orange.png](https://lets.paybygroup.com/images/merchant/elements/pbg_orange.png)
 
 Orange PayByGroup Button Hover State<br>
-![Orange PayByGroup Button Hover State](https://lets.paybygroup.com/assets/pbg_orange_hover.png)<br>
-[https://lets.paybygroup.com/assets/pbg_orange_hover.png](https://lets.paybygroup.com/assets/pbg_orange_hover.png)
+![Orange PayByGroup Button Hover State](https://lets.paybygroup.com/images/merchant/elements/pbg_orange_hover.png)<br>
+[https://lets.paybygroup.com/images/merchant/elements/pbg_orange_hover.png](https://lets.paybygroup.com/images/merchant/elements/pbg_orange_hover.png)
 
 
 
