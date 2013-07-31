@@ -178,14 +178,14 @@ Example results:
 
     { "transactions":
       [
-        { "id":                            165412358,
-          "user_id":                    9331,
-          "amount":                    "111.23",
-          "nett_amount":            "110.00",
+        { "id":                 165412358,
+          "user_id":            9331,
+          "amount":             "111.23",
+          "nett_amount":        "110.00",
           "convenience_fee":    "1.23",
-          "merchant_fee":          "1.00",
-          "pbg_adjustment":      "0.00",
-          "created_at":               "2013-01-11T19:20:30-08:00"
+          "merchant_fee":       "1.00",
+          "pbg_adjustment":     "0.00",
+          "created_at":         "2013-01-11T19:20:30-08:00"
         },
         {
 
