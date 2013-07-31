@@ -1,6 +1,6 @@
 # PayByGroup Merchant Input Variables
 <div class="alert tip">
-  <p><strong>Tip</strong>: When using these attributes on [JS Snippet] (/js_integration), turn <code>_</code> in to <code>-</code><br>For example : <code>merchant_api_url => merchant-api-url</code> .</p>
+  <p><strong>Tip</strong>: When using these attributes on a <a href="/js_integration">JS Snippet Integration</a>, turn <code>_</code> in to <code>-</code><br>For example : <code>merchant_api_url => merchant-api-url</code> .</p>
 </div>
 
 ## Merchant Configuration
