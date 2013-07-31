@@ -84,7 +84,34 @@ PayByGroup Info Unit 300x250
 Two-line We Offer PayByGroup Info Unit
 ![https://lets.paybygroup.com/assets/twoline_weofferpaybygroup.png] (Two Line We Offer PayByGroup Info Unit)
 [https://lets.paybygroup.com/assets/twoline_weofferpaybygroup.png] (https://lets.paybygroup.com/assets/twoline_weofferpaybygroup.png)
-## Pre-Made Informational Units (Customizable HTML Formats)
+
+<!-- ## Pre-Made Informational Units (Customizable HTML Formats)
+
+http://www.vacationrental365.com/site/PropertyList/18064/View-Vacation-Rentals.aspx
+
+<div class='pbg_info' data-popup-button='Keep Browsing' data-popup-button-action='close' style='float: right;width: 400px;overflow: visible;position: relative;margin-top: -65px;cursor:pointer;'>
+<p>
+Need to split the cost? We now offer
+<img height='20' src='http://lets.paybygroup.com/assets/paybygroup-text-small.png' style='vertical-align: middle;margin-right: 5px;'>
+<a href='#'>Learn More</a>.
+</p>
+</div>
+
+<pre class="terminal">
+<div class='pbg_info' data-popup-button='Keep Browsing' data-popup-button-action='close' style='float: right;width: 400px;overflow: visible;position: relative;margin-top: -65px;cursor:pointer;'>
+<p>
+Need to split the cost? We now offer
+<img height='20' src='http://lets.paybygroup.com/assets/paybygroup-text-small.png' style='vertical-align: middle;margin-right: 5px;'>
+<a href='#'>Learn More</a>.
+</p>
+</div>
+</pre> 
+
+## Pre-Made Use PayByGroup Designs (Customizable HTML Formats)
+
+Beachfront Only checkout page box
+
+-->
 
 ## Pre-Made Use PayByGroup Elements
 
