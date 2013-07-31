@@ -69,6 +69,10 @@ Huge Icon<br>
 
 ## Pre-Made Informational Units (Image Format)
 
+PayByGroup Info Unit 120x240<br>
+![PayByGroup Info Unit 120x240](https://lets.paybygroup.com/assets/paybygroup_infounit_120x240.png)<br>
+[https://lets.paybygroup.com/assets/paybygroup_infounit_120x240.png](https://lets.paybygroup.com/assets/paybygroup_infounit_120x240.png)
+
 PayByGroup Info Unit 160x600<br>
 ![PayByGroup Info Unit 160x600](https://lets.paybygroup.com/assets/paybygroup_infounit_160x600.png)<br>
 [https://lets.paybygroup.com/assets/paybygroup_infounit_160x600.png](https://lets.paybygroup.com/assets/paybygroup_infounit_160x600.png)
@@ -77,9 +81,21 @@ PayByGroup Info Unit 240x400<br>
 ![PayByGroup Info Unit 240x400](https://lets.paybygroup.com/assets/paybygroup_infounit_240x400.png)<br>
 [https://lets.paybygroup.com/assets/paybygroup_infounit_240x400.png](https://lets.paybygroup.com/assets/paybygroup_infounit_240x400.png)
 
+PayByGroup Info Unit 300x100<br>
+![PayByGroup Info Unit 300x100](https://lets.paybygroup.com/assets/paybygroup_infounit_300x100.png)<br>
+[https://lets.paybygroup.com/assets/paybygroup_infounit_300x100.png](https://lets.paybygroup.com/assets/paybygroup_infounit_300x100.png)
+
 PayByGroup Info Unit 300x250<br>
 ![PayByGroup Info Unit 300x250](https://lets.paybygroup.com/assets/paybygroup_infounit_300x250.png)<br>
 [https://lets.paybygroup.com/assets/paybygroup_infounit_300x250.png](https://lets.paybygroup.com/assets/paybygroup_infounit_300x250.png)
+
+PayByGroup Info Unit 469x60<br>
+![PayByGroup Info Unit 469x60](https://lets.paybygroup.com/assets/paybygroup_infounit_469x60.png)<br>
+[https://lets.paybygroup.com/assets/paybygroup_infounit_469x60.png](https://lets.paybygroup.com/assets/paybygroup_infounit_469x60.png)
+
+PayByGroup Info Unit 728x90<br>
+![PayByGroup Info Unit 728x90](https://lets.paybygroup.com/assets/paybygroup_infounit_728x90.png)<br>
+[https://lets.paybygroup.com/assets/paybygroup_infounit_728x90.png](https://lets.paybygroup.com/assets/paybygroup_infounit_728x90.png)
 
 Two-line We Offer PayByGroup Info Unit<br>
 ![Two Line We Offer PayByGroup Info Unit](https://lets.paybygroup.com/assets/twoline_weofferpaybygroup.png)<br>
