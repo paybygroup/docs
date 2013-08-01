@@ -77,22 +77,22 @@ purchase. Possible values are:
 ## Payments and Splitting
 <dl>
   <dt>purchase_cost <code><i>currency</i></code></dt>
-  <dl>Idealized total cost of the purchase (including deposits, taxes, and fees). This is the amount PayByGroup sends to the merchant when the PayByGroup completes, unless the merchant collected an organizer deposit as a portion of the total cost<sup>1</sup>.</dl>
+  <dl>Idealized total cost of the purchase (including deposits, taxes, and fees). This is the amount PayByGroup sends to the merchant when the PayByGroup completes, unless the merchant collected an organizer deposit as a portion of the total cost.<sup>1</sup></dl>
   <dt>purchase_cost_per_spot <code><i>currency</i></code></dt>
-  <dl>Total cost of one spot (including deposits, taxes, and fees). This amount, multiplied by the total number of spots in the group, is sent to the merchant when the PayByGroup completes<sup>1</sup>.</dl>
+  <dl>Total cost of one spot (including deposits, taxes, and fees). This amount, multiplied by the total number of spots in the group, is sent to the merchant when the PayByGroup completes.<sup>1</sup></dl>
   <dt>min_min_people <code><i>integer</i></code></dt>
   <dl>Minimum users who must be part of the purchase in order for it to complete.</dl>
   <dt>max_max_people <code><i>integer</i></code></dt>
   <dl>Maximum users who are allowed to be part of the purchase.</dl>
   <dt>allow_specified_per_person <code><i>object</i></code></dt>
-  <dl>This option is only available for purchases with a <strong>purchase_cost</strong> and is set to <strong>true</strong> by default. It allows the organizer to select the specified per person splitting method, which means each member of the group will specify the amount they are contributing instead of splitting the cost evenly. The tipping point is reached once the total dollar amount needed is committed. To disable this option for a given purchsae, you may set it to <strong>false</strong>.</dl>
+  <dl>This option is only available for purchases with a <strong>purchase_cost</strong> and is set to <strong>true</strong> by default. It allows the organizer to select the specified-per-person splitting method, which means each member of the group will specify the amount they are contributing instead of splitting the cost evenly. The tipping point is reached once the total dollar amount needed is committed. To disable this option for a given purchase, you may set it to <strong>false</strong>.</dl>
+  <dt>allow_even_split <code><i>object</i></code></dt>
+  <dl>This option is only available for purchases with a <strong>purchase_cost</strong> and is set to <strong>true</strong> by default. It allows the organizer to select the even-split splitting method, which means the purchase cost is split evenly amongst the total number of spots claimed. The tipping point is reached once the minimum number of needed spots is claimed. To disable this option for a given purchase, you may set it to <strong>false</strong>.</dl>
   <dt>organizer_deposit <code><i>currency</i></code></dt>
   <dl>Amount of the deposit required from the organizer in order to allow for a <strong>deposit_hold</strong>. This amount is paid by the organizer at the time the purchase is created if <strong>pbg_collects_org_deposit</strong> is <strong>true</strong>.</dl>
   <dt>pbg_collects_org_deposit <code><i>object</i></code></dt>
   <dl>Specifies whether PayByGroup collects the deposit when the organizer creates their PayByGroup. If not specified and <strong>organizer_deposit</strong> is greater than zero, it is assumed the deposit has been collected directly by the merchant.</dl>
-<!--  <dt>allow_even_split <code><i>object</i></code></dt>
-  <dl>Allow organizer to select the even splitting method, which will automatically divide the total cost by the number of people that commit. <strong>purchase_cost</strong> must be specified.</dl>
-  <dt>allow_fixed_per_person <code><i>object</i></code></dt>
+<!--  <dt>allow_fixed_per_person <code><i>object</i></code></dt>
   <dl>Allow organizer to select the fixed per person splitting method, which sets the cost of each spot as a fixed amount. <strong>cost_per_person</strong> must be specified to enable this option.</dl>
 </dl> -->
 <br>
