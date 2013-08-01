@@ -68,16 +68,24 @@ Querying PayByGroup about existing group purchases using certain parameters.
   { "group_purchases":
     [
       {
-        "id":               "ABC_12345",
-        "status":           "GP_MERCHANT_PAID",
-        "name":             "1600 Whitmarsh Avenue",
-        "commit_deadline":  "2013-04-19T15:54:05-07:00",
-        "min_people":       2,
-        "max_people":       5,
+        "id":                       "ABC_12345",
+        "status":                   "GP_MERCHANT_PAID",
+        "name":                     "1600 Whitmarsh Avenue",
+        "commit_deadline":          "2013-04-19T15:54:05-07:00",
+        "min_people":               2,
+        "max_people":               5,
         "splitting_method_type":    "GroupPurchases::SimpleSplit",
-        "purchase_cost":    "1500.00",
-        "merchant_id":      "test",
-        "merchant_name":    "John Doe"
+        "purchase_cost":            "1500.00",
+        "merchant_id":              "test",
+        "merchant_name":            "John Doe"
+        "purchase_inventory_id":    "inv123",
+        "purchase_image_url":       "http://example.com/image.jpg",
+        "purchase_description":     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
+        "purchase_link_url":        "http://yoursite.com/abc_12345",
+        "hold_type":                "no_hold",
+        "min_min_people":           2,
+        "max_max_people":           10,
+        "organizer_deposit":        0.0
       },
       {
 
@@ -262,17 +270,24 @@ Example format:
     { "api_key":  "XXXXXXXXXX",
       "purchase_id":  "123",
       "group_purchase": {
-        "id":                 123,
-        "status":             "ACTIVE",
-        "name":               "Lorem ipsum",
-        "commit_deadline":    "2013-06-19",
-        "min_people":         "5",
-        "max_people":         "10",
-        "splitting_type":     "even_split",
-        "purchase_cost":      "1000.00",
-        "purchase_id":        "98765",
-        "merchant_id":        "EXMR",
-        "merchant_name":      "Example Merchant"
+        "id":                       "ABC_12345",
+        "status":                   "GP_MERCHANT_PAID",
+        "name":                     "1600 Whitmarsh Avenue",
+        "commit_deadline":          "2013-04-19T15:54:05-07:00",
+        "min_people":               2,
+        "max_people":               5,
+        "splitting_method_type":    "GroupPurchases::SimpleSplit",
+        "purchase_cost":            "1500.00",
+        "merchant_id":              "test",
+        "merchant_name":            "John Doe"
+        "purchase_inventory_id":    "inv123",
+        "purchase_image_url":       "http://example.com/image.jpg",
+        "purchase_description":     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod...",
+        "purchase_link_url":        "http://yoursite.com/abc_12345",
+        "hold_type":                "no_hold",
+        "min_min_people":           2,
+        "max_max_people":           10,
+        "organizer_deposit":        0.0
       }
     }
 
