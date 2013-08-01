@@ -46,18 +46,18 @@ These variables are set when the PayByGroup is created using the [JS Snippet] (/
   <dl>URL linking back to the merchant’s site for the item being purchased or a shopping cart listing all the items being purchased as part of this PayByGroup.</dl>
   <dt>purchase_inventory_id  <code><i>string</i></code></dt>
   <dl>An ID provided by the merchant that represents a piece of inventory that may be involved in multiple purchases, e.g. a house that is booked for different times in separate PayByGroups, each with a unique `purchase_id`.</dl>
+  <dt>purchase_deadline  <code><i>date</i></code></dt>
+  <dl>Date at which this PayByGroup becomes invalid at 11:59 PM PST. The PayByGroup is frozen and cannot be updated or completed after this date unless the `purchase_deadline` is edited by the merchant to be at a later date. If it is not extended, the inventory should be released.</dl>
+  <dt>hold_deadline  <code><i>date</i></code></dt>
+  <dl>If <strong>hold_type</strong> is either <strong>“free_hold”</strong> or <strong>“deposit_hold”</strong>, this is the date on which the hold expires and the inventory becomes subject to availability. This date is displayed on the organizer’s dashboard.</dl>
   <dt>hold_type  <code><i>string</i></code></dt>
-  <dl>Must be one of:
+  <dl>Defaults to <strong>no_hold</strong> but must be one of:
     <ul>
       <li><strong>"no_hold"</strong>Purchase is subject to availability of the inventory at time of completion.</li>
       <li><strong>"free_hold"</strong>The inventory is reserved for a specified period of time without any initial payment or deposit, usually 1-3 days, after which it is subject to availability.</li>
       <li><strong>"deposit_hold"</strong>An initial payment or deposit is made by the organizer, either on the merchant’s site or as part of their creating a PayByGroup, in order to reserve the inventory for a specified period or time or until the PayByGroup completes.</li>
     </ul>
   </dl>
-  <dt>hold_deadline  <code><i>date</i></code></dt>
-  <dl>If <strong>hold_type</strong> is either <strong>“free_hold”</strong> or <strong>“deposit_hold”</strong>, this is the date on which the hold expires and the inventory becomes subject to availability. This date is displayed on the organizer’s dashboard.</dl>
-  <dt>purchase_deadline  <code><i>date</i></code></dt>
-  <dl>Date at which this PayByGroup becomes invalid at 11:59 PM PST. The PayByGroup is frozen and cannot be updated or completed after this date unless the `purchase_deadline` is edited by the merchant to be at a later date. If it is not extended, the inventory should be released.</dl>
   <dt>merchant_org_email <code><i>string</i></code></dt>
   <dl>Default email for the organizer used to reference the organizer in the merchant’s system and to streamline their experience setting up their PayByGroup.</dl>
   <dt>merchant_org_first_name <code><i>string</i></code></dt>
@@ -88,13 +88,13 @@ purchase. Possible values are:
   <dl>Amount of the deposit required from the organizer in order to allow for a `deposit_hold`. This amount is paid by the organizer at the time the purchase is created if `pbg_collects_org_deposit` is `true`.</dl>
   <dt>pbg_collects_org_deposit <code><i>object</i></code></dt>
   <dl>Specifies whether PayByGroup collects the deposit when the organizer creates their PayByGroup. If not specified and `organizer_deposit` is greater than zero, it is assumed the deposit has been collected directly by the merchant.</dl>
-  <dt>allow_even_split <code><i>object</i></code></dt>
+<!--  <dt>allow_even_split <code><i>object</i></code></dt>
   <dl>Allow organizer to select the even splitting method, which will automatically divide the total cost by the number of people that commit. <strong>purchase_cost</strong> must be specified.</dl>
   <dt>allow_fixed_per_person <code><i>object</i></code></dt>
   <dl>Allow organizer to select the fixed per person splitting method, which sets the cost of each spot as a fixed amount. `cost_per_person` must be specified to enable this option.</dl>
   <dt>allow_specified_per_person <code><i>object</i></code></dt>
   <dl>Allow organizer to select the specified per person splitting method, which means each member of the group will specify the amount they are contributing. The tipping point is reached once the total dollar amount needed is committed.</dl>
-</dl>
+</dl> -->
 <br>
 <hr>
 <br>
