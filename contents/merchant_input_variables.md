@@ -3,10 +3,17 @@
   <p><strong>Tip</strong>: When using these attributes on a <a href="/js_integration">JS Snippet Integration</a>, turn <code>_</code> in to <code>-</code><br>For example : <code>merchant_api_url => merchant-api-url</code> .</p>
 </div>
 
-## Merchant Configuration
+## Authentication
 <dl>
   <dt>api_key <code><i>string</i></code></dt>
   <dd>A 32-character sequence of printable ASCII characters.</dd>
+</dl>
+<div class="alert tip">
+  <p><strong>No key?</strong>: If you do not have an API Key <a href="mailto:merchants@paybygroup.com?subject=Merchant API Key Needed">Contact Us</a> .</p>
+</div>
+
+## Merchant Configuration
+<dl>
  <!-- <dt>merchant_api_url <code><i>url</i></code></dt>
   <dd>Used to display on credit card statements and cannot be greater than 11 characters.</dd> -->
   <dt>merchant_agent_email <code><i>string</i></code></dt>
