@@ -81,9 +81,9 @@ purchase. Possible values are:
   <dt>purchase_cost_per_spot <code><i>currency</i></code></dt>
   <dl>Total cost of one spot (including deposits, taxes, and fees). This amount, multiplied by the total number of spots in the group, is sent to the merchant when the PayByGroup completes.<sup>1</sup></dl>
   <dt>min_min_people <code><i>integer</i></code></dt>
-  <dl>Minimum users who must be part of the purchase in order for it to complete.</dl>
+  <dl>Absolute minimum number of spots that must be claimed in order for the purchase to complete.</dl>
   <dt>max_max_people <code><i>integer</i></code></dt>
-  <dl>Maximum users who are allowed to be part of the purchase.</dl>
+  <dl>Absolute maximum number of spots that are allowed to be claimed as part of the purchase.</dl>
   <dt>allow_specified_per_person <code><i>object</i></code></dt>
   <dl>This option is only available for purchases with a <strong>purchase_cost</strong> and is set to <strong>true</strong> by default. It allows the organizer to select the specified-per-person splitting method, which means each member of the group will specify the amount they are contributing instead of splitting the cost evenly. The tipping point is reached once the total dollar amount needed is committed. To disable this option for a given purchase, you may set it to <strong>false</strong>.</dl>
   <dt>allow_even_split <code><i>object</i></code></dt>
