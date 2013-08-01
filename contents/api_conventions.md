@@ -25,7 +25,7 @@ The following describes the approach used by PayByGroup APIs unless explicitly s
       (e.g. "USD" for US dollars)
 
 #### API ENDPOINT
- - `production` - https://lets.paybygroup.com/api/v1/
+ - `production` - https://lets.paybygroup.com/api/v1/ (184.106.133.37)
 
 #### MERCHANT\_API\_URL
 - URL supplied by the merchant
