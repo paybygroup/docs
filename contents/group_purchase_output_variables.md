@@ -39,10 +39,6 @@
   <dl>Maximum number of people allowed by the organizer to join the PayByGroup. Must be less than or equal to `max_max_people` if that constraint is set by the merchant.</dl>
   <dt>commit_deadline <code><i>date</i></code></dt>
   <dl>Date set by organizer by which invitees must respond. It cannot be set later than the `purchase_deadline` as set by the merchant.</dl>
-  <dt>invite_subject <code><i>string</i></code></dt>
-  <dl>Text of the email subject line used by the organizer when sending invitations.</dl>
-  <dt>invite_message <code><i>string</i></code></dt>
-  <dl>Message sent by the organizer to the invitees to invite them to participate in the PayByGroup.</dl>
   <dt>created_at <code><i>date</i></code></dt>
   <dl>The date/timestamp of when a PayByGroup was created.</dl>
   <dt>updated_at <code><i>date</i></code></dt>
@@ -52,3 +48,8 @@
   <dt>pp_cost <code><i>currency</i></code></dt>
   <dl>The current cost per person based on the number of people committed.</dl>
 </dl>
+
+<!--   <dt>invite_subject <code><i>string</i></code></dt>
+  <dl>Text of the email subject line used by the organizer when sending invitations.</dl>
+  <dt>invite_message <code><i>string</i></code></dt>
+  <dl>Message sent by the organizer to the invitees to invite them to participate in the PayByGroup.</dl> -->
