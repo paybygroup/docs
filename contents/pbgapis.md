@@ -26,12 +26,12 @@ Action    | Resource                                          | Description
 GET       | [/group_purchases](#purchase_index)                     | Returns the details for matching selection of purchases
 GET       | /group_purchases/:purchase_id                  | Returns the details for single group purchase
 POST      | /group_purchases/:id/collect_funds        | Confirms that the inventory is available to complete the purchase and triggers final capture of the funds to the merchant's account [](info#purchase_collect_funds_info)
-PUT      | /group_purchases/:id/set_unavailable      | Notifies the organizer and the merchant by email that the specific inventory is no longer available and prompts the merchant to contact the organizer regarding substitute inventory to which to apply this PayByGroup [](info#purchase_set_unavailable_info)
-PUT      | /group_purchases/:id/cancel     | Permanently cancels this PayByGroup, refunds any transacations, and cancels any credit card authorizations currently in place [](info#purchase_cancel_info)
+PUT       | /group_purchases/:id/set_unavailable      | Notifies the organizer and the merchant by email that the specific inventory is no longer available and prompts the merchant to contact the organizer regarding substitute inventory to which to apply this PayByGroup [](info#purchase_set_unavailable_info)
+PUT       | /group_purchases/:id/cancel     | Permanently cancels this PayByGroup, refunds any transacations, and cancels any credit card authorizations currently in place [](info#purchase_cancel_info)
 POST      | /group_purchases/:id/refund        | Returns all funds collected for this PayByGroup and cancels any existing authorizations on credit cards tied to this PayByGroup [](info#purchase_refund_info)
 GET       | [/group_purchases/:id/invitees](#invitees_index)        | Returns details on all members of the selected group purchase 
 GET       | [/group_purchases/:id/transactions](#transaction_index) | Returns the details for all transactions that are part of the selected group purchase
-DELETE      | [/group_purchases/:id/delete](https://lets.paybygroup.com/api/v1/group_purchases/:id/delete)        | Completely removes a purchase from the PayByGroup system (Use with EXTREME CAUTION) [](info#purchase_delete_info)
+DELETE    | /group_purchases/:id/delete       | Completely removes a purchase from the PayByGroup system (Use with EXTREME CAUTION) [](info#purchase_delete_info)
 
 
 <div class="hide">
@@ -68,16 +68,16 @@ Querying PayByGroup about existing group purchases using certain parameters.
   { "group_purchases":
     [
       {
-        "id": "ABC_12345",
-        "status": "GP_MERCHANT_PAID",
-        "name": "1600 Whitmarsh Avenue",
-        "commit_deadline": "2013-04-19T15:54:05-07:00",
-        "min_people": 2,
-        "max_people": 5,
-        "splitting_method_type": "GroupPurchases::SimpleSplit",
-        "purchase_cost": "1500.00",
-        "merchant_id": "test",
-        "merchant_name": "John Doe"
+        "id":               "ABC_12345",
+        "status":           "GP_MERCHANT_PAID",
+        "name":             "1600 Whitmarsh Avenue",
+        "commit_deadline":  "2013-04-19T15:54:05-07:00",
+        "min_people":       2,
+        "max_people":       5,
+        "splitting_method_type":    "GroupPurchases::SimpleSplit",
+        "purchase_cost":    "1500.00",
+        "merchant_id":      "test",
+        "merchant_name":    "John Doe"
       },
       {
 
