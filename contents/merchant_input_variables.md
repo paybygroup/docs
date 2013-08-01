@@ -58,15 +58,6 @@ These variables are set when the PayByGroup is created using the [JS Snippet] (/
   <dl>If <strong>hold_type</strong> is either <strong>“free_hold”</strong> or <strong>“deposit_hold”</strong>, this is the date on which the hold expires and the inventory becomes subject to availability. This date is displayed on the organizer’s dashboard.</dl>
   <dt>purchase_deadline  <code><i>date</i></code></dt>
   <dl>Date at which this PayByGroup becomes invalid at 11:59 PM PST. The PayByGroup is frozen and cannot be updated or completed after this date unless the `purchase_deadline` is edited by the merchant to be at a later date. If it is not extended, the inventory should be released.</dl>
-  <dt>inventory_state  <code><i>string</i></code></dt>
-<!--  <dl>Specifies the current state of the inventory underlying a
-purchase. Possible values are:
-    <ul>
-      <li><strong>"available"</strong>The inventory is still available.</li>
-      <li><strong>"unavailable"</strong>The inventory is no longer available.</li>
-      <li><strong>"unknown"</strong>The status of the inventory cannot be instantly determined.</li>
-    </ul>
-  </dl> -->
   <dt>merchant_org_email <code><i>string</i></code></dt>
   <dl>Default email for the organizer used to reference the organizer in the merchant’s system and to streamline their experience setting up their PayByGroup.</dl>
   <dt>merchant_org_first_name <code><i>string</i></code></dt>
@@ -74,6 +65,14 @@ purchase. Possible values are:
   <dt>merchant_org_last_name <code><i>string</i></code></dt>
   <dl>Default last name for the organizer.</dl>
 </dl>
+<!--    <dt>inventory_state  <code><i>string</i></code></dt> <dl>Specifies the current state of the inventory underlying a
+purchase. Possible values are:
+    <ul>
+      <li><strong>"available"</strong>The inventory is still available.</li>
+      <li><strong>"unavailable"</strong>The inventory is no longer available.</li>
+      <li><strong>"unknown"</strong>The status of the inventory cannot be instantly determined.</li>
+    </ul>
+  </dl> -->
 
 ## Payments and Splitting
 <dl>
