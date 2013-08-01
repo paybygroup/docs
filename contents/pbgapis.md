@@ -24,7 +24,7 @@ You need to include `api_key` to authenticate.
 Action    | Resource                                          | Description
 ----------| --------------------------------------------------| ----------------------------------------------------------
 GET       | [/group_purchases](#purchase_index)                     | Returns the details for matching selection of purchases
-GET       | /group_purchases/:purchase_id                  | Returns the details for single group purchase
+GET       | /group_purchases/:id                  | Returns the details for single group purchase
 POST      | /group_purchases/:id/collect_funds        | Confirms that the inventory is available to complete the purchase and triggers final capture of the funds to the merchant's account [](info#purchase_collect_funds_info)
 PUT       | /group_purchases/:id/set_unavailable      | Notifies the organizer and the merchant by email that the specific inventory is no longer available and prompts the merchant to contact the organizer regarding substitute inventory to which to apply this PayByGroup [](info#purchase_set_unavailable_info)
 PUT       | /group_purchases/:id/cancel     | Permanently cancels this PayByGroup, refunds any transacations, and cancels any credit card authorizations currently in place [](info#purchase_cancel_info)
@@ -117,12 +117,12 @@ Call for querying PayByGroup about users associated with an existing group purch
   - `status` -- the current status of this invitee. One of the following: 'INVITED', 'ACCEPTED', 'WITHDRAWN'.
   - `opt_in` -- if `true` then this user has agreed to receive marketing emails from the merchant, but if `false` no marketing emails may be sent, only transactional emails.
 
-Each user info hash contains one of the following depending on how the cost was split:
+Each user info hash contains one of the following depending on how the cost was split. The other will return `null`:
 
   - `number_of_spots` -- if the total cost was split evenly or the cost is a fixed amount per person, then this value indicates how many spots this user claimed.
   - `amount_committed` -- if each user was able to enter the amount they are willing to contribute to the total cost, then this value is the amount to which they committed.
 
-Each user info hash may contain the following values if they are available:
+Each user info hash may contain the following values if they are available. If they are not available, then `null` is returned:
 
   - `age` -- the user's age in years at the time they committed to the purchase.
   - `location` -- the geographic location of the user, typically returned as `city, state`.
