@@ -49,9 +49,9 @@
   <dl>The current cost per person based on the number of people committed.</dl>
   <dt>splitting_type <code><i>string</i></code></dt>
   <dl>How the cost is being split amongst the group. Must be one of: <ul>
-      <li><strong>"even_split"</strong>The total cost is split evenly amongst all the spots that are claimed.</li>
-      <li><strong>"fixed_per_person"</strong>Each spot costs a consistent amount regardless of how many spots are claimed.</li>
-      <li><strong>"specified_per_person"</strong>Each member of the group specifies an arbitrary amount they will contribute towards the total needed.</li>
+      <li><strong>"even_split"</strong> The total cost is split evenly amongst all the spots that are claimed.</li>
+      <li><strong>"fixed_per_person"</strong> Each spot costs a consistent amount regardless of how many spots are claimed.</li>
+      <li><strong>"specified_per_person"</strong> Each member of the group specifies an arbitrary amount they will contribute towards the total needed.</li>
     </ul></dl>
 </dl>
 
