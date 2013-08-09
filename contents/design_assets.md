@@ -106,8 +106,6 @@ Two-line We Offer PayByGroup Info Unit<br>
 
 ## Pre-Made Informational Units (Customizable HTML Formats)
 
-<!-- http://www.vacationrental365.com/site/PropertyList/18064/View-Vacation-Rentals.aspx -->
-
 <div class='pbg_info' data-popup-button='Keep Browsing' data-popup-button-action='close' style='cursor:pointer;'>
 <p>
 Need to split the cost? We now offer
@@ -124,11 +122,30 @@ Need to split the cost? We now offer
       </p>
     </div>
 
-## Pre-Made Use PayByGroup Designs (Customizable HTML Formats)
+<br><hr><br>
+<div class="pbg_info_box">                    <fieldset style="border: 1px solid #aaaaaa;background-color: #FFF;">                      <legend style="margin-left: 10px;padding-left: 10px;padding-right: 10px;font-weight: bold;color: rgb(105, 104, 104);font-size: 11px;">                        GROUP PAYMENTS POWERED BY                         <img height="25" src="http://lets.paybygroup.com/assets/paybygroup-logo-small.png" style="vertical-align: middle;margin-right: 5px;margin-left: 5px;">                      </legend>                      <div class="calculation" style="padding: 10px;">                        <div class="left" style="float:left;line-height:5px;">                          <p style="font-weight: bold;">Need to split the cost?</p>                          <p style="display: inline;">Cost per person: $<span id="cost_per_person">2370.32</span></p>                        </div>                        <div class="right" style="float:right;">                          <a href="#" id="pbg_button" data-popup-button="Continue" data-popup-button-action="to_pbg" class="pbg_info" data-popup-id="#pbg_info_popup"><img src="https://lets.paybygroup.com/images/merchant/elements/pbg_orange.png" alt="PayByGroup" style="width: auto; height: auto;"></a>                          <p style="font-style: italic;margin-top: 5px;font-size: 10px;text-align: center;">No deposit required.</p>                        </div>                        <div class="clear"></div>                      </div>                    </fieldset>                  </div>
 
-Beachfront Only checkout page box
-
-
+<br>
+    <div class="pbg_info_box">
+      <fieldset style="border: 1px solid #aaaaaa;background-color: #FFF;">
+        <legend style="margin-left: 10px;padding-left: 10px;padding-right: 10px;font-weight: bold;color: rgb(105, 104, 104);font-size: 11px;">
+          GROUP PAYMENTS POWERED BY<img height="25" src="http://lets.paybygroup.com/assets/paybygroup-logo-small.png" style="vertical-align: middle;margin-right: 5px;margin-left: 5px;">
+        </legend>
+        <div class="calculation" style="padding: 10px;">
+          <div class="left" style="float:left;line-height:5px;">
+            <p style="font-weight: bold;">Need to split the cost?</p>
+            <p style="display: inline;">Cost per person: $<span id="cost_per_person">2370.32</span></p>
+          </div>
+          <div class="right" style="float:right;">
+            <a href="#" id="pbg_button" data-popup-button="Continue" data-popup-button-action="to_pbg" class="pbg_info" data-popup-id="#pbg_info_popup">
+              <img src="https://lets.paybygroup.com/images/merchant/elements/pbg_orange.png" alt="PayByGroup" style="width: auto; height: auto;">
+            </a>
+            <p style="font-style: italic;margin-top: 5px;font-size: 10px;text-align: center;">No deposit required.</p>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </fieldset>
+    </div>
 
 ## Pre-Made Use PayByGroup Elements
 
