@@ -76,6 +76,7 @@ Querying PayByGroup about existing group purchases using certain parameters.
         "max_people":               5,
         "splitting_method_type":    "GroupPurchases::SimpleSplit",
         "purchase_cost":            "1500.00",
+        "purchase_currency":        "USD",
         "merchant_id":              "test",
         "merchant_name":            "John Doe"
         "purchase_inventory_id":    "inv123",
@@ -278,6 +279,7 @@ Example format:
         "max_people":               5,
         "splitting_method_type":    "GroupPurchases::SimpleSplit",
         "purchase_cost":            "1500.00",
+        "purchase_currency":        "USD",
         "merchant_id":              "test",
         "merchant_name":            "John Doe"
         "purchase_inventory_id":    "inv123",

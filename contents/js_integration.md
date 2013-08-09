@@ -41,7 +41,7 @@ In order to customize your PayByGroup you need to add the following data attribu
   <dt>purchase-id</dt>
   <dd>Your ID used to identify the purchase for your records.</dd>
   <dt>purchase-cost</dt>
-  <dd>Total cost of the purchase in dollars. i.e. 45.80</dd>
+  <dd>Total cost of the purchase, e.g. 45.80 (defaults to USD if purchase-currency not specified)</dd>
   <dt>purchase-link-url</dt>
   <dd>URL for the page of the product/service.</dd>
   <dt>purchase-description</dt>
