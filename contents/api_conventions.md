@@ -19,10 +19,6 @@ The following describes the approach used by PayByGroup APIs unless explicitly s
     - Date: `YYYY-MM-DD`
     - Datetime: `YYYY-MM-DDTHH:MM:SS-0800`
     (For simplicity, midnight PST time is the expiration time for all PayByGroups. That way no group is surprised to have theirs expire before midnight in their local time, and the expiration does not need to be conditioned on the location of one or more users.)
-  - CURRENCY: "#####.##" -- The current format is a simple decimal encoded as a string representing US dollars.
-    - Our future format will include currency indicators:  "###.## USD"
-      A string containing a decimal followed by a space and a currency indicator
-      (e.g. "USD" for US dollars)
 
 #### API ENDPOINT
  - `production` - https://lets.paybygroup.com/api/v1/ (184.106.133.37)
