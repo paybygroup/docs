@@ -55,6 +55,7 @@ An example of all attributes would be:
       data-purchase-name="Awesome Escape"
       data-purchase-id="ESCAPE-23"
       data-purchase-cost="500.45"
+      data-purchase-currency="CAD"
       data-purchase-link-url="http://example.com/property"
       data-purchase-description="Great rental for 3 people with lake view." >
     </div>
