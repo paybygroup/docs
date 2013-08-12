@@ -183,6 +183,10 @@ Call for querying the payment transactions associated with a specified group pur
   <p><strong>NOTE</strong>: If a transaction record is for a refund, the `amount`, `nett_amount`, `convenience_fee`, and `merchant_fee` may all be negative values.</p>
 </div>
 
+<div class="alert tip">
+  <p><strong>NOTE</strong>: All amounts will be in the :purchase_currency of this group purchase.</p>
+</div>
+
 Example results:
 
     { "transactions":
