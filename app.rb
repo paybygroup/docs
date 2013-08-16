@@ -14,9 +14,6 @@ require 'github/markup'
 @@status = 'up'
 @@last_check_status = Time.current
 
-use Rack::Auth::Basic, "Restricted Area" do |username, password|
-  [username, password] == ['merchant', 'docs']
-end
 
 def get_status
   if @@last_check_status +30.minutes < Time.current
