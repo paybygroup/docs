@@ -53,6 +53,10 @@ These variables are set when the PayByGroup is created using the [JS Snippet] (/
   <dl>URL linking back to the merchant’s site for the item being purchased or a shopping cart listing all the items being purchased as part of this PayByGroup.</dl>
   <dt>purchase_inventory_id  <code><i>string</i></code></dt>
   <dl>An ID provided by the merchant that represents a piece of inventory that may be involved in multiple purchases, e.g. a house that is booked for different times in separate PayByGroups, each with a unique <strong>purchase_id</strong>.</dl>
+  <dt>purchase_start_date  <code><i>date</i></code></dt>
+  <dl>This is the activity date or starting date of what is being purchased - e.g. an activity, trip, rental, booking or anything that occurs at a specific time.</dl>
+  <dt>purchase_end_date  <code><i>date</i></code></dt>
+  <dl>This is the ending date of what is being purchased if the purchase is for something that has a date range - e.g. a hotel booking, vacation rental, cruise, tour trip, etc.</dl>
   <dt>purchase_deadline  <code><i>date</i></code></dt>
   <dl>Date at which this PayByGroup becomes invalid at 11:59 PM PST. The PayByGroup is frozen and cannot be updated or completed after this date unless the <strong>purchase_deadline</strong> is edited by the merchant to be at a later date. If it is not extended, the inventory should be released.</dl>
   <dt>hold_deadline  <code><i>date</i></code></dt>
