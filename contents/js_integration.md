@@ -67,7 +67,7 @@ These attributes are used on an as needed basis depending on your product/servic
 <dl>
   <dt>purchase-start-date</dt>
   <dd>If your service needs to store a start date. i.e. Reservation start date.</dd>
-  <dt>purchase-start-date</dt>
+  <dt>purchase-end-date</dt>
   <dd>If your service needs to store an end date. i.e. Reservation end date.</dd>
   <dt>hold-deadline</dt>
   <dd>Date on which the hold expires and the inventory becomes subject to availability.</dd>
@@ -89,7 +89,7 @@ You may customize the look and feel to match your site as long as the PayByGroup
 When clicked, the informational unit displays the lightbox explaining how PayByGroup works, and the only option on the lightbox is to close it and keep browsing.
 
 <div class="alert tip">
-  <p>The key parameter that defines these divs as informational units is <code>data-button-action="close"</code> .</p>
+  <p>The key parameter that defines these divs as informational units is <code>data-popup-button-action="close"</code> .</p>
 </div>
 
 No other data attributes need to be defined for the informational units, though you can customize them if you like.
@@ -116,24 +116,24 @@ Here is an example of the option to use PayByGroup where the div and button have
 ## Advanced Lightbox Data Attributes
 ![PayByGroup Demo Light Box](/images/demo_light_box.png)
 <dl>
-  <dt>button-action</dt>
+  <dt>popup-button-action</dt>
   <dd>Action taken by the lightbox's primary call to action button.
   By default the action is <code>to_pbg</code> which triggers the option to use PayByGroup and sends the user to PayByGroup using the parameters specified for the group purchase.The other legal value is <code>close</code> which causes the informational lightbox to close.</dd>
   <dt>popup-target</dt>
   <dd>This parameter will indicate the target window that will load the Create PayByGroup page. It follows the same convention as a regular <a href="http://www.w3schools.com/tags/att_link_target.asp">target link attribute</a>. Defaults to <code>self</code>.</dd>
   <dt>popup-button</dt>
   <dd>Text for the primary call-to-action button on the lightbox.</dd>
-  <dt>step1</dt>
+  <dt>popup-step1</dt>
   <dd>Text content for step 1.</dd>
-  <dt>step2</dt>
+  <dt>popup-step2</dt>
   <dd>Text content for step 2.</dd>
-  <dt>step3</dt>
+  <dt>popup-step3</dt>
   <dd>Text content for step 3.</dd>
-  <dt>footer</dt>
+  <dt>popup-footer</dt>
   <dd>"Details" text shown in the footer of the lightbox.</dd>
-  <dt>footer-link</dt>
+  <dt>popup-footer-link</dt>
   <dd>The textual content of the optional 'more info' link to the lower right of the primary call-to-action button.</dd>
-  <dt>footer-link-url</dt>
+  <dt>popup-footer-link-url</dt>
   <dd>The absolute or relative URL target for the optional footer link.</dd>
 </dl>
 <br>
