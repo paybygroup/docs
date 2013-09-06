@@ -113,6 +113,7 @@ Here is an example of the option to use PayByGroup where the div and button have
 <br>
 <hr>
 <br>
+<!--
 ## Advanced Lightbox Data Attributes
 ![PayByGroup Demo Light Box](/images/demo_light_box.png)
 <dl>
@@ -138,7 +139,7 @@ Here is an example of the option to use PayByGroup where the div and button have
 </dl>
 <br>
 <hr>
-<br>
+<br> -->
 ## Group Purchase Attributes
 
 The PayByGroup lightbox also takes additional parameters to set many details for the group purchase. These parameters can be found in [Merchant Input Variables](/merchant_input_variables).
