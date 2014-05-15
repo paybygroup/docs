@@ -29,7 +29,7 @@ POST      | /group_purchases/:id/collect_funds        | Confirms that the invent
 PUT       | /group_purchases/:id/set_unavailable      | Notifies the organizer and the merchant by email that the specific inventory is no longer available and prompts the merchant to contact the organizer regarding substitute inventory to which to apply this PayByGroup [](info#purchase_set_unavailable_info)
 PUT       | /group_purchases/:id/cancel     | Permanently cancels this PayByGroup, refunds any transacations, and cancels any credit card authorizations currently in place [](info#purchase_cancel_info)
 POST      | /group_purchases/:id/refund        | Returns all funds collected for this PayByGroup and cancels any existing authorizations on credit cards tied to this PayByGroup [](info#purchase_refund_info)
-GET       | [/group_purchases/:id/invitees](#invitees_index)        | Returns details on all members of the selected group purchase 
+GET       | [/group_purchases/:id/invitees](#invitees_index)        | Returns details on all members of the selected group purchase
 GET       | [/group_purchases/:id/transactions](#transaction_index) | Returns the details for all transactions that are part of the selected group purchase
 DELETE    | /group_purchases/:id/delete       | Completely removes a purchase from the PayByGroup system (Use with EXTREME CAUTION) [](info#purchase_delete_info)
 
@@ -206,7 +206,7 @@ Example results:
       ]
     }
 
-<!-- 
+<!--
 <br><br>
 ---------------
 # MERCHANT PROVIDED API HOOKS
@@ -247,7 +247,7 @@ METHOD:
 #### RESPONSE FORM
 - **:group_purchase** _(hash)_     --  [REQUIRED]  Hash of values to be merged into the parameters of
   the PayByGroup.
-- Standard response parameters as listed in the conventions section may be employed by the merchant as 
+- Standard response parameters as listed in the conventions section may be employed by the merchant as
   appropriate.
 
   - purchase_cost currency [merchant] -- Idealized total cost of the purchase (including deposits, taxes, and fees). This is the amount PBG sends to the merchant when the PayByGroup completes, unless merchant collected an organizer deposit.
