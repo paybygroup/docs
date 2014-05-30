@@ -30,10 +30,10 @@
       <div style="display: inline-block;float: left;width: 240px;">
         <p style="line-height: 25px;width: 200px;font-weight: 300;margin: 0;">
           No charge until your group completes and you confirm.
-          <a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="text-decoration: none;color: #63b2ac;">Learn more.</a>
+          <a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="text-decoration: none !important;color: #63b2ac;">Learn more.</a>
         </p>
       </div>
-      <div style="display: inline-block;width: 160px;"><a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 16px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #a0da2e;color: #FFFFFF  ;margin-top: 5px;margin-bottom: 15px;font-size: 17px;text-decoration: none;width: 160px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a></div>
+      <div style="display: inline-block;width: 160px;"><a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 16px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #a0da2e;color: #FFFFFF  ;margin-top: 5px;margin-bottom: 15px;font-size: 17px;text-decoration: none !important;width: 160px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a></div>
     </div>
   </div>
 </div>
@@ -68,10 +68,10 @@
           <div style="display: inline-block;float: left;width: 240px;">
             <p style="line-height: 25px;width: 200px;font-weight: 300;margin: 0;">
               No charge until your group completes and you confirm.
-              <a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="text-decoration: none;color: #63b2ac;">Learn more.</a>
+              <a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="text-decoration: none !important;color: #63b2ac;">Learn more.</a>
             </p>
           </div>
-          <div style="display: inline-block;width: 160px;"><a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 16px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #a0da2e;color: #FFFFFF  ;margin-top: 5px;margin-bottom: 15px;font-size: 17px;text-decoration: none;width: 160px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a></div>
+          <div style="display: inline-block;width: 160px;"><a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 16px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #a0da2e;color: #FFFFFF  ;margin-top: 5px;margin-bottom: 15px;font-size: 17px;text-decoration: none !important;width: 160px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a></div>
         </div>
       </div>
     </div>
@@ -153,7 +153,7 @@
         </p>
       </div>
       <div style="width: 150px;display: inline-block;">
-        <a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 10px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #a0da2e;color: #FFFFFF  ;margin-top: 25px;margin-bottom: 15px;font-size: 16px;text-decoration: none;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a>
+        <a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 10px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #a0da2e;color: #FFFFFF  ;margin-top: 25px;margin-bottom: 15px;font-size: 16px;text-decoration: none !important;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a>
       </div>
     </div>
     <div style="background-color: #f5f5f5;display: block;padding: 0 15px;height: 50px;">
@@ -239,7 +239,7 @@
             </p>
           </div>
           <div style="width: 150px;display: inline-block;">
-            <a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 10px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #a0da2e;color: #FFFFFF  ;margin-top: 25px;margin-bottom: 15px;font-size: 16px;text-decoration: none;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a>
+            <a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 10px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #a0da2e;color: #FFFFFF  ;margin-top: 25px;margin-bottom: 15px;font-size: 16px;text-decoration: none !important;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a>
           </div>
         </div>
         <div style="background-color: #f5f5f5;display: block;padding: 0 15px;height: 50px;">
@@ -262,7 +262,7 @@
           <span style="color: #b0b2b2;font-weight: lighter;">Powered by : </span><img src="https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png" alt="PayByGroup">
         </p>
       </div>
-      <div style="display: inline-block;width: 150px;"><a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 18px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #51aa50;color: #FFFFFF  ;margin-top: 15px;margin-bottom: 15px;font-size: 16px;text-decoration: none;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a></div>
+      <div style="display: inline-block;width: 150px;"><a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 18px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #51aa50;color: #FFFFFF  ;margin-top: 15px;margin-bottom: 15px;font-size: 16px;text-decoration: none !important;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a></div>
     </div>
   </div>
 </div>
@@ -281,7 +281,7 @@
               <span style="color: #b0b2b2;font-weight: lighter;">Powered by : </span><img src="https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png" alt="PayByGroup">
             </p>
           </div>
-          <div style="display: inline-block;width: 150px;"><a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 18px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #51aa50;color: #FFFFFF  ;margin-top: 15px;margin-bottom: 15px;font-size: 16px;text-decoration: none;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a></div>
+          <div style="display: inline-block;width: 150px;"><a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 18px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #51aa50;color: #FFFFFF  ;margin-top: 15px;margin-bottom: 15px;font-size: 16px;text-decoration: none !important;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a></div>
         </div>
       </div>
     </div>
@@ -320,7 +320,7 @@
             ">
         </p>
       </div>
-      <div style="display: inline-block;width: 150px;"><a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 18px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #f06c47;color: #FFFFFF  ;margin-top: 15px;margin-bottom: 15px;font-size: 16px;text-decoration: none;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a></div>
+      <div style="display: inline-block;width: 150px;"><a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 18px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #f06c47;color: #FFFFFF  ;margin-top: 15px;margin-bottom: 15px;font-size: 16px;text-decoration: none !important;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a></div>
     </div>
   </div>
 </div>
@@ -359,7 +359,7 @@
                 ">
             </p>
           </div>
-          <div style="display: inline-block;width: 150px;"><a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 18px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #f06c47;color: #FFFFFF  ;margin-top: 15px;margin-bottom: 15px;font-size: 16px;text-decoration: none;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a></div>
+          <div style="display: inline-block;width: 150px;"><a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 18px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #f06c47;color: #FFFFFF  ;margin-top: 15px;margin-bottom: 15px;font-size: 16px;text-decoration: none !important;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a></div>
         </div>
       </div>
     </div>
@@ -450,7 +450,7 @@
         </div>
       </div>
       <div style="width: 170px;display: inline-block;">
-        <a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 10px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #a0da2e;color: #FFFFFF  ;margin-top: 20px;margin-bottom: 15px;font-size: 16px;text-decoration: none;width: 160px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a>
+        <a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 10px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #a0da2e;color: #FFFFFF  ;margin-top: 20px;margin-bottom: 15px;font-size: 16px;text-decoration: none !important;width: 160px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a>
       </div>
     </div>
     <div style="background-color: #f5f5f5;display: block;padding: 0 15px;height: 65px;">
@@ -532,7 +532,7 @@
             </div>
           </div>
           <div style="width: 170px;display: inline-block;">
-            <a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 10px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #a0da2e;color: #FFFFFF  ;margin-top: 20px;margin-bottom: 15px;font-size: 16px;text-decoration: none;width: 160px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a>
+            <a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 10px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #a0da2e;color: #FFFFFF  ;margin-top: 20px;margin-bottom: 15px;font-size: 16px;text-decoration: none !important;width: 160px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a>
           </div>
         </div>
         <div style="background-color: #f5f5f5;display: block;padding: 0 15px;height: 65px;">
@@ -563,7 +563,7 @@
           <span style="color: #b0b2b2;font-weight: lighter;">Powered by : </span><img src="https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png" alt="PayByGroup">
         </p>
       </div>
-      <div style="display: inline-block;width: 150px;"><a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 15px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #f06c47;color: #FFFFFF  ;margin-top: 15px;margin-bottom: 15px;font-size: 16px;text-decoration: none;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a></div>
+      <div style="display: inline-block;width: 150px;"><a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 15px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #f06c47;color: #FFFFFF  ;margin-top: 15px;margin-bottom: 15px;font-size: 16px;text-decoration: none !important;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a></div>
     </div>
   </div>
 </div>
@@ -582,7 +582,7 @@
               <span style="color: #b0b2b2;font-weight: lighter;">Powered by : </span><img src="https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png" alt="PayByGroup">
             </p>
           </div>
-          <div style="display: inline-block;width: 150px;"><a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 15px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #f06c47;color: #FFFFFF  ;margin-top: 15px;margin-bottom: 15px;font-size: 16px;text-decoration: none;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a></div>
+          <div style="display: inline-block;width: 150px;"><a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 15px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #f06c47;color: #FFFFFF  ;margin-top: 15px;margin-bottom: 15px;font-size: 16px;text-decoration: none !important;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a></div>
         </div>
       </div>
     </div>
