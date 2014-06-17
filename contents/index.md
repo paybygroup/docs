@@ -31,4 +31,5 @@
 
 ### Design
 >- [Design Guidelines](/design_guidelines)  --  Rules and recommendations for displaying PayByGroup on your site
+>- [HTML Design Assets](/html_design_assets)  --  HTML Assets you can use when including PayByGroup on your site
 >- [Design Assets](/design_assets)  --  Assets and elements you can use when including PayByGroup on your site
