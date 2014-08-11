@@ -31,26 +31,26 @@
 			  	<a href="#intro">Introduction</a>
 			</li>
 			<li>
-			  	<a href="#auth">Authentication</a>
+			  	<a href="#auth">JavaScript Integration</a>
 			</li>
 			<li>
-				<a href="#games">Games</a>
+				<a href="#games">API</a>
 				<ul class="nav">
-				    <li><a href="#js-individual-compiled">Retrieve a Game</a></li>
-				    <li><a href="#js-data-attrs">Create a Game</a></li>
-				    <li><a href="#js-programmatic-api">Delete a Game</a></li>
+				    <li><a href="#js-individual-compiled">Group Purchases</a></li>
+				    <li><a href="#js-data-attrs">Merchant</a></li>
+				    <li><a href="#js-programmatic-api">Users</a></li>
 			  	</ul>
 			</li>
 			<li>
-			  	<a href="#users">Users</a>
+					<a href="#orders">Complete a Group Purchase</a>
+			</li>
+			<li>
+			  	<a href="#users">Design</a>
 			  	<ul class="nav">
-			    	<li><a href="#users">Retrieve a User</a></li>
-			    	<li><a href="#users">Create a User</a></li>
-			    	<li><a href="#users">Delete a User</a></li>
+			    	<li><a href="#users">Guidelines</a></li>
+			    	<li><a href="#users">HTML Assets</a></li>
+			    	<li><a href="#users">Image Assets</a></li>
 			  	</ul>
-			</li>
-			<li>
-			  	<a href="#orders">Orders</a>
 			</li>
 			<li>
 			  	<a href="#errors">Errors</a>
@@ -223,6 +223,70 @@ end
 					</div>
 				</div>
 			</div>
+			<div class="method" id="orders">
+				<div class="method-section clearfix">
+					<div class="method-description">
+						<h3>Orders</h3>
+						<p>
+							It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						</p>
+					</div>
+					<div class="method-example">
+<pre>
+<code class="ruby">React::Order.create(
+	:item => "React Bootstrap Theme",
+	:price => 1500,
+	:name => "John McClane",
+	:email => "john_mcclane@awesome.com",
+	:country => "US",
+	:some_key => "yey_JA390094AWPIWWN435",
+	:age => 53
+)
+</code><code class="python">react.User.create(
+	item="React Bootstrap Theme",
+	price=1500,
+	name="John McClane",
+	email="john_mcclane@awesome.com",
+	country="US",
+	some_key="yey_JA390094AWPIWWN435",
+	age=53
+)
+</code><code class="php">React_User::create(array(
+	"item" => "React Bootstrap Theme",
+	"price" => 1500,
+	"name" => "John McClane",
+	"email" => "john_mcclane@awesome.com",
+	"country" => "US",
+	"some_key" => "yey_JA390094AWPIWWN435",
+	"age" => 53
+));
+</code>
+<code class="ruby always-visible"># Object Response
+{
+	"object": "Order",
+	"item": "React Bootstrap Theme",
+	"price": 1500,
+	"name": "John McClane",
+	"email": "john_mcclane@awesome.com",
+	"country": "US",
+	"some_key": "yey_JA390094AWPIWWN435",
+	"age": 53
+	"address": {
+		"address_line1": null,
+		"address_line2": null,
+		"address_city": null,
+		"address_state": null,
+		"address_zip": null,
+		"address_country": null
+	}
+	"valid": true,
+	"description": null
+}
+</code>
+</pre>
+					</div>
+				</div>
+			</div>
 			<div class="method" id="users">
 				<div class="method-section clearfix">
 					<div class="method-description">
@@ -296,70 +360,6 @@ end
 <code class="ruby always-visible"># Object Response
 {
   "object": "User",
-  "name": "John McClane",
-  "email": "john_mcclane@awesome.com",
-  "country": "US",
-  "some_key": "yey_JA390094AWPIWWN435",
-  "age": 53
-  "address": {
-    "address_line1": null,
-    "address_line2": null,
-    "address_city": null,
-    "address_state": null,
-    "address_zip": null,
-    "address_country": null
-  }
-  "valid": true,
-  "description": null
-}
-</code>
-</pre>
-					</div>
-				</div>
-			</div>
-			<div class="method" id="orders">
-				<div class="method-section clearfix">
-					<div class="method-description">
-						<h3>Orders</h3>
-						<p>
-							It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-						</p>
-					</div>
-					<div class="method-example">
-<pre>
-<code class="ruby">React::Order.create(
-  :item => "React Bootstrap Theme",
-  :price => 1500,
-  :name => "John McClane",
-  :email => "john_mcclane@awesome.com",
-  :country => "US",
-  :some_key => "yey_JA390094AWPIWWN435",
-  :age => 53
-)
-</code><code class="python">react.User.create(
-  item="React Bootstrap Theme",
-  price=1500,
-  name="John McClane",
-  email="john_mcclane@awesome.com",
-  country="US",
-  some_key="yey_JA390094AWPIWWN435",
-  age=53
-)
-</code><code class="php">React_User::create(array(
-  "item" => "React Bootstrap Theme",
-  "price" => 1500,
-  "name" => "John McClane",
-  "email" => "john_mcclane@awesome.com",
-  "country" => "US",
-  "some_key" => "yey_JA390094AWPIWWN435",
-  "age" => 53
-));
-</code>
-<code class="ruby always-visible"># Object Response
-{
-  "object": "Order",
-  "item": "React Bootstrap Theme",
-  "price": 1500,
   "name": "John McClane",
   "email": "john_mcclane@awesome.com",
   "country": "US",
