@@ -9,13 +9,14 @@
 	<!-- stylesheets -->
 	<link rel="stylesheet" type="text/css" href="css/compiled/theme.css">
 	<link rel="stylesheet" type="text/css" href="css/vendor/animate.css">
-	<link rel="stylesheet" type="text/css" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/default.min.css">
+	<link rel="stylesheet" href="css/vendor/highlight/railscasts.css">
+	<link rel="stylesheet" href="css/vendor/highlight/github.css">
 
 	<!-- javascript -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="js/bootstrap/bootstrap.min.js"></script>
-	<script src="js/theme.js"></script>
-	<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
 
 	<!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -61,9 +62,9 @@
 	<div id="api-docs">
 		<div id="methods">
 			<div class="languages">
-				<a class="language selected" data-lang="ruby" href="#">Ruby</a>
-				<a class="language" data-lang="python" href="#">Python</a>
-				<a class="language" data-lang="php" href="#">PHP</a>
+				<a class="language selected" data-lang="html" href="#">HTML</a>
+				<!-- <a class="language" data-lang="python" href="#">Python</a> -->
+				<!-- <a class="language" data-lang="php" href="#">PHP</a> -->
 			</div>
 			<div class="method" id="intro">
 				<div class="method-section clearfix">
@@ -80,59 +81,38 @@
 						</p>
 					</div>
 					<div class="method-example">
-<pre>
-<code class="ruby"># All this code is just for demonstration purposes
 
-React.api_key = "In here goes your api key!"</code><code class="python"># All this code is just for demonstration purposes
-
-react.api_key = "In here goes your api key!"</code><code class="php"># All this code is just for demonstration purposes
-
-React::setApiKey("In here goes your api key!");</code>
-</pre>
 					</div>
 				</div>
 			</div>
 			<div class="method" id="auth">
 				<div class="method-section clearfix">
 					<div class="method-description">
-						<h3>Authentication</h3>
+						<h3>JavaScript Integration</h3>
 						<p>
-							It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+							Copy and place the code snippet just before the closing <code> &lt;/body&gt; </code>
+						</p>
+						<br/>
+						<p>
+							Any HTML element can be used to trigger a PayByGoup information light box by adding a <code> pbg_info </code> value to its class attribute. If the HTML element is empty we will populate it with the PayByGroup button. For example.
+						</p>
+						<br/>
+						<p>
+							This will generate the following button.
+							<br/>
+							<br/>
+							<img src="https://cdn.paybygroup.com/images/merchant/elements/pbg_orange.png" alt="PayByGroup">
 						</p>
 					</div>
 					<div class="method-example">
-<pre>
-<code class="ruby">class A < B
-	def self.create(object = User)
-		return object
-	end
-
-	def full_name
-		return "#{self.first_name} #{self.last_name}"
-	end
-end
-</code><code class="python">class Mapping:
-	def __init__(self, iterable):
-		self.items_list = []
-		self.__update(iterable)
-
-	def update(self, iterable):
-		for item in iterable:
-			self.items_list.append(item)
-</code><code class="php">class myClass {
-	var $input;
-	var $output;
-
-	function myClass($input) {
-		$output = 'You entered: ' . $input;
-		return $output;
-	}
-}
-</code>
-</pre>
+						<pre><code class="html">&lt;script src=&quot;https://lets.paybygroup.com/snippet/v2/loader.js?merchant_id=XXXXXXX&quot;&gt;&lt;/script&gt;</code></pre>
+						<pre>
+							<code class="html">&lt;div class=&quot;pbg_info&quot;&gt;&lt;/div&gt;</code>
+						</pre>
 					</div>
 				</div>
 			</div>
+
 			<div class="method" id="games">
 				<div class="method-section clearfix">
 					<div class="method-description">
@@ -183,7 +163,7 @@ end
 					</div>
 					<div class="method-example">
 <pre>
-<code class="ruby">React::Game.create(
+<code class="xml">React::Game.create(
   :name => "Super Mario Bros",
   :company => "Nintendo",
   :some_key => "yey_JA390094AWPIWWN435",
@@ -202,7 +182,7 @@ end
   "rating" => 100
 ));
 </code>
-<code class="ruby always-visible"># Object Response
+<code class="xml always-visible"># Object Response
 {
   "object": "Game",
   "name": "Super Mario Bros",
@@ -233,7 +213,7 @@ end
 					</div>
 					<div class="method-example">
 <pre>
-<code class="ruby">React::Order.create(
+<code class="xml">React::Order.create(
 	:item => "React Bootstrap Theme",
 	:price => 1500,
 	:name => "John McClane",
@@ -261,7 +241,7 @@ end
 	"age" => 53
 ));
 </code>
-<code class="ruby always-visible"># Object Response
+<code class="xml always-visible"># Object Response
 {
 	"object": "Order",
 	"item": "React Bootstrap Theme",
@@ -335,7 +315,7 @@ end
 					</div>
 					<div class="method-example">
 <pre>
-<code class="ruby">React::User.create(
+<code class="xml">React::User.create(
   :name => "John McClane",
   :email => "john_mcclane@awesome.com",
   :country => "US",
@@ -357,7 +337,7 @@ end
   "age" => 53
 ));
 </code>
-<code class="ruby always-visible"># Object Response
+<code class="xml always-visible"># Object Response
 {
   "object": "User",
   "name": "John McClane",
@@ -430,10 +410,21 @@ end
 	<script type="text/javascript">
 		$(function () {
 			hljs.configure({
-			  tabReplace: '  ',
-			  classPrefix: ''
+			  tabReplace: '  '
 			})
-			hljs.initHighlightingOnLoad();
+
+			$('.method-example pre code').each(function(i, block) {
+				hljs.highlightBlock(block);
+			})
+
+			$('.method-description pre code').each(function(i, block) {
+				hljs.configure({
+					classPrefix: 'github-hljs-'
+				})
+				hljs.highlightBlock(block);
+			})
+
+			// hljs.initHighlightingOnLoad();
 
 
 			// language toggle

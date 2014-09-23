@@ -1,8 +1,8 @@
-// 
-//	Scripts for the theme, 
+//
+//	Scripts for the theme,
 // 	slideshow is used for Home Alt #4 (index4.html)
 // 	services is used for Services (services.html)
-// 
+//
 
 $(function () {
 	slideshow.initialize();
@@ -36,7 +36,7 @@ var contactForm = {
 		if (!$contactForm.length) {
 			return;
 		}
-		
+
 		$contactForm.validate({
 			rules: {
 				"name": {
@@ -84,7 +84,7 @@ var services = {
 				var index = $features.index(this);
 				$screens.stop().fadeOut();
 				$screens.eq(index).fadeIn();
-			}			
+			}
 		});
 	},
 	initialize: function () {

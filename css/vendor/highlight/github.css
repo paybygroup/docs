@@ -1,0 +1,127 @@
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+.github-hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
+  -webkit-text-size-adjust: none;
+}
+
+.github-hljs-comment,
+.github-hljs-template_comment,
+.diff .github-hljs-header,
+.github-hljs-javadoc {
+  color: #998;
+  font-style: italic;
+}
+
+.github-hljs-keyword,
+.css .rule .github-hljs-keyword,
+.github-hljs-winutils,
+.javascript .github-hljs-title,
+.nginx .github-hljs-title,
+.github-hljs-subst,
+.github-hljs-request,
+.github-hljs-status {
+  color: #333;
+  font-weight: bold;
+}
+
+.github-hljs-number,
+.github-hljs-hexcolor,
+.ruby .github-hljs-constant {
+  color: #008080;
+}
+
+.github-hljs-string,
+.github-hljs-tag .github-hljs-value,
+.github-hljs-phpdoc,
+.github-hljs-dartdoc,
+.tex .github-hljs-formula {
+  color: #d14;
+}
+
+.github-hljs-title,
+.github-hljs-id,
+.scss .github-hljs-preprocessor {
+  color: #900;
+  font-weight: bold;
+}
+
+.javascript .github-hljs-title,
+.github-hljs-list .github-hljs-keyword,
+.github-hljs-subst {
+  font-weight: normal;
+}
+
+.github-hljs-class .github-hljs-title,
+.github-hljs-type,
+.vhdl .github-hljs-literal,
+.tex .github-hljs-command {
+  color: #458;
+  font-weight: bold;
+}
+
+.github-hljs-tag,
+.github-hljs-tag .github-hljs-title,
+.github-hljs-rules .github-hljs-property,
+.django .github-hljs-tag .github-hljs-keyword {
+  color: #000080;
+  font-weight: normal;
+}
+
+.github-hljs-attribute,
+.github-hljs-variable,
+.lisp .github-hljs-body {
+  color: #008080;
+}
+
+.github-hljs-regexp {
+  color: #009926;
+}
+
+.github-hljs-symbol,
+.ruby .github-hljs-symbol .github-hljs-string,
+.lisp .github-hljs-keyword,
+.clojure .github-hljs-keyword,
+.scheme .github-hljs-keyword,
+.tex .github-hljs-special,
+.github-hljs-prompt {
+  color: #990073;
+}
+
+.github-hljs-built_in {
+  color: #0086b3;
+}
+
+.github-hljs-preprocessor,
+.github-hljs-pragma,
+.github-hljs-pi,
+.github-hljs-doctype,
+.github-hljs-shebang,
+.github-hljs-cdata {
+  color: #999;
+  font-weight: bold;
+}
+
+.github-hljs-deletion {
+  background: #fdd;
+}
+
+.github-hljs-addition {
+  background: #dfd;
+}
+
+.diff .github-hljs-change {
+  background: #0086b3;
+}
+
+.github-hljs-chunk {
+  color: #aaa;
+}

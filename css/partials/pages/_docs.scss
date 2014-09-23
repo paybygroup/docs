@@ -157,7 +157,7 @@
 						.info {
 							margin-top: 45px;
 							margin-bottom: 40px;
-							
+
 							h4 {
 								font-size: 14px;
 								border-bottom: 1px solid #E4E4E4;
@@ -176,7 +176,7 @@
 									font-weight: bold;
 									color: #333;
 								}
-								
+
 								.desc {
 									width: 60%;
 									float: right;
@@ -219,7 +219,7 @@
 									display: block !important;
 								}
 
-								&.ruby {
+								&.html {
 									display: block;
 								}
 
@@ -231,7 +231,7 @@
 								}
 							}
 
-							.ruby {
+							.ruby, .html {
 								color: #DAE4F2;
 
 								> * {
@@ -298,7 +298,7 @@
 								}
 							}
 						}
-					}	
+					}
 				}
 			}
 		}
