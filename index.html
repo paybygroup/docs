@@ -25,33 +25,39 @@
 <body id="docs" data-spy="scroll" data-target="#guide">
 	<div id="guide">
 		<h1 class="logo">
-			<a href="/docs">PayByGroup</a>
+			<a href="http://docs.paybygroup.com">PayByGroup</a>
 		</h1>
 		<ul class="menu nav">
-            <li>
-			  	<a href="#intro">Introduction</a>
+      <li>
+			  <a href="#intro">Introduction</a>
 			</li>
 			<li>
-			  	<a href="#auth">JavaScript Integration</a>
+			  <a href="#js_integration">JavaScript Integration</a>
+		  	<ul class="nav">
+		      <li><a href="#js_integration">Adding PayByGroup in &lt; 5 minutes</a></li>
+		      <li><a href="#js_data_attributes">Data Attributes</a></li>
+		      <li><a href="#js_sample_implementation">Sample Implementation</a></li>
+		    </ul>
 			</li>
 			<li>
-				<a href="#games">API</a>
-				<ul class="nav">
-				    <li><a href="#js-individual-compiled">Group Purchases</a></li>
-				    <li><a href="#js-data-attrs">Merchant</a></li>
-				    <li><a href="#js-programmatic-api">Users</a></li>
-			  	</ul>
+			  	<a href="#errors">API Conventions</a>
 			</li>
 			<li>
-					<a href="#orders">Complete a Group Purchase</a>
-			</li>
-			<li>
-			  	<a href="#users">Design</a>
+			  	<a href="#users">Group Purchase API</a>
 			  	<ul class="nav">
-			    	<li><a href="#users">Guidelines</a></li>
-			    	<li><a href="#users">HTML Assets</a></li>
+			    	<li><a href="#users">Status</a></li>
+			    	<li><a href="#users">Attributes</a></li>
 			    	<li><a href="#users">Image Assets</a></li>
 			  	</ul>
+			</li>
+			<li>
+				<a href="#group_purchase">Design Assets</a>
+				<ul class="nav">
+			    <li><a href="#js-individual-compiled">Informational Units (Images)</a></li>
+			    <li><a href="#js-individual-compiled">Informational Units (HTML)</a></li>
+			    <li><a href="#js-programmatic-api">Use PayByGroup Elements</a></li>
+			    <li><a href="#js-programmatic-api">Logos</a></li>
+			  </ul>
 			</li>
 			<li>
 			  	<a href="#errors">Errors</a>
@@ -85,7 +91,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="method" id="auth">
+			<div class="method" id="js_integration">
 				<div class="method-section clearfix">
 					<div class="method-description">
 						<h3>JavaScript Integration</h3>
@@ -113,157 +119,150 @@
 				</div>
 			</div>
 
-			<div class="method" id="games">
+			<div class="method" id="js_data_attributes">
 				<div class="method-section clearfix">
 					<div class="method-description">
-						<h3>Games</h3>
+						<h3>Data Attributes</h3>
 						<p>
-							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							In order to customize your PayByGroup you need to add the following data attributes to your <code> pbg_info </code> element.
 						</p>
-						<p>
-							It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-						</p>
+						<div class="alert tip">
+						  <p><strong>Tip</strong>: Remember to add data attributes in the element in the following way <code>data-purchase-name="Hello world"</code> .</p>
+						</div>
 						<div class="info">
-							<h4>The Game Object</h4>
+							<h4>Group Purchase</h4>
 							<div class="field clearfix">
-								<div class="key">name:</div>
+								<div class="key">purchase-image-url:</div>
 								<div class="desc">
 									<strong>string</strong>
-									The name of the game
+									URL for the PayByGroup image
 								</div>
 							</div>
 							<div class="field clearfix">
-								<div class="key">company:</div>
+								<div class="key">purchase-name:</div>
 								<div class="desc">
 									<strong>string</strong>
-									The name of the company creator
+									Name of the product/service for the PayByGroup
 								</div>
 							</div>
 							<div class="field clearfix">
-								<div class="key">some_key:</div>
+								<div class="key">purchase-id:</div>
 								<div class="desc">
 									<strong>string</strong>
+									Your ID used to identify the purchase for your records
 								</div>
 							</div>
 							<div class="field clearfix">
-								<div class="key">rating:</div>
+								<div class="key">purchase-cost:</div>
 								<div class="desc">
-									<strong>integer</strong>
-									The rating of the game from 0 to 100.
+									<strong>float</strong>
+									Total cost of the purchase
 								</div>
 							</div>
 							<div class="field clearfix">
-								<div class="key">description:</div>
+								<div class="key">purchase-currency:</div>
 								<div class="desc">
-									<strong>hash</strong>
-									key/value pairs with fields that describe the game.
+									<strong>string</strong>
+									Three letter code of the currency being used (defaults to USD if not specified). No automatic conversions happen, so make sure that your gateway accepts it
 								</div>
 							</div>
+							<div class="field clearfix">
+								<div class="key">purchase-link-url:</div>
+								<div class="desc">
+									<strong>string</strong>
+									URL for the page of the product/service
+								</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">purchase-description:</div>
+								<div class="desc">
+									<strong>string</strong>
+									Description of the purchase
+								</div>
+							</div>
+							<br/>
+							<br/>
+							<h5>Other Commonly Used Data Attributes</h5>
+							<p>These attributes are used on an as needed basis depending on your product/service.</p>
+							<div class="field clearfix">
+								<div class="key">purchase-start-date:</div>
+								<div class="desc">
+									<strong>date</strong>
+									If your service needs to store a start date. i.e. Reservation start date
+								</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">purchase-end-date:</div>
+								<div class="desc">
+									<strong>date</strong>
+									If your service needs to store an end date. i.e. Reservation end date
+								</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">purchase-description:</div>
+								<div class="desc">
+									<strong>date</strong>
+									Date on which the hold expires and the inventory becomes subject to availability
+								</div>
+							</div>
+
+
 						</div>
 					</div>
 					<div class="method-example">
 <pre>
-<code class="xml">React::Game.create(
-  :name => "Super Mario Bros",
-  :company => "Nintendo",
-  :some_key => "yey_JA390094AWPIWWN435",
-  :rating => 100
-)
-</code><code class="python">react.Game.create(
-  name="Super Mario Bros",
-  company="Nintendo",
-  some_key="yey_JA390094AWPIWWN435"
-  rating=100
-)
-</code><code class="php">React_Charge::create(array(
-  "name" => "Super Mario Bros",
-  "company" => "Nintendo",
-  "some_key" => "yey_JA390094AWPIWWN435"
-  "rating" => 100
-));
-</code>
-<code class="xml always-visible"># Object Response
-{
-  "object": "Game",
-  "name": "Super Mario Bros",
-  "company": "Nintendo",
-  "some_key": "yey_JA390094AWPIWWN435",
-  "rating": 100
-  "description": {
-    "some_desc1": null,
-    "some_desc2": null,
-    "some_desc3": null,
-    "some_desc4": null,
-  }
-  "valid": true,
-  "other_field": null
-}
+<code class="html">
+&lt;div class=&quot;pbg_info&quot;
+  data-purchase-image-url=&quot;https://example.com/picture.png&quot;
+  data-purchase-name=&quot;Awesome Escape&quot;
+  data-purchase-id=&quot;ESCAPE-23&quot;
+  data-purchase-cost=&quot;500.45&quot;
+  data-purchase-currency=&quot;CAD&quot;
+  data-purchase-link-url=&quot;http://example.com/property&quot;
+  data-purchase-description=&quot;Great rental for 3 people with lake view.&quot; &gt;
+&lt;/div&gt;
 </code>
 </pre>
 					</div>
 				</div>
 			</div>
-			<div class="method" id="orders">
+			<div class="method" id="js_sample_implementation">
 				<div class="method-section clearfix">
 					<div class="method-description">
-						<h3>Orders</h3>
+						<h3>Sample Implementation</h3>
+						<h4>Informational Unit(s)</h4>
 						<p>
-							It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+							Add an informational unit using any of the copy and design examples listed in the <a href="/design_guidelines">Design Guidelines</a>
+						  on one or more of the following pages of your website:
 						</p>
+						<p>•   Homepage <br>
+						•   Search results page <br>
+						•   Product listing page
+						</p>
+						<p>You may customize the look and feel to match your site as long as the PayByGroup Logo (<a href="/design_assets">See Design Assets</a>) is included whenever the term "PayByGroup" is used.<sup>1</sup> We recommend you use the version hosted by PayByGroup to eliminate the need to change your code if the logo is updated.
+						</p>
+						<p>When clicked, the informational unit displays the lightbox explaining how PayByGroup works, and the only option on the lightbox is to close it and keep browsing.
+						</p>
+						<div class="alert tip">
+						  <p>The key parameter that defines these divs as informational units is <code>data-popup-button-action="close"</code> .</p>
+						</div>
+						<br/>
+						<p>No other data attributes need to be defined for the informational units, though you can customize them if you like.</p>
+						<p>Here is an example of an informational unit (see <a href="/design_assets">Design Assets</a> for more):</p>
+						<p><img src="images/info_unit.png" alt="Info Unit"></p>
+						<br/>
+						<br/>
+						<h4>Option to Use PayByGroup</h4>
+						<p>Place the option to use PayByGroup at the earliest point on your site where the total cost is available - including all taxes, fees, and options. This will typically be on the first page of your checkout process.</p>
+						<div class="alert tip">
+						  <p><strong>Tip</strong>: This is where you should be sure to set the data attributes listed above and any additional ones you want to include .</p>
+						</div>
+						<br/>
+						<p>Here is an example of the option to use PayByGroup where the div and button have been styled to match the merchant's existing site:</p>
+						<p><img src="images/use_paybygroup.png" alt="Use PayByGroup" style="width:100%;max-width:478px;"></p>
 					</div>
 					<div class="method-example">
-<pre>
-<code class="xml">React::Order.create(
-	:item => "React Bootstrap Theme",
-	:price => 1500,
-	:name => "John McClane",
-	:email => "john_mcclane@awesome.com",
-	:country => "US",
-	:some_key => "yey_JA390094AWPIWWN435",
-	:age => 53
-)
-</code><code class="python">react.User.create(
-	item="React Bootstrap Theme",
-	price=1500,
-	name="John McClane",
-	email="john_mcclane@awesome.com",
-	country="US",
-	some_key="yey_JA390094AWPIWWN435",
-	age=53
-)
-</code><code class="php">React_User::create(array(
-	"item" => "React Bootstrap Theme",
-	"price" => 1500,
-	"name" => "John McClane",
-	"email" => "john_mcclane@awesome.com",
-	"country" => "US",
-	"some_key" => "yey_JA390094AWPIWWN435",
-	"age" => 53
-));
-</code>
-<code class="xml always-visible"># Object Response
-{
-	"object": "Order",
-	"item": "React Bootstrap Theme",
-	"price": 1500,
-	"name": "John McClane",
-	"email": "john_mcclane@awesome.com",
-	"country": "US",
-	"some_key": "yey_JA390094AWPIWWN435",
-	"age": 53
-	"address": {
-		"address_line1": null,
-		"address_line2": null,
-		"address_city": null,
-		"address_state": null,
-		"address_zip": null,
-		"address_country": null
-	}
-	"valid": true,
-	"description": null
-}
-</code>
-</pre>
+
 					</div>
 				</div>
 			</div>
