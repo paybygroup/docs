@@ -279,7 +279,7 @@ a:focus, button:focus {
         text-decoration: none; }
   #docs #guide .menu > li.active > .nav {
     display: block; }
-  #docs #guide .menu > li.active > a {
+  #docs #guide .menu > li.active > a, #docs #guide .menu > li.active > ul > li.active > a {
     background: #DEEAF1; }
   #docs #guide .menu > li a {
     color: #3391C9;
