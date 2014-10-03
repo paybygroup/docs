@@ -478,27 +478,31 @@
 					<div class="method-description" id="design_assets_html">
 						<h3>Informational Units (HTML)</h3>
 						<style>
-							#pbg_info_box.one {
+							#pbg_info_box.one, #pbg_info_box.four {
 								font-family: Helvetica;color: #3e4243;display: block;font-size: 15px;width: 100%;max-width:435px;background: white;border: 1px solid #dbdbdb;border-radius: 2px;
 							}
 							#pbg_info_box.one > div {
 								padding: 0 15px;
 							}
-							#pbg_info_box.one > div:last-child {
+							#pbg_info_box > #footer {
 								background-color: #f5f5f5;
 								padding: 10px 15px;
 							}
-							#pbg_info_box.one > h3 {
+							#pbg_info_box.one > h3, #pbg_info_box.four > h3 {
 								margin: 20px 0 5px;font-size: 20px !important;font-weight: 500 !important;color:#333 !important;font-family: Helvetica;padding-left: 15px;
+							}
+							#pbg_info_box.two > #footer {
+								color: #B0B2B2;
+								text-align: right;
 							}
 							#pbg_info_box.one > p {
 								width: 240px;float: left;display: inline-block;font-weight: 200 !important;line-height: 22px !important;width: 50%;color:#666 !important;font-size: 15px !important;font-family: Helvetica;margin:1em 0;padding-left: 15px;min-width: 210px;
 							}
-							#pbg_info_box.one div > a#pbg_button {
-								font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 16px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #a0da2e;color: #FFFFFF  ;margin-top: 5px;margin-bottom: 15px;font-size: 17px;text-decoration: none !important;width: 160px;display: inline-block;font-weight: 400;letter-spacing: 1px;-webkit-transition: 0.3s;-moz-transition: 0.3s;-o-transition: 0.3s;transition: 0.3s;
+							#pbg_info_box a#pbg_button.pbg_btn {
+								font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 16px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #F06C47;color: #FFFFFF  ;margin-top: 5px;margin-bottom: 15px;font-size: 17px;text-decoration: none !important;width: 160px;display: inline-block;font-weight: 400;letter-spacing: 1px;-webkit-transition: 0.3s;-moz-transition: 0.3s;-o-transition: 0.3s;transition: 0.3s;
 							}
-							#pbg_info_box.one div > a#pbg_button:hover {
-								background-color: #8EC228;
+							#pbg_info_box a#pbg_button.pbg_btn:hover {
+								background-color: #F98868;
 							}
 							#pbg_info_box.one #costs {
 								width: 50%;display: inline-block;min-width: 210px;
@@ -506,7 +510,7 @@
 							#pbg_info_box.one #costs > h4 {
 								margin: 15px 0 0 0;font-weight: bold;letter-spacing: 0.04em;font-size: 15px;color:#3e4243;
 							}
-							#pbg_info_box.one #costs > h4 > span {
+							#pbg_info_box span#pbg_mention {
 								color:#f16b3f;
 							}
 							#pbg_info_box.one #costs > p {
@@ -518,21 +522,175 @@
 							#pbg_info_box.one #footer > a {
 								display: inline-block;width: 160px;margin-left:5px;
 							}
-							#pbg_info_box.one #footer p {
+							#pbg_info_box.one #footer p, #pbg_info_box.two h4 {
 								display: inline-block;float: left;width: 50%;min-width:210px;line-height: 25px !important;width: 200px !important;font-weight: 300 !important;margin: 0 !important;font-size:15px !important;color:#666;
 							}
 							#pbg_info_box.one #footer p > a {
 								text-decoration: none !important;color: #63b2ac;
 							}
+							#pbg_info_box a.pbg_tooltips {
+								position: relative;
+								display: inline;
+								width: 17px;
+								height: 17px;
+								display: inline-block;
+								background-color: #63b2ac;
+								border-radius: 50%;
+								margin: 0 4px;
+								cursor: default;
+								line-height: initial;
+								font-size: 14px;
+							}
+							#pbg_info_box a.pbg_tooltips i{
+								color: white;
+								font-weight: 300;
+								padding: 0 5px;
+								font-style: normal;
+							}
+							#pbg_info_box a.pbg_tooltips .pbg_tooltip_content {
+								position: absolute;
+								width:150px;
+								color: #FFFFFF;
+								background: #000000;
+								height: 50px;
+								text-align: center;
+								visibility: hidden;
+								border-radius: 4px;
+							}
+							#pbg_info_box a.pbg_tooltips .pbg_tooltip_content:after {
+								content: '';
+								position: absolute;
+								top: 50%;
+								right: 100%;
+								margin-top: -8px;
+								width: 0; height: 0;
+								border-right: 8px solid #000000;
+								border-top: 8px solid transparent;
+								border-bottom: 8px solid transparent;
+							}
+							#pbg_info_box a:hover.pbg_tooltips {
+								text-decoration: none;
+							}
+							#pbg_info_box a:hover.pbg_tooltips .pbg_tooltip_content {
+								visibility: visible;
+								opacity: 0.7;
+								left: 100%;
+								top: 50%;
+								margin-top: -25px;
+								margin-left: 15px;
+								z-index: 999;
+								text-align: left;
+								padding-left: 5px;
+								padding-top: 5px;
+								font-size: 12px;
+								font-weight: 100;
+								font-family: Helvetica;
+								line-height: 1.7em;
+								color: #FFFFFF;
+							}
 
+							/* Box 2*/
+							#pbg_info_box.two {
+								max-width: 435px;
+								min-width: 350px;
+							}
+							#pbg_info_box.two > div:first-child {
+								padding-left: 15px;
+							}
+							#pbg_info_box.two > div {
+								display: inline-block;
+								float: left;
+								width: 50%;
+							}
+							#pbg_info_box.two > a {
+								display: inline-block;
+								float: right;
+								width: 50%;
+								margin-right: 15px;
+							}
+							#pbg_info_box.two > #footer {
+								color: #B0B2B2;
+								text-align: right;
+								width: 100%;
+								padding-top: 15px;
+								padding-bottom: 15px;
+							}
+							#pbg_info_box.two > div > p {
+								display: block;
+								clear: both;
+								color: #b0b2b2 !important;
+								padding-top: 5px;
+							}
+							#pbg_info_box.two > div > p > span {
+								font-size: 17px;
+								font-weight: 400;
+								color: #3E4243;
+							}
+
+							/* Box 3*/
+							#pbg_info_box.three, #pbg_info_box.four {
+								max-width: 435px;
+								min-width: 335px;
+							}
+							#pbg_info_box.three > h3, #pbg_info_box.three > p {
+								padding: 0px 15px;
+							}
+							#pbg_info_box.three > #footer > p, #pbg_info_box.four > #footer > p{
+								display: inline-block;
+								color: #B0B2B2 !important;
+							}
+							#pbg_info_box.three > #footer > a.pbg_btn, #pbg_info_box.four > #footer > a.pbg_btn{
+								float: right;
+							}
+
+							/* Box 4*/
+							#pbg_info_box.four > p {
+								padding-left: 15px;
+								padding-bottom: 10px;
+								border-bottom: 1px solid #F5F5F5;
+							}
+							#pbg_info_box.four > div.box {
+								display: inline-block;
+								width: 50%;
+								padding-left: 15px;
+								float: left;
+								padding-bottom: 20px;
+								margin-bottom: 10px;
+								text-align: center;
+							}
+							#pbg_info_box.four > div.box:first-of-type {
+								border-right: 1px solid #F5F5F5;
+							}
+							#pbg_info_box.four > div.box > h4 {
+								margin: 15px 0 0 0;
+								font-weight: bold;
+								letter-spacing: 0.04em;
+								font-size: 15px;
+								color: #3E4243;
+							}
+							#pbg_info_box.four > div.box > p {
+								font-size: 18px;
+								margin: 0 0 0 5px;
+								color: #3E4243;
+							}
+							#pbg_info_box.four > div.box > small {
+								font-weight: lighter;
+								margin-top: 5px;
+								color: #B0B2B2 !important;
+								font-size: 12px;
+							}
+							#pbg_info_box.four > div#footer {
+								display: block;
+								width: 100%;
+							}
 						</style>
 						<div id="pbg_info_box" class="one">
 					    <h3>Need split the cost?</h3>
 			        <p>We have partnered with PayByGroup to make it easy to rally your group, split the cost, and complete this purchase</p>
 				      <div id="costs">
-				        <h4>Without <span>PayByGroup</span></h4>
+				        <h4>Without <span id="pbg_mention">PayByGroup</span></h4>
 				        <p>You Pay<span id="pbg_before_amount">$ 3,888.73</span></p>
-				        <h4>With <span>PayByGroup</span></h4>
+				        <h4>With <span id="pbg_mention">PayByGroup</span></h4>
 				        <p><span id="pbg_after_amount">$ 388.73</span> / per person</p>
 				      </div>
 					    <div id="footer">
@@ -540,7 +698,7 @@
 				          No charge until your group completes and you confirm.<br/>
 				          <a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup">Learn more.</a>
 				        </p>
-					      <a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup">Split the cost</a>
+					      <a href="#" id="pbg_button" class="pbg_info pbg_btn" data-popup-id="#pbg_info_popup">Split the cost</a>
 					    </div>
 						</div>
 					</div>
@@ -550,9 +708,9 @@
   &lt;h3&gt;Need split the cost?&lt;/h3&gt;
   &lt;p&gt;We have partnered with PayByGroup to make it easy to rally your group, split the cost, and complete this purchase&lt;/p&gt;
   &lt;div id=&quot;costs&quot;&gt;
-    &lt;h4&gt;Without &lt;span&gt;PayByGroup&lt;/span&gt;&lt;/h4&gt;
+    &lt;h4&gt;Without &lt;span id=&quot;pbg_mention&quot;&gt;PayByGroup&lt;/span&gt;&lt;/h4&gt;
     &lt;p&gt;You Pay&lt;span id=&quot;pbg_before_amount&quot;&gt;$ 3,888.73&lt;/span&gt;&lt;/p&gt;
-    &lt;h4&gt;With &lt;span&gt;PayByGroup&lt;/span&gt;&lt;/h4&gt;
+    &lt;h4&gt;With &lt;span id=&quot;pbg_mention&quot;&gt;PayByGroup&lt;/span&gt;&lt;/h4&gt;
     &lt;p&gt;&lt;span id=&quot;pbg_after_amount&quot;&gt;$ 388.73&lt;/span&gt; / per person&lt;/p&gt;
   &lt;/div&gt;
   &lt;div id=&quot;footer&quot;&gt;
@@ -560,193 +718,64 @@
       No charge until your group completes and you confirm.&lt;br/&gt;
       &lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;Learn more.&lt;/a&gt;
     &lt;/p&gt;
-    &lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;Split the cost&lt;/a&gt;
+    &lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info pbg_btn&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;Split the cost&lt;/a&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 					</code></pre>
 					</div>
 					<div class="clearfix"></div>
 					<div class="method-description">
-						<div id="pbg_info_box">
-						  <style>
-						    a.pbg_tooltips {
-						    position: relative;
-						    display: inline;
-						    width: 17px;
-						    height: 17px;
-						    display: inline-block;
-						    background-color: #63b2ac;
-						    border-radius: 50%;
-						    margin: 0 4px;
-						    cursor: default;
-						    }
-						    a.pbg_tooltips i{
-						    color: white;
-						    font-weight: 300;
-						    padding: 0 5px;
-						    font-style: normal;
-						    }
-						    a.pbg_tooltips p{
-						    font-weight: lighter;
-						    text-align: left;
-						    padding: 0;
-						    margin: 5px 0 0 5px;
-						    }
-						    a.pbg_tooltips .pbg_tooltip_content {
-						    position: absolute;
-						    width:150px;
-						    color: #FFFFFF;
-						    background: #000000;
-						    height: 50px;
-						    text-align: center;
-						    visibility: hidden;
-						    border-radius: 4px;
-						    }
-						    a.pbg_tooltips .pbg_tooltip_content:after {
-						    content: '';
-						    position: absolute;
-						    top: 50%;
-						    right: 100%;
-						    margin-top: -8px;
-						    width: 0; height: 0;
-						    border-right: 8px solid #000000;
-						    border-top: 8px solid transparent;
-						    border-bottom: 8px solid transparent;
-						    }
-						    a:hover.pbg_tooltips {
-						    	text-decoration: none;
-						    }
-						    a.pbg_tooltips > .pbg_tooltip_content > p > *{
-						    	color: #FFFFFF;
-						    	font-size: 12px;
-						    }
-						    a:hover.pbg_tooltips .pbg_tooltip_content {
-						    visibility: visible;
-						    opacity: 0.7;
-						    left: 100%;
-						    top: 50%;
-						    margin-top: -25px;
-						    margin-left: 15px;
-						    z-index: 999;
-						    }
-						    #pbg_info_box_two div > a#pbg_button {
-						    	font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 10px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #a0da2e;color: #FFFFFF  ;margin-top: 25px;margin-bottom: 15px;font-size: 16px;text-decoration: none !important;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;-webkit-transition: 0.3s;-moz-transition: 0.3s;-o-transition: 0.3s;transition: 0.3s;
-						    }
-						    #pbg_info_box_two div > a#pbg_button:hover {
-						    	background-color: #8EC228;
-						    }
-						  </style>
-						  <div style="font-family: Helvetica;color: #3e4243;display: block;font-size: 15px;width:100%;max-width: 320px;background: white;" id="pbg_info_box_two">
-						    <div style="padding: 0 10px;">
-						      <div style="width: 150px;float: left;display: inline-block;">
-						        <h4 style="font-weight: 300;margin-bottom:0;color:#3E4243;">
-						          Avg. cost
-						          <a href="#" class="pbg_tooltips">
-						            <i>?</i>
-						            <div class="pbg_tooltip_content">
-						            <p><small>Total Cost : </small><span id="pbg_before_amount" style="font-size: 12px;">$ 2,874.00</span>
-						            <br>
-						            <small style="align: left;">(4 people)</small></p>
-						            </div></a>
-						        </h4>
-						        <p style="font-weight: lighter;margin-top: 10px;">
-						          <span id="pbg_after_amount" style="font-size: 17px;font-weight: 400;">$ 388.73</span>
-						          <small style="color: #b0b2b2;font-size: 13px;">/ per person</small>
-						        </p>
-						      </div>
-						      <div style="width: 150px;display: inline-block;">
-						        <a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup">Split the cost</a>
-						      </div>
-						    </div>
-						    <div style="background-color: #f5f5f5;display: block;padding: 0 15px;height: 50px;">
-						      <p style="margin: 10px 0;font-size: 12px;float: right;"><span style="color: #b0b2b2;font-weight: lighter;">Powered by : </span><img src="https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png" alt="PayByGroup"></p>
-						    </div>
-						  </div>
-						</div>
+					  <div id="pbg_info_box" class="two">
+				      <div>
+				        <h4>
+				          Avg. cost
+				          <a href="#" class="pbg_tooltips">
+				            <i>?</i>
+				            <div class="pbg_tooltip_content">
+					            Total Cost :
+					            <span id="pbg_before_amount">$ 2,874.00</span>
+					            <br>
+					            (4 people)
+				          	</div>
+				          </a>
+				        </h4>
+				        <p>
+				          <span id="pbg_after_amount">$ 388.73</span> / per person
+				        </p>
+				      </div>
+				      <a href="#" id="pbg_button" class="pbg_info pbg_btn" data-popup-id="#pbg_info_popup">
+				      	Split the cost
+				      </a>
+					    <div id="footer">
+					      Powered by : <img src="https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png" alt="PayByGroup">
+					    </div>
+					  </div>
 					</div>
 					<div class="method-example">
 					<pre><code class="html">
-&lt;div id=&quot;pbg_info_box&quot;&gt;
-  &lt;style&gt;
-    a.pbg_tooltips {
-    position: relative;
-    display: inline;
-    width: 17px;
-    height: 17px;
-    display: inline-block;
-    background-color: #63b2ac;
-    border-radius: 50%;
-    margin: 0 4px;
-    cursor: default;
-    }
-    a.pbg_tooltips i{
-    color: white;
-    font-weight: 300;
-    padding: 0 5px;
-    font-style: normal;
-    }
-    a.pbg_tooltips p{
-    font-weight: lighter;
-    text-align: left;
-    padding: 0;
-    margin: 5px 0 0 5px;
-    }
-    a.pbg_tooltips .pbg_tooltip_content {
-    position: absolute;
-    width:150px;
-    color: #FFFFFF;
-    background: #000000;
-    height: 50px;
-    text-align: center;
-    visibility: hidden;
-    border-radius: 4px;
-    }
-    a.pbg_tooltips .pbg_tooltip_content:after {
-    content: &#039;&#039;;
-    position: absolute;
-    top: 50%;
-    right: 100%;
-    margin-top: -8px;
-    width: 0; height: 0;
-    border-right: 8px solid #000000;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    }
-    a:hover.pbg_tooltips .pbg_tooltip_content {
-    visibility: visible;
-    opacity: 0.7;
-    left: 100%;
-    top: 50%;
-    margin-top: -25px;
-    margin-left: 15px;
-    z-index: 999;
-    }
-  &lt;/style&gt;
-  &lt;div style=&quot;font-family: Helvetica;color: #3e4243;display: block;font-size: 15px;width:100%;max-width: 320px;background: white;&quot;&gt;
-    &lt;div style=&quot;padding: 0 10px;&quot;&gt;
-      &lt;div style=&quot;width: 150px;float: left;display: inline-block;&quot;&gt;
-        &lt;h4 style=&quot;font-weight: 300;margin-bottom:0;&quot;&gt;
-          Avg. cost
-          &lt;a href=&quot;#&quot; class=&quot;pbg_tooltips&quot;&gt;
-            &lt;i&gt;?&lt;/i&gt;
-            &lt;div class=&quot;pbg_tooltip_content&quot;&gt;
-            &lt;p&gt;&lt;small&gt;Total Cost : &lt;/small&gt;&lt;span id=&quot;pbg_before_amount&quot; style=&quot;font-size: 12px;&quot;&gt;$ 2,874.00&lt;/span&gt;
-            &lt;br&gt;
-            &lt;small style=&quot;align: left;&quot;&gt;(4 people)&lt;/small&gt;&lt;/p&gt;
-            &lt;/div&gt;&lt;/a&gt;
-        &lt;/h4&gt;
-        &lt;p style=&quot;font-weight: lighter;margin-top: 10px;&quot;&gt;
-          &lt;span id=&quot;pbg_after_amount&quot; style=&quot;font-size: 17px;font-weight: 400;&quot;&gt;$ 388.73&lt;/span&gt;
-          &lt;small style=&quot;color: #b0b2b2;font-size: 13px;&quot;&gt;/ per person&lt;/small&gt;
-        &lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div style=&quot;width: 150px;display: inline-block;&quot;&gt;
-        &lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info&quot; data-popup-id=&quot;#pbg_info_popup&quot; style=&quot;font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 10px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #a0da2e;color: #FFFFFF  ;margin-top: 25px;margin-bottom: 15px;font-size: 16px;text-decoration: none !important;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;&quot;&gt;Split the cost&lt;/a&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;background-color: #f5f5f5;display: block;padding: 0 15px;height: 50px;&quot;&gt;
-      &lt;p style=&quot;margin: 10px 0;font-size: 12px;float: right;&quot;&gt;&lt;span style=&quot;color: #b0b2b2;font-weight: lighter;&quot;&gt;Powered by : &lt;/span&gt;&lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png&quot; alt=&quot;PayByGroup&quot;&gt;&lt;/p&gt;
-    &lt;/div&gt;
+&lt;div id=&quot;pbg_info_box&quot; class=&quot;two&quot;&gt;
+  &lt;div&gt;
+    &lt;h4&gt;
+      Avg. cost
+      &lt;a href=&quot;#&quot; class=&quot;pbg_tooltips&quot;&gt;
+        &lt;i&gt;?&lt;/i&gt;
+        &lt;div class=&quot;pbg_tooltip_content&quot;&gt;
+          Total Cost :
+          &lt;span id=&quot;pbg_before_amount&quot;&gt;$ 2,874.00&lt;/span&gt;
+          &lt;br&gt;
+          (4 people)
+      	&lt;/div&gt;
+      &lt;/a&gt;
+    &lt;/h4&gt;
+    &lt;p&gt;
+      &lt;span id=&quot;pbg_after_amount&quot;&gt;$ 388.73&lt;/span&gt; / per person
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info pbg_btn&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;
+  	Split the cost
+  &lt;/a&gt;
+  &lt;div id=&quot;footer&quot;&gt;
+    Powered by : &lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png&quot; alt=&quot;PayByGroup&quot;&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 					</code></pre>
@@ -754,39 +783,27 @@
 					<div class="clearfix"></div>
 
 					<div class="method-description">
-						<div id="pbg_info_box">
-						  <div style="color: #3e4243;display: block;font-size: 14px;width:100%;max-width: 320px;background-color: white;font-family: Helvetica;">
-						    <div style="padding: 10px;">
-						      <h3 style="font-size: 17px;font-weight: 300;margin: 10px 0;">Traveling with friends or family?</h3>
-						      <p style="line-height: 30px;width: 260px;font-weight: 300;">We have partnered with <span style="color: #f16b3f;">PayByGroup</span> to make it easy to rally your group, split the cost, and complete this purchase. </p>
-						    </div>
-						    <div style="background-color: #f5f5f5;display: block;padding: 0 10px;height: 90px;">
-						      <div style="display: inline-block;float: left;width: 150px;">
-						        <p style="line-height: 30px;width: 146px;font-weight: 300;">
-						          <span style="color: #b0b2b2;font-weight: lighter;">Powered by : </span><img src="https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png" alt="PayByGroup">
-						        </p>
-						      </div>
-						      <div style="display: inline-block;width: 150px;"><a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 18px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #51aa50;color: #FFFFFF  ;margin-top: 15px;margin-bottom: 15px;font-size: 16px;text-decoration: none !important;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a></div>
-						    </div>
-						  </div>
+						<div id="pbg_info_box" class="three">
+						  <h3>Traveling with friends or family?</h3>
+						  <p>We have partnered with <span id="pbg_mention">PayByGroup</span> to make it easy to rally your group, split the cost, and complete this purchase. </p>
+				      <div id="footer">
+				        <p>
+				          Powered by :<br/><img src="https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png" alt="PayByGroup">
+				        </p>
+				        <a href="#" id="pbg_button" class="pbg_info pbg_btn" data-popup-id="#pbg_info_popup">Split the cost</a>
+				      </div>
 						</div>
 					</div>
 					<div class="method-example">
 						<pre><code class="html">
-&lt;div id=&quot;pbg_info_box&quot;&gt;
-  &lt;div style=&quot;color: #3e4243;display: block;font-size: 14px;width:100%;max-width: 320px;background-color: white;font-family: Helvetica;&quot;&gt;
-    &lt;div style=&quot;padding: 10px;&quot;&gt;
-      &lt;h3 style=&quot;font-size: 17px;font-weight: 300;margin: 10px 0;&quot;&gt;Traveling with friends or family?&lt;/h3&gt;
-      &lt;p style=&quot;line-height: 30px;width: 260px;font-weight: 300;&quot;&gt;We have partnered with &lt;span style=&quot;color: #f16b3f;&quot;&gt;PayByGroup&lt;/span&gt; to make it easy to rally your group, split the cost, and complete this purchase. &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;background-color: #f5f5f5;display: block;padding: 0 10px;height: 90px;&quot;&gt;
-      &lt;div style=&quot;display: inline-block;float: left;width: 150px;&quot;&gt;
-        &lt;p style=&quot;line-height: 30px;width: 146px;font-weight: 300;&quot;&gt;
-          &lt;span style=&quot;color: #b0b2b2;font-weight: lighter;&quot;&gt;Powered by : &lt;/span&gt;&lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png&quot; alt=&quot;PayByGroup&quot;&gt;
-        &lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div style=&quot;display: inline-block;width: 150px;&quot;&gt;&lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info&quot; data-popup-id=&quot;#pbg_info_popup&quot; style=&quot;font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 18px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #51aa50;color: #FFFFFF  ;margin-top: 15px;margin-bottom: 15px;font-size: 16px;text-decoration: none !important;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;&quot;&gt;Split the cost&lt;/a&gt;&lt;/div&gt;
-    &lt;/div&gt;
+&lt;div id=&quot;pbg_info_box&quot; class=&quot;three&quot;&gt;
+  &lt;h3&gt;Traveling with friends or family?&lt;/h3&gt;
+  &lt;p&gt;We have partnered with &lt;span&gt;PayByGroup&lt;/span&gt; to make it easy to rally your group, split the cost, and complete this purchase. &lt;/p&gt;
+  &lt;div id=&quot;footer&quot;&gt;
+    &lt;p&gt;
+      Powered by :&lt;br/&gt;&lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png&quot; alt=&quot;PayByGroup&quot;&gt;
+    &lt;/p&gt;
+    &lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info pbg_btn&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;Split the cost&lt;/a&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 						</code></pre>
@@ -794,286 +811,108 @@
 					<div class="clearfix"></div>
 
 					<div class="method-description">
-						<div id="pbg_info_box">
-						  <div style="border: 1px solid #DBDBDB;border-radius: 5px;font-family: Helvetica;color: #3e4243;display: block;font-size: 14px;width:100%;max-width: 320px;background-color:white;">
-						    <h3 style="margin: 20px 10px 5px;font-size: 20px;font-weight: 500;">Keep the price low.</h3>
-						    <div style="margin: 0 10px;">
-						      <p style="font-weight: lighter;font-size: 12px;">PayBygroup allows you to keep the cost dow by splitting with friends. Try us out!</p>
-						    </div>
-						    <div style="padding: 10px;border-top: 1px solid #f5f5f5;">
-						      <div style="width: 149px;float: left;display: inline-block;border-right: 1px solid #f5f5f5;">
-						        <div style="margin-left: 25px;">
-						          <h4 style="margin: 15px 0 0 0;font-weight: bold;letter-spacing: 0.03em;font-size: 15px;">Without PBG</h4>
-						          <p style="font-weight: lighter;margin-top: 10px;">
-						            <span id="pbg_before_amount" style="font-size: 15px;margin: 0 0 0 5px;">$ 3,888.73</span>
-						          </p>
-						        </div>
-						      </div>
-						      <div style="width: 149px;display: inline-block;">
-						        <div style="margin-left: 25px;">
-						          <h4 style="margin: 15px 0 0 0;font-weight: bold;letter-spacing: 0.03em;font-size: 15px;">With PBG</h4>
-						          <p style="font-weight: lighter;margin-top: 10px;">
-						            <span id="pbg_after_amount" style="font-size: 15px;">$ 388.73</span>
-						            <small style="color: #b0b2b2;font-size: 10px;">/ per person</small>
-						          </p>
-						        </div>
-						      </div>
-						    </div>
-						    <div style="background-color: #f5f5f5;display: block;padding: 0 10px;height: 90px;">
-						      <div style="display: inline-block;float: left;width: 150px;">
-						        <p style="line-height: 30px;width: 146px;font-weight: 300;">
-						          <span style="color: #b0b2b2;font-weight: lighter;">Powered by : </span><img src="https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png" alt="PayByGroup" style="
-						            ">
-						        </p>
-						      </div>
-						      <div style="display: inline-block;width: 150px;"><a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 18px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #f06c47;color: #FFFFFF  ;margin-top: 15px;margin-bottom: 15px;font-size: 16px;text-decoration: none !important;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a></div>
-						    </div>
-						  </div>
+						<div id="pbg_info_box" class="four">
+					    <h3>Keep the price low.</h3>
+					    <p><span id="pbg_mention">PayByGroup</span> allows you to keep the cost down by splitting with friends. Try us out!</p>
+					    <div class="box">
+					    	<h4>Without <span id="pbg_mention">PayByGroup</span></h4>
+					    	<span id="pbg_before_amount">$ 3,888.73</span>
+					    </div>
+							<div class="box">
+							  <h4>With <span id="pbg_mention">PayByGroup</span></h4>
+								<span id="pbg_after_amount">$ 388.73</span><small> / per person</small>
+							</div>
+							<div class="clearfix"></div>
+							<div id="footer">
+								<p>
+								  Powered by :<br/><img src="https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png" alt="PayByGroup">
+								</p>
+								<a href="#" id="pbg_button" class="pbg_info pbg_btn" data-popup-id="#pbg_info_popup">Split the cost</a>
+							</div>
 						</div>
 					</div>
 					<div class="method-example">
 						<pre><code class="html">
-&lt;div id=&quot;pbg_info_box&quot;&gt;
-  &lt;div style=&quot;border: 1px solid #DBDBDB;border-radius: 5px;font-family: Helvetica;color: #3e4243;display: block;font-size: 14px;width:100%;max-width: 320px;background-color:white;&quot;&gt;
-    &lt;h3 style=&quot;margin: 20px 10px 5px;font-size: 20px;font-weight: 500;&quot;&gt;Keep the price low.&lt;/h3&gt;
-    &lt;div style=&quot;margin: 0 10px;&quot;&gt;
-      &lt;p style=&quot;font-weight: lighter;font-size: 12px;&quot;&gt;PayBygroup allows you to keep the cost dow by splitting with friends. Try us out!&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;padding: 10px;border-top: 1px solid #f5f5f5;&quot;&gt;
-      &lt;div style=&quot;width: 149px;float: left;display: inline-block;border-right: 1px solid #f5f5f5;&quot;&gt;
-        &lt;div style=&quot;margin-left: 25px;&quot;&gt;
-          &lt;h4 style=&quot;margin: 15px 0 0 0;font-weight: bold;letter-spacing: 0.03em;font-size: 15px;&quot;&gt;Without PBG&lt;/h4&gt;
-          &lt;p style=&quot;font-weight: lighter;margin-top: 10px;&quot;&gt;
-            &lt;span id=&quot;pbg_before_amount&quot; style=&quot;font-size: 15px;margin: 0 0 0 5px;&quot;&gt;$ 3,888.73&lt;/span&gt;
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div style=&quot;width: 149px;display: inline-block;&quot;&gt;
-        &lt;div style=&quot;margin-left: 25px;&quot;&gt;
-          &lt;h4 style=&quot;margin: 15px 0 0 0;font-weight: bold;letter-spacing: 0.03em;font-size: 15px;&quot;&gt;With PBG&lt;/h4&gt;
-          &lt;p style=&quot;font-weight: lighter;margin-top: 10px;&quot;&gt;
-            &lt;span id=&quot;pbg_after_amount&quot; style=&quot;font-size: 15px;&quot;&gt;$ 388.73&lt;/span&gt;
-            &lt;small style=&quot;color: #b0b2b2;font-size: 10px;&quot;&gt;/ per person&lt;/small&gt;
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;background-color: #f5f5f5;display: block;padding: 0 10px;height: 90px;&quot;&gt;
-      &lt;div style=&quot;display: inline-block;float: left;width: 150px;&quot;&gt;
-        &lt;p style=&quot;line-height: 30px;width: 146px;font-weight: 300;&quot;&gt;
-          &lt;span style=&quot;color: #b0b2b2;font-weight: lighter;&quot;&gt;Powered by : &lt;/span&gt;&lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png&quot; alt=&quot;PayByGroup&quot; style=&quot;
-            &quot;&gt;
-        &lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div style=&quot;display: inline-block;width: 150px;&quot;&gt;&lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info&quot; data-popup-id=&quot;#pbg_info_popup&quot; style=&quot;font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 18px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #f06c47;color: #FFFFFF  ;margin-top: 15px;margin-bottom: 15px;font-size: 16px;text-decoration: none !important;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;&quot;&gt;Split the cost&lt;/a&gt;&lt;/div&gt;
-    &lt;/div&gt;
+&lt;div id=&quot;pbg_info_box&quot; class=&quot;four&quot;&gt;
+  &lt;h3&gt;Keep the price low.&lt;/h3&gt;
+  &lt;p&gt;&lt;span id=&quot;pbg_mention&quot;&gt;PayByGroup&lt;/span&gt; allows you to keep the cost down by splitting with friends. Try us out!&lt;/p&gt;
+  &lt;div class=&quot;box&quot;&gt;
+  	&lt;h4&gt;Without &lt;span id=&quot;pbg_mention&quot;&gt;PayByGroup&lt;/span&gt;&lt;/h4&gt;
+  	&lt;span id=&quot;pbg_before_amount&quot;&gt;$ 3,888.73&lt;/span&gt;
   &lt;/div&gt;
+	&lt;div class=&quot;box&quot;&gt;
+	  &lt;h4&gt;With &lt;span id=&quot;pbg_mention&quot;&gt;PayByGroup&lt;/span&gt;&lt;/h4&gt;
+		&lt;span id=&quot;pbg_after_amount&quot;&gt;$ 388.73&lt;/span&gt;&lt;small&gt; / per person&lt;/small&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+	&lt;div id=&quot;footer&quot;&gt;
+		&lt;p&gt;
+		  Powered by :&lt;br/&gt;&lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png&quot; alt=&quot;PayByGroup&quot;&gt;
+		&lt;/p&gt;
+		&lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info pbg_btn&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;Split the cost&lt;/a&gt;
+	&lt;/div&gt;
 &lt;/div&gt;
 						</code></pre>
 					</div>
 					<div class="clearfix"></div>
 
 					<div class="method-description">
-						<div id="pbg_info_box">
-						  <style>
-						    a.pbg_tooltips {
-						    position: relative;
-						    display: inline;
-						    }
-						    a.pbg_tooltips .pbg_tooltip_content {
-						    position: absolute;
-						    width:150px;
-						    color: #FFFFFF;
-						    background: #000000;
-						    height: 50px;
-						    text-align: center;
-						    visibility: hidden;
-						    border-radius: 4px;
-						    }
-						    a.pbg_tooltips .pbg_tooltip_content:after {
-						    content: '';
-						    position: absolute;
-						    top: 50%;
-						    right: 100%;
-						    margin-top: -8px;
-						    width: 0; height: 0;
-						    border-right: 8px solid #000000;
-						    border-top: 8px solid transparent;
-						    border-bottom: 8px solid transparent;
-						    }
-						    a:hover.pbg_tooltips .pbg_tooltip_content {
-						    visibility: visible;
-						    opacity: 0.7;
-						    left: 100%;
-						    top: 50%;
-						    margin-top: -25px;
-						    margin-left: 15px;
-						    z-index: 999;
-						    }
-						  </style>
-						  <div style="border: 1px solid #DBDBDB;border-radius: 5px;font-family: Helvetica;color: #3e4243;display: block;font-size: 14px;width:100%;max-width: 430px;background-color:white;">
-						    <div style="background-color: #f5f5f5;display: block;">
-						      <h3 style="margin: 0;font-size: 20px;font-weight: 300;padding: 15px;">Want to split the cost?</h3>
-						    </div>
-						    <div style="padding: 5px 10px;">
-						      <div style="width: 230px;float: left;display: inline-block;">
-						        <div style="margin-left: 30px;">
-						          <h4 style="margin: 15px 0 0 0;font-weight: 400;letter-spacing: 0.03em;font-size: 15px;">
-						            Cost
-						            <a href="#" class="pbg_tooltips" style="width: 17px;height: 17px;display: inline-block;background-color: #63b2ac;border-radius: 50%;margin: 0 4px;cursor: default;">
-						              <i style="color: white;font-weight: 300;padding: 0 5px;font-style: normal;">?</i>
-						              <div class="pbg_tooltip_content">
-						                <p style="font-weight: lighter;text-align: left;padding: 0;margin: 5px 0 0 5px;"><small>Total Cost : </small><span id="pbg_before_amount" style="font-size: 12px;">$ 2,874.00</span>
-						                  <br>
-						                  <small style="align: left;">(4 people)</small>
-						                </p>
-						              </div>
-						            </a>
-						            <p></p>
-						          </h4>
-						          <p style="font-weight: lighter;margin-top: 10px;">
-						            <span id="pbg_after_amount" style="font-size: 18px;font-weight: 400;">$ 388.73</span>
-						            <small style="color: #b0b2b2;font-size: 12px;">/ per person</small>
-						          </p>
-						        </div>
-						      </div>
-						      <div style="width: 170px;display: inline-block;">
-						        <a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 10px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #a0da2e;color: #FFFFFF  ;margin-top: 20px;margin-bottom: 15px;font-size: 16px;text-decoration: none !important;width: 160px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a>
-						      </div>
-						    </div>
-						    <div style="background-color: #f5f5f5;display: block;padding: 0 15px;height: 65px;">
-						      <div style="display: inline-block;float: left;width: 300px;">
-						        <p style="line-height: 30px;font-weight: 200;">Easily split this purchase with your group.</p>
-						      </div>
-						      <div style="display: inline-block;float: left;width: 100px;">
-						        <p style="line-height: 20px;width: 146px;font-weight: 300;margin: 10px 10px;font-size: 13px;">
-						          <span style="color: #b0b2b2;font-weight: lighter;">Powered by : </span><img src="https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png" alt="PayByGroup">
-						        </p>
-						      </div>
-						    </div>
-						  </div>
+						<div id="pbg_info_box" class="five">
+						  <h3>Want to split the cost?</h3>
+							<div>
+				        <h4>
+				          Avg. cost
+				          <a href="#" class="pbg_tooltips">
+				            <i>?</i>
+				            <div class="pbg_tooltip_content">
+					            Total Cost :
+					            <span id="pbg_before_amount">$ 2,874.00</span>
+					            <br>
+					            (4 people)
+				          	</div>
+				          </a>
+				        </h4>
+				        <p>
+				          <span id="pbg_after_amount">$ 388.73</span> / per person
+				        </p>
+							</div>
+							<a href="#" id="pbg_button" class="pbg_info pbg_btn" data-popup-id="#pbg_info_popup">Split the cost</a>
+							<div id="footer">
+								<p>Easily split this purchase with your group</p>
+								<div>
+									Powered by :<br/><img src="https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png" alt="PayByGroup">
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="method-example">
 						<pre><code class="html">
-&lt;div id=&quot;pbg_info_box&quot;&gt;
-  &lt;style&gt;
-    a.pbg_tooltips {
-    position: relative;
-    display: inline;
-    }
-    a.pbg_tooltips .pbg_tooltip_content {
-    position: absolute;
-    width:150px;
-    color: #FFFFFF;
-    background: #000000;
-    height: 50px;
-    text-align: center;
-    visibility: hidden;
-    border-radius: 4px;
-    }
-    a.pbg_tooltips .pbg_tooltip_content:after {
-    content: &#039;&#039;;
-    position: absolute;
-    top: 50%;
-    right: 100%;
-    margin-top: -8px;
-    width: 0; height: 0;
-    border-right: 8px solid #000000;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    }
-    a:hover.pbg_tooltips .pbg_tooltip_content {
-    visibility: visible;
-    opacity: 0.7;
-    left: 100%;
-    top: 50%;
-    margin-top: -25px;
-    margin-left: 15px;
-    z-index: 999;
-    }
-  &lt;/style&gt;
-  &lt;div style=&quot;border: 1px solid #DBDBDB;border-radius: 5px;font-family: Helvetica;color: #3e4243;display: block;font-size: 14px;width:100%;max-width: 430px;background-color:white;&quot;&gt;
-    &lt;div style=&quot;background-color: #f5f5f5;display: block;&quot;&gt;
-      &lt;h3 style=&quot;margin: 0;font-size: 20px;font-weight: 300;padding: 15px;&quot;&gt;Want to split the cost?&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;padding: 5px 10px;&quot;&gt;
-      &lt;div style=&quot;width: 230px;float: left;display: inline-block;&quot;&gt;
-        &lt;div style=&quot;margin-left: 30px;&quot;&gt;
-          &lt;h4 style=&quot;margin: 15px 0 0 0;font-weight: 400;letter-spacing: 0.03em;font-size: 15px;&quot;&gt;
-            Cost
-            &lt;a href=&quot;#&quot; class=&quot;pbg_tooltips&quot; style=&quot;width: 17px;height: 17px;display: inline-block;background-color: #63b2ac;border-radius: 50%;margin: 0 4px;cursor: default;&quot;&gt;
-              &lt;i style=&quot;color: white;font-weight: 300;padding: 0 5px;font-style: normal;&quot;&gt;?&lt;/i&gt;
-              &lt;div class=&quot;pbg_tooltip_content&quot;&gt;
-                &lt;p style=&quot;font-weight: lighter;text-align: left;padding: 0;margin: 5px 0 0 5px;&quot;&gt;&lt;small&gt;Total Cost : &lt;/small&gt;&lt;span id=&quot;pbg_before_amount&quot; style=&quot;font-size: 12px;&quot;&gt;$ 2,874.00&lt;/span&gt;
-                  &lt;br&gt;
-                  &lt;small style=&quot;align: left;&quot;&gt;(4 people)&lt;/small&gt;
-                &lt;/p&gt;
-              &lt;/div&gt;
-            &lt;/a&gt;
-            &lt;p&gt;&lt;/p&gt;
-          &lt;/h4&gt;
-          &lt;p style=&quot;font-weight: lighter;margin-top: 10px;&quot;&gt;
-            &lt;span id=&quot;pbg_after_amount&quot; style=&quot;font-size: 18px;font-weight: 400;&quot;&gt;$ 388.73&lt;/span&gt;
-            &lt;small style=&quot;color: #b0b2b2;font-size: 12px;&quot;&gt;/ per person&lt;/small&gt;
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div style=&quot;width: 170px;display: inline-block;&quot;&gt;
-        &lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info&quot; data-popup-id=&quot;#pbg_info_popup&quot; style=&quot;font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 10px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #a0da2e;color: #FFFFFF  ;margin-top: 20px;margin-bottom: 15px;font-size: 16px;text-decoration: none !important;width: 160px;display: inline-block;font-weight: 400;letter-spacing: 1px;&quot;&gt;Split the cost&lt;/a&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;background-color: #f5f5f5;display: block;padding: 0 15px;height: 65px;&quot;&gt;
-      &lt;div style=&quot;display: inline-block;float: left;width: 300px;&quot;&gt;
-        &lt;p style=&quot;line-height: 30px;font-weight: 200;&quot;&gt;Easily split this purchase with your group.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div style=&quot;display: inline-block;float: left;width: 100px;&quot;&gt;
-        &lt;p style=&quot;line-height: 20px;width: 146px;font-weight: 300;margin: 10px 10px;font-size: 13px;&quot;&gt;
-          &lt;span style=&quot;color: #b0b2b2;font-weight: lighter;&quot;&gt;Powered by : &lt;/span&gt;&lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png&quot; alt=&quot;PayByGroup&quot;&gt;
-        &lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-						</code></pre>
-					</div>
-					<div class="clearfix"></div>
-
-					<div class="method-description">
-						<div id="pbg_info_box">
-						  <div style="color: #3e4243;display: block;font-size: 14px;width:100%;max-width: 430px;background-color: white;font-family: Helvetica;">
-						    <div style="padding: 10px 15px 5px;">
-						      <h3 style="font-size: 18px;font-weight: 500;margin: 10px 0;">Traveling with friends or family?</h3>
-						      <p style="line-height: 25px;font-weight: 300;">We have partnered with <span style="color: #f16b3f;">PayByGroup</span> to make it easy to rally your group, split the cost, and complete this purchase. </p>
-						    </div>
-						    <div style="background-color: #f5f5f5;display: block;padding: 0 15px;height: 90px;border-top: 1px solid #dbdbdb;">
-						      <div style="display: inline-block;float: left;width: 250px;">
-						        <p style="line-height: 25px;width: 200px;font-weight: 300;">
-						          <span style="color: #b0b2b2;font-weight: lighter;">Powered by : </span><img src="https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png" alt="PayByGroup">
-						        </p>
-						      </div>
-						      <div style="display: inline-block;width: 150px;"><a href="#" id="pbg_button" class="pbg_info" data-popup-id="#pbg_info_popup" style="font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 15px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #f06c47;color: #FFFFFF  ;margin-top: 15px;margin-bottom: 15px;font-size: 16px;text-decoration: none !important;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;">Split the cost</a></div>
-						    </div>
-						  </div>
-						</div>
-					</div>
-					<div class="method-example">
-						<pre><code class="html">
-&lt;div id=&quot;pbg_info_box&quot;&gt;
-  &lt;div style=&quot;color: #3e4243;display: block;font-size: 14px;width:100%;max-width: 430px;background-color: white;font-family: Helvetica;&quot;&gt;
-    &lt;div style=&quot;padding: 10px 15px 5px;&quot;&gt;
-      &lt;h3 style=&quot;font-size: 18px;font-weight: 500;margin: 10px 0;&quot;&gt;Traveling with friends or family?&lt;/h3&gt;
-      &lt;p style=&quot;line-height: 25px;font-weight: 300;&quot;&gt;We have partnered with &lt;span style=&quot;color: #f16b3f;&quot;&gt;PayByGroup&lt;/span&gt; to make it easy to rally your group, split the cost, and complete this purchase. &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div style=&quot;background-color: #f5f5f5;display: block;padding: 0 15px;height: 90px;border-top: 1px solid #dbdbdb;&quot;&gt;
-      &lt;div style=&quot;display: inline-block;float: left;width: 250px;&quot;&gt;
-        &lt;p style=&quot;line-height: 25px;width: 200px;font-weight: 300;&quot;&gt;
-          &lt;span style=&quot;color: #b0b2b2;font-weight: lighter;&quot;&gt;Powered by : &lt;/span&gt;&lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png&quot; alt=&quot;PayByGroup&quot;&gt;
-        &lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div style=&quot;display: inline-block;width: 150px;&quot;&gt;&lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info&quot; data-popup-id=&quot;#pbg_info_popup&quot; style=&quot;font-weight: 400;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 15px 0px;font-size: 18px;line-height: 1.33;border-radius: 3px;background-color: #f06c47;color: #FFFFFF  ;margin-top: 15px;margin-bottom: 15px;font-size: 16px;text-decoration: none !important;width: 140px;display: inline-block;font-weight: 400;letter-spacing: 1px;&quot;&gt;Split the cost&lt;/a&gt;&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+&lt;div id=&quot;pbg_info_box&quot; class=&quot;five&quot;&gt;
+  &lt;h3&gt;Want to split the cost?&lt;/h3&gt;
+	&lt;div&gt;
+    &lt;h4&gt;
+      Avg. cost
+      &lt;a href=&quot;#&quot; class=&quot;pbg_tooltips&quot;&gt;
+        &lt;i&gt;?&lt;/i&gt;
+        &lt;div class=&quot;pbg_tooltip_content&quot;&gt;
+          Total Cost :
+          &lt;span id=&quot;pbg_before_amount&quot;&gt;$ 2,874.00&lt;/span&gt;
+          &lt;br&gt;
+          (4 people)
+      	&lt;/div&gt;
+      &lt;/a&gt;
+    &lt;/h4&gt;
+    &lt;p&gt;
+      &lt;span id=&quot;pbg_after_amount&quot;&gt;$ 388.73&lt;/span&gt; / per person
+    &lt;/p&gt;
+	&lt;/div&gt;
+	&lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info pbg_btn&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;Split the cost&lt;/a&gt;
+	&lt;div id=&quot;footer&quot;&gt;
+		&lt;p&gt;Easily split this purchase with your group&lt;/p&gt;
+		&lt;div&gt;
+			Powered by :&lt;br/&gt;&lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png&quot; alt=&quot;PayByGroup&quot;&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
 &lt;/div&gt;
 						</code></pre>
 					</div>
