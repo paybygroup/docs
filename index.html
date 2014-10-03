@@ -478,7 +478,7 @@
 					<div class="method-description" id="design_assets_html">
 						<h3>Informational Units (HTML)</h3>
 						<style>
-							#pbg_info_box.one, #pbg_info_box.four {
+							#pbg_info_box.one, #pbg_info_box.four, #pbg_info_box.five {
 								font-family: Helvetica;color: #3e4243;display: block;font-size: 15px;width: 100%;max-width:435px;background: white;border: 1px solid #dbdbdb;border-radius: 2px;
 							}
 							#pbg_info_box.one > div {
@@ -488,7 +488,7 @@
 								background-color: #f5f5f5;
 								padding: 10px 15px;
 							}
-							#pbg_info_box.one > h3, #pbg_info_box.four > h3 {
+							#pbg_info_box.one > h3, #pbg_info_box.four > h3, #pbg_info_box.five > h3 {
 								margin: 20px 0 5px;font-size: 20px !important;font-weight: 500 !important;color:#333 !important;font-family: Helvetica;padding-left: 15px;
 							}
 							#pbg_info_box.two > #footer {
@@ -522,7 +522,7 @@
 							#pbg_info_box.one #footer > a {
 								display: inline-block;width: 160px;margin-left:5px;
 							}
-							#pbg_info_box.one #footer p, #pbg_info_box.two h4 {
+							#pbg_info_box.one #footer p, #pbg_info_box.two h4, #pbg_info_box.five h4 {
 								display: inline-block;float: left;width: 50%;min-width:210px;line-height: 25px !important;width: 200px !important;font-weight: 300 !important;margin: 0 !important;font-size:15px !important;color:#666;
 							}
 							#pbg_info_box.one #footer p > a {
@@ -615,13 +615,13 @@
 								padding-top: 15px;
 								padding-bottom: 15px;
 							}
-							#pbg_info_box.two > div > p {
+							#pbg_info_box.two > div > p, #pbg_info_box.five > div > p {
 								display: block;
 								clear: both;
 								color: #b0b2b2 !important;
 								padding-top: 5px;
 							}
-							#pbg_info_box.two > div > p > span {
+							#pbg_info_box.two > div > p > span, #pbg_info_box.five > div > p > span {
 								font-size: 17px;
 								font-weight: 400;
 								color: #3E4243;
@@ -635,7 +635,7 @@
 							#pbg_info_box.three > h3, #pbg_info_box.three > p {
 								padding: 0px 15px;
 							}
-							#pbg_info_box.three > #footer > p, #pbg_info_box.four > #footer > p{
+							#pbg_info_box.three > #footer > p, #pbg_info_box.four > #footer > p, #pbg_info_box.five > #footer > div{
 								display: inline-block;
 								color: #B0B2B2 !important;
 							}
@@ -682,6 +682,38 @@
 							#pbg_info_box.four > div#footer {
 								display: block;
 								width: 100%;
+							}
+
+							/* Box 5*/
+							#pbg_info_box.five {
+								min-width: 370px;
+							}
+							#pbg_info_box.five > h3 {
+								background-color: #F5F5F5;
+								padding: 20px 0 20px 15px;
+								margin: 0;
+							}
+							#pbg_info_box.five > div.cost {
+								padding-left: 15px;
+								width: 50%;
+								display: inline-block;
+								margin-top: 15px;
+							}
+							#pbg_info_box.five > a#pbg_button {
+								width: 45%;
+								display: inline-block;
+								margin-top: 0px;
+							}
+							#pbg_info_box.five > #footer > p {
+								display: inline-block;
+								font-weight: 200;
+								color: #3E4243 !important;
+								font-size: 14px;
+							}
+							#pbg_info_box.five > #footer > div {
+								width: 95px;
+								float: right;
+								font-size: 13px;
 							}
 						</style>
 						<div id="pbg_info_box" class="one">
@@ -859,9 +891,9 @@
 					<div class="method-description">
 						<div id="pbg_info_box" class="five">
 						  <h3>Want to split the cost?</h3>
-							<div>
+							<div class="cost">
 				        <h4>
-				          Avg. cost
+				          Cost
 				          <a href="#" class="pbg_tooltips">
 				            <i>?</i>
 				            <div class="pbg_tooltip_content">
@@ -878,7 +910,7 @@
 							</div>
 							<a href="#" id="pbg_button" class="pbg_info pbg_btn" data-popup-id="#pbg_info_popup">Split the cost</a>
 							<div id="footer">
-								<p>Easily split this purchase with your group</p>
+								<p>Easily split this purchase with your group.</p>
 								<div>
 									Powered by :<br/><img src="https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png" alt="PayByGroup">
 								</div>
@@ -889,9 +921,9 @@
 						<pre><code class="html">
 &lt;div id=&quot;pbg_info_box&quot; class=&quot;five&quot;&gt;
   &lt;h3&gt;Want to split the cost?&lt;/h3&gt;
-	&lt;div&gt;
+	&lt;div class=&quot;cost&quot;&gt;
     &lt;h4&gt;
-      Avg. cost
+      Cost
       &lt;a href=&quot;#&quot; class=&quot;pbg_tooltips&quot;&gt;
         &lt;i&gt;?&lt;/i&gt;
         &lt;div class=&quot;pbg_tooltip_content&quot;&gt;
@@ -908,7 +940,7 @@
 	&lt;/div&gt;
 	&lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info pbg_btn&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;Split the cost&lt;/a&gt;
 	&lt;div id=&quot;footer&quot;&gt;
-		&lt;p&gt;Easily split this purchase with your group&lt;/p&gt;
+		&lt;p&gt;Easily split this purchase with your group.&lt;/p&gt;
 		&lt;div&gt;
 			Powered by :&lt;br/&gt;&lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png&quot; alt=&quot;PayByGroup&quot;&gt;
 		&lt;/div&gt;
