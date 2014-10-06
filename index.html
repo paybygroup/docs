@@ -45,10 +45,9 @@
 <!-- 			<li>
 			  	<a href="#group_purchase_api">Group Purchase API</a>
 			  	<ul class="nav">
-			    	<li><a href="#group_purchase_api">Status</a></li>
+			    	<li><a href="#group_purchase_api_status">Status</a></li>
 			    	<li><a href="#group_purchase_api_attributes">Attributes</a></li>
 			    	<li><a href="#group_purchase_api_methods">Methods</a></li>
-			    	<li><a href="#group_purchase_api_assets">Image Assets</a></li>
 			  	</ul>
 			</li> -->
 			<li>
@@ -210,6 +209,28 @@
 									Date on which the hold expires and the inventory becomes subject to availability
 								</div>
 							</div>
+							<div class="field clearfix">
+								<div class="key">purchase-deposit-amount:</div>
+								<div class="desc">
+									<strong>float</strong>
+									Cost of the deposit to hold the inventory
+								</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">purchase-hold-deadline:</div>
+								<div class="desc">
+									<strong>date</strong>
+									Date on which the deposit expires and the inventory becomes subject to availability
+								</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">purchase-inventory-id:</div>
+								<div class="desc">
+									<strong>float</strong>
+									Your ID used to identify the inventory. We use this to connect to your platform
+								</div>
+							</div>
+
 
 
 						</div>
@@ -299,7 +320,7 @@
 							(For simplicity, midnight PST time is the expiration time for all PayByGroups. That way no group is surprised to have theirs expire before midnight in their local time, and the expiration does not need to be conditioned on the location of one or more users.)<br/>
 						</p>
 						<h4>API Endpoint</h4>
-						<p><code>production</code> - https://lets.paybygroup.com/api/v1/ (184.106.133.37)</p>
+						<p><code>production</code> - https://lets.paybygroup.com/api/</p>
 						<h4>MERCHANT_API_URL</h4>
 						<p>URL supplied by the merchant</p>
 						<h4>API_KEY</h4>
@@ -327,7 +348,8 @@
 					</div>
 				</div>
 			</div>
-<!-- 			<div class="method" id="group_purchase_api">
+<!--
+			<div class="method" id="group_purchase_api">
 				<div class="method-section clearfix">
 					<div class="method-description">
 						<h2>Group Purchase API</h2>
@@ -338,14 +360,118 @@
 					<div class="method-example">
 					</div>
 					<div class="clearfix"></div>
-				</div>
-			</div> -->
+
+					<div class="method-description" id="group_purchase_api_status">
+						<h3>Status</h3>
+						<p>These all all of the possible status a PayByGroup can have on it's <code>state</code> attribute.</p>
+						<div class="info">
+							<div class="field clearfix">
+								<div class="key">new</div>
+								<div class="desc">The Organizer reached the page to set the details of their PayByGroup.</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">purchase_options</div>
+								<div class="desc">First step of the creation of the PayByGroup has been completed. Selection of deposit or not.</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">deposit</div>
+								<div class="desc">The Organizer has selected to use a deposit.</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">deposit_pending</div>
+								<div class="desc">The Organizer has submitted deposit.</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">failed_deposit</div>
+								<div class="desc">The Organizer has submitted deposit, but failed, still in deposit page.</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">split_the_cost_with_deposit</div>
+								<div class="desc">The Organizer has submitted deposit succesfully and is now choosing how to split the cost.</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">split_the_cost</div>
+								<div class="desc">The Organizer is now choosing how to split the cost.</div>
+							</div>
+
+							<hr>
+
+							<div class="field clearfix">
+								<div class="key">input_complete</div>
+								<div class="desc">The Organizer has set all the details of their PayByGroup but not completed signup to complete creation of the purchase.</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">not_claimed</div>
+								<div class="desc">The PayByGroup was initiated by the merchant, but the organizer never completed setting it up.</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">active</div>
+								<div class="desc">The PayByGroup was successfully created but has not yet tipped. The organizer can send payment to the merchant at any point prior to the tipping point being reached by making up the shortfall on their own.</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">failed</div>
+								<div class="desc">There was a problem with the PayByGroup, this is our fallback status if anything fails.</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">unavailable</div>
+								<div class="desc">Inventory not available for the PayByGroup.</div>
+							</div>
+
+							<hr>
+
+							<div class="field clearfix">
+								<div class="key">organizer_committed</div>
+								<div class="desc">Organizer has approved the purchase, and payments are in the process of being authorized.</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">merchant_committed</div>
+								<div class="desc">Payment has been approved by the merchant.</div>
+							</div>
+
+							<hr>
+
+							<div class="field clearfix">
+								<div class="key">authorized</div>
+								<div class="desc">Payments have all been authorized, and the purchase is awaiting final merchant approval.</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">captured</div>
+								<div class="desc">All payments have been captured from users.</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">paid_out</div>
+								<div class="desc">Payment has been successfully completed to the merchant.</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">payout_failed</div>
+								<div class="desc">Payment was collected successfully, but the payout to the merchant failed.</div>
+							</div>
+
+							<hr>
+
+							<div class="field clearfix">
+								<div class="key">canceled</div>
+								<div class="desc">PayByGroup canceled by organizer or merchant.</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">refund_requested</div>
+								<div class="desc">The merchant has initiated a full or partial refund.</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">refunded</div>
+								<div class="desc">The requested refund has successfully completed.</div>
+							</div>
 
 
-			<div class="method" id="design_assets">
-				<div class="method-section clearfix">
-					<div class="method-description">
-						<h2>Design Assets</h2>
+
+						</div>
+					</div>
+					<div class="method-example">
+					</div>
+					<div class="clearfix"></div>
+
+					<div class="method-description" id="group_purchase_api_attributes">
+						<h3>Attributes</h3>
 						<p>
 							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 						</p>
@@ -353,10 +479,34 @@
 					<div class="method-example">
 					</div>
 					<div class="clearfix"></div>
+
+
+					<div class="method-description" id="group_purchase_api_methods">
+						<h3>Methods</h3>
+						<p>
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+						</p>
+					</div>
+					<div class="method-example">
+					</div>
+					<div class="clearfix"></div>
+
+				</div>
+			</div> -->
+
+			<div class="method" id="design_assets">
+				<div class="method-section clearfix">
+					<div class="method-description">
+						<h2>Design Assets</h2>
+						<p>These guidelines cover the recommended practices for adding the PayByGroup option to your website. They are based on lessons gathered from our clients who have maximized the value of adding PayByGroup to their business and thereby increased their sales conversion rates to very high levels.</p>
+
+					</div>
+					<div class="method-example">
+					</div>
+					<div class="clearfix"></div>
 					<div class="method-description" id="design_assets_guidelines">
 						<h3>Guidelines</h3>
 						<h4>Placing PayByGroup on Your Site</h4>
-						<p>These guidelines cover the recommended practices for adding the PayByGroup option to your website. They are based on lessons gathered from our clients who have maximized the value of adding PayByGroup to their business and thereby increased their sales conversion rates to very high levels.</p>
 						<p>Three key principles guide the most effective implementations:</p>
 						<ol>
 							<li><p><strong>Early awareness:</strong> make users aware early in your site that PayByGroup is an available payment option, long before they leave without purchasing</p></li>
@@ -414,9 +564,12 @@
 						<br/>
 						<br/>
 						<h4>Logo and Graphic Guidelines</h4>
+						<br/>
 						<div class="alert tip">
 						  <p><strong>Alert</strong>: For any implementation of PayByGroup on a merchant site, the following guidelines must be followed whenever the PayByGroup brand name or logo is used.</p>
 						</div>
+						<br/>
+
 						<ul>
 							<li><p>Whenever the word “PayByGroup” is shown, it must be displayed using one of the Hosted <a href="/design_assets">PayByGroup Design Assets</a>. <sup>1</sup></p></li>
 							<li><p>If you wish to use buttons that precisely match the colors of your site, you must choose other language for the button so as not to use the PayByGroup logo. In this case, the button must include “powered by PayByGroup” below, to the right, or surrounding the button using one of the <a href="/design_assets">PayByGroup Design Assets</a>. <small>The only exception to this guideline is when a checkout page’s technical constraints require a text-only use of “PayByGroup” for the user to choose it as their option.</small> </p></li>
