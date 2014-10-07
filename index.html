@@ -39,9 +39,9 @@
 		      <li><a href="#js_sample_implementation">Sample Implementation</a></li>
 		    </ul>
 			</li>
-			<li>
+<!-- 			<li>
 			  	<a href="#api_conventions">API Conventions</a>
-			</li>
+			</li> -->
 <!-- 			<li>
 			  	<a href="#group_purchase_api">Group Purchase API</a>
 			  	<ul class="nav">
@@ -53,7 +53,6 @@
 			<li>
 				<a href="#design_assets">Design Assets</a>
 				<ul class="nav">
-			    <li><a href="#design_assets_guidelines">Guidelines</a></li>
 			    <li><a href="#design_assets_html">Informational Units (HTML)</a></li>
 			    <li><a href="#design_assets_logos">Logos</a></li>
 			  </ul>
@@ -76,13 +75,7 @@
 					<div class="method-description">
 						<h2>Introduction</h2>
 						<p>
-							This is a documentation page demo for <a href="http://en.wikipedia.org/wiki/Application_programming_interface">an API</a>, you can use it for your own purposes if you want to showcase your API or some other kind of documentation for your app.
-							The info shown here is merely for the demo so it is not real.
-						</p>
-						<p>
-							You can edit the code with anything you like and use only the languages that you want, the code syntax highlighting is made using
-							<a href="http://highlightjs.org" target="_blank">highlightjs.org</a> and supports a good
-							variety of languages. Comes with some color schemes by default but you can easily customize the scheme of each language directly from the CSS.
+							Use our JavaScript and HTML tools to integrate with PayByGroup and start collecting money.
 						</p>
 					</div>
 					<div class="method-example">
@@ -94,21 +87,23 @@
 				<div class="method-section clearfix">
 					<div class="method-description">
 						<h2>JavaScript Integration</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quis saepe, quibusdam reprehenderit omnis quae placeat numquam distinctio expedita, iure veritatis odit non, dolor ullam eum vel eaque, nesciunt quasi.</p>
+						<p>Adding PayByGroup in < 5 minutes</p>
 					</div>
 					<div class="method-example">
 					</div>
 					<div class="clearfix"></div>
 					<div class="method-description">
-						<h3>Adding PayByGroup in < 5 minutes</h3>
+						<h3>Step 1</h3>
 						<p>
 							Copy and place the code snippet just before the closing <code> &lt;/body&gt; </code>
 						</p>
 						<br/>
+						<h3>Step 2</h3>
 						<p>
 							Any HTML element can be used to trigger a PayByGoup information light box by adding a <code> pbg_info </code> value to its class attribute. If the HTML element is empty we will populate it with the PayByGroup button. For example.
 						</p>
 						<br/>
+						<h3>Done!</h3>
 						<p>
 							This will generate the following button.
 							<br/>
@@ -118,7 +113,10 @@
 					</div>
 					<div class="method-example">
 						<br/>
+						<br/>
 						<pre><code class="html">&lt;script src=&quot;https://lets.paybygroup.com/snippet/v2/loader.js?merchant_id=XXXXXXX&quot;&gt;&lt;/script&gt;</code></pre>
+						<br/>
+						<br/>
 						<pre>
 							<code class="html">&lt;div class=&quot;pbg_info&quot;&gt;&lt;/div&gt;</code>
 						</pre>
@@ -191,22 +189,15 @@
 							<div class="field clearfix">
 								<div class="key">purchase-start-date:</div>
 								<div class="desc">
-									<strong>date</strong>
+									<strong>date <code>YYYY-MM-DD</code></strong>
 									If your service needs to store a start date. i.e. Reservation start date
 								</div>
 							</div>
 							<div class="field clearfix">
 								<div class="key">purchase-end-date:</div>
 								<div class="desc">
-									<strong>date</strong>
+									<strong>date <code>YYYY-MM-DD</code></strong>
 									If your service needs to store an end date. i.e. Reservation end date
-								</div>
-							</div>
-							<div class="field clearfix">
-								<div class="key">purchase-description:</div>
-								<div class="desc">
-									<strong>date</strong>
-									Date on which the hold expires and the inventory becomes subject to availability
 								</div>
 							</div>
 							<div class="field clearfix">
@@ -219,7 +210,7 @@
 							<div class="field clearfix">
 								<div class="key">purchase-hold-deadline:</div>
 								<div class="desc">
-									<strong>date</strong>
+									<strong>date <code>YYYY-MM-DD</code></strong>
 									Date on which the deposit expires and the inventory becomes subject to availability
 								</div>
 							</div>
@@ -228,6 +219,20 @@
 								<div class="desc">
 									<strong>float</strong>
 									Your ID used to identify the inventory. We use this to connect to your platform
+								</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">purchase-min-min-people:</div>
+								<div class="desc">
+									<strong>integer</strong>
+									Absolute minimum number of spots that must be claimed in order for the purchase to complete
+								</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">purchase-max-max-people:</div>
+								<div class="desc">
+									<strong>integer</strong>
+									Absolute maximum number of spots that are allowed to be claimed as part of the purchase
 								</div>
 							</div>
 
@@ -257,25 +262,12 @@
 					<div class="method-description" id="js_sample_implementation">
 						<h3>Sample Implementation</h3>
 						<h4>Informational Unit(s)</h4>
-						<p>
-							Add an informational unit using any of the copy and design examples listed in the <a href="/design_guidelines">Design Guidelines</a>
-						  on one or more of the following pages of your website:
-						</p>
-						<p>&bull;   Homepage <br>
-						&bull;   Search results page <br>
-						&bull;   Product listing page
-						</p>
-						<p>You may customize the look and feel to match your site as long as the PayByGroup Logo (<a href="/design_assets">See Design Assets</a>) is included whenever the term "PayByGroup" is used.<sup>1</sup> We recommend you use the version hosted by PayByGroup to eliminate the need to change your code if the logo is updated.
-						</p>
-						<p>When clicked, the informational unit displays the lightbox explaining how PayByGroup works, and the only option on the lightbox is to close it and keep browsing.
-						</p>
 						<div class="alert tip">
 						  <p>The key parameter that defines these divs as informational units is <code>data-popup-button-action="close"</code> .</p>
 						</div>
 						<br/>
-						<p>No other data attributes need to be defined for the informational units, though you can customize them if you like.</p>
-						<p>Here is an example of an informational unit (see <a href="/design_assets">Design Assets</a> for more):</p>
-						<p><img src="images/info_unit.png" alt="Info Unit"></p>
+						<p>Once you click the the element with <code>class="pbg_info"</code> the following popup will display:</p>
+						<img src="images/popup.jpg" alt="PayByGroup Popup" style="width:100%">
 						<br/>
 						<br/>
 						<h4>Option to Use PayByGroup</h4>
@@ -285,7 +277,31 @@
 						</div>
 						<br/>
 						<p>Here is an example of the option to use PayByGroup where the div and button have been styled to match the merchant's existing site:</p>
-						<p><img src="images/use_paybygroup.png" alt="Use PayByGroup" style="width:100%;max-width:478px;"></p>
+						<div id="pbg_info_box" class="two">
+						  <div>
+						    <h4>
+						      Avg. cost
+						      <a href="#" class="pbg_tooltips">
+						        <i>?</i>
+						        <div class="pbg_tooltip_content">
+						          Total Cost :
+						          <span id="pbg_before_amount">$ 2,874.00</span>
+						          <br>
+						          (4 people)
+						      	</div>
+						      </a>
+						    </h4>
+						    <p>
+						      <span id="pbg_after_amount">$ 388.73</span> / per person
+						    </p>
+						  </div>
+						  <a href="#" id="pbg_button" class="pbg_info pbg_btn" data-popup-id="#pbg_info_popup">
+						  	Split the cost
+						  </a>
+						  <div id="footer">
+						    Powered by : <img src="https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png" alt="PayByGroup">
+						  </div>
+						</div>
 					</div>
 					<div class="method-example">
 
@@ -293,7 +309,7 @@
 				</div>
 			</div>
 
-
+<!--
 			<div class="method" id="api_conventions">
 				<div class="method-section clearfix">
 					<div class="method-description">
@@ -347,7 +363,7 @@
 					<div class="method-example">
 					</div>
 				</div>
-			</div>
+			</div> -->
 <!--
 			<div class="method" id="group_purchase_api">
 				<div class="method-section clearfix">
@@ -496,8 +512,7 @@
 
 			<div class="method" id="design_assets">
 				<div class="method-section clearfix">
-					<div class="method-description">
-						<h2>Design Assets</h2>
+					<!-- <div class="method-description">
 						<p>These guidelines cover the recommended practices for adding the PayByGroup option to your website. They are based on lessons gathered from our clients who have maximized the value of adding PayByGroup to their business and thereby increased their sales conversion rates to very high levels.</p>
 
 					</div>
@@ -627,9 +642,10 @@
 					</div>
 					<div class="method-example">
 					</div>
-					<div class="clearfix"></div>
-					<div class="method-description" id="design_assets_html">
-						<h3>Informational Units (HTML)</h3>
+					<div class="clearfix"></div> -->
+					<div class="method-description" >
+						<h2 id="design_assets">Design Assets</h2>
+						<h3 id="design_assets_html">Informational Units (HTML)</h3>
 						<style>
 							#pbg_info_box.one, #pbg_info_box.four, #pbg_info_box.five {
 								font-family: Helvetica;color: #3e4243;display: block;font-size: 15px;width: 100%;max-width:435px;background: white;border: 1px solid #dbdbdb;border-radius: 2px;
