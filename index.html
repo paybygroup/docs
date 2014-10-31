@@ -59,11 +59,11 @@
 			  	<a href="#api_conventions">API conventions</a>
 			</li> -->
 <!-- 			<li>
-			  	<a href="#group_purchase_api">Group purchase API</a>
+			  	<a href="#group_api">Group purchase API</a>
 			  	<ul class="nav">
-			    	<li><a href="#group_purchase_api_status">Status</a></li>
-			    	<li><a href="#group_purchase_api_attributes">Attributes</a></li>
-			    	<li><a href="#group_purchase_api_methods">Methods</a></li>
+			    	<li><a href="#group_api_status">Status</a></li>
+			    	<li><a href="#group_api_attributes">Attributes</a></li>
+			    	<li><a href="#group_api_methods">Methods</a></li>
 			  	</ul>
 			</li> -->
 			<li>
@@ -101,7 +101,7 @@
 						Next, use the <a href="#design_assets">Design assets</a> section to find the pre-built widget that best fits the available space on the "checkout" page of your site. Remember that PayByGroup isn't trying to replace your existing checkout method, but rather is just a secondary option for users who aren't quite ready to complete the purchase on their own.
 						</p>
 						<p>
-						You can then customize the "Split the Cost" button inside those widgets with <a href="#js_data_attributes">Data attributes</a>. A good rule of thumb is that you should pass every data attribute that you CAN pass. For example, if you don't pass the attribute called <code>purchase-cost</code>, then we'll have to ask the customer to supply a total cost quote. If you don't pass <code>purchase-name</code>, the customer has to type in the name of the inventory item he's trying to buy.
+						You can then customize the "Split the Cost" button inside those widgets with <a href="#js_data_attributes">Data attributes</a>. A good rule of thumb is that you should pass every data attribute that you CAN pass. For example, if you don't pass the attribute called <code>cost</code>, then we'll have to ask the customer to supply a total cost quote. If you don't pass <code>name</code>, the customer has to type in the name of the inventory item he's trying to buy.
 						</p>
 						<p>
 						If you have any questions about this page or how to use any of the code here, please reach out to us at <a href="mailto:support@paybygroup.com">support@paybygroup.com</a>
@@ -158,7 +158,7 @@
 							In order to customize your PayByGroup you need to add the following data attributes to your <code> pbg_info </code> element.
 						</p>
 						<div class="alert tip">
-						  <p><strong>Tip</strong>: Remember to add data attributes in the element in the following way <code>data-purchase-name="Hello world"</code> .</p>
+						  <p><strong>Tip</strong>: Remember to add data attributes in the element in the following way <code>data-name="Hello world"</code> .</p>
 						</div>
 						<div class="info">
 							<h4>Group purchase</h4>
@@ -170,7 +170,7 @@
 								</div>
 							</div>
 							<div class="field clearfix">
-								<div class="key">purchase-name:</div>
+								<div class="key">name:</div>
 								<div class="desc">
 									<strong>string</strong>
 									Name of the product/service for the PayByGroup
@@ -184,28 +184,28 @@
 								</div>
 							</div>
 							<div class="field clearfix">
-								<div class="key">purchase-cost:</div>
+								<div class="key">cost:</div>
 								<div class="desc">
 									<strong>float</strong>
 									Total cost of the purchase
 								</div>
 							</div>
 							<div class="field clearfix">
-								<div class="key">purchase-currency:</div>
+								<div class="key">currency:</div>
 								<div class="desc">
 									<strong>string</strong>
 									Three letter code of the currency being used (defaults to USD if not specified). No automatic conversions happen, so make sure that your gateway accepts it
 								</div>
 							</div>
 							<div class="field clearfix">
-								<div class="key">purchase-link-url:</div>
+								<div class="key">link-url:</div>
 								<div class="desc">
 									<strong>string</strong>
 									URL for the page of the product/service
 								</div>
 							</div>
 							<div class="field clearfix">
-								<div class="key">purchase-description:</div>
+								<div class="key">description:</div>
 								<div class="desc">
 									<strong>string</strong>
 									Description of the purchase
@@ -216,49 +216,49 @@
 							<h5>Other commonly used data attributes</h5>
 							<p>These attributes are used on an as needed basis depending on your product/service.</p>
 							<div class="field clearfix">
-								<div class="key">purchase-start-date:</div>
+								<div class="key">start-date:</div>
 								<div class="desc">
 									<strong>date <code>YYYY-MM-DD</code></strong>
 									If your service needs to store a start date. i.e. Reservation start date
 								</div>
 							</div>
 							<div class="field clearfix">
-								<div class="key">purchase-end-date:</div>
+								<div class="key">end-date:</div>
 								<div class="desc">
 									<strong>date <code>YYYY-MM-DD</code></strong>
 									If your service needs to store an end date. i.e. Reservation end date
 								</div>
 							</div>
 							<div class="field clearfix">
-								<div class="key">purchase-deposit-amount:</div>
+								<div class="key">deposit-amount:</div>
 								<div class="desc">
 									<strong>float</strong>
 									Cost of the deposit to hold the inventory
 								</div>
 							</div>
 							<div class="field clearfix">
-								<div class="key">purchase-hold-deadline:</div>
+								<div class="key">hold-deadline:</div>
 								<div class="desc">
 									<strong>date <code>YYYY-MM-DD</code></strong>
 									Date on which the deposit expires and the inventory becomes subject to availability
 								</div>
 							</div>
 							<div class="field clearfix">
-								<div class="key">purchase-inventory-id:</div>
+								<div class="key">inventory-id:</div>
 								<div class="desc">
 									<strong>float</strong>
 									Your ID used to identify the inventory. We use this to connect to your platform
 								</div>
 							</div>
 							<div class="field clearfix">
-								<div class="key">purchase-min-min-people:</div>
+								<div class="key">min-min-people:</div>
 								<div class="desc">
 									<strong>integer</strong>
 									Absolute minimum number of spots that must be claimed in order for the purchase to complete
 								</div>
 							</div>
 							<div class="field clearfix">
-								<div class="key">purchase-max-max-people:</div>
+								<div class="key">max-max-people:</div>
 								<div class="desc">
 									<strong>integer</strong>
 									Absolute maximum number of spots that are allowed to be claimed as part of the purchase
@@ -275,12 +275,12 @@
 <code class="html">
 &lt;div class=&quot;pbg_info&quot;
   data-purchase-image-url=&quot;https://example.com/picture.png&quot;
-  data-purchase-name=&quot;Awesome Escape&quot;
+  data-name=&quot;Awesome Escape&quot;
   data-purchase-id=&quot;ESCAPE-23&quot;
-  data-purchase-cost=&quot;500.45&quot;
-  data-purchase-currency=&quot;CAD&quot;
-  data-purchase-link-url=&quot;http://example.com/property&quot;
-  data-purchase-description=&quot;Great rental for 3 people with lake view.&quot; &gt;
+  data-cost=&quot;500.45&quot;
+  data-currency=&quot;CAD&quot;
+  data-link-url=&quot;http://example.com/property&quot;
+  data-description=&quot;Great rental for 3 people with lake view.&quot; &gt;
 &lt;/div&gt;
 </code>
 </pre>
@@ -394,7 +394,7 @@
 				</div>
 			</div> -->
 <!--
-			<div class="method" id="group_purchase_api">
+			<div class="method" id="group_api">
 				<div class="method-section clearfix">
 					<div class="method-description">
 						<h2>Group Purchase API</h2>
@@ -406,7 +406,7 @@
 					</div>
 					<div class="clearfix"></div>
 
-					<div class="method-description" id="group_purchase_api_status">
+					<div class="method-description" id="group_api_status">
 						<h3>Status</h3>
 						<p>These all all of the possible status a PayByGroup can have on it's <code>state</code> attribute.</p>
 						<div class="info">
@@ -415,7 +415,7 @@
 								<div class="desc">The Organizer reached the page to set the details of their PayByGroup.</div>
 							</div>
 							<div class="field clearfix">
-								<div class="key">purchase_options</div>
+								<div class="key">options</div>
 								<div class="desc">First step of the creation of the PayByGroup has been completed. Selection of deposit or not.</div>
 							</div>
 							<div class="field clearfix">
@@ -515,7 +515,7 @@
 					</div>
 					<div class="clearfix"></div>
 
-					<div class="method-description" id="group_purchase_api_attributes">
+					<div class="method-description" id="group_api_attributes">
 						<h3>Attributes</h3>
 						<p>
 							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -526,7 +526,7 @@
 					<div class="clearfix"></div>
 
 
-					<div class="method-description" id="group_purchase_api_methods">
+					<div class="method-description" id="group_api_methods">
 						<h3>Methods</h3>
 						<p>
 							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
