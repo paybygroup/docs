@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>PayByGroup Docs</title>
+	<title>Pay By Group Docs</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<!-- stylesheets -->
@@ -41,7 +41,7 @@
 <body id="docs" data-spy="scroll" data-target="#guide">
 	<div id="guide">
 		<h1 class="logo" style="margin-bottom: 0px;">
-			<a href="http://docs.paybygroup.com">PayByGroup</a>
+			<a href="http://docs.paybygroup.com">Pay By Group</a>
 		</h1>
 		<ul class="menu nav">
 			<li><a href="http://www.paybygroup.com/pricing1/" style="font-size:12px;">Register a business account</a></li>
@@ -52,7 +52,7 @@
 			<li>
 			  <a href="#js_integration">JavaScript integration</a>
 		  	<ul class="nav">
-		      <li><a href="#js_integration">Adding PayByGroup in &lt; 5 minutes</a></li>
+		      <li><a href="#js_integration">Adding Pay By Group in &lt; 5 minutes</a></li>
 		      <li><a href="#js_data_attributes">Data attributes</a></li>
 		      <li><a href="#js_sample_implementation">Sample Implementation</a></li>
 		    </ul>
@@ -94,13 +94,13 @@
 					<div class="method-description">
 						<h2>Introduction</h2>
 						<p>
-							PayByGroup works by passing information about a given purchase from your site to ours via a Javascript widget on your webpage. For example, if someone wants to start a PayByGroup from a vacation rental website, PayByGroup needs to know things like what property they want to rent, how much it will cost, and when they'll be staying there.
+							Pay By Group works by passing information about a given purchase from your site to ours via a Javascript widget on your webpage. For example, if someone wants to start a Pay By Group from a vacation rental website, Pay By Group needs to know things like what property they want to rent, how much it will cost, and when they'll be staying there.
 						</p>
 						<p>
-						This page provides all the HTML and Javascript tools necessary to add this widget to your site. Start with the <a href="#js_integration">Javascript integration</a> section to get the snippet of Javascript code to put in the footer of your site -- this snippet is necessary in order for any other PayByGroup widgets or informational units to work.
+						This page provides all the HTML and Javascript tools necessary to add this widget to your site. Start with the <a href="#js_integration">Javascript integration</a> section to get the snippet of Javascript code to put in the footer of your site -- this snippet is necessary in order for any other Pay By Group widgets or informational units to work.
 						</p>
 						<p>
-						Next, use the <a href="#design_assets">Design assets</a> section to find the pre-built widget that best fits the available space on the "checkout" page of your site. Remember that PayByGroup isn't trying to replace your existing checkout method, but rather is just a secondary option for users who aren't quite ready to complete the purchase on their own.
+						Next, use the <a href="#design_assets">Design assets</a> section to find the pre-built widget that best fits the available space on the "checkout" page of your site. Remember that Pay By Group isn't trying to replace your existing checkout method, but rather is just a secondary option for users who aren't quite ready to complete the purchase on their own.
 						</p>
 						<p>
 						You can then customize the "Split the Cost" button inside those widgets with <a href="#js_data_attributes">Data attributes</a>. A good rule of thumb is that you should pass every data attribute that you CAN pass. For example, if you don't pass the attribute called <code>cost</code>, then we'll have to ask the customer to supply a total cost quote. If you don't pass <code>name</code>, the customer has to type in the name of the inventory item he's trying to buy.
@@ -118,7 +118,7 @@
 				<div class="method-section clearfix">
 					<div class="method-description">
 						<h2>JavaScript integration</h2>
-						<p>Adding PayByGroup in < 5 minutes</p>
+						<p>Adding Pay By Group in < 5 minutes</p>
 					</div>
 					<div class="method-example">
 					</div>
@@ -131,7 +131,7 @@
 						<br/>
 						<h3>Step 2</h3>
 						<p>
-							Any HTML element can be used to trigger a PayByGoup information light box by adding a <code> pbg_info </code> value to its class attribute. If the HTML element is empty we will populate it with the PayByGroup button. For example.
+							Any HTML element can be used to trigger a PayByGoup information light box by adding a <code> pbg_info </code> value to its class attribute. If the HTML element is empty we will populate it with the Pay By Group button. For example.
 						</p>
 						<br/>
 						<h3>Done!</h3>
@@ -139,7 +139,7 @@
 							This will generate the following button.
 							<br/>
 							<br/>
-							<img src="https://cdn.paybygroup.com/images/merchant/elements/pbg_orange.png" alt="PayByGroup">
+							<img src="https://cdn.paybygroup.com/images/merchant/elements/pbg_orange.png" alt="Pay By Group">
 						</p>
 					</div>
 					<div class="method-example">
@@ -157,7 +157,7 @@
 					<div class="method-description" id="js_data_attributes">
 						<h3>Data attributes</h3>
 						<p>
-							In order to customize your PayByGroup you need to add the following data attributes to your <code> pbg_info </code> element.
+							In order to customize your Pay By Group you need to add the following data attributes to your <code> pbg_info </code> element.
 						</p>
 						<div class="alert tip">
 						  <p><strong>Tip</strong>: Remember to add data attributes in the element in the following way <code>data-name="Hello world"</code> .</p>
@@ -168,14 +168,14 @@
 								<div class="key">purchase-image-url:</div>
 								<div class="desc">
 									<strong>string</strong>
-									URL for the PayByGroup image
+									URL for the Pay By Group image
 								</div>
 							</div>
 							<div class="field clearfix">
 								<div class="key">name:</div>
 								<div class="desc">
 									<strong>string</strong>
-									Name of the product/service for the PayByGroup
+									Name of the product/service for the Pay By Group
 								</div>
 							</div>
 							<div class="field clearfix">
@@ -298,16 +298,16 @@
 						</div>
 						<br/>
 						<p>Once you click the the element with <code>class="pbg_info"</code> the following popup will display:</p>
-						<img src="images/popup.jpg" alt="PayByGroup Popup" style="width:100%">
+						<img src="images/popup.jpg" alt="Pay By Group Popup" style="width:100%">
 						<br/>
 						<br/>
-						<h4>Option to use PayByGroup</h4>
-						<p>Place the option to use PayByGroup at the earliest point on your site where the total cost is available - including all taxes, fees, and options. This will typically be on the first page of your checkout process.</p>
+						<h4>Option to use Pay By Group</h4>
+						<p>Place the option to use Pay By Group at the earliest point on your site where the total cost is available - including all taxes, fees, and options. This will typically be on the first page of your checkout process.</p>
 						<div class="alert tip">
 						  <p><strong>Tip</strong>: This is where you should be sure to set the data attributes listed above and any additional ones you want to include .</p>
 						</div>
 						<br/>
-						<p>Here is an example of the option to use PayByGroup where the div and button have been styled to match the merchant's existing site:</p>
+						<p>Here is an example of the option to use Pay By Group where the div and button have been styled to match the merchant's existing site:</p>
 						<div id="pbg_info_box" class="two">
 						  <div>
 						    <h4>
@@ -330,7 +330,7 @@
 						  	Split the cost
 						  </a>
 						  <div id="footer">
-						    Powered by : <img src="https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png" alt="PayByGroup">
+						    Powered by : <img src="https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png" alt="Pay By Group">
 						  </div>
 						</div>
 					</div>
@@ -345,12 +345,12 @@
 				<div class="method-section clearfix">
 					<div class="method-description">
 						<h2>API Conventions</h2>
-						<p>The following describes the approach used by PayByGroup APIs unless explicitly stated otherwise.</p>
+						<p>The following describes the approach used by Pay By Group APIs unless explicitly stated otherwise.</p>
 						<h4>Format</h4>
 						<p>
 						Data is transferred as URL encoded parameters.<br/>
 						The calling parameters for all API calls must contain the <code>api_key</code> parameter containing the merchant-specific
-						authorization token obtained from the PayByGroup dashboard of the master user account for a given merchant.<br/>
+						authorization token obtained from the Pay By Group dashboard of the master user account for a given merchant.<br/>
 						All requests must be <code>HTTPS</code><br/>
 						</p>
 						<h4>Addressing</h4>
@@ -364,7 +364,7 @@
 							Datetime format used is <code>ISO 8601</code><br/>
 							Date: <code>YYYY-MM-DD</code><br/>
 							Datetime: <code>YYYY-MM-DDTHH:MM:SS-0800</code>
-							(For simplicity, midnight PST time is the expiration time for all PayByGroups. That way no group is surprised to have theirs expire before midnight in their local time, and the expiration does not need to be conditioned on the location of one or more users.)<br/>
+							(For simplicity, midnight PST time is the expiration time for all Pay By Groups. That way no group is surprised to have theirs expire before midnight in their local time, and the expiration does not need to be conditioned on the location of one or more users.)<br/>
 						</p>
 						<h4>API Endpoint</h4>
 						<p><code>production</code> - https://lets.paybygroup.com/api/</p>
@@ -410,15 +410,15 @@
 
 					<div class="method-description" id="group_api_status">
 						<h3>Status</h3>
-						<p>These all all of the possible status a PayByGroup can have on it's <code>state</code> attribute.</p>
+						<p>These all all of the possible status a Pay By Group can have on it's <code>state</code> attribute.</p>
 						<div class="info">
 							<div class="field clearfix">
 								<div class="key">new</div>
-								<div class="desc">The Organizer reached the page to set the details of their PayByGroup.</div>
+								<div class="desc">The Organizer reached the page to set the details of their Pay By Group.</div>
 							</div>
 							<div class="field clearfix">
 								<div class="key">options</div>
-								<div class="desc">First step of the creation of the PayByGroup has been completed. Selection of deposit or not.</div>
+								<div class="desc">First step of the creation of the Pay By Group has been completed. Selection of deposit or not.</div>
 							</div>
 							<div class="field clearfix">
 								<div class="key">deposit</div>
@@ -445,23 +445,23 @@
 
 							<div class="field clearfix">
 								<div class="key">input_complete</div>
-								<div class="desc">The Organizer has set all the details of their PayByGroup but not completed signup to complete creation of the purchase.</div>
+								<div class="desc">The Organizer has set all the details of their Pay By Group but not completed signup to complete creation of the purchase.</div>
 							</div>
 							<div class="field clearfix">
 								<div class="key">not_claimed</div>
-								<div class="desc">The PayByGroup was initiated by the merchant, but the organizer never completed setting it up.</div>
+								<div class="desc">The Pay By Group was initiated by the merchant, but the organizer never completed setting it up.</div>
 							</div>
 							<div class="field clearfix">
 								<div class="key">active</div>
-								<div class="desc">The PayByGroup was successfully created but has not yet tipped. The organizer can send payment to the merchant at any point prior to the tipping point being reached by making up the shortfall on their own.</div>
+								<div class="desc">The Pay By Group was successfully created but has not yet tipped. The organizer can send payment to the merchant at any point prior to the tipping point being reached by making up the shortfall on their own.</div>
 							</div>
 							<div class="field clearfix">
 								<div class="key">failed</div>
-								<div class="desc">There was a problem with the PayByGroup, this is our fallback status if anything fails.</div>
+								<div class="desc">There was a problem with the Pay By Group, this is our fallback status if anything fails.</div>
 							</div>
 							<div class="field clearfix">
 								<div class="key">unavailable</div>
-								<div class="desc">Inventory not available for the PayByGroup.</div>
+								<div class="desc">Inventory not available for the Pay By Group.</div>
 							</div>
 
 							<hr>
@@ -498,7 +498,7 @@
 
 							<div class="field clearfix">
 								<div class="key">canceled</div>
-								<div class="desc">PayByGroup canceled by organizer or merchant.</div>
+								<div class="desc">Pay By Group canceled by organizer or merchant.</div>
 							</div>
 							<div class="field clearfix">
 								<div class="key">refund_requested</div>
@@ -544,7 +544,7 @@
 			<div class="method" id="design_assets">
 				<div class="method-section clearfix">
 					<!-- <div class="method-description">
-						<p>These guidelines cover the recommended practices for adding the PayByGroup option to your website. They are based on lessons gathered from our clients who have maximized the value of adding PayByGroup to their business and thereby increased their sales conversion rates to very high levels.</p>
+						<p>These guidelines cover the recommended practices for adding the Pay By Group option to your website. They are based on lessons gathered from our clients who have maximized the value of adding Pay By Group to their business and thereby increased their sales conversion rates to very high levels.</p>
 
 					</div>
 					<div class="method-example">
@@ -552,17 +552,17 @@
 					<div class="clearfix"></div>
 					<div class="method-description" id="design_assets_guidelines">
 						<h3>Guidelines</h3>
-						<h4>Placing PayByGroup on Your Site</h4>
+						<h4>Placing Pay By Group on Your Site</h4>
 						<p>Three key principles guide the most effective implementations:</p>
 						<ol>
-							<li><p><strong>Early awareness:</strong> make users aware early in your site that PayByGroup is an available payment option, long before they leave without purchasing</p></li>
-							<li><p><strong>Continuous context:</strong> provide context at each key decision point on your site to let users know where/when in your funnel they will be given the option to choose PayByGroup</p></li>
-							<li><p><strong>Available when they need it:</strong> make the option to use PayByGroup available as early in the funnel as possible, in addition to placing it on the checkout page, which is a point where non-PayByGroup businesses typically lose many conversions</p></li>
+							<li><p><strong>Early awareness:</strong> make users aware early in your site that Pay By Group is an available payment option, long before they leave without purchasing</p></li>
+							<li><p><strong>Continuous context:</strong> provide context at each key decision point on your site to let users know where/when in your funnel they will be given the option to choose Pay By Group</p></li>
+							<li><p><strong>Available when they need it:</strong> make the option to use Pay By Group available as early in the funnel as possible, in addition to placing it on the checkout page, which is a point where non-Pay By Group businesses typically lose many conversions</p></li>
 						</ol>
 						<br/>
 						<br/>
 						<h4>Early Awareness</h4>
-						<p>Including a note on your homepage or primary landing page that shows PayByGroup is available on your site accomplishes three things:</p>
+						<p>Including a note on your homepage or primary landing page that shows Pay By Group is available on your site accomplishes three things:</p>
 						<ul>
 							<li><p>Highlights your offerings as well-suited for use or purchase by multiple people.</p></li>
 							<li><p>Shows that you are sensitive to the challenges your users face and are willing to provide the tools and extra-mile service needed to make their experience with your business even better.</p></li>
@@ -570,60 +570,60 @@
 						</ul>
 						<br/>
 						<h5>Copy Examples</h5>
-						<p>Need to split the cost? We now offer <em>PayByGroup</em>. Learn more</p>
-						<p>Traveling with multiple parties? We now offer <em>PayByGroup</em>. Learn more</p>
+						<p>Need to split the cost? We now offer <em>Pay By Group</em>. Learn more</p>
+						<p>Traveling with multiple parties? We now offer <em>Pay By Group</em>. Learn more</p>
 						<br/>
 						<h5>Visual Examples</h5>
-						<p><img src="images/twoline_weofferpaybygroup.png" alt="Two Line We Offer PayByGroup" ></p>
+						<p><img src="images/twoline_weofferpaybygroup.png" alt="Two Line We Offer Pay By Group" ></p>
 						<br/>
 						<br/>
 						<h4>Continuous Context</h4>
-						<p>As users browse through your site they typically encounter search results, product pages, and one or more checkout steps such as a shopping cart and agreement page. At each of these points, a user that needs PayByGroup is deciding whether to continue through the purchase process.</p>
-						<p>If they are aware you offer PayByGroup, they are wondering when the option will be available. Unfortunately users’ attention spans are too short to rely on their remembering what you told them on the previous page so you have to remind them.</p>
-						<p>If they aren’t aware you offer PayByGroup and you don’t inform them at each step in the funnel, then the users that need it will abandon your site before they have a chance to start a purchase on your site via PayByGroup.</p>
+						<p>As users browse through your site they typically encounter search results, product pages, and one or more checkout steps such as a shopping cart and agreement page. At each of these points, a user that needs Pay By Group is deciding whether to continue through the purchase process.</p>
+						<p>If they are aware you offer Pay By Group, they are wondering when the option will be available. Unfortunately users’ attention spans are too short to rely on their remembering what you told them on the previous page so you have to remind them.</p>
+						<p>If they aren’t aware you offer Pay By Group and you don’t inform them at each step in the funnel, then the users that need it will abandon your site before they have a chance to start a purchase on your site via Pay By Group.</p>
 						<h5>Copy Examples</h5>
-						<p>Worried about fronting all the money? Choose <em>PayByGroup</em> at checkout. Learn more.</p>
-						<p>Traveling with others? Choose <em>PayByGroup</em> at checkout. Learn more.</p>
+						<p>Worried about fronting all the money? Choose <em>Pay By Group</em> at checkout. Learn more.</p>
+						<p>Traveling with others? Choose <em>Pay By Group</em> at checkout. Learn more.</p>
 						<h5>Visual Examples</h5>
-						<p><img src="images/weofferpaybygroup_horizontalbox.png" alt="We Offer PayByGroup Horizontal Box" style="width:100%;max-width:783px;"></p>
+						<p><img src="images/weofferpaybygroup_horizontalbox.png" alt="We Offer Pay By Group Horizontal Box" style="width:100%;max-width:783px;"></p>
 						<br/>
 						<br/>
 						<h4>Available When They Need It</h4>
-						<p>There are two places where users expect PayByGroup to be available as an option:</p>
+						<p>There are two places where users expect Pay By Group to be available as an option:</p>
 						<h5>1. As soon as the total cost is clear</h5>
 						<ul>
 							<li><p>This is a significant drop-off point for many businesses.</p></li>
-							<li><p>PayByGroup is able to get users to continue a purchase they otherwise would have abandoned.</p></li>
+							<li><p>Pay By Group is able to get users to continue a purchase they otherwise would have abandoned.</p></li>
 						</ul>
 						<h5>2. On the checkout page</h5>
 						<ul>
-							<li><p>Because users are accustomed to options with “Pay” in the name to be found on the checkout page, many of them look for the PayByGroup option here</p></li>
+							<li><p>Because users are accustomed to options with “Pay” in the name to be found on the checkout page, many of them look for the Pay By Group option here</p></li>
 						</ul>
-						<p>For merchants with a single checkout page, which also serves as the first place the total cost is displayed, these two locations are the same. In those cases, that page is where PayByGroup should go.</p>
-						<p>For other merchants that have a quote page or a widget that displays the total cost on the product page or a shopping cart page before the checkout, these locations differ. For those merchants the option to choose PayByGroup should be available in both locations.</p>
+						<p>For merchants with a single checkout page, which also serves as the first place the total cost is displayed, these two locations are the same. In those cases, that page is where Pay By Group should go.</p>
+						<p>For other merchants that have a quote page or a widget that displays the total cost on the product page or a shopping cart page before the checkout, these locations differ. For those merchants the option to choose Pay By Group should be available in both locations.</p>
 						<p>The best way to present the option at the checkout step is by asking users whether they want to split the cost OR complete the booking themselves. For the users that need to get others on board, presenting an either/or option makes it seem like a trusted option offered by the merchant and not an unknown, risky option.</p>
 						<h5>Copy Examples</h5>
-						<p>Split the cost with <em>PayByGroup</em>. How it works.</p>
-						<p>We now offer <em>PayByGroup</em>. View details.</p>
+						<p>Split the cost with <em>Pay By Group</em>. How it works.</p>
+						<p>We now offer <em>Pay By Group</em>. View details.</p>
 						<h5>Visual Examples</h5>
-						<p><img src="images/sample_poweredbypaybygroup_box.png" alt="Sample Powered By PayByGroup Box" style="width:100%;max-width:478px;"></p>
+						<p><img src="images/sample_poweredbypaybygroup_box.png" alt="Sample Powered By Pay By Group Box" style="width:100%;max-width:478px;"></p>
 						<br/>
 						<br/>
 						<h4>Logo and Graphic Guidelines</h4>
 						<br/>
 						<div class="alert tip">
-						  <p><strong>Alert</strong>: For any implementation of PayByGroup on a merchant site, the following guidelines must be followed whenever the PayByGroup brand name or logo is used.</p>
+						  <p><strong>Alert</strong>: For any implementation of Pay By Group on a merchant site, the following guidelines must be followed whenever the Pay By Group brand name or logo is used.</p>
 						</div>
 						<br/>
 
 						<ul>
-							<li><p>Whenever the word “PayByGroup” is shown, it must be displayed using one of the Hosted <a href="/design_assets">PayByGroup Design assets</a>. <sup>1</sup></p></li>
-							<li><p>If you wish to use buttons that precisely match the colors of your site, you must choose other language for the button so as not to use the PayByGroup logo. In this case, the button must include “powered by PayByGroup” below, to the right, or surrounding the button using one of the <a href="/design_assets">PayByGroup Design assets</a>. <small>The only exception to this guideline is when a checkout page’s technical constraints require a text-only use of “PayByGroup” for the user to choose it as their option.</small> </p></li>
-							<li><p>The copy describing that PayByGroup is available or prompting users to choose PayByGroup on the product or checkout page must come from one of the PayByGroup Copy Elements below. <small>If you wish to use different copy, you may request approval and suggest it be added to the list of allowable copy by emailing business@paybygroup.com</small></p></li>
+							<li><p>Whenever the word “Pay By Group” is shown, it must be displayed using one of the Hosted <a href="/design_assets">Pay By Group Design assets</a>. <sup>1</sup></p></li>
+							<li><p>If you wish to use buttons that precisely match the colors of your site, you must choose other language for the button so as not to use the Pay By Group logo. In this case, the button must include “powered by Pay By Group” below, to the right, or surrounding the button using one of the <a href="/design_assets">Pay By Group Design assets</a>. <small>The only exception to this guideline is when a checkout page’s technical constraints require a text-only use of “Pay By Group” for the user to choose it as their option.</small> </p></li>
+							<li><p>The copy describing that Pay By Group is available or prompting users to choose Pay By Group on the product or checkout page must come from one of the Pay By Group Copy Elements below. <small>If you wish to use different copy, you may request approval and suggest it be added to the list of allowable copy by emailing business@paybygroup.com</small></p></li>
 						</ul>
 						<br/>
 						<br/>
-						<h4>PayByGroup Copy Elements</h4>
+						<h4>Pay By Group Copy Elements</h4>
 						<p><strong>Full Example</strong></p>
 						<p><img src="images/partsofcopy_image.png" alt="Image Explaining Copy Elements" style="width:100%;max-width:560px;"></p>
 						<p><strong>Part One - Prompt</strong></p>
@@ -648,18 +648,18 @@
 						</p>
 						<p><strong>Part Two - Explanation</strong>
 						<br/>
-						<small>TIP: You may substitute your merchant name – e.g. “Bob’s Vacation Rentals now offers PayByGroup” – for “We” in any of the PayByGroup Copy Elements</small>
+						<small>TIP: You may substitute your merchant name – e.g. “Bob’s Vacation Rentals now offers Pay By Group” – for “We” in any of the Pay By Group Copy Elements</small>
 						</p>
-						<p>We now offer <em>PayByGroup</em>.<br/>
-							Choose <em>PayByGroup</em> at checkout.<br/>
-							Split the cost with <em>PayByGroup</em>.<br/>
-							Use <em>PayByGroup</em> to buy with friends and family.<br/>
-							Use <em>PayByGroup</em> to book with friends and family.<br/>
-							Start a <em>PayByGroup</em> to get your group together.<br/>
-							Don’t front the whole cost alone. Choose <em>PayByGroup</em>.<br/>
-							Find out who’s in and split this cost with friends and family using <em>PayByGroup</em>.<br/>
-							Split the cost with friends and family using <em>PayByGroup</em>.<br/>
-							Quickly and easily get everyone on board using <em>PayByGroup</em>.<p/>
+						<p>We now offer <em>Pay By Group</em>.<br/>
+							Choose <em>Pay By Group</em> at checkout.<br/>
+							Split the cost with <em>Pay By Group</em>.<br/>
+							Use <em>Pay By Group</em> to buy with friends and family.<br/>
+							Use <em>Pay By Group</em> to book with friends and family.<br/>
+							Start a <em>Pay By Group</em> to get your group together.<br/>
+							Don’t front the whole cost alone. Choose <em>Pay By Group</em>.<br/>
+							Find out who’s in and split this cost with friends and family using <em>Pay By Group</em>.<br/>
+							Split the cost with friends and family using <em>Pay By Group</em>.<br/>
+							Quickly and easily get everyone on board using <em>Pay By Group</em>.<p/>
 						<p><strong>Part Three - Call to Action</strong></p>
 						<p>
 							Learn more
@@ -680,11 +680,11 @@
 
 						<div id="pbg_info_box" class="one">
 					    <h3>Need to split the cost?</h3>
-			        <p>We have partnered with PayByGroup to make it easy to rally your group, split the cost, and complete this purchase.</p>
+			        <p>We have partnered with Pay By Group to make it easy to rally your group, split the cost, and complete this purchase.</p>
 				      <div id="costs">
-				        <h4>Without <span id="pbg_mention">PayByGroup</span></h4>
+				        <h4>Without <span id="pbg_mention">Pay By Group</span></h4>
 				        <p>You Pay<span id="pbg_before_amount">$ 3,888.73</span></p>
-				        <h4>With <span id="pbg_mention">PayByGroup</span></h4>
+				        <h4>With <span id="pbg_mention">Pay By Group</span></h4>
 				        <p><span id="pbg_after_amount">$ 388.73</span> / per person</p>
 				      </div>
 					    <div id="footer">
@@ -700,11 +700,11 @@
 					<pre><code class="html">
 &lt;div id=&quot;pbg_info_box&quot; class=&quot;one&quot;&gt;
   &lt;h3&gt;Need to split the cost?&lt;/h3&gt;
-  &lt;p&gt;We have partnered with PayByGroup to make it easy to rally your group, split the cost, and complete this purchase&lt;/p&gt;
+  &lt;p&gt;We have partnered with Pay By Group to make it easy to rally your group, split the cost, and complete this purchase&lt;/p&gt;
   &lt;div id=&quot;costs&quot;&gt;
-    &lt;h4&gt;Without &lt;span id=&quot;pbg_mention&quot;&gt;PayByGroup&lt;/span&gt;&lt;/h4&gt;
+    &lt;h4&gt;Without &lt;span id=&quot;pbg_mention&quot;&gt;Pay By Group&lt;/span&gt;&lt;/h4&gt;
     &lt;p&gt;You Pay&lt;span id=&quot;pbg_before_amount&quot;&gt;$ 3,888.73&lt;/span&gt;&lt;/p&gt;
-    &lt;h4&gt;With &lt;span id=&quot;pbg_mention&quot;&gt;PayByGroup&lt;/span&gt;&lt;/h4&gt;
+    &lt;h4&gt;With &lt;span id=&quot;pbg_mention&quot;&gt;Pay By Group&lt;/span&gt;&lt;/h4&gt;
     &lt;p&gt;&lt;span id=&quot;pbg_after_amount&quot;&gt;$ 388.73&lt;/span&gt; / per person&lt;/p&gt;
   &lt;/div&gt;
   &lt;div id=&quot;footer&quot;&gt;
@@ -741,7 +741,7 @@
 				      	Split the cost
 				      </a>
 					    <div id="footer">
-					      Powered by : <img src="https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png" alt="PayByGroup">
+					      Powered by : <img src="https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png" alt="Pay By Group">
 					    </div>
 					  </div>
 					</div>
@@ -769,7 +769,7 @@
   	Split the cost
   &lt;/a&gt;
   &lt;div id=&quot;footer&quot;&gt;
-    Powered by : &lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png&quot; alt=&quot;PayByGroup&quot;&gt;
+    Powered by : &lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png&quot; alt=&quot;Pay By Group&quot;&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 					</code></pre>
@@ -779,10 +779,10 @@
 					<div class="method-description">
 						<div id="pbg_info_box" class="three">
 						  <h3>Traveling with friends or family?</h3>
-						  <p>We have partnered with <span id="pbg_mention">PayByGroup</span> to make it easy to rally your group, split the cost, and complete this purchase. </p>
+						  <p>We have partnered with <span id="pbg_mention">Pay By Group</span> to make it easy to rally your group, split the cost, and complete this purchase. </p>
 				      <div id="footer">
 				        <p>
-				          Powered by :<br/><img src="https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png" alt="PayByGroup">
+				          Powered by :<br/><img src="https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png" alt="Pay By Group">
 				        </p>
 				        <a href="#" id="pbg_button" class="pbg_info pbg_btn" data-popup-id="#pbg_info_popup">Split the cost</a>
 				      </div>
@@ -792,10 +792,10 @@
 						<pre><code class="html">
 &lt;div id=&quot;pbg_info_box&quot; class=&quot;three&quot;&gt;
   &lt;h3&gt;Traveling with friends or family?&lt;/h3&gt;
-  &lt;p&gt;We have partnered with &lt;span&gt;PayByGroup&lt;/span&gt; to make it easy to rally your group, split the cost, and complete this purchase. &lt;/p&gt;
+  &lt;p&gt;We have partnered with &lt;span&gt;Pay By Group&lt;/span&gt; to make it easy to rally your group, split the cost, and complete this purchase. &lt;/p&gt;
   &lt;div id=&quot;footer&quot;&gt;
     &lt;p&gt;
-      Powered by :&lt;br/&gt;&lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png&quot; alt=&quot;PayByGroup&quot;&gt;
+      Powered by :&lt;br/&gt;&lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png&quot; alt=&quot;Pay By Group&quot;&gt;
     &lt;/p&gt;
     &lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info pbg_btn&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;Split the cost&lt;/a&gt;
   &lt;/div&gt;
@@ -807,19 +807,19 @@
 					<div class="method-description">
 						<div id="pbg_info_box" class="four">
 					    <h3>Keep the price low.</h3>
-					    <p><span id="pbg_mention">PayByGroup</span> allows you to keep the cost down by splitting with friends. Try us out!</p>
+					    <p><span id="pbg_mention">Pay By Group</span> allows you to keep the cost down by splitting with friends. Try us out!</p>
 					    <div class="box">
-					    	<h4>Without <span id="pbg_mention">PayByGroup</span></h4>
+					    	<h4>Without <span id="pbg_mention">Pay By Group</span></h4>
 					    	<span id="pbg_before_amount">$ 3,888.73</span>
 					    </div>
 							<div class="box">
-							  <h4>With <span id="pbg_mention">PayByGroup</span></h4>
+							  <h4>With <span id="pbg_mention">Pay By Group</span></h4>
 								<span id="pbg_after_amount">$ 388.73</span><small> / per person</small>
 							</div>
 							<div class="clearfix"></div>
 							<div id="footer">
 								<p>
-								  Powered by :<br/><img src="https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png" alt="PayByGroup">
+								  Powered by :<br/><img src="https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png" alt="Pay By Group">
 								</p>
 								<a href="#" id="pbg_button" class="pbg_info pbg_btn" data-popup-id="#pbg_info_popup">Split the cost</a>
 							</div>
@@ -829,19 +829,19 @@
 						<pre><code class="html">
 &lt;div id=&quot;pbg_info_box&quot; class=&quot;four&quot;&gt;
   &lt;h3&gt;Keep the price low.&lt;/h3&gt;
-  &lt;p&gt;&lt;span id=&quot;pbg_mention&quot;&gt;PayByGroup&lt;/span&gt; allows you to keep the cost down by splitting with friends. Try us out!&lt;/p&gt;
+  &lt;p&gt;&lt;span id=&quot;pbg_mention&quot;&gt;Pay By Group&lt;/span&gt; allows you to keep the cost down by splitting with friends. Try us out!&lt;/p&gt;
   &lt;div class=&quot;box&quot;&gt;
-  	&lt;h4&gt;Without &lt;span id=&quot;pbg_mention&quot;&gt;PayByGroup&lt;/span&gt;&lt;/h4&gt;
+  	&lt;h4&gt;Without &lt;span id=&quot;pbg_mention&quot;&gt;Pay By Group&lt;/span&gt;&lt;/h4&gt;
   	&lt;span id=&quot;pbg_before_amount&quot;&gt;$ 3,888.73&lt;/span&gt;
   &lt;/div&gt;
 	&lt;div class=&quot;box&quot;&gt;
-	  &lt;h4&gt;With &lt;span id=&quot;pbg_mention&quot;&gt;PayByGroup&lt;/span&gt;&lt;/h4&gt;
+	  &lt;h4&gt;With &lt;span id=&quot;pbg_mention&quot;&gt;Pay By Group&lt;/span&gt;&lt;/h4&gt;
 		&lt;span id=&quot;pbg_after_amount&quot;&gt;$ 388.73&lt;/span&gt;&lt;small&gt; / per person&lt;/small&gt;
 	&lt;/div&gt;
 	&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
 	&lt;div id=&quot;footer&quot;&gt;
 		&lt;p&gt;
-		  Powered by :&lt;br/&gt;&lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png&quot; alt=&quot;PayByGroup&quot;&gt;
+		  Powered by :&lt;br/&gt;&lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png&quot; alt=&quot;Pay By Group&quot;&gt;
 		&lt;/p&gt;
 		&lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info pbg_btn&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;Split the cost&lt;/a&gt;
 	&lt;/div&gt;
@@ -874,7 +874,7 @@
 							<div id="footer">
 								<p>Easily split this purchase with your group.</p>
 								<div>
-									Powered by :<br/><img src="https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png" alt="PayByGroup">
+									Powered by :<br/><img src="https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png" alt="Pay By Group">
 								</div>
 							</div>
 						</div>
@@ -904,7 +904,7 @@
 	&lt;div id=&quot;footer&quot;&gt;
 		&lt;p&gt;Easily split this purchase with your group.&lt;/p&gt;
 		&lt;div&gt;
-			Powered by :&lt;br/&gt;&lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png&quot; alt=&quot;PayByGroup&quot;&gt;
+			Powered by :&lt;br/&gt;&lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png&quot; alt=&quot;Pay By Group&quot;&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
@@ -913,7 +913,7 @@
           <div class="clearfix"></div>
           <div class="method-description">
             <div id="pbg_info_box" class="six">
-              <h3><span id="pbg_mention">PayByGroup</span> make it easy to split the cost with friends and family.</h3>
+              <h3><span id="pbg_mention">Pay By Group</span> make it easy to split the cost with friends and family.</h3>
               <div class="cost">
                 <p><span id="pbg_after_amount">$ 388.73</span> / per person</p>
               </div>
@@ -925,7 +925,7 @@
           </div>
           <div class="method-example">
             <pre><code class="html">
-&lt;div id=&quot;pbg_info_box&quot; class=&quot;six&quot;&gt;<br/>  &lt;h3&gt;&lt;span id=&quot;pbg_mention&quot;&gt;PayByGroup&lt;/span&gt; make it easy to split the cost with friends and family.&lt;/h3&gt;<br/>  &lt;div class=&quot;cost&quot;&gt;<br/>    &lt;p&gt;&lt;span id=&quot;pbg_after_amount&quot;&gt;$ 388.73&lt;/span&gt; / per person&lt;/p&gt;<br/>  &lt;/div&gt;<br/>  &lt;div id=&quot;footer&quot;&gt;<br/>    &lt;p&gt;&lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info pbg_btn&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;Split the cost&lt;/a&gt;&lt;/p&gt;<br/>    &lt;/div&gt;<br/>  &lt;/div&gt;<br/>  &lt;img src=&quot;https://cdn.paybygroup.com/images/creditcards.png&quot; alt=&quot;We accept main credit cards&quot;&gt;<br/>&lt;/div&gt;
+&lt;div id=&quot;pbg_info_box&quot; class=&quot;six&quot;&gt;<br/>  &lt;h3&gt;&lt;span id=&quot;pbg_mention&quot;&gt;Pay By Group&lt;/span&gt; make it easy to split the cost with friends and family.&lt;/h3&gt;<br/>  &lt;div class=&quot;cost&quot;&gt;<br/>    &lt;p&gt;&lt;span id=&quot;pbg_after_amount&quot;&gt;$ 388.73&lt;/span&gt; / per person&lt;/p&gt;<br/>  &lt;/div&gt;<br/>  &lt;div id=&quot;footer&quot;&gt;<br/>    &lt;p&gt;&lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info pbg_btn&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;Split the cost&lt;/a&gt;&lt;/p&gt;<br/>    &lt;/div&gt;<br/>  &lt;/div&gt;<br/>  &lt;img src=&quot;https://cdn.paybygroup.com/images/creditcards.png&quot; alt=&quot;We accept main credit cards&quot;&gt;<br/>&lt;/div&gt;
             </code></pre>
           </div>
 					<div class="clearfix"></div>
@@ -936,7 +936,7 @@
 					<div class="method-description" style="background-color: #EEE;">
 						<h3>Informational units</h3>
 						<p>
-							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_120x240.png" alt="PayByGroup">
+							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_120x240.png" alt="Pay By Group">
 						</p>
 					</div>
 					<div class="method-example">
@@ -947,7 +947,7 @@ https://cdn.paybygroup.com/assets/banners/paybygroup_120x240.png
 					<div class="clearfix"></div>
 					<div class="method-description" style="background-color: #EEE;">
 						<p>
-							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_125x125.png" alt="PayByGroup">
+							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_125x125.png" alt="Pay By Group">
 						</p>
 					</div>
 					<div class="method-example">
@@ -958,7 +958,7 @@ https://cdn.paybygroup.com/assets/banners/paybygroup_125x125.png
 					<div class="clearfix"></div>
 					<div class="method-description" style="background-color: #EEE;">
 						<p>
-							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_180x150.png" alt="PayByGroup">
+							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_180x150.png" alt="Pay By Group">
 						</p>
 					</div>
 					<div class="method-example">
@@ -969,7 +969,7 @@ https://cdn.paybygroup.com/assets/banners/paybygroup_180x150.png
 					<div class="clearfix"></div>
 					<div class="method-description" style="background-color: #EEE;">
 						<p>
-							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_234x60.png" alt="PayByGroup">
+							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_234x60.png" alt="Pay By Group">
 						</p>
 					</div>
 					<div class="method-example">
@@ -980,7 +980,7 @@ https://cdn.paybygroup.com/assets/banners/paybygroup_234x60.png
 					<div class="clearfix"></div>
 					<div class="method-description" style="background-color: #EEE;">
 						<p>
-							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_300x115.png" alt="PayByGroup">
+							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_300x115.png" alt="Pay By Group">
 						</p>
 					</div>
 					<div class="method-example">
@@ -991,7 +991,7 @@ https://cdn.paybygroup.com/assets/banners/paybygroup_300x115.png
 					<div class="clearfix"></div>
 					<div class="method-description" style="background-color: #EEE;">
 						<p>
-							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_2_300x115.png" alt="PayByGroup">
+							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_2_300x115.png" alt="Pay By Group">
 						</p>
 					</div>
 					<div class="method-example">
@@ -1002,7 +1002,7 @@ https://cdn.paybygroup.com/assets/banners/paybygroup_2_300x115.png
 					<div class="clearfix"></div>
 					<div class="method-description" style="background-color: #EEE;">
 						<p>
-							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_240x400.png" alt="PayByGroup">
+							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_240x400.png" alt="Pay By Group">
 						</p>
 					</div>
 					<div class="method-example">
@@ -1013,7 +1013,7 @@ https://cdn.paybygroup.com/assets/banners/paybygroup_240x400.png
 					<div class="clearfix"></div>
 					<div class="method-description" style="background-color: #EEE;">
 						<p>
-							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_2_240x400.png" alt="PayByGroup">
+							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_2_240x400.png" alt="Pay By Group">
 						</p>
 					</div>
 					<div class="method-example">
@@ -1024,7 +1024,7 @@ https://cdn.paybygroup.com/assets/banners/paybygroup_2_240x400.png
 					<div class="clearfix"></div>
 					<div class="method-description" style="background-color: #EEE;">
 						<p>
-							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_250x250.png" alt="PayByGroup">
+							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_250x250.png" alt="Pay By Group">
 						</p>
 					</div>
 					<div class="method-example">
@@ -1035,7 +1035,7 @@ https://cdn.paybygroup.com/assets/banners/paybygroup_250x250.png
 					<div class="clearfix"></div>
 					<div class="method-description" style="background-color: #EEE;">
 						<p>
-							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_300x250.png" alt="PayByGroup">
+							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_300x250.png" alt="Pay By Group">
 						</p>
 					</div>
 					<div class="method-example">
@@ -1046,7 +1046,7 @@ https://cdn.paybygroup.com/assets/banners/paybygroup_300x250.png
 					<div class="clearfix"></div>
 					<div class="method-description" style="background-color: #EEE;">
 						<p>
-							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_336x280.png" alt="PayByGroup">
+							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_336x280.png" alt="Pay By Group">
 						</p>
 					</div>
 					<div class="method-example">
@@ -1057,7 +1057,7 @@ https://cdn.paybygroup.com/assets/banners/paybygroup_336x280.png
 					<div class="clearfix"></div>
 					<div class="method-description" style="background-color: #EEE;">
 						<p>
-							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_468x60.png" alt="PayByGroup"  style="width:100%;max-width:468px;">
+							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_468x60.png" alt="Pay By Group"  style="width:100%;max-width:468px;">
 						</p>
 					</div>
 					<div class="method-example">
@@ -1068,7 +1068,7 @@ https://cdn.paybygroup.com/assets/banners/paybygroup_468x60.png
 					<div class="clearfix"></div>
 					<div class="method-description" style="background-color: #EEE;">
 						<p>
-							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_600x200.png" alt="PayByGroup" style="width:100%;max-width:600px;">
+							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_600x200.png" alt="Pay By Group" style="width:100%;max-width:600px;">
 						</p>
 					</div>
 					<div class="method-example">
@@ -1079,7 +1079,7 @@ https://cdn.paybygroup.com/assets/banners/paybygroup_600x200.png
 					<div class="clearfix"></div>
 					<div class="method-description" style="background-color: #EEE;">
 						<p>
-							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_2_600x200.jpg" alt="PayByGroup"  style="width:100%;max-width:600px;">
+							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_2_600x200.jpg" alt="Pay By Group"  style="width:100%;max-width:600px;">
 						</p>
 					</div>
 					<div class="method-example">
@@ -1090,7 +1090,7 @@ https://cdn.paybygroup.com/assets/banners/paybygroup_2_600x200.jpg
 					<div class="clearfix"></div>
 					<div class="method-description" style="background-color: #EEE;">
 						<p>
-							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_728x90.png" alt="PayByGroup" style="width:100%;max-width:728px;">
+							<img src="https://cdn.paybygroup.com/assets/banners/paybygroup_728x90.png" alt="Pay By Group" style="width:100%;max-width:728px;">
 						</p>
 					</div>
 					<div class="method-example">
@@ -1108,7 +1108,7 @@ https://cdn.paybygroup.com/assets/banners/paybygroup_728x90.png
 					<div class="method-description">
 						<h3>Logos</h3>
 						<p>
-							<img src="https://cdn.paybygroup.com/assets/pbg_logohuge.png" alt="PayByGroup" style="width:100%;max-width:350px;">
+							<img src="https://cdn.paybygroup.com/assets/pbg_logohuge.png" alt="Pay By Group" style="width:100%;max-width:350px;">
 						</p>
 					</div>
 					<div class="method-example">
@@ -1119,9 +1119,9 @@ https://cdn.paybygroup.com/assets/pbg_logohuge.png
 						</code></pre>
 					</div>
 					<div class="clearfix"></div>
-					<div class="method-description">
+					<!-- <div class="method-description">
 						<p>
-							<img src="https://cdn.paybygroup.com/assets/pbg_iconlogohuge.png" alt="PayByGroup" style="width:100%;max-width:350px;">
+							<img src="https://cdn.paybygroup.com/assets/pbg_iconlogohuge.png" alt="Pay By Group" style="width:100%;max-width:350px;">
 						</p>
 					</div>
 					<div class="method-example">
@@ -1132,7 +1132,7 @@ https://cdn.paybygroup.com/assets/pbg_iconlogohuge.png
 					<div class="clearfix"></div>
 					<div class="method-description">
 						<p>
-							<img src="https://cdn.paybygroup.com/assets/pbg_iconlogosquarehuge.png" alt="PayByGroup" style="width:100%;max-width:350px;">
+							<img src="https://cdn.paybygroup.com/assets/pbg_iconlogosquarehuge.png" alt="Pay By Group" style="width:100%;max-width:350px;">
 						</p>
 					</div>
 					<div class="method-example">
@@ -1143,14 +1143,14 @@ https://cdn.paybygroup.com/assets/pbg_iconlogosquarehuge.png
 					<div class="clearfix"></div>
 					<div class="method-description">
 						<p>
-							<img src="https://cdn.paybygroup.com/assets/pbg_iconhuge.png" alt="PayByGroup" style="width:100%;max-width:350px;">
+							<img src="https://cdn.paybygroup.com/assets/pbg_iconhuge.png" alt="Pay By Group" style="width:100%;max-width:350px;">
 						</p>
 					</div>
 					<div class="method-example">
 						<pre><code class="html">
 https://cdn.paybygroup.com/assets/pbg_iconhuge.png
 						</code></pre>
-					</div>
+					</div> -->
 				</div>
 			</div>
 <!--

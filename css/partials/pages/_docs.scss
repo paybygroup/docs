@@ -17,12 +17,13 @@
 			font-size: 29px;
 
 			a {
-				color: #000;
+				color: #2E3AA1;
 				font-family: $myriad;
 				padding: 20px 0 15px 23px;
 				display: block;
 				border-bottom: 1px solid #D6DCE0;
 				box-shadow: 0px 1px #FFF;
+				word-spacing: -3px;
 				@include transition(color .15s linear);
 
 				&:hover {
