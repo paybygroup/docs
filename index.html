@@ -139,7 +139,7 @@
 							This will generate the following button.
 							<br/>
 							<br/>
-							<img src="https://cdn.paybygroup.com/images/merchant/elements/pbg_orange.png" alt="Pay By Group">
+							<div class="pbg_info"></div>
 						</p>
 					</div>
 					<div class="method-example">
@@ -298,7 +298,7 @@
 						</div>
 						<br/>
 						<p>Once you click the the element with <code>class="pbg_info"</code> the following popup will display:</p>
-						<img src="images/popup.jpg" alt="Pay By Group Popup" style="width:100%">
+						<img src="images/popup.png" alt="Pay By Group Popup" style="width:100%">
 						<br/>
 						<br/>
 						<h4>Option to use Pay By Group</h4>
@@ -306,36 +306,6 @@
 						<div class="alert tip">
 						  <p><strong>Tip</strong>: This is where you should be sure to set the data attributes listed above and any additional ones you want to include .</p>
 						</div>
-						<br/>
-						<p>Here is an example of the option to use Pay By Group where the div and button have been styled to match the merchant's existing site:</p>
-						<div id="pbg_info_box" class="two">
-						  <div>
-						    <h4>
-						      Avg. cost
-						      <a href="#" class="pbg_tooltips">
-						        <i>?</i>
-						        <div class="pbg_tooltip_content">
-						          Total Cost :
-						          <span id="pbg_before_amount">$ 2,874.00</span>
-						          <br>
-						          (4 people)
-						      	</div>
-						      </a>
-						    </h4>
-						    <p>
-						      <span id="pbg_after_amount">$ 388.73</span> / per person
-						    </p>
-						  </div>
-						  <a href="#" id="pbg_button" class="pbg_info pbg_btn" data-popup-id="#pbg_info_popup">
-						  	Split the cost
-						  </a>
-<!-- 						  <div id="pbg_footer">
-						    Powered by : <img src="https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png" alt="Pay By Group">
-						  </div> -->
-						</div>
-					</div>
-					<div class="method-example">
-
 					</div>
 				</div>
 			</div>
@@ -701,109 +671,83 @@
 					<div class="method-example">
 					<pre><code class="html">
 &lt;div id=&quot;pbg_info_box&quot; class=&quot;one&quot;&gt;
-  &lt;h3&gt;Need to split the cost?&lt;/h3&gt;
-  &lt;p&gt;We have partnered with Pay By Group to make it easy to rally your group, split the cost, and complete this purchase&lt;/p&gt;
+  &lt;div class=&#39;h3&#39;&gt;Need to split the cost?&lt;/div&gt;
+  &lt;p&gt;We have partnered with &lt;span id=&quot;pbg_mention&quot;&gt;Pay By Group&lt;/span&gt; to make it easy to rally your group, split the cost, and complete this purchase.&lt;/p&gt;
   &lt;div id=&quot;costs&quot;&gt;
-    &lt;h4&gt;Without &lt;span id=&quot;pbg_mention&quot;&gt;Pay By Group&lt;/span&gt;&lt;/h4&gt;
+    &lt;div class=&#39;h4&#39;&gt;Without &lt;span id=&quot;pbg_mention&quot;&gt;Pay By Group&lt;/span&gt;&lt;/div&gt;
     &lt;p&gt;You Pay&lt;span id=&quot;pbg_before_amount&quot;&gt;$ 3,888.73&lt;/span&gt;&lt;/p&gt;
-    &lt;h4&gt;With &lt;span id=&quot;pbg_mention&quot;&gt;Pay By Group&lt;/span&gt;&lt;/h4&gt;
+    &lt;div class=&#39;h4&#39;&gt;With &lt;span id=&quot;pbg_mention&quot;&gt;Pay By Group&lt;/span&gt;&lt;/div&gt;
     &lt;p&gt;&lt;span id=&quot;pbg_after_amount&quot;&gt;$ 388.73&lt;/span&gt; / per person&lt;/p&gt;
   &lt;/div&gt;
-  &lt;div id=&quot;footer&quot;&gt;
-    &lt;p&gt;
-      No charge until your group completes and you confirm.&lt;br/&gt;
-      &lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;Learn more.&lt;/a&gt;
-    &lt;/p&gt;
-    &lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info pbg_btn&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;Split the cost&lt;/a&gt;
+  &lt;div id=&quot;pbg_footer&quot;&gt;
+    &lt;div id=&#39;bounding_box&#39;&gt;
+    	&lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info pbg_btn&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;
+    		Split the cost with &lt;span id=&quot;pbg_logo&quot;&gt;Pay By Group&lt;/span&gt;
+    	&lt;/a&gt;
+    	&lt;span id=&quot;pbg_credit_cards&quot;&gt;We accept main credit cards&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;pbg_clearfix&quot;&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 					</code></pre>
 					</div>
 					<div class="clearfix"></div>
 					<div class="method-description">
-					  <div id="pbg_info_box" class="two">
-				      <div>
-				        <div class='h4'>
-				          Avg. cost
-				          <a href="#" class="pbg_tooltips">
-				            <i>?</i>
-				            <div class="pbg_tooltip_content">
-					            Total Cost :
-					            <span id="pbg_before_amount">$ 2,874.00</span>
-					            <br>
-					            (4 people)
-				          	</div>
-				          </a>
-				        </div>
-				        <p>
-				          <span id="pbg_after_amount">$ 388.73</span> / per person
-				        </p>
-				      </div>
-							<div id='bounding_box'>
-								<a href="#" id="pbg_button" class="pbg_info pbg_btn" data-popup-id="#pbg_info_popup">
-									Split the cost with <span id="pbg_logo">Pay By Group</span>
-								</a>
-								<span id="pbg_credit_cards">We accept main credit cards</span>
-							</div>
-
-<!-- 					    <div id="pbg_footer">
-					      Powered by : <img src="https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png" alt="Pay By Group">
-					    </div> -->
+					<div id='pbg_info_box' class='two'>
+					  <div class='h3'>Traveling with friends or family?</div>
+					  <p>We have partnered with <span id='pbg_mention'>Pay By Group</span> makes it easy to rally your group, split the cost, and complete this purchase. </p>
+					  <div>
+					    <div class='h4'>
+					      Avg. cost
+					      <a href='#' class='pbg_tooltips'>
+					        <i>?</i>
+					        <div class='pbg_tooltip_content'>
+					          Total Cost :
+					          <span id='pbg_before_amount'>$100</span>
+					          <br>
+					          (<span id='number_of_people'>4</span> people)
+					        </div>
+					      </a>
+					    </div>
+					    <p>
+					      <span id='pbg_after_amount'>$25</span> / per person
+					    </p>
+					  </div>
+					  <div id='bounding_box'>
+					    <a href='#' id='pbg_button' class='pbg_info pbg_btn' data-popup-id='#pbg_info_popup'>
+					      Split the cost with <span id='pbg_logo'>Pay By Group</span>
+					    </a>
+					    <span id='pbg_credit_cards'>We accept main credit cards</span>
 					  </div>
 					</div>
-					<div class="method-example">
-					<pre><code class="html">
-&lt;div id=&quot;pbg_info_box&quot; class=&quot;two&quot;&gt;
-  &lt;div&gt;
-    &lt;h4&gt;
-      Avg. cost
-      &lt;a href=&quot;#&quot; class=&quot;pbg_tooltips&quot;&gt;
-        &lt;i&gt;?&lt;/i&gt;
-        &lt;div class=&quot;pbg_tooltip_content&quot;&gt;
-          Total Cost :
-          &lt;span id=&quot;pbg_before_amount&quot;&gt;$ 2,874.00&lt;/span&gt;
-          &lt;br&gt;
-          (4 people)
-      	&lt;/div&gt;
-      &lt;/a&gt;
-    &lt;/h4&gt;
-    &lt;p&gt;
-      &lt;span id=&quot;pbg_after_amount&quot;&gt;$ 388.73&lt;/span&gt; / per person
-    &lt;/p&gt;
-  &lt;/div&gt;
-  &lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info pbg_btn&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;
-  	Split the cost
-  &lt;/a&gt;
-  &lt;div id=&quot;footer&quot;&gt;
-    Powered by : &lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png&quot; alt=&quot;Pay By Group&quot;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-					</code></pre>
-					</div>
-					<div class="clearfix"></div>
-
-					<div class="method-description">
-						<div id="pbg_info_box" class="three">
-						  <div class='h3'>Traveling with friends or family?</div>
-						  <p>We have partnered with <span id="pbg_mention">Pay By Group</span> makes it easy to rally your group, split the cost, and complete this purchase. </p>
-						  <div id='bounding_box'>
-						  	<a href="#" id="pbg_button" class="pbg_info pbg_btn" data-popup-id="#pbg_info_popup">
-						  		Split the cost with <span id="pbg_logo">Pay By Group</span>
-						  	</a>
-						  	<span id="pbg_credit_cards">We accept main credit cards</span>
-						  </div>
-						</div>
 					</div>
 					<div class="method-example">
 						<pre><code class="html">
-&lt;div id=&quot;pbg_info_box&quot; class=&quot;three&quot;&gt;
-  &lt;h3&gt;Traveling with friends or family?&lt;/h3&gt;
-  &lt;p&gt;We have partnered with &lt;span&gt;Pay By Group&lt;/span&gt; makes it easy to rally your group, split the cost, and complete this purchase. &lt;/p&gt;
-  &lt;div id=&quot;footer&quot;&gt;
+&lt;div id=&#39;pbg_info_box&#39; class=&#39;two&#39;&gt;
+  &lt;div class=&#39;h3&#39;&gt;Traveling with friends or family?&lt;/div&gt;
+  &lt;p&gt;We have partnered with &lt;span id=&#39;pbg_mention&#39;&gt;Pay By Group&lt;/span&gt; makes it easy to rally your group, split the cost, and complete this purchase. &lt;/p&gt;
+  &lt;div&gt;
+    &lt;div class=&#39;h4&#39;&gt;
+      Avg. cost
+      &lt;a href=&#39;#&#39; class=&#39;pbg_tooltips&#39;&gt;
+        &lt;i&gt;?&lt;/i&gt;
+        &lt;div class=&#39;pbg_tooltip_content&#39;&gt;
+          Total Cost :
+          &lt;span id=&#39;pbg_before_amount&#39;&gt;$100&lt;/span&gt;
+          &lt;br&gt;
+          (&lt;span id=&#39;number_of_people&#39;&gt;4&lt;/span&gt; people)
+        &lt;/div&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
     &lt;p&gt;
-      Powered by :&lt;br/&gt;&lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png&quot; alt=&quot;Pay By Group&quot;&gt;
+      &lt;span id=&#39;pbg_after_amount&#39;&gt;$25&lt;/span&gt; / per person
     &lt;/p&gt;
-    &lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info pbg_btn&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;Split the cost&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div id=&#39;bounding_box&#39;&gt;
+    &lt;a href=&#39;#&#39; id=&#39;pbg_button&#39; class=&#39;pbg_info pbg_btn&#39; data-popup-id=&#39;#pbg_info_popup&#39;&gt;
+      Split the cost with &lt;span id=&#39;pbg_logo&#39;&gt;Pay By Group&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;span id=&#39;pbg_credit_cards&#39;&gt;We accept main credit cards&lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 						</code></pre>
@@ -824,9 +768,6 @@
 							</div>
 							<div class="clearfix"></div>
 							<div id="pbg_footer">
-<!-- 								<p>
-								  Powered by :<br/><img src="https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png" alt="Pay By Group">
-								</p> -->
 								<div id='bounding_box'>
 									<a href="#" id="pbg_button" class="pbg_info pbg_btn" data-popup-id="#pbg_info_popup">
 										Split the cost with <span id="pbg_logo">Pay By Group</span>
@@ -840,88 +781,30 @@
 					<div class="method-example">
 						<pre><code class="html">
 &lt;div id=&quot;pbg_info_box&quot; class=&quot;four&quot;&gt;
-  &lt;h3&gt;Keep the price low.&lt;/h3&gt;
+  &lt;div class=&#39;h3&#39;&gt;Keep the price low.&lt;/div&gt;
   &lt;p&gt;&lt;span id=&quot;pbg_mention&quot;&gt;Pay By Group&lt;/span&gt; allows you to keep the cost down by splitting with friends. Try us out!&lt;/p&gt;
-  &lt;div class=&quot;box&quot;&gt;
-  	&lt;h4&gt;Without &lt;span id=&quot;pbg_mention&quot;&gt;Pay By Group&lt;/span&gt;&lt;/h4&gt;
+  &lt;div class=&quot;pbg_box&quot;&gt;
+  	&lt;div class=&#39;h4&#39;&gt;Without &lt;span id=&quot;pbg_mention&quot;&gt;Pay By Group&lt;/span&gt;&lt;/div&gt;
   	&lt;span id=&quot;pbg_before_amount&quot;&gt;$ 3,888.73&lt;/span&gt;
   &lt;/div&gt;
-	&lt;div class=&quot;box&quot;&gt;
-	  &lt;h4&gt;With &lt;span id=&quot;pbg_mention&quot;&gt;Pay By Group&lt;/span&gt;&lt;/h4&gt;
+	&lt;div class=&quot;pbg_box&quot;&gt;
+	  &lt;div class=&#39;h4&#39;&gt;With &lt;span id=&quot;pbg_mention&quot;&gt;Pay By Group&lt;/span&gt;&lt;/div&gt;
 		&lt;span id=&quot;pbg_after_amount&quot;&gt;$ 388.73&lt;/span&gt;&lt;small&gt; / per person&lt;/small&gt;
 	&lt;/div&gt;
 	&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
-	&lt;div id=&quot;footer&quot;&gt;
-		&lt;p&gt;
-		  Powered by :&lt;br/&gt;&lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogosmall.png&quot; alt=&quot;Pay By Group&quot;&gt;
-		&lt;/p&gt;
-		&lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info pbg_btn&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;Split the cost&lt;/a&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-						</code></pre>
-					</div>
-					<div class="clearfix"></div>
-
-					<div class="method-description">
-						<div id="pbg_info_box" class="five">
-						  <div class='h3'>Want to split the cost?</div>
-							<div class="cost">
-				        <div class='h4'>
-				          Cost
-				          <a href="#" class="pbg_tooltips">
-				            <i>?</i>
-				            <div class="pbg_tooltip_content">
-					            Total Cost :
-					            <span id="pbg_before_amount">$ 2,874.00</span>
-					            <br>
-					            (4 people)
-				          	</div>
-				          </a>
-				        </div>
-				        <p>
-				          <span id="pbg_after_amount">$ 388.73</span> / per person
-				        </p>
-							</div>
-							<a href="#" id="pbg_button" class="pbg_info pbg_btn" data-popup-id="#pbg_info_popup">Split the cost</a>
-							<div id="pbg_footer">
-								<p>Easily split this purchase with your group.</p>
-								<div>
-									Powered by :<br/><img src="https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png" alt="Pay By Group">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="method-example">
-						<pre><code class="html">
-&lt;div id=&quot;pbg_info_box&quot; class=&quot;five&quot;&gt;
-  &lt;h3&gt;Want to split the cost?&lt;/h3&gt;
-	&lt;div class=&quot;cost&quot;&gt;
-    &lt;h4&gt;
-      Cost
-      &lt;a href=&quot;#&quot; class=&quot;pbg_tooltips&quot;&gt;
-        &lt;i&gt;?&lt;/i&gt;
-        &lt;div class=&quot;pbg_tooltip_content&quot;&gt;
-          Total Cost :
-          &lt;span id=&quot;pbg_before_amount&quot;&gt;$ 2,874.00&lt;/span&gt;
-          &lt;br&gt;
-          (4 people)
-      	&lt;/div&gt;
-      &lt;/a&gt;
-    &lt;/h4&gt;
-    &lt;p&gt;
-      &lt;span id=&quot;pbg_after_amount&quot;&gt;$ 388.73&lt;/span&gt; / per person
-    &lt;/p&gt;
-	&lt;/div&gt;
-	&lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info pbg_btn&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;Split the cost&lt;/a&gt;
-	&lt;div id=&quot;footer&quot;&gt;
-		&lt;p&gt;Easily split this purchase with your group.&lt;/p&gt;
-		&lt;div&gt;
-			Powered by :&lt;br/&gt;&lt;img src=&quot;https://cdn.paybygroup.com/assets/pbg_iconlogotiny.png&quot; alt=&quot;Pay By Group&quot;&gt;
+	&lt;div id=&quot;pbg_footer&quot;&gt;
+		&lt;div id=&#39;bounding_box&#39;&gt;
+			&lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info pbg_btn&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;
+				Split the cost with &lt;span id=&quot;pbg_logo&quot;&gt;Pay By Group&lt;/span&gt;
+			&lt;/a&gt;
+			&lt;span id=&quot;pbg_credit_cards&quot;&gt;We accept main credit cards&lt;/span&gt;
 		&lt;/div&gt;
+		&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
 						</code></pre>
 					</div>
+
           <div class="clearfix"></div>
           <div class="method-description">
             <div id="pbg_info_box" class="six">
@@ -942,7 +825,21 @@
           </div>
           <div class="method-example">
             <pre><code class="html">
-&lt;div id=&quot;pbg_info_box&quot; class=&quot;six&quot;&gt;<br/>  &lt;h3&gt;&lt;span id=&quot;pbg_mention&quot;&gt;Pay By Group&lt;/span&gt; makes it easy to split the cost with friends and family.&lt;/h3&gt;<br/>  &lt;div class=&quot;cost&quot;&gt;<br/>    &lt;p&gt;&lt;span id=&quot;pbg_after_amount&quot;&gt;$ 388.73&lt;/span&gt; / per person&lt;/p&gt;<br/>  &lt;/div&gt;<br/>  &lt;div id=&quot;footer&quot;&gt;<br/>    &lt;p&gt;&lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info pbg_btn&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;Split the cost&lt;/a&gt;&lt;/p&gt;<br/>    &lt;/div&gt;<br/>  &lt;/div&gt;<br/>  &lt;img src=&quot;https://cdn.paybygroup.com/images/creditcards.png&quot; alt=&quot;We accept main credit cards&quot;&gt;<br/>&lt;/div&gt;
+&lt;div id=&quot;pbg_info_box&quot; class=&quot;six&quot;&gt;
+  &lt;div class=&#39;h3&#39;&gt;&lt;span id=&quot;pbg_mention&quot;&gt;Pay By Group&lt;/span&gt; makes it easy to split the cost with friends and family.&lt;/div&gt;
+  &lt;div class=&quot;cost&quot;&gt;
+    &lt;p&gt;&lt;span id=&quot;pbg_after_amount&quot;&gt;$ 388.73&lt;/span&gt; / per person&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;pbg_footer&quot;&gt;
+	 &lt;div id=&#39;bounding_box&#39;&gt;
+	 	&lt;a href=&quot;#&quot; id=&quot;pbg_button&quot; class=&quot;pbg_info pbg_btn&quot; data-popup-id=&quot;#pbg_info_popup&quot;&gt;
+	 		Split the cost with &lt;span id=&quot;pbg_logo&quot;&gt;Pay By Group&lt;/span&gt;
+	 	&lt;/a&gt;
+	 	&lt;span id=&quot;pbg_credit_cards&quot;&gt;We accept main credit cards&lt;/span&gt;
+	 &lt;/div&gt;
+	 &lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
             </code></pre>
           </div>
 					<div class="clearfix"></div>
