@@ -165,13 +165,6 @@
 						<div class="info">
 							<h4>Group purchase</h4>
 							<div class="field clearfix">
-								<div class="key">purchase-image-url:</div>
-								<div class="desc">
-									<strong>string</strong>
-									URL for the Pay By Group image
-								</div>
-							</div>
-							<div class="field clearfix">
 								<div class="key">name:</div>
 								<div class="desc">
 									<strong>string</strong>
@@ -179,17 +172,31 @@
 								</div>
 							</div>
 							<div class="field clearfix">
-								<div class="key">purchase-id:</div>
-								<div class="desc">
-									<strong>string</strong>
-									Your ID used to identify the purchase for your records
-								</div>
-							</div>
-							<div class="field clearfix">
 								<div class="key">total-cost:</div>
 								<div class="desc">
 									<strong>float</strong>
 									Total cost of the purchase
+								</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">purchase-description:</div>
+								<div class="desc">
+									<strong>string</strong>
+									Description of the purchase
+								</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">purchase-image-url:</div>
+								<div class="desc">
+									<strong>string</strong>
+									URL for the Pay By Group image
+								</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">purchase-id:</div>
+								<div class="desc">
+									<strong>string</strong>
+									Your ID used to identify the purchase for your records
 								</div>
 							</div>
 							<div class="field clearfix">
@@ -207,10 +214,24 @@
 								</div>
 							</div>
 							<div class="field clearfix">
-								<div class="key">purchase-description:</div>
+								<div class="key">organizer-first-name:</div>
 								<div class="desc">
 									<strong>string</strong>
-									Description of the purchase
+									First name of the customer who started this purchase
+								</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">organizer-last-name:</div>
+								<div class="desc">
+									<strong>string</strong>
+									Last name of the customer who started this purchase
+								</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">organizer-email:</div>
+								<div class="desc">
+									<strong>string</strong>
+									Email of the customer who started this purchase
 								</div>
 							</div>
 							<br/>
@@ -243,6 +264,13 @@
 								<div class="desc">
 									<strong>date <code>YYYY-MM-DD</code></strong>
 									Date on which the deposit expires and the inventory becomes subject to availability
+								</div>
+							</div>
+							<div class="field clearfix">
+								<div class="key">purchase-deadline:</div>
+								<div class="desc">
+									<strong>date <code>YYYY-MM-DD</code></strong>
+									Deadline for the group of traveler must pay for the group. Pay By Group uses this deadline to encourage the group to pitch in.
 								</div>
 							</div>
 							<div class="field clearfix">
